@@ -1,0 +1,82 @@
+/* Daily News – Styleguide V1 (Design, 18.11.). Basis 17 px, alles in rem. */
+:root {
+  --hg: #FAF8F3; --flaeche: #FFFFFF; --text: #17181C; --gedaempft: #5A5D66; --linie: #E4E0D6;
+  --akzent: #1E2F55; --akzent-flaeche: #EEF1F7;
+  --ok: #1F6B3F; --ok-f: #E3F1E8; --warn: #7A5200; --warn-f: #FBEFD2;
+  --streit: #5B3E96; --streit-f: #ECE6F7; --unklar: #4A4E57; --unklar-f: #E9E9EC;
+  --serif: "Newsreader", ui-serif, "New York", Georgia, serif;
+  --sans: "Inter", -apple-system, system-ui, sans-serif;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --hg: #121418; --flaeche: #1B1E24; --text: #ECEAE4; --gedaempft: #A3A7B0; --linie: #2A2E36;
+    --akzent: #9DB3E8; --akzent-flaeche: #1E2638;
+    --ok: #7FD3A0; --ok-f: #1A3326; --warn: #F2C66B; --warn-f: #3A2E12;
+    --streit: #C4AEF0; --streit-f: #2D2440; --unklar: #C2C5CC; --unklar-f: #2A2D33;
+  }
+}
+html { font-size: 106.25%; } /* 17 px */
+@supports (font: -apple-system-body) { html { font: -apple-system-body; } } /* folgt iPhone-Textgröße */
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--hg); color: var(--text);
+  font-family: var(--sans); font-size: 1rem; line-height: 1.55;
+  padding: env(safe-area-inset-top) 0 calc(4.5rem + env(safe-area-inset-bottom));
+  -webkit-text-size-adjust: 100%;
+}
+main { padding: 0 20px; max-width: 40rem; margin: 0 auto; }
+.laden, .leer { color: var(--gedaempft); padding: 3rem 0; text-align: center; }
+.leer h2 { font-family: var(--serif); color: var(--text); font-size: 1.41rem; margin: 0 0 .5rem; }
+
+/* Kopf */
+.kopf { padding: 1.5rem 0 1rem; border-bottom: 1px solid var(--linie); }
+.kopf h1 { font-family: var(--serif); font-weight: 700; font-size: 2.59rem; line-height: 1.05; margin: 0; letter-spacing: -.01em; }
+.meta { color: var(--gedaempft); font-size: .765rem; margin-top: .5rem; }
+.beispiel { display: inline-block; margin-top: .5rem; font-size: .706rem; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--warn); background: var(--warn-f); padding: 2px 8px; border-radius: 999px; }
+
+/* Hinweisleisten */
+#hinweise { position: sticky; top: 0; z-index: 5; }
+.hinweis { display: flex; gap: 8px; align-items: flex-start; padding: 10px 20px; font-size: .88rem; line-height: 1.4;
+  background: var(--warn-f); color: var(--warn); border-bottom: 1px solid var(--linie); }
+.hinweis.offline { background: var(--unklar-f); color: var(--unklar); }
+.hinweis.info { background: var(--akzent-flaeche); color: var(--akzent); }
+.hinweis svg { flex: none; margin-top: 2px; }
+
+/* Bereiche + Liste */
+.bereich { margin-top: 1.5rem; }
+.bereich-titel { display: flex; align-items: center; gap: 6px; font-size: .706rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--gedaempft); margin: 0 0 4px; }
+.liste { list-style: none; margin: 0; padding: 0; }
+.liste li { display: flex; gap: 12px; align-items: flex-start; justify-content: space-between;
+  padding: 12px 0; border-bottom: 1px solid var(--linie); min-height: 44px; }
+.liste .schlagzeile { font-family: var(--serif); font-weight: 600; font-size: 1.118rem; line-height: 1.3; }
+.status { flex: none; display: inline-flex; align-items: center; gap: 4px; border-radius: 999px; padding: 2px 8px;
+  font-size: .706rem; font-weight: 600; white-space: nowrap; }
+.status.bestaetigt { color: var(--ok); background: var(--ok-f); }
+.status.eine_quelle { color: var(--warn); background: var(--warn-f); }
+.status.umstritten { color: var(--streit); background: var(--streit-f); }
+.status.unklar { color: var(--unklar); background: var(--unklar-f); }
+
+/* Facts + Begriff */
+.abschnitt { font-family: var(--serif); font-size: 1.41rem; margin: 2rem 0 .5rem; }
+.karte { background: var(--flaeche); border: 1px solid var(--linie); border-radius: 12px; padding: 16px; margin-bottom: 12px; }
+.karte h3 { font-family: var(--serif); font-size: 1.118rem; margin: 0 0 4px; }
+.karte p { margin: 0; }
+.begriff { background: var(--akzent-flaeche); border-color: transparent; }
+.begriff .label { font-size: .706rem; letter-spacing: .08em; text-transform: uppercase; color: var(--akzent); font-weight: 600; }
+.transparenz { color: var(--gedaempft); font-size: .765rem; margin: 2rem 0 1rem; }
+
+/* Navigation unten */
+.navi { position: fixed; left: 0; right: 0; bottom: 0; display: flex; background: var(--flaeche);
+  border-top: 1px solid var(--linie); padding-bottom: env(safe-area-inset-bottom); }
+.navi button { flex: 1; min-height: 52px; background: none; border: 0; font: inherit; font-size: .765rem; color: var(--gedaempft); }
+.navi button.aktiv { color: var(--akzent); font-weight: 600; }
+.navi button:disabled { opacity: .45; }
+
+/* Toast */
+#toast { position: fixed; left: 50%; bottom: calc(5rem + env(safe-area-inset-bottom)); transform: translate(-50%, 1rem);
+  background: var(--akzent); color: var(--hg); padding: 10px 16px; border-radius: 12px; font-size: .88rem;
+  opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; }
+#toast.sichtbar { opacity: 1; transform: translate(-50%, 0); }

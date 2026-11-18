@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "aktualisiert": "2026-11-18T14:35:19.822Z",
+  "tage": [
+    {
+      "datum": "2026-11-18",
+      "datei": "2026-11-18.json",
+      "meldungen": 6
+    },
+    {
+      "datum": "2026-11-17",
+      "datei": "2026-11-17.json",
+      "meldungen": 6
+    },
+    {
+      "datum": "2026-11-16",
+      "datei": "2026-11-16.json",
+      "meldungen": 6
+    }
+  ]
+}

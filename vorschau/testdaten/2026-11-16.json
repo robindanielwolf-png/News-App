@@ -1,0 +1,419 @@
+{
+  "version": 1,
+  "datum": "2026-11-16",
+  "erstellt_um": "2026-11-16T06:10:00+01:00",
+  "beispiel": true,
+  "transparenz": "TESTDATEN – keine echten Nachrichten. Erstellt für die Vorschau der App.",
+  "korrekturen": [],
+  "meldungen": [
+    {
+      "id": "2026-11-16-de-01",
+      "bereich": "de_eu",
+      "schlagzeile": "Testmeldung 1 vom 16.11. – de_eu",
+      "kurz": "Das ist eine Testmeldung mit zwei Sätzen. Sie dient nur dazu, die Ansicht zu prüfen.",
+      "status": "bestaetigt",
+      "ereignis_datum": "2026-11-16",
+      "stand": "2026-11-16T06:00:00+01:00",
+      "hintergrund": "Hintergrund in drei bis fünf Sätzen. Hier steht nur Platzhaltertext. Die echte Redaktion füllt dieses Feld.",
+      "warum_wichtig": "Warum das wichtig ist, in ein bis zwei Sätzen.",
+      "quellen": [
+        {
+          "titel": "Testquelle 1",
+          "medium": "Medium 1",
+          "url": "https://example.org/quelle-1",
+          "datum": "2026-11-18",
+          "primaer": true
+        },
+        {
+          "titel": "Testquelle 2",
+          "medium": "Medium 2",
+          "url": "https://example.org/quelle-2",
+          "datum": "2026-11-18",
+          "primaer": false
+        }
+      ],
+      "vertiefung": {
+        "text": "Kontext und Vorgeschichte (Platzhalter).",
+        "links": [
+          {
+            "titel": "Weiterlesen",
+            "medium": "Medium 3",
+            "url": "https://example.org/weiterlesen"
+          }
+        ],
+        "chat_prompt": "Erklär mir den Hintergrund zu dieser Testmeldung."
+      },
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-16-welt-01",
+      "bereich": "welt",
+      "schlagzeile": "Testmeldung 2 vom 16.11. – welt",
+      "kurz": "Das ist eine Testmeldung mit zwei Sätzen. Sie dient nur dazu, die Ansicht zu prüfen.",
+      "status": "bestaetigt",
+      "ereignis_datum": "2026-11-16",
+      "stand": "2026-11-16T06:00:00+01:00",
+      "hintergrund": "Hintergrund in drei bis fünf Sätzen. Hier steht nur Platzhaltertext. Die echte Redaktion füllt dieses Feld.",
+      "warum_wichtig": "Warum das wichtig ist, in ein bis zwei Sätzen.",
+      "quellen": [
+        {
+          "titel": "Testquelle 1",
+          "medium": "Medium 1",
+          "url": "https://example.org/quelle-1",
+          "datum": "2026-11-18",
+          "primaer": true
+        },
+        {
+          "titel": "Testquelle 2",
+          "medium": "Medium 2",
+          "url": "https://example.org/quelle-2",
+          "datum": "2026-11-18",
+          "primaer": false
+        }
+      ],
+      "vertiefung": {
+        "text": "Kontext und Vorgeschichte (Platzhalter).",
+        "links": [
+          {
+            "titel": "Weiterlesen",
+            "medium": "Medium 3",
+            "url": "https://example.org/weiterlesen"
+          }
+        ],
+        "chat_prompt": "Erklär mir den Hintergrund zu dieser Testmeldung."
+      },
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-16-wirt-01",
+      "bereich": "wirtschaft",
+      "schlagzeile": "Testmeldung 3 vom 16.11. – wirtschaft",
+      "kurz": "Das ist eine Testmeldung mit zwei Sätzen. Sie dient nur dazu, die Ansicht zu prüfen.",
+      "status": "eine_quelle",
+      "ereignis_datum": "2026-11-16",
+      "stand": "2026-11-16T06:00:00+01:00",
+      "hintergrund": "Hintergrund in drei bis fünf Sätzen. Hier steht nur Platzhaltertext. Die echte Redaktion füllt dieses Feld.",
+      "warum_wichtig": "Warum das wichtig ist, in ein bis zwei Sätzen.",
+      "quellen": [
+        {
+          "titel": "Testquelle 1",
+          "medium": "Medium 1",
+          "url": "https://example.org/quelle-1",
+          "datum": "2026-11-18",
+          "primaer": true
+        }
+      ],
+      "vertiefung": {
+        "text": "Kontext und Vorgeschichte (Platzhalter).",
+        "links": [
+          {
+            "titel": "Weiterlesen",
+            "medium": "Medium 3",
+            "url": "https://example.org/weiterlesen"
+          }
+        ],
+        "chat_prompt": "Erklär mir den Hintergrund zu dieser Testmeldung."
+      },
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-16-ki-01",
+      "bereich": "ki_tech",
+      "schlagzeile": "Testmeldung 4 vom 16.11. – ki_tech",
+      "kurz": "Das ist eine Testmeldung mit zwei Sätzen. Sie dient nur dazu, die Ansicht zu prüfen.",
+      "status": "umstritten",
+      "ereignis_datum": "2026-11-16",
+      "stand": "2026-11-16T06:00:00+01:00",
+      "hintergrund": "Hintergrund in drei bis fünf Sätzen. Hier steht nur Platzhaltertext. Die echte Redaktion füllt dieses Feld.",
+      "warum_wichtig": "Warum das wichtig ist, in ein bis zwei Sätzen.",
+      "quellen": [
+        {
+          "titel": "Testquelle 1",
+          "medium": "Medium 1",
+          "url": "https://example.org/quelle-1",
+          "datum": "2026-11-18",
+          "primaer": true
+        },
+        {
+          "titel": "Testquelle 2",
+          "medium": "Medium 2",
+          "url": "https://example.org/quelle-2",
+          "datum": "2026-11-18",
+          "primaer": false
+        }
+      ],
+      "vertiefung": {
+        "text": "Kontext und Vorgeschichte (Platzhalter).",
+        "links": [
+          {
+            "titel": "Weiterlesen",
+            "medium": "Medium 3",
+            "url": "https://example.org/weiterlesen"
+          }
+        ],
+        "chat_prompt": "Erklär mir den Hintergrund zu dieser Testmeldung."
+      },
+      "benchmarks": null,
+      "positionen": [
+        {
+          "seite": "Seite A",
+          "position": "Position A (Platzhalter)."
+        },
+        {
+          "seite": "Seite B",
+          "position": "Position B (Platzhalter)."
+        }
+      ],
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-16-ki-02",
+      "bereich": "ki_tech",
+      "schlagzeile": "Testmeldung 5 vom 16.11. – ki_tech",
+      "kurz": "Das ist eine Testmeldung mit zwei Sätzen. Sie dient nur dazu, die Ansicht zu prüfen.",
+      "status": "bestaetigt",
+      "ereignis_datum": "2026-11-16",
+      "stand": "2026-11-16T06:00:00+01:00",
+      "hintergrund": "Hintergrund in drei bis fünf Sätzen. Hier steht nur Platzhaltertext. Die echte Redaktion füllt dieses Feld.",
+      "warum_wichtig": "Warum das wichtig ist, in ein bis zwei Sätzen.",
+      "quellen": [
+        {
+          "titel": "Testquelle 1",
+          "medium": "Medium 1",
+          "url": "https://example.org/quelle-1",
+          "datum": "2026-11-18",
+          "primaer": true
+        },
+        {
+          "titel": "Testquelle 2",
+          "medium": "Medium 2",
+          "url": "https://example.org/quelle-2",
+          "datum": "2026-11-18",
+          "primaer": false
+        }
+      ],
+      "vertiefung": {
+        "text": "Kontext und Vorgeschichte (Platzhalter).",
+        "links": [
+          {
+            "titel": "Weiterlesen",
+            "medium": "Medium 3",
+            "url": "https://example.org/weiterlesen"
+          }
+        ],
+        "chat_prompt": "Erklär mir den Hintergrund zu dieser Testmeldung."
+      },
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-16-sport-01",
+      "bereich": "sport",
+      "schlagzeile": "Testmeldung 6 vom 16.11. – sport",
+      "kurz": "Das ist eine Testmeldung mit zwei Sätzen. Sie dient nur dazu, die Ansicht zu prüfen.",
+      "status": "unklar",
+      "ereignis_datum": "2026-11-16",
+      "stand": "2026-11-16T06:00:00+01:00",
+      "hintergrund": "Hintergrund in drei bis fünf Sätzen. Hier steht nur Platzhaltertext. Die echte Redaktion füllt dieses Feld.",
+      "warum_wichtig": "Warum das wichtig ist, in ein bis zwei Sätzen.",
+      "quellen": [
+        {
+          "titel": "Testquelle 1",
+          "medium": "Medium 1",
+          "url": "https://example.org/quelle-1",
+          "datum": "2026-11-18",
+          "primaer": true
+        },
+        {
+          "titel": "Testquelle 2",
+          "medium": "Medium 2",
+          "url": "https://example.org/quelle-2",
+          "datum": "2026-11-18",
+          "primaer": false
+        }
+      ],
+      "vertiefung": {
+        "text": "Kontext und Vorgeschichte (Platzhalter).",
+        "links": [
+          {
+            "titel": "Weiterlesen",
+            "medium": "Medium 3",
+            "url": "https://example.org/weiterlesen"
+          }
+        ],
+        "chat_prompt": "Erklär mir den Hintergrund zu dieser Testmeldung."
+      },
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    }
+  ],
+  "facts": [
+    {
+      "id": "2026-11-16-fact-01",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "Fact eins",
+      "text": "Ein Test-Fact in einem Satz.",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Testquelle 1",
+          "medium": "Medium 1",
+          "url": "https://example.org/quelle-1",
+          "datum": "2026-11-18",
+          "primaer": true
+        }
+      ]
+    },
+    {
+      "id": "2026-11-16-fact-02",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "Fact zwei",
+      "text": "Ein Test-Fact in einem Satz.",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Testquelle 1",
+          "medium": "Medium 1",
+          "url": "https://example.org/quelle-1",
+          "datum": "2026-11-18",
+          "primaer": true
+        }
+      ]
+    },
+    {
+      "id": "2026-11-16-fact-03",
+      "art": "zeitlos",
+      "thema": "ki",
+      "titel": "Fact drei",
+      "text": "Ein Test-Fact in einem Satz.",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Testquelle 1",
+          "medium": "Medium 1",
+          "url": "https://example.org/quelle-1",
+          "datum": "2026-11-18",
+          "primaer": true
+        }
+      ]
+    }
+  ],
+  "extra_facts": [
+    {
+      "id": "2026-11-16-extra-01",
+      "art": "zeitlos",
+      "thema": "wirtschaft",
+      "titel": "Extra-Fact 1",
+      "text": "Ein weiterer Test-Fact.",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Testquelle 2",
+          "medium": "Medium 2",
+          "url": "https://example.org/quelle-2",
+          "datum": "2026-11-18",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-16-extra-02",
+      "art": "zeitlos",
+      "thema": "wirtschaft",
+      "titel": "Extra-Fact 2",
+      "text": "Ein weiterer Test-Fact.",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Testquelle 2",
+          "medium": "Medium 2",
+          "url": "https://example.org/quelle-2",
+          "datum": "2026-11-18",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-16-extra-03",
+      "art": "zeitlos",
+      "thema": "wirtschaft",
+      "titel": "Extra-Fact 3",
+      "text": "Ein weiterer Test-Fact.",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Testquelle 2",
+          "medium": "Medium 2",
+          "url": "https://example.org/quelle-2",
+          "datum": "2026-11-18",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-16-extra-04",
+      "art": "zeitlos",
+      "thema": "wirtschaft",
+      "titel": "Extra-Fact 4",
+      "text": "Ein weiterer Test-Fact.",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Testquelle 2",
+          "medium": "Medium 2",
+          "url": "https://example.org/quelle-2",
+          "datum": "2026-11-18",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-16-extra-05",
+      "art": "zeitlos",
+      "thema": "wirtschaft",
+      "titel": "Extra-Fact 5",
+      "text": "Ein weiterer Test-Fact.",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Testquelle 2",
+          "medium": "Medium 2",
+          "url": "https://example.org/quelle-2",
+          "datum": "2026-11-18",
+          "primaer": false
+        }
+      ]
+    }
+  ],
+  "begriff": {
+    "wort": "Testbegriff",
+    "erklaerung": "Erklärung des Begriffs in einem Satz.",
+    "meldung_id": "2026-11-16-ki-01",
+    "status": "bestaetigt",
+    "quellen": [
+      {
+        "titel": "Testquelle 1",
+        "medium": "Medium 1",
+        "url": "https://example.org/quelle-1",
+        "datum": "2026-11-18",
+        "primaer": true
+      }
+    ]
+  }
+}

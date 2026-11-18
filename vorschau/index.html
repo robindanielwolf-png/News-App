@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Daily News</title>
+  <meta name="theme-color" content="#FAF8F3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121418" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Daily News">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hinweise" aria-live="polite"></div>
+  <main id="inhalt">
+    <p class="laden">Lädt …</p>
+  </main>
+  <nav class="navi" aria-label="Navigation">
+    <button class="aktiv" aria-current="page">Heute</button>
+    <button disabled title="kommt in einem späteren Schritt">Archiv</button>
+    <button disabled title="kommt in einem späteren Schritt">Gemerkt</button>
+    <button disabled title="kommt in einem späteren Schritt">Einstellungen</button>
+  </nav>
+  <div id="toast" role="status"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

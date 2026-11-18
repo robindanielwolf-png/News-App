@@ -1,0 +1,10 @@
+{
+  "name": "Daily News",
+  "short_name": "Daily News",
+  "lang": "de",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#1E2F55",
+  "theme_color": "#FAF8F3"
+}
