@@ -1,10 +1,10 @@
 // Service Worker: App-Hülle offline. Tagesdateien speichert app.js selbst (7 Tage).
-const VERSION = '0.1.1';
+const VERSION = '0.1.2';
 const HUELLE = 'news-app-huelle-' + VERSION;
 const DATEIEN = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon.svg'];
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(HUELLE).then(c => c.addAll(DATEIEN)).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(HUELLE).then(c => c.addAll(DATEIEN.map(u => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', (e) => {
   e.waitUntil(caches.keys()
