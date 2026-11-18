@@ -1,5 +1,5 @@
 // Daily News – Schritt 1: Tagesdatei laden, 7 Tage offline speichern, Hinweise, nie leerer Bildschirm.
-const VERSION = '0.1.0';
+const VERSION = '0.1.1';
 const OFFLINE_TAGE = 7;
 
 // Datenquelle: ?daten=test / ?daten=test-kaputt nur für die Vorschau; sonst echter Datenordner.

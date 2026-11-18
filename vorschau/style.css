@@ -6,16 +6,9 @@
   --streit: #5B3E96; --streit-f: #ECE6F7; --unklar: #4A4E57; --unklar-f: #E9E9EC;
   --serif: "Newsreader", ui-serif, "New York", Georgia, serif;
   --sans: "Inter", -apple-system, system-ui, sans-serif;
-  color-scheme: light dark;
+  color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --hg: #121418; --flaeche: #1B1E24; --text: #ECEAE4; --gedaempft: #A3A7B0; --linie: #2A2E36;
-    --akzent: #9DB3E8; --akzent-flaeche: #1E2638;
-    --ok: #7FD3A0; --ok-f: #1A3326; --warn: #F2C66B; --warn-f: #3A2E12;
-    --streit: #C4AEF0; --streit-f: #2D2440; --unklar: #C2C5CC; --unklar-f: #2A2D33;
-  }
-}
+/* Dunkelmodus vorerst aus (18.11.) – Palette steht im Styleguide */
 html { font-size: 106.25%; } /* 17 px */
 @supports (font: -apple-system-body) { html { font: -apple-system-body; } } /* folgt iPhone-Textgröße */
 * { box-sizing: border-box; }
