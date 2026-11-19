@@ -379,8 +379,16 @@
           "url": "https://example.org/test/21",
           "datum": "2026-11-19",
           "primaer": true
+        },
+        {
+          "titel": "Testartikel 41 (fiktiv)",
+          "medium": "Testmagazin Zahlen",
+          "url": "https://example.org/test/41",
+          "datum": "2026-11-19",
+          "primaer": false
         }
-      ]
+      ],
+      "interessenkonflikt": false
     },
     {
       "id": "2026-11-19-fact-2",
@@ -396,8 +404,16 @@
           "url": "https://example.org/test/22",
           "datum": "2026-11-19",
           "primaer": true
+        },
+        {
+          "titel": "Testartikel 42 (fiktiv)",
+          "medium": "Testmagazin Zahlen",
+          "url": "https://example.org/test/42",
+          "datum": "2026-11-19",
+          "primaer": false
         }
-      ]
+      ],
+      "interessenkonflikt": true
     },
     {
       "id": "2026-11-19-fact-3",
@@ -413,8 +429,16 @@
           "url": "https://example.org/test/23",
           "datum": "2026-11-19",
           "primaer": true
+        },
+        {
+          "titel": "Testartikel 43 (fiktiv)",
+          "medium": "Testmagazin Zahlen",
+          "url": "https://example.org/test/43",
+          "datum": "2026-11-19",
+          "primaer": false
         }
-      ]
+      ],
+      "interessenkonflikt": false
     }
   ],
   "extra_facts": [
@@ -432,8 +456,16 @@
           "url": "https://example.org/test/24",
           "datum": "2026-11-19",
           "primaer": true
+        },
+        {
+          "titel": "Testartikel 44 (fiktiv)",
+          "medium": "Testmagazin Zahlen",
+          "url": "https://example.org/test/44",
+          "datum": "2026-11-19",
+          "primaer": false
         }
-      ]
+      ],
+      "interessenkonflikt": false
     },
     {
       "id": "2026-11-19-fact-5",
@@ -449,8 +481,16 @@
           "url": "https://example.org/test/25",
           "datum": "2026-11-19",
           "primaer": true
+        },
+        {
+          "titel": "Testartikel 45 (fiktiv)",
+          "medium": "Testmagazin Zahlen",
+          "url": "https://example.org/test/45",
+          "datum": "2026-11-19",
+          "primaer": false
         }
-      ]
+      ],
+      "interessenkonflikt": false
     },
     {
       "id": "2026-11-19-fact-6",
@@ -466,8 +506,16 @@
           "url": "https://example.org/test/26",
           "datum": "2026-11-19",
           "primaer": true
+        },
+        {
+          "titel": "Testartikel 46 (fiktiv)",
+          "medium": "Testmagazin Zahlen",
+          "url": "https://example.org/test/46",
+          "datum": "2026-11-19",
+          "primaer": false
         }
-      ]
+      ],
+      "interessenkonflikt": false
     },
     {
       "id": "2026-11-19-fact-7",
@@ -483,8 +531,16 @@
           "url": "https://example.org/test/27",
           "datum": "2026-11-19",
           "primaer": true
+        },
+        {
+          "titel": "Testartikel 47 (fiktiv)",
+          "medium": "Testmagazin Zahlen",
+          "url": "https://example.org/test/47",
+          "datum": "2026-11-19",
+          "primaer": false
         }
-      ]
+      ],
+      "interessenkonflikt": false
     },
     {
       "id": "2026-11-19-fact-8",
@@ -500,8 +556,16 @@
           "url": "https://example.org/test/28",
           "datum": "2026-11-19",
           "primaer": true
+        },
+        {
+          "titel": "Testartikel 48 (fiktiv)",
+          "medium": "Testmagazin Zahlen",
+          "url": "https://example.org/test/48",
+          "datum": "2026-11-19",
+          "primaer": false
         }
-      ]
+      ],
+      "interessenkonflikt": false
     }
   ],
   "begriff": {

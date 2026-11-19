@@ -181,5 +181,25 @@ a.quelle:active { background: var(--akzent-flaeche); }
 .lernen-text { font-size: .824rem; line-height: 1.45; color: #D9E0EE; }
 .knopf[aria-disabled="true"] { opacity: .75; }
 
-/* Facts am Ende */
-.facts-seite .karte { margin: 0; }
+/* ---------- Facts + Begriff (Schritt 3) ---------- */
+.knopf.text { background: transparent; border: 0; color: var(--akzent); min-height: 48px; }
+.knopf.links { justify-content: flex-start; text-align: left; padding: 0; font-weight: 600; line-height: 1.35; }
+.uebrig { font-weight: 400; color: #D9E0EE; }
+.mitte { text-align: center; }
+.facts-kopf { display: flex; justify-content: space-between; align-items: baseline; }
+.facts-ueberschrift { font-size: 1.76rem; }
+.fact-karte { padding: 22px 20px; border-radius: 16px; background: var(--flaeche); border: 1px solid var(--linie);
+  display: flex; flex-direction: column; gap: 14px; }
+.fact-titel { margin: 0; font-family: var(--serif); font-size: 1.65rem; line-height: 1.15; font-weight: 700; overflow-wrap: break-word; }
+.fact-text { margin: 0; }
+.fact-quellen { margin: -12px 0; font-size: .765rem; color: var(--gedaempft); line-height: 20px; }
+.fact-quellen a { display: inline-block; color: var(--akzent); padding: 12px 0; line-height: 20px; }
+.fact-knoepfe { display: flex; flex-direction: column; gap: 10px; }
+/* Startseite: Fact-Karten zum Antippen + Begriff */
+.fact-teaser { display: flex; flex-direction: column; gap: 6px; width: 100%; text-align: left; font: inherit; color: inherit; cursor: pointer; }
+.fact-teaser:active { background: var(--akzent-flaeche); }
+.teaser-titel { font-family: var(--serif); font-size: 1.118rem; font-weight: 700; line-height: 1.25; }
+.teaser-text { font-size: .88rem; line-height: 1.45; color: #2C2F36; }
+section.begriff { margin-top: 1.5rem; padding: 16px; background: var(--akzent-flaeche); border-radius: 12px; display: flex; flex-direction: column; gap: 6px; }
+.begriff-wort { margin: 0; font-family: var(--serif); font-size: 1.3rem; font-weight: 700; }
+.begriff-text { margin: 0; font-size: .88rem; line-height: 1.45; color: #2C2F36; }

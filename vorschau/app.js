@@ -1,6 +1,7 @@
 // Daily News – Schritt 1: Tagesdatei laden, 7 Tage offline speichern, Hinweise, nie leerer Bildschirm.
 // Schritt 2: Wisch-Modus mit Ebene 1 (Meldung), Ebene 2 (Hintergrund, Quellen, Positionen, Benchmarks), Ebene 3 (Tiefer einsteigen).
-const VERSION = '0.2.0';
+// Schritt 3: Facts einzeln mit „Nächster Fact“ / „Noch einer“ (Extra-Facts), Begriff des Tages.
+const VERSION = '0.3.0';
 const OFFLINE_TAGE = 7;
 
 // Datenquelle: ?daten=test / ?daten=test-kaputt nur für die Vorschau; sonst echter Datenordner.
@@ -165,8 +166,14 @@ function zeichne() {
       m.map(x => `<li><button class="zeile" data-wisch="${reihe.indexOf(x)}"><span class="schlagzeile">${esc(x.schlagzeile)}</span>${statusChip(x.status)}</button></li>`).join('')
     }</ul></section>`;
   }).join('');
-  const facts = (d.facts || []).map(f => `<div class="karte"><h3>${esc(f.titel || '')}</h3><p>${esc(f.text)}</p></div>`).join('');
+  const facts = (Array.isArray(d.facts) ? d.facts : []).map((f, i) => `<button class="karte fact-teaser" data-fact="${i}">
+      <span class="zeile-oben"><span class="label akzent">${esc(themaName(f.thema) || 'Fact')}</span>${statusChip(f.status)}</span>
+      ${f.titel ? `<span class="teaser-titel">${esc(f.titel)}</span>` : ''}
+      <span class="teaser-text">${esc(f.text)}</span>
+    </button>`).join('');
+  const extraAnzahl = Array.isArray(d.extra_facts) ? d.extra_facts.length : 0;
   const b = d.begriff;
+  const begriffMeldung = b?.meldung_id && d.meldungen.find(m => m.id === b.meldung_id);
   $('inhalt').innerHTML = `
     <header class="kopf">
       <h1>Daily News</h1>
@@ -175,8 +182,15 @@ function zeichne() {
       <button class="knopf haupt start-wisch" data-wisch="0">${svg(ICON_WISCHEN, 18)}Durchwischen starten</button>
     </header>
     ${gruppen}
-    ${facts ? `<h2 class="abschnitt">3 Facts</h2>${facts}` : ''}
-    ${b?.wort ? `<div class="karte begriff"><div class="label">Begriff des Tages</div><h3>${esc(b.wort)}</h3><p>${esc(b.erklaerung)}</p></div>` : ''}
+    ${facts ? `<h2 class="abschnitt">${d.facts.length === 3 ? '3 Facts' : 'Facts'}</h2>${facts}
+      ${extraAnzahl ? `<p class="unterzeile">+ ${extraAnzahl} weitere · „Noch einer“ am Ende des Durchwischens</p>` : ''}` : ''}
+    ${b?.wort ? `<section class="begriff">
+      <div class="zeile-oben"><span class="label akzent">Begriff des Tages</span>${b.status ? statusChip(b.status) : ''}</div>
+      <h3 class="begriff-wort">${esc(b.wort)}</h3>
+      <p class="begriff-text">${esc(b.erklaerung)}</p>
+      ${quellenZeile(b.quellen)}
+      ${begriffMeldung ? `<button class="knopf text links" data-begriff="${esc(begriffMeldung.id)}">Kommt vor in: ${esc(begriffMeldung.schlagzeile)}</button>` : ''}
+    </section>` : ''}
     <p class="transparenz">${esc(d.transparenz || '')}</p>`;
 }
 
@@ -341,20 +355,81 @@ function ebene3(m) {
   </div>`;
 }
 
-function factsSeite(d) {
-  const facts = (d.facts || []).map(f => `<div class="karte"><h3>${esc(f.titel || '')}</h3><p>${esc(f.text)}</p></div>`).join('');
+// ---------- Facts (Schritt 3): eine Karte nach der anderen, danach bis zu 5 Extra-Facts ----------
+const THEMEN = { ki: 'KI', wirtschaft: 'Wirtschaft', sport: 'Sport', koerper: 'Körper', tech: 'Tech', welt: 'Welt', wissen: 'Wissen', natur: 'Natur', geschichte: 'Geschichte' };
+const themaName = (t) => THEMEN[t] || (t ? String(t).charAt(0).toUpperCase() + String(t).slice(1) : '');
+const ICON_PLUS = '<path d="M8 3v10M3 8h10"/>';
+
+function quellenZeile(quellen) {
+  const q = (quellen || []).map(x => link(x.url, esc(x.medium || x.titel || 'Quelle'))).filter(Boolean);
+  return q.length ? `<p class="fact-quellen">Quellen: ${q.join(' · ')}</p>` : '';
+}
+
+function factKarte(f) {
+  const kopf = [themaName(f.thema), f.art === 'zeitlos' ? 'zeitlos' : f.art === 'aktuell' ? 'aktuell' : ''].filter(Boolean).join(' · ');
+  return `<article class="fact-karte">
+    <div class="zeile-oben"><span class="label akzent">${esc(kopf || 'Fact')}</span>${statusChip(f.status)}</div>
+    ${f.titel ? `<h2 class="fact-titel">${esc(f.titel)}</h2>` : ''}
+    <p class="fact-text">${esc(f.text)}</p>
+    ${f.interessenkonflikt ? '<p class="kasten neutral">Hinweis: Meldung über Anthropic, den Hersteller von Claude. Geprüft nach denselben Regeln wie alle anderen.</p>' : ''}
+    ${quellenZeile(f.quellen)}
+  </article>`;
+}
+
+// Alle Facts der Ausgabe: erst die 3 festen, dann der Vorrat.
+function alleFacts(d) {
+  return { haupt: Array.isArray(d.facts) ? d.facts : [], extra: Array.isArray(d.extra_facts) ? d.extra_facts : [] };
+}
+
+function factsSeite() {
   return `<div class="ebene1 facts-seite">
-    <span class="label akzent">Zum Schluss</span>
-    <h1 class="wisch-titel">3 Facts</h1>
-    ${facts}
-    <div class="luft"></div>
-    <button class="knopf haupt" data-aktion="schliessen">Fertig – zurück zur Startseite</button>
+    <div class="facts-kopf"><h1 class="wisch-titel facts-ueberschrift">Facts</h1><span class="unterzeile fact-zaehler" aria-live="polite"></span></div>
+    <div class="fact-platz"></div>
+    <div class="fact-knoepfe"></div>
   </div>`;
 }
 
-const wisch = { offen: false, reihe: [], index: 0 };
+function zeigeFact(i) {
+  const d = zustand.ausgabe;
+  const seite = $('wisch').querySelector('.facts-seite');
+  if (!d || !seite) return;
+  const { haupt, extra } = alleFacts(d);
+  const alle = [...haupt, ...extra];
+  if (!alle.length) {
+    seite.querySelector('.fact-platz').innerHTML = '<p class="unterzeile">Heute keine Facts.</p>';
+    seite.querySelector('.fact-knoepfe').innerHTML = '<button class="knopf haupt" data-aktion="schliessen">Fertig – zurück zur Startseite</button>';
+    return;
+  }
+  wisch.fact = Math.max(0, Math.min(i, alle.length - 1));
+  const istExtra = wisch.fact >= haupt.length;
+  const uebrig = alle.length - 1 - Math.max(wisch.fact, haupt.length - 1);
+  seite.querySelector('.fact-zaehler').textContent = istExtra
+    ? `Extra ${wisch.fact - haupt.length + 1} / ${extra.length}`
+    : `${wisch.fact + 1} / ${haupt.length}`;
+  seite.querySelector('.fact-platz').innerHTML = factKarte(alle[wisch.fact]);
+  const fertig = '<button class="knopf text" data-aktion="schliessen">Fertig – zurück zur Startseite</button>';
+  seite.querySelector('.fact-knoepfe').innerHTML = wisch.fact < haupt.length - 1
+    ? '<button class="knopf" data-aktion="naechster-fact">Nächster Fact</button>'
+    : uebrig > 0
+      ? `<button class="knopf haupt" data-aktion="naechster-fact">${svg(ICON_PLUS, 18)}Noch einer <span class="uebrig">(${uebrig} übrig)</span></button>${fertig}`
+      : `<p class="unterzeile mitte">Das waren alle Facts für heute.</p><button class="knopf haupt" data-aktion="schliessen">Fertig – zurück zur Startseite</button>`;
+  if (wisch.fact >= haupt.length - 1) merkeFortschritt(d.datum, 'durchgewischt');
+}
 
-function wischOeffnen(start) {
+// Für V2 „Fortschritt“ vorbereitet: pro Tag nur lokal festhalten, was gelesen wurde. Nie im Repo.
+function merkeFortschritt(datum, was) {
+  try {
+    const f = JSON.parse(localStorage.getItem('fortschritt') || '{}');
+    f[datum] = { ...(f[datum] || {}), [was]: true };
+    const tage = Object.keys(f).sort().reverse();
+    for (const t of tage.slice(400)) delete f[t];
+    localStorage.setItem('fortschritt', JSON.stringify(f));
+  } catch {}
+}
+
+const wisch = { offen: false, reihe: [], index: 0, fact: 0 };
+
+function wischOeffnen(start, factStart = 0) {
   const d = zustand.ausgabe;
   if (!d) return;
   wisch.reihe = reihenfolge(d);
@@ -372,8 +447,9 @@ function wischOeffnen(start) {
     </div>
     <div class="spur" tabindex="-1">${
       wisch.reihe.map((m, i) => `<article class="seite" aria-label="Meldung ${i + 1} von ${n}">${ebene1(m, d)}${ebene2(m, d, i + 1, n)}${ebene3(m)}</article>`).join('')
-    }<article class="seite" aria-label="Facts">${factsSeite(d)}</article></div>`;
+    }<article class="seite" aria-label="Facts">${factsSeite()}</article></div>`;
   el.hidden = false;
+  zeigeFact(factStart);
   document.body.classList.add('wisch-offen');
   const spur = el.querySelector('.spur');
   spur.scrollLeft = start * spur.clientWidth;
@@ -412,8 +488,22 @@ function wischSchliessen() {
 document.addEventListener('click', (e) => {
   const start = e.target.closest('[data-wisch]');
   if (start && !wisch.offen) return wischOeffnen(Number(start.dataset.wisch) || 0);
+  const factStart = e.target.closest('[data-fact]');
+  if (factStart && !wisch.offen) return wischOeffnen(reihenfolge(zustand.ausgabe).length, Number(factStart.dataset.fact) || 0);
+  const begriff = e.target.closest('[data-begriff]');
+  if (begriff && !wisch.offen) {
+    merkeFortschritt(zustand.ausgabe.datum, 'begriff');
+    const i = reihenfolge(zustand.ausgabe).findIndex(m => m.id === begriff.dataset.begriff);
+    if (i >= 0) wischOeffnen(i);
+    return;
+  }
   if (!wisch.offen) return;
   if (e.target.closest('[data-aktion="schliessen"]')) return wischSchliessen();
+  if (e.target.closest('[data-aktion="naechster-fact"]')) {
+    zeigeFact(wisch.fact + 1);
+    $('wisch').querySelector('.facts-seite').closest('.seite').scrollTo({ top: 0 });
+    return;
+  }
   const ziel = e.target.closest('[data-ziel]');
   if (ziel) {
     const seite = ziel.closest('.seite');
