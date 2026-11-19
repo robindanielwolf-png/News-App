@@ -5,8 +5,9 @@
 // Schritt 5: Korrekturen – Kasten oben in der neuen Ausgabe, Banner über der korrigierten Meldung (Original bleibt).
 // Schritt 6: Einstellungen – Bereiche an/aus, nur lokal auf dem Gerät.
 // Schritt 7: Merken – Lesezeichen für Meldungen und Facts, mit Inhalt lokal gespeichert, Übersicht „Gemerkt“.
+// 0.9.0: Schriften Newsreader + Inter lokal (Styleguide).
 // Schritt 8: „Mehr dazu lernen“ – fertige Frage in die Zwischenablage, dann Claude öffnen (kein Prompt in der URL).
-const VERSION = '0.8.0';
+const VERSION = '0.9.0';
 const OFFLINE_TAGE = 7;
 const ARCHIV_TAGE = 30;
 

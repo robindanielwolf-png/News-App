@@ -1,4 +1,9 @@
 /* Daily News – Styleguide V1 (Design, 18.11.). Basis 17 px, alles in rem. */
+/* Schriften lokal im Repo (offline): Inter + Newsreader, variabel, nur lateinischer Zeichensatz, SIL OFL 1.1 (schriften/OFL-*.txt) */
+@font-face { font-family: "Inter"; src: url("schriften/inter-latin-wght.woff2") format("woff2");
+  font-weight: 400 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Newsreader"; src: url("schriften/newsreader-latin-opsz.woff2") format("woff2");
+  font-weight: 400 700; font-style: normal; font-display: swap; }
 :root {
   --hg: #FAF8F3; --flaeche: #FFFFFF; --text: #17181C; --gedaempft: #5A5D66; --linie: #E4E0D6;
   --akzent: #1E2F55; --akzent-flaeche: #EEF1F7;
