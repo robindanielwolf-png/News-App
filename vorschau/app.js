@@ -5,7 +5,8 @@
 // Schritt 5: Korrekturen – Kasten oben in der neuen Ausgabe, Banner über der korrigierten Meldung (Original bleibt).
 // Schritt 6: Einstellungen – Bereiche an/aus, nur lokal auf dem Gerät.
 // Schritt 7: Merken – Lesezeichen für Meldungen und Facts, mit Inhalt lokal gespeichert, Übersicht „Gemerkt“.
-const VERSION = '0.7.0';
+// Schritt 8: „Mehr dazu lernen“ – fertige Frage in die Zwischenablage, dann Claude öffnen (kein Prompt in der URL).
+const VERSION = '0.8.0';
 const OFFLINE_TAGE = 7;
 const ARCHIV_TAGE = 30;
 
@@ -377,7 +378,7 @@ function ebene3(m) {
     <section class="lernen">
       <span class="lernen-titel">Noch Fragen dazu?</span>
       <span class="lernen-text">Kopiert eine fertige Frage und öffnet Claude. Dort im Chat News &amp; Facts einfügen.</span>
-      <button class="knopf weiss" data-platzhalter="lernen" aria-disabled="true">${svg(ICON_CHAT, 18)}Mehr dazu lernen</button>
+      <button class="knopf weiss" data-lernen="${esc(m.id)}">${svg(ICON_CHAT, 18)}Mehr dazu lernen</button>
     </section>
     <p class="wisch-tipp">Seitlich wischen für die nächste Meldung</p>
   </div>`;
@@ -571,11 +572,13 @@ document.addEventListener('click', (e) => {
     if (block) seite.scrollTo({ top: block.offsetTop - 8, behavior: 'smooth' });
     return;
   }
-  if (e.target.closest('[data-platzhalter="lernen"]')) toast('„Mehr dazu lernen“ kommt in einem späteren Schritt');
+  const lernen = e.target.closest('[data-lernen]');
+  if (lernen) return mehrDazuLernen(wisch.reihe.find(m => m.id === lernen.dataset.lernen));
+  if (e.target.closest('[data-aktion="lernen-zu"]')) return lernFensterZu();
 });
 document.addEventListener('keydown', (e) => {
   if (!wisch.offen) return;
-  if (e.key === 'Escape') wischSchliessen();
+  if (e.key === 'Escape') return $('wisch').querySelector('.lern-fenster') ? lernFensterZu() : wischSchliessen();
   else if (e.key === 'ArrowRight') wischGeheZu(wisch.index + 1);
   else if (e.key === 'ArrowLeft') wischGeheZu(wisch.index - 1);
 });
@@ -690,6 +693,54 @@ async function oeffneArchivTag(datum, meldungId = null) {
       : `Die Ausgabe vom ${kurzDatum(datum)} konnte nicht geladen werden`);
   }
 }
+
+// ---------- „Mehr dazu lernen“ (Schritt 8) ----------
+// Kopiert die fertige Frage (vertiefung.chat_prompt) und öffnet Claude. Die Frage steht nie in der URL –
+// es werden nur öffentliche News-Inhalte kopiert. Eingefügt wird sie im Chat „News & Facts“.
+const CLAUDE_URL = 'https://claude.ai/new';
+
+function lernFrage(m) {
+  const p = typeof m?.vertiefung?.chat_prompt === 'string' ? m.vertiefung.chat_prompt.trim() : '';
+  return p || `Erklär mir den Hintergrund zu dieser Meldung: „${m?.schlagzeile || ''}“`;
+}
+
+// Alter Weg ohne Clipboard-API (läuft synchron im Tipp, daher auch auf älterem iOS).
+function kopiereAlt(text) {
+  const t = document.createElement('textarea');
+  t.value = text; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+  document.body.appendChild(t); t.select(); t.setSelectionRange(0, text.length);
+  let ok = false; try { ok = document.execCommand('copy'); } catch {}
+  t.remove();
+  return ok;
+}
+
+function mehrDazuLernen(m) {
+  if (!m) return;
+  const frage = lernFrage(m);
+  // Beides direkt im Tipp starten: iOS erlaubt Zwischenablage und neues Fenster nur während der Nutzer-Geste.
+  const kopie = navigator.clipboard?.writeText ? navigator.clipboard.writeText(frage) : Promise.reject(new Error('keine API'));
+  const fenster = window.open(CLAUDE_URL, '_blank'); // ohne 'noopener', sonst liefert open() immer null
+  try { if (fenster) fenster.opener = null; } catch {}
+  kopie.then(() => toast('Frage kopiert – in Claude im Chat „News & Facts“ einfügen'))
+    .catch(() => (kopiereAlt(frage) ? toast('Frage kopiert – in Claude im Chat „News & Facts“ einfügen') : lernFensterAuf(frage)));
+  if (fenster === null && !document.hidden) lernFensterAuf(frage); // Fenster blockiert → Frage + Link zeigen
+}
+
+// Rückfall: Frage zum selbst Kopieren + Link zu Claude.
+function lernFensterAuf(frage) {
+  const el = $('wisch');
+  if (!el || el.querySelector('.lern-fenster')) return;
+  el.insertAdjacentHTML('beforeend', `<div class="lern-fenster" role="dialog" aria-modal="true" aria-label="Frage für Claude">
+    <div class="lern-karte">
+      <span class="lernen-titel">Frage für Claude</span>
+      <p class="unterzeile">Text gedrückt halten → „Alles auswählen“ → „Kopieren“. Dann in Claude im Chat „News &amp; Facts“ einfügen.</p>
+      <textarea class="lern-text" readonly rows="5">${esc(frage)}</textarea>
+      <a class="knopf haupt" href="${CLAUDE_URL}" target="_blank" rel="noopener noreferrer">${svg(ICON_CHAT, 18)}Claude öffnen</a>
+      <button class="knopf text" data-aktion="lernen-zu">Schließen</button>
+    </div>
+  </div>`);
+}
+function lernFensterZu() { $('wisch')?.querySelector('.lern-fenster')?.remove(); }
 
 // ---------- Merken (Schritt 7): nur lokal, mit Inhalt, bleibt dauerhaft ----------
 const ICON_LESEZEICHEN = '<path d="M4 2h8v12l-4-3-4 3z"/>';
