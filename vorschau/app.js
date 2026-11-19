@@ -4,7 +4,8 @@
 // Schritt 4: Archiv – mit Netz die letzten 30 Tage, offline die 7 gespeicherten.
 // Schritt 5: Korrekturen – Kasten oben in der neuen Ausgabe, Banner über der korrigierten Meldung (Original bleibt).
 // Schritt 6: Einstellungen – Bereiche an/aus, nur lokal auf dem Gerät.
-const VERSION = '0.6.0';
+// Schritt 7: Merken – Lesezeichen für Meldungen und Facts, mit Inhalt lokal gespeichert, Übersicht „Gemerkt“.
+const VERSION = '0.7.0';
 const OFFLINE_TAGE = 7;
 const ARCHIV_TAGE = 30;
 
@@ -164,6 +165,7 @@ function zeichne() {
   navi();
   if (ansicht.tab === 'archiv') return zeichneArchiv();
   if (ansicht.tab === 'einstellungen') return zeichneEinstellungen();
+  if (ansicht.tab === 'gemerkt') return zeichneGemerkt();
   if (ansicht.tab === 'archivtag' && ansicht.tag) return zeichneAusgabe(ansicht.tag, true);
   const d = zustand.ausgabe;
   if (!d) {
@@ -354,7 +356,10 @@ function ebene2(m, d, nr, gesamt) {
       ${quellenKarten(m.quellen)}
     </section>
     ${m.hinweis_quellen ? `<section class="kasten akzent">${label('Hinweis zu den Quellen', 'akzent')}<p class="klein-text">${esc(m.hinweis_quellen)}</p></section>` : ''}
-    <button class="knopf haupt" data-ziel="ebene3">Tiefer einsteigen${svg(ICON_RUNTER, 18)}</button>
+    <div class="knopf-reihe">
+      <button class="knopf haupt" data-ziel="ebene3">Tiefer einsteigen${svg(ICON_RUNTER, 18)}</button>
+      <button class="knopf quadrat" data-merken="meldung|${esc(m.id)}" aria-label="Merken" aria-pressed="false">${svg(ICON_LESEZEICHEN, 20)}</button>
+    </div>
   </div>`;
 }
 
@@ -413,7 +418,7 @@ function factsSeite() {
 }
 
 function zeigeFact(i) {
-  const d = gezeigteAusgabe();
+  const d = wisch.ausgabe || gezeigteAusgabe();
   const seite = $('wisch').querySelector('.facts-seite');
   if (!d || !seite) return;
   const { haupt, extra } = alleFacts(d);
@@ -430,13 +435,19 @@ function zeigeFact(i) {
     ? `Extra ${wisch.fact - haupt.length + 1} / ${extra.length}`
     : `${wisch.fact + 1} / ${haupt.length}`;
   seite.querySelector('.fact-platz').innerHTML = factKarte(alle[wisch.fact]);
+  merkenKnoepfe();
+  if (wisch.modus === 'fact') {
+    seite.querySelector('.fact-zaehler').textContent = d.datum ? kurzDatum(d.datum) : '';
+    seite.querySelector('.fact-knoepfe').innerHTML = '<button class="knopf haupt" data-aktion="schliessen">Fertig – zurück zu Gemerkt</button>';
+    return;
+  }
   const fertig = '<button class="knopf text" data-aktion="schliessen">Fertig – zurück zur Startseite</button>';
   seite.querySelector('.fact-knoepfe').innerHTML = wisch.fact < haupt.length - 1
     ? '<button class="knopf" data-aktion="naechster-fact">Nächster Fact</button>'
     : uebrig > 0
       ? `<button class="knopf haupt" data-aktion="naechster-fact">${svg(ICON_PLUS, 18)}Noch einer <span class="uebrig">(${uebrig} übrig)</span></button>${fertig}`
       : `<p class="unterzeile mitte">Das waren alle Facts für heute.</p><button class="knopf haupt" data-aktion="schliessen">Fertig – zurück zur Startseite</button>`;
-  if (wisch.fact >= haupt.length - 1) merkeFortschritt(d.datum, 'durchgewischt');
+  if (wisch.modus === 'ausgabe' && wisch.fact >= haupt.length - 1) merkeFortschritt(d.datum, 'durchgewischt');
 }
 
 // Für V2 „Fortschritt“ vorbereitet: pro Tag nur lokal festhalten, was gelesen wurde. Nie im Repo.
@@ -450,29 +461,34 @@ function merkeFortschritt(datum, was) {
   } catch {}
 }
 
-const wisch = { offen: false, reihe: [], index: 0, fact: 0 };
+// modus: 'ausgabe' (normal), 'meldung' / 'fact' (ein einzelner gemerkter Eintrag)
+const wisch = { offen: false, reihe: [], index: 0, fact: 0, ausgabe: null, modus: 'ausgabe' };
+const mitFactsSeite = () => wisch.modus !== 'meldung';
 
-function wischOeffnen(start, factStart = 0) {
-  const d = gezeigteAusgabe();
+function wischOeffnen(start, factStart = 0, opt = {}) {
+  const d = opt.ausgabe || gezeigteAusgabe();
   if (!d) return;
-  wisch.reihe = reihenfolge(d);
+  wisch.ausgabe = d;
+  wisch.modus = opt.modus || 'ausgabe';
+  wisch.reihe = wisch.modus === 'meldung' ? d.meldungen : wisch.modus === 'fact' ? [] : reihenfolge(d);
   wisch.offen = true;
   const n = wisch.reihe.length;
+  const segmente = n + (mitFactsSeite() ? 1 : 0);
   const el = $('wisch');
   el.innerHTML = `
     <div class="wisch-leiste">
-      <div class="fortschritt" role="img" aria-label="Fortschritt">${'<span></span>'.repeat(n + 1)}</div>
+      <div class="fortschritt" role="img" aria-label="Fortschritt">${'<span></span>'.repeat(segmente)}</div>
       <div class="wisch-kopf">
-        <button class="rund" data-aktion="schliessen" aria-label="Zurück zur Liste">${svg(ICON_X, 20)}</button>
+        <button class="rund" data-aktion="schliessen" aria-label="Zurück">${svg(ICON_X, 20)}</button>
         <span class="zaehler" aria-live="polite"></span>
-        <span class="rund-platz" aria-hidden="true"></span>
+        <button class="rund rechts" data-merken-aktuell aria-label="Merken" aria-pressed="false">${svg(ICON_LESEZEICHEN, 20)}</button>
       </div>
     </div>
     <div class="spur" tabindex="-1">${
       wisch.reihe.map((m, i) => `<article class="seite" aria-label="Meldung ${i + 1} von ${n}">${ebene1(m, d)}${ebene2(m, d, i + 1, n)}${ebene3(m)}</article>`).join('')
-    }<article class="seite" aria-label="Facts">${factsSeite()}</article></div>`;
+    }${mitFactsSeite() ? `<article class="seite" aria-label="Facts">${factsSeite()}</article>` : ''}</div>`;
   el.hidden = false;
-  zeigeFact(factStart);
+  if (mitFactsSeite()) zeigeFact(factStart);
   document.body.classList.add('wisch-offen');
   const spur = el.querySelector('.spur');
   spur.scrollLeft = start * spur.clientWidth;
@@ -487,17 +503,19 @@ function wischOeffnen(start, factStart = 0) {
 
 function wischStand(i) {
   const n = wisch.reihe.length;
-  wisch.index = Math.max(0, Math.min(i, n));
+  wisch.index = Math.max(0, Math.min(i, mitFactsSeite() ? n : n - 1));
   const el = $('wisch');
   if (!el.querySelector('.fortschritt')) return;
   el.querySelectorAll('.fortschritt span').forEach((s, k) => s.classList.toggle('an', k <= wisch.index));
   el.querySelector('.fortschritt').setAttribute('aria-label', wisch.index < n ? `Meldung ${wisch.index + 1} von ${n}` : 'Facts');
-  el.querySelector('.zaehler').textContent = wisch.index < n ? `${wisch.index + 1} / ${n}` : 'Facts';
+  el.querySelector('.zaehler').textContent = wisch.modus !== 'ausgabe' ? 'Gemerkt' : wisch.index < n ? `${wisch.index + 1} / ${n}` : 'Facts';
+  merkenKnoepfe();
 }
 
 function wischGeheZu(i) {
   const spur = $('wisch').querySelector('.spur');
-  spur.scrollTo({ left: Math.max(0, Math.min(i, wisch.reihe.length)) * spur.clientWidth, behavior: 'smooth' });
+  const max = mitFactsSeite() ? wisch.reihe.length : wisch.reihe.length - 1;
+  spur.scrollTo({ left: Math.max(0, Math.min(i, max)) * spur.clientWidth, behavior: 'smooth' });
 }
 
 function wischSchliessen() {
@@ -506,6 +524,7 @@ function wischSchliessen() {
   el.hidden = true;
   el.innerHTML = '';
   document.body.classList.remove('wisch-offen');
+  if (ansicht.tab === 'gemerkt') zeichne(); // Liste kann sich durch Merken/Entfernen geändert haben
 }
 
 document.addEventListener('click', (e) => {
@@ -528,8 +547,18 @@ document.addEventListener('click', (e) => {
     if (i >= 0) wischOeffnen(i);
     return;
   }
+  const gOeffnen = e.target.closest('[data-gemerkt-oeffnen]');
+  if (gOeffnen && !wisch.offen) return oeffneGemerkt(gOeffnen.dataset.gemerktOeffnen);
+  const gWeg = e.target.closest('[data-gemerkt-weg]');
+  if (gWeg && !wisch.offen) return entferneGemerkt(gWeg.dataset.gemerktWeg);
   if (!wisch.offen) return;
   if (e.target.closest('[data-aktion="schliessen"]')) return wischSchliessen();
+  if (e.target.closest('[data-merken-aktuell]')) return merkenUmschalten(aktuellerEintrag());
+  const merk = e.target.closest('[data-merken]');
+  if (merk) {
+    const id = merk.dataset.merken.split('|')[1];
+    return merkenUmschalten({ art: 'meldung', objekt: wisch.reihe.find(m => m.id === id) });
+  }
   if (e.target.closest('[data-aktion="naechster-fact"]')) {
     zeigeFact(wisch.fact + 1);
     $('wisch').querySelector('.facts-seite').closest('.seite').scrollTo({ top: 0 });
@@ -562,7 +591,7 @@ const ICON_WEITER = '<path d="M6 3l5 5-5 5"/>';
 const WOCHENTAG = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
 
 function navi() {
-  const aktiv = ansicht.tab === 'einstellungen' ? 'einstellungen'
+  const aktiv = ['einstellungen', 'gemerkt'].includes(ansicht.tab) ? ansicht.tab
     : ansicht.tab === 'heute' || (ansicht.tab === 'archivtag' && ansicht.herkunft === 'heute') ? 'heute' : 'archiv';
   document.querySelectorAll('.navi [data-tab]').forEach(b => {
     const an = b.dataset.tab === aktiv;
@@ -574,7 +603,7 @@ function navi() {
 function zeigeTab(tab) {
   if (ansicht.tab === 'archiv') ansicht.archivScroll = window.scrollY;
   if (tab === 'heute' && ansicht.tab === 'heute') return window.scrollTo({ top: 0, behavior: 'smooth' });
-  ansicht.tab = ['archiv', 'einstellungen'].includes(tab) ? tab : 'heute';
+  ansicht.tab = ['archiv', 'einstellungen', 'gemerkt'].includes(tab) ? tab : 'heute';
   ansicht.tag = null;
   ansicht.scrollNachZeichnen = ansicht.tab === 'archiv' ? ansicht.archivScroll : 0;
   zeichne();
@@ -660,6 +689,101 @@ async function oeffneArchivTag(datum, meldungId = null) {
       ? `Die Ausgabe vom ${kurzDatum(datum)} gibt es nur mit Internet`
       : `Die Ausgabe vom ${kurzDatum(datum)} konnte nicht geladen werden`);
   }
+}
+
+// ---------- Merken (Schritt 7): nur lokal, mit Inhalt, bleibt dauerhaft ----------
+const ICON_LESEZEICHEN = '<path d="M4 2h8v12l-4-3-4 3z"/>';
+const SPEICHER_GEMERKT = 'gemerkt';
+// Eintrag: { art: 'meldung'|'fact', id, datum, am (ISO), inhalt (komplette Meldung bzw. Fact) }
+
+function gemerktListe() {
+  try { const l = JSON.parse(localStorage.getItem(SPEICHER_GEMERKT) || '[]'); return Array.isArray(l) ? l.filter(x => x && x.id && x.inhalt) : []; }
+  catch { return []; }
+}
+function speichereGemerkt(liste) {
+  try { localStorage.setItem(SPEICHER_GEMERKT, JSON.stringify(liste)); return true; }
+  catch { toast('Konnte nicht gemerkt werden – Speicher voll oder gesperrt'); return false; }
+}
+const schluessel = (art, id) => `${art}|${id}`;
+const istGemerkt = (art, id) => gemerktListe().some(x => x.art === art && x.id === id);
+
+function aktuellerEintrag() {
+  if (wisch.index < wisch.reihe.length) return { art: 'meldung', objekt: wisch.reihe[wisch.index] };
+  const { haupt, extra } = alleFacts(wisch.ausgabe || {});
+  return { art: 'fact', objekt: [...haupt, ...extra][wisch.fact] };
+}
+
+function merkenUmschalten({ art, objekt } = {}) {
+  if (!objekt?.id) return;
+  const liste = gemerktListe();
+  const i = liste.findIndex(x => x.art === art && x.id === objekt.id);
+  if (i >= 0) {
+    liste.splice(i, 1);
+    if (speichereGemerkt(liste)) toast('Nicht mehr gemerkt');
+  } else {
+    const datum = wisch.ausgabe?.datum || String(objekt.id).slice(0, 10);
+    liste.unshift({ art, id: objekt.id, datum, am: new Date().toISOString(), inhalt: objekt });
+    if (speichereGemerkt(liste)) toast('Gemerkt – zu finden unter „Gemerkt“');
+  }
+  merkenKnoepfe();
+}
+
+// Alle Lesezeichen-Knöpfe im Wisch-Modus auf den gespeicherten Stand bringen.
+function merkenKnoepfe() {
+  const el = $('wisch');
+  if (!el || el.hidden) return;
+  const setze = (b, an) => { b.setAttribute('aria-pressed', String(an)); b.setAttribute('aria-label', an ? 'Nicht mehr merken' : 'Merken'); b.classList.toggle('voll', an); };
+  el.querySelectorAll('[data-merken]').forEach(b => { const [art, id] = b.dataset.merken.split('|'); setze(b, istGemerkt(art, id)); });
+  const oben = el.querySelector('[data-merken-aktuell]');
+  const e = aktuellerEintrag();
+  if (oben) { oben.hidden = !e.objekt?.id; if (e.objekt?.id) setze(oben, istGemerkt(e.art, e.objekt.id)); }
+}
+
+function zeichneGemerkt() {
+  const liste = gemerktListe();
+  $('inhalt').innerHTML = `
+    <header class="kopf archiv-kopf"><h1>Gemerkt</h1>
+      <div class="meta">${liste.length} ${liste.length === 1 ? 'Eintrag' : 'Einträge'} · nur auf diesem iPhone · bleiben dauerhaft</div></header>
+    ${liste.length ? `<ul class="gemerkt-liste">${liste.map(x => {
+      const bereich = x.art === 'fact' ? 'Fact' : (BEREICHE.find(b => b[0] === x.inhalt.bereich)?.[1] || 'Meldung');
+      const titel = x.art === 'fact' ? (x.inhalt.titel || x.inhalt.text) : x.inhalt.schlagzeile;
+      const k = esc(schluessel(x.art, x.id));
+      return `<li class="gemerkt-zeile">
+        <button class="gemerkt-oeffnen" data-gemerkt-oeffnen="${k}">
+          <span class="label akzent">${esc(bereich)}${/^\d{4}-\d{2}-\d{2}$/.test(x.datum || '') ? ' · ' + esc(kurzDatum(x.datum)) : ''}</span>
+          <span class="gemerkt-titel">${esc(titel || '')}</span>
+        </button>
+        <button class="rund gemerkt-weg voll" data-gemerkt-weg="${k}" aria-label="Nicht mehr merken">${svg(ICON_LESEZEICHEN, 20)}</button>
+      </li>`;
+    }).join('')}</ul>` : '<div class="leer"><h2>Noch nichts gemerkt</h2><p>Tippe in einer Meldung oder bei einem Fact auf das Lesezeichen.</p></div>'}`;
+}
+
+function entferneGemerkt(k) {
+  const liste = gemerktListe();
+  const i = liste.findIndex(x => schluessel(x.art, x.id) === k);
+  if (i < 0) return;
+  liste.splice(i, 1);
+  if (speichereGemerkt(liste)) { toast('Nicht mehr gemerkt'); zeichne(); }
+}
+
+// Öffnet einen gemerkten Eintrag. Ist die Ausgabe noch erreichbar, wird die aktuelle Fassung genommen
+// (z. B. mit Korrektur-Banner) und die gespeicherte Kopie aufgefrischt; sonst die gespeicherte Kopie.
+async function oeffneGemerkt(k) {
+  const liste = gemerktListe();
+  const x = liste.find(y => schluessel(y.art, y.id) === k);
+  if (!x) return;
+  let inhalt = x.inhalt;
+  try {
+    const d = zustand.ausgabe?.datum === x.datum ? zustand.ausgabe : await ladeArchivTag(x.datum);
+    const pool = x.art === 'fact' ? [...(d.facts || []), ...(d.extra_facts || [])] : d.meldungen;
+    const frisch = pool.find(y => y?.id === x.id);
+    if (frisch) { inhalt = frisch; x.inhalt = frisch; speichereGemerkt(liste); }
+  } catch {} // offline oder Datei weg: gespeicherte Kopie reicht
+  if (ansicht.tab !== 'gemerkt') return;
+  const ausgabe = x.art === 'fact'
+    ? { datum: x.datum, meldungen: [], facts: [inhalt], extra_facts: [] }
+    : { datum: x.datum, meldungen: [inhalt] };
+  wischOeffnen(0, 0, { ausgabe, modus: x.art });
 }
 
 // ---------- Einstellungen (Schritt 6): Bereiche an/aus, nur lokal ----------

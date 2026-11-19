@@ -1,5 +1,5 @@
 // Service Worker: App-Hülle offline. Tagesdateien speichert app.js selbst (7 Tage).
-const VERSION = '0.6.0';
+const VERSION = '0.7.0';
 const HUELLE = 'news-app-huelle-' + VERSION;
 const DATEIEN = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon.svg'];
 

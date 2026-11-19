@@ -254,3 +254,20 @@ section.begriff { margin-top: 1.5rem; padding: 16px; background: var(--akzent-fl
 .einst-text { margin: 0; font-size: .94rem; line-height: 1.5; }
 .klein-leer { padding: 2rem 0 0; display: flex; flex-direction: column; gap: 12px; }
 .klein-leer p { margin: 0; }
+
+/* ---------- Merken (Schritt 7) ---------- */
+.rund.rechts { margin-left: 0; margin-right: -10px; }
+.rund-platz { display: none; }
+.voll svg path { fill: currentColor; }
+[data-merken-aktuell].voll, .knopf.quadrat.voll, .gemerkt-weg { color: var(--akzent); }
+.knopf-reihe { display: flex; gap: 10px; }
+.knopf-reihe .knopf.haupt { flex: 1; width: auto; }
+.knopf.quadrat { flex: none; width: 52px; padding: 0; }
+.gemerkt-liste { list-style: none; margin: 0; padding: 0; }
+.gemerkt-zeile { display: flex; gap: 12px; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid var(--linie); }
+.gemerkt-oeffnen { flex: 1; display: flex; flex-direction: column; gap: 4px; min-height: 44px; padding: 8px 0; background: none; border: 0;
+  font: inherit; color: inherit; text-align: left; cursor: pointer; }
+.gemerkt-oeffnen:active { background: var(--akzent-flaeche); }
+.gemerkt-titel { font-family: var(--serif); font-size: 1.06rem; line-height: 1.25; font-weight: 600; overflow-wrap: break-word; }
+.gemerkt-weg { flex: none; margin: 2px -10px 0 0; }
+body.wisch-offen #toast { bottom: auto; top: calc(64px + env(safe-area-inset-top)); } /* im Wisch-Modus nicht über den Knöpfen unten */
