@@ -1,533 +1,550 @@
 {
-  "version": 1,
-  "datum": "2026-11-18",
-  "erstellt_um": "2026-11-18T06:10:00+01:00",
-  "beispiel": true,
-  "transparenz": "TESTDATEN – keine echten Nachrichten. Erstellt für die Vorschau der App.",
-  "korrekturen": [],
-  "meldungen": [
+ "version": 1,
+ "datum": "2026-11-18",
+ "erstellt_um": "2026-11-18T06:10:00+01:00",
+ "beispiel": true,
+ "transparenz": "TESTDATEN – keine echten Nachrichten. Erstellt für die Vorschau der App.",
+ "korrekturen": [
+  {
+   "meldung_id": "2026-11-17-wirt-01",
+   "datum_meldung": "2026-11-17",
+   "korrigiert_am": "2026-11-18",
+   "was_falsch": "Fiktiv: Kaufpreis zu hoch angegeben.",
+   "richtig": "Fiktiv: Der Kaufpreis ist kleiner.",
+   "quellen": [
     {
-      "id": "2026-11-18-de-01",
-      "bereich": "de_eu",
-      "schlagzeile": "Testmeldung: Bundestag beschließt fiktives Gesetz zur Verwaltung",
-      "kurz": "Fiktive Kurzfassung mit den wichtigsten Fakten. Sie dient nur zum Testen der Ansicht.",
-      "status": "bestaetigt",
-      "laeuft_noch": false,
-      "ereignis_datum": "2026-11-18",
-      "stand": "2026-11-18T06:00:00+01:00",
-      "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Hier steht Platzhaltertext. Er ist absichtlich etwas länger, damit man sieht, wie Ebene 2 mit mehr Text wirkt. Die echte Redaktion schreibt hier drei bis fünf Sätze.",
-      "warum_wichtig": "Fiktiv: Warum das für den Alltag oder die Wirtschaft zählt, in ein bis zwei Sätzen.",
-      "quellen": [
-        {
-          "titel": "Testartikel 1 (fiktiv)",
-          "medium": "Testbehörde (Mitteilung)",
-          "url": "https://example.org/test/1",
-          "datum": "2026-11-18",
-          "primaer": true
-        },
-        {
-          "titel": "Testartikel 2 (fiktiv)",
-          "medium": "Testzeitung Nord",
-          "url": "https://example.org/test/2",
-          "datum": "2026-11-18",
-          "primaer": false
-        },
-        {
-          "titel": "Testartikel 3 (fiktiv)",
-          "medium": "Testradio West",
-          "url": "https://example.org/test/3",
-          "datum": "2026-11-18",
-          "primaer": false
-        }
-      ],
-      "vertiefung": {
-        "text": "Kontext zu Testmeldung: Dies ist fiktiver Platzhaltertext für die Vorschau. Er erklärt die Vorgeschichte in einigen Sätzen. Die echte Redaktion füllt dieses Feld täglich. Hier geht es nur um die Darstellung.",
-        "links": [
-          {
-            "titel": "Erklärstück zu Testmeldung (fiktiv)",
-            "medium": "Testmedium Lesen",
-            "url": "https://example.org/lesen/1"
-          },
-          {
-            "titel": "Chronik zum Thema (fiktiv)",
-            "medium": "Testmedium Archiv",
-            "url": "https://example.org/lesen/2"
-          }
-        ],
-        "chat_prompt": "Erklär mir den Hintergrund zu Testmeldung."
-      },
-      "modelle": null,
-      "benchmarks": null,
-      "positionen": null,
-      "interessenkonflikt": false,
-      "korrigiert": null
-    },
-    {
-      "id": "2026-11-18-welt-01",
-      "bereich": "welt",
-      "schlagzeile": "Testmeldung: Streit um fiktives Abkommen – beide Seiten widersprechen sich",
-      "kurz": "Fiktive Kurzfassung mit den wichtigsten Fakten. Sie dient nur zum Testen der Ansicht.",
-      "status": "umstritten",
-      "laeuft_noch": false,
-      "ereignis_datum": "2026-11-09",
-      "stand": "2026-11-18T05:40:00+01:00",
-      "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Hier steht Platzhaltertext. Er ist absichtlich etwas länger, damit man sieht, wie Ebene 2 mit mehr Text wirkt. Die echte Redaktion schreibt hier drei bis fünf Sätze.",
-      "warum_wichtig": "Fiktiv: Warum das für den Alltag oder die Wirtschaft zählt, in ein bis zwei Sätzen.",
-      "quellen": [
-        {
-          "titel": "Testartikel 4 (fiktiv)",
-          "medium": "Testagentur International",
-          "url": "https://example.org/test/4",
-          "datum": "2026-11-09",
-          "primaer": false
-        },
-        {
-          "titel": "Testartikel 5 (fiktiv)",
-          "medium": "Testzeitung Süd",
-          "url": "https://example.org/test/5",
-          "datum": "2026-11-09",
-          "primaer": false
-        }
-      ],
-      "vertiefung": {
-        "text": "Kontext zu Testmeldung: Dies ist fiktiver Platzhaltertext für die Vorschau. Er erklärt die Vorgeschichte in einigen Sätzen. Die echte Redaktion füllt dieses Feld täglich. Hier geht es nur um die Darstellung.",
-        "links": [
-          {
-            "titel": "Erklärstück zu Testmeldung (fiktiv)",
-            "medium": "Testmedium Lesen",
-            "url": "https://example.org/lesen/1"
-          },
-          {
-            "titel": "Chronik zum Thema (fiktiv)",
-            "medium": "Testmedium Archiv",
-            "url": "https://example.org/lesen/2"
-          }
-        ],
-        "chat_prompt": "Erklär mir den Hintergrund zu Testmeldung."
-      },
-      "modelle": null,
-      "benchmarks": null,
-      "positionen": [
-        {
-          "seite": "Regierung (fiktiv)",
-          "position": "Das Abkommen sichere Handel und Stabilität, sagt die Regierung."
-        },
-        {
-          "seite": "Opposition (fiktiv)",
-          "position": "Die Opposition hält die Zusagen für zu vage und fordert Nachverhandlungen."
-        }
-      ],
-      "interessenkonflikt": false,
-      "korrigiert": null,
-      "hinweis_quellen": "Fiktiver Hinweis: Die Originalerklärungen beider Seiten wurden nicht direkt geprüft."
-    },
-    {
-      "id": "2026-11-18-wirt-01",
-      "bereich": "wirtschaft",
-      "schlagzeile": "Testmeldung: Fiktiver Konzern plant Übernahme <Zeichen & \"Sonderzeichen\">",
-      "kurz": "Fiktive Kurzfassung mit den wichtigsten Fakten. Sie dient nur zum Testen der Ansicht.",
-      "status": "eine_quelle",
-      "laeuft_noch": false,
-      "ereignis_datum": "2026-11-18",
-      "stand": "2026-11-18T06:00:00+01:00",
-      "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Hier steht Platzhaltertext. Er ist absichtlich etwas länger, damit man sieht, wie Ebene 2 mit mehr Text wirkt. Die echte Redaktion schreibt hier drei bis fünf Sätze.",
-      "warum_wichtig": "Fiktiv: Warum das für den Alltag oder die Wirtschaft zählt, in ein bis zwei Sätzen.",
-      "quellen": [
-        {
-          "titel": "Testartikel 6 (fiktiv)",
-          "medium": "Testwirtschaftsblatt",
-          "url": "https://example.org/test/6",
-          "datum": "2026-11-18",
-          "primaer": false
-        }
-      ],
-      "vertiefung": {
-        "text": "Kontext zu Testmeldung: Dies ist fiktiver Platzhaltertext für die Vorschau. Er erklärt die Vorgeschichte in einigen Sätzen. Die echte Redaktion füllt dieses Feld täglich. Hier geht es nur um die Darstellung.",
-        "links": [
-          {
-            "titel": "Erklärstück zu Testmeldung (fiktiv)",
-            "medium": "Testmedium Lesen",
-            "url": "https://example.org/lesen/1"
-          },
-          {
-            "titel": "Chronik zum Thema (fiktiv)",
-            "medium": "Testmedium Archiv",
-            "url": "https://example.org/lesen/2"
-          }
-        ],
-        "chat_prompt": "Erklär mir den Hintergrund zu Testmeldung."
-      },
-      "modelle": null,
-      "benchmarks": null,
-      "positionen": null,
-      "interessenkonflikt": false,
-      "korrigiert": null
-    },
-    {
-      "id": "2026-11-18-ki-01",
-      "bereich": "ki_tech",
-      "schlagzeile": "Testmeldung: Modell Gamma 1 veröffentlicht – bisher nur Herstellerangaben",
-      "kurz": "Fiktive Kurzfassung mit den wichtigsten Fakten. Sie dient nur zum Testen der Ansicht.",
-      "status": "eine_quelle",
-      "laeuft_noch": false,
-      "ereignis_datum": "2026-11-18",
-      "stand": "2026-11-18T06:00:00+01:00",
-      "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Hier steht Platzhaltertext. Er ist absichtlich etwas länger, damit man sieht, wie Ebene 2 mit mehr Text wirkt. Die echte Redaktion schreibt hier drei bis fünf Sätze.",
-      "warum_wichtig": "Fiktiv: Warum das für den Alltag oder die Wirtschaft zählt, in ein bis zwei Sätzen.",
-      "quellen": [
-        {
-          "titel": "Testartikel 12 (fiktiv)",
-          "medium": "Hersteller C (Mitteilung)",
-          "url": "https://example.org/test/12",
-          "datum": "2026-11-18",
-          "primaer": true
-        }
-      ],
-      "vertiefung": {
-        "text": "Kontext zu Testmeldung: Dies ist fiktiver Platzhaltertext für die Vorschau. Er erklärt die Vorgeschichte in einigen Sätzen. Die echte Redaktion füllt dieses Feld täglich. Hier geht es nur um die Darstellung.",
-        "links": [
-          {
-            "titel": "Erklärstück zu Testmeldung (fiktiv)",
-            "medium": "Testmedium Lesen",
-            "url": "https://example.org/lesen/1"
-          },
-          {
-            "titel": "Chronik zum Thema (fiktiv)",
-            "medium": "Testmedium Archiv",
-            "url": "https://example.org/lesen/2"
-          }
-        ],
-        "chat_prompt": "Erklär mir den Hintergrund zu Testmeldung."
-      },
-      "modelle": [
-        "Modell Gamma 1"
-      ],
-      "benchmarks": {
-        "hersteller": [
-          {
-            "test": "Testbench Mathe (fiktiv)",
-            "modell": "Modell Gamma 1",
-            "wert": "91,2 %",
-            "quelle": "Hersteller C, Mitteilung",
-            "url": "https://example.org/bench/h3"
-          }
-        ],
-        "unabhaengig": [],
-        "hinweis": "Noch keine unabhängigen Tests – Modell erst seit gestern verfügbar."
-      },
-      "positionen": null,
-      "interessenkonflikt": false,
-      "korrigiert": null
-    },
-    {
-      "id": "2026-11-18-ki-02",
-      "bereich": "ki_tech",
-      "schlagzeile": "Testmeldung: Fiktiver Börsengang – Ausgabepreis soll heute festgelegt werden",
-      "kurz": "Fiktive Kurzfassung mit den wichtigsten Fakten. Sie dient nur zum Testen der Ansicht.",
-      "status": "unklar",
-      "laeuft_noch": true,
-      "ereignis_datum": "2026-11-18",
-      "stand": "2026-11-18T06:00:00+01:00",
-      "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Hier steht Platzhaltertext. Er ist absichtlich etwas länger, damit man sieht, wie Ebene 2 mit mehr Text wirkt. Die echte Redaktion schreibt hier drei bis fünf Sätze.",
-      "warum_wichtig": "Fiktiv: Warum das für den Alltag oder die Wirtschaft zählt, in ein bis zwei Sätzen.",
-      "quellen": [
-        {
-          "titel": "Testartikel 9 (fiktiv)",
-          "medium": "Testfinanzdienst",
-          "url": "https://example.org/test/9",
-          "datum": "2026-11-18",
-          "primaer": false
-        }
-      ],
-      "vertiefung": {
-        "text": "Kontext zu Testmeldung: Dies ist fiktiver Platzhaltertext für die Vorschau. Er erklärt die Vorgeschichte in einigen Sätzen. Die echte Redaktion füllt dieses Feld täglich. Hier geht es nur um die Darstellung.",
-        "links": [
-          {
-            "titel": "Erklärstück zu Testmeldung (fiktiv)",
-            "medium": "Testmedium Lesen",
-            "url": "https://example.org/lesen/1"
-          },
-          {
-            "titel": "Chronik zum Thema (fiktiv)",
-            "medium": "Testmedium Archiv",
-            "url": "https://example.org/lesen/2"
-          }
-        ],
-        "chat_prompt": "Erklär mir den Hintergrund zu Testmeldung."
-      },
-      "modelle": null,
-      "benchmarks": null,
-      "positionen": null,
-      "interessenkonflikt": false,
-      "korrigiert": null
-    },
-    {
-      "id": "2026-11-18-sport-01",
-      "bereich": "sport",
-      "schlagzeile": "Testmeldung: Fiktiver Verein gewinnt Pokalspiel nach Verlängerung mit einer extra langen Schlagzeile",
-      "kurz": "Fiktive Kurzfassung mit den wichtigsten Fakten. Sie dient nur zum Testen der Ansicht.",
-      "status": "bestaetigt",
-      "laeuft_noch": false,
-      "ereignis_datum": "2026-11-18",
-      "stand": "2026-11-18T06:00:00+01:00",
-      "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Hier steht Platzhaltertext. Er ist absichtlich etwas länger, damit man sieht, wie Ebene 2 mit mehr Text wirkt. Die echte Redaktion schreibt hier drei bis fünf Sätze.",
-      "warum_wichtig": "Fiktiv: Warum das für den Alltag oder die Wirtschaft zählt, in ein bis zwei Sätzen.",
-      "quellen": [
-        {
-          "titel": "Testartikel 10 (fiktiv)",
-          "medium": "Testsportportal",
-          "url": "https://example.org/test/10",
-          "datum": "2026-11-18",
-          "primaer": false
-        },
-        {
-          "titel": "Testartikel 11 (fiktiv)",
-          "medium": "Testverband (Mitteilung)",
-          "url": "https://example.org/test/11",
-          "datum": "2026-11-18",
-          "primaer": true
-        }
-      ],
-      "vertiefung": {
-        "text": "Kontext zu Testmeldung: Dies ist fiktiver Platzhaltertext für die Vorschau. Er erklärt die Vorgeschichte in einigen Sätzen. Die echte Redaktion füllt dieses Feld täglich. Hier geht es nur um die Darstellung.",
-        "links": [
-          {
-            "titel": "Erklärstück zu Testmeldung (fiktiv)",
-            "medium": "Testmedium Lesen",
-            "url": "https://example.org/lesen/1"
-          },
-          {
-            "titel": "Chronik zum Thema (fiktiv)",
-            "medium": "Testmedium Archiv",
-            "url": "https://example.org/lesen/2"
-          }
-        ],
-        "chat_prompt": "Erklär mir den Hintergrund zu Testmeldung."
-      },
-      "modelle": null,
-      "benchmarks": null,
-      "positionen": null,
-      "interessenkonflikt": false,
-      "korrigiert": null
+     "titel": "Testartikel 50 (fiktiv)",
+     "medium": "Testwirtschaftsblatt",
+     "url": "https://example.org/test/50",
+     "datum": "2026-11-18",
+     "primaer": false
     }
-  ],
-  "facts": [
-    {
-      "id": "2026-11-18-fact-1",
-      "art": "aktuell",
-      "thema": "ki",
-      "titel": "Test-Fact 1",
-      "text": "Fiktiver Fact Nummer 1 zum Thema ki. Nur für die Vorschau.",
-      "status": "bestaetigt",
-      "quellen": [
-        {
-          "titel": "Testartikel 21 (fiktiv)",
-          "medium": "Teststatistikamt",
-          "url": "https://example.org/test/21",
-          "datum": "2026-11-18",
-          "primaer": true
-        },
-        {
-          "titel": "Testartikel 41 (fiktiv)",
-          "medium": "Testmagazin Zahlen",
-          "url": "https://example.org/test/41",
-          "datum": "2026-11-18",
-          "primaer": false
-        }
-      ],
-      "interessenkonflikt": false
-    },
-    {
-      "id": "2026-11-18-fact-2",
-      "art": "aktuell",
-      "thema": "wirtschaft",
-      "titel": "Test-Fact 2",
-      "text": "Fiktiver Fact Nummer 2 zum Thema wirtschaft. Nur für die Vorschau.",
-      "status": "bestaetigt",
-      "quellen": [
-        {
-          "titel": "Testartikel 22 (fiktiv)",
-          "medium": "Teststatistikamt",
-          "url": "https://example.org/test/22",
-          "datum": "2026-11-18",
-          "primaer": true
-        },
-        {
-          "titel": "Testartikel 42 (fiktiv)",
-          "medium": "Testmagazin Zahlen",
-          "url": "https://example.org/test/42",
-          "datum": "2026-11-18",
-          "primaer": false
-        }
-      ],
-      "interessenkonflikt": true
-    },
-    {
-      "id": "2026-11-18-fact-3",
-      "art": "zeitlos",
-      "thema": "koerper",
-      "titel": "Test-Fact 3",
-      "text": "Fiktiver Fact Nummer 3 zum Thema koerper. Nur für die Vorschau.",
-      "status": "bestaetigt",
-      "quellen": [
-        {
-          "titel": "Testartikel 23 (fiktiv)",
-          "medium": "Teststatistikamt",
-          "url": "https://example.org/test/23",
-          "datum": "2026-11-18",
-          "primaer": true
-        },
-        {
-          "titel": "Testartikel 43 (fiktiv)",
-          "medium": "Testmagazin Zahlen",
-          "url": "https://example.org/test/43",
-          "datum": "2026-11-18",
-          "primaer": false
-        }
-      ],
-      "interessenkonflikt": false
-    }
-  ],
-  "extra_facts": [
-    {
-      "id": "2026-11-18-fact-4",
-      "art": "zeitlos",
-      "thema": "wissen",
-      "titel": "Test-Fact 4",
-      "text": "Fiktiver Fact Nummer 4 zum Thema wissen. Nur für die Vorschau.",
-      "status": "bestaetigt",
-      "quellen": [
-        {
-          "titel": "Testartikel 24 (fiktiv)",
-          "medium": "Teststatistikamt",
-          "url": "https://example.org/test/24",
-          "datum": "2026-11-18",
-          "primaer": true
-        },
-        {
-          "titel": "Testartikel 44 (fiktiv)",
-          "medium": "Testmagazin Zahlen",
-          "url": "https://example.org/test/44",
-          "datum": "2026-11-18",
-          "primaer": false
-        }
-      ],
-      "interessenkonflikt": false
-    },
-    {
-      "id": "2026-11-18-fact-5",
-      "art": "zeitlos",
-      "thema": "wissen",
-      "titel": "Test-Fact 5",
-      "text": "Fiktiver Fact Nummer 5 zum Thema wissen. Nur für die Vorschau.",
-      "status": "bestaetigt",
-      "quellen": [
-        {
-          "titel": "Testartikel 25 (fiktiv)",
-          "medium": "Teststatistikamt",
-          "url": "https://example.org/test/25",
-          "datum": "2026-11-18",
-          "primaer": true
-        },
-        {
-          "titel": "Testartikel 45 (fiktiv)",
-          "medium": "Testmagazin Zahlen",
-          "url": "https://example.org/test/45",
-          "datum": "2026-11-18",
-          "primaer": false
-        }
-      ],
-      "interessenkonflikt": false
-    },
-    {
-      "id": "2026-11-18-fact-6",
-      "art": "zeitlos",
-      "thema": "wissen",
-      "titel": "Test-Fact 6",
-      "text": "Fiktiver Fact Nummer 6 zum Thema wissen. Nur für die Vorschau.",
-      "status": "bestaetigt",
-      "quellen": [
-        {
-          "titel": "Testartikel 26 (fiktiv)",
-          "medium": "Teststatistikamt",
-          "url": "https://example.org/test/26",
-          "datum": "2026-11-18",
-          "primaer": true
-        },
-        {
-          "titel": "Testartikel 46 (fiktiv)",
-          "medium": "Testmagazin Zahlen",
-          "url": "https://example.org/test/46",
-          "datum": "2026-11-18",
-          "primaer": false
-        }
-      ],
-      "interessenkonflikt": false
-    },
-    {
-      "id": "2026-11-18-fact-7",
-      "art": "zeitlos",
-      "thema": "wissen",
-      "titel": "Test-Fact 7",
-      "text": "Fiktiver Fact Nummer 7 zum Thema wissen. Nur für die Vorschau.",
-      "status": "bestaetigt",
-      "quellen": [
-        {
-          "titel": "Testartikel 27 (fiktiv)",
-          "medium": "Teststatistikamt",
-          "url": "https://example.org/test/27",
-          "datum": "2026-11-18",
-          "primaer": true
-        },
-        {
-          "titel": "Testartikel 47 (fiktiv)",
-          "medium": "Testmagazin Zahlen",
-          "url": "https://example.org/test/47",
-          "datum": "2026-11-18",
-          "primaer": false
-        }
-      ],
-      "interessenkonflikt": false
-    },
-    {
-      "id": "2026-11-18-fact-8",
-      "art": "zeitlos",
-      "thema": "wissen",
-      "titel": "Test-Fact 8",
-      "text": "Fiktiver Fact Nummer 8 zum Thema wissen. Nur für die Vorschau.",
-      "status": "bestaetigt",
-      "quellen": [
-        {
-          "titel": "Testartikel 28 (fiktiv)",
-          "medium": "Teststatistikamt",
-          "url": "https://example.org/test/28",
-          "datum": "2026-11-18",
-          "primaer": true
-        },
-        {
-          "titel": "Testartikel 48 (fiktiv)",
-          "medium": "Testmagazin Zahlen",
-          "url": "https://example.org/test/48",
-          "datum": "2026-11-18",
-          "primaer": false
-        }
-      ],
-      "interessenkonflikt": false
-    }
-  ],
-  "begriff": {
-    "wort": "Testbegriff",
-    "erklaerung": "Ein fiktiver Begriff, kurz und ohne Fachjargon erklärt.",
-    "meldung_id": "2026-11-18-wirt-01",
-    "status": "bestaetigt",
-    "quellen": [
-      {
-        "titel": "Testartikel 30 (fiktiv)",
-        "medium": "Testlexikon",
-        "url": "https://example.org/test/30",
-        "datum": null,
-        "primaer": false
-      }
-    ]
+   ]
   }
+ ],
+ "meldungen": [
+  {
+   "id": "2026-11-18-de-01",
+   "bereich": "de_eu",
+   "schlagzeile": "Testmeldung 18.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+   "kurz": "Fiktive Kurzfassung mit den wichtigsten Fakten. Sie dient nur zum Testen der Ansicht.",
+   "status": "bestaetigt",
+   "laeuft_noch": false,
+   "ereignis_datum": "2026-11-18",
+   "stand": "2026-11-18T06:00:00+01:00",
+   "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Hier steht Platzhaltertext. Er ist absichtlich etwas länger, damit man sieht, wie Ebene 2 mit mehr Text wirkt. Die echte Redaktion schreibt hier drei bis fünf Sätze.",
+   "warum_wichtig": "Fiktiv: Warum das für den Alltag oder die Wirtschaft zählt, in ein bis zwei Sätzen.",
+   "quellen": [
+    {
+     "titel": "Testartikel 1 (fiktiv)",
+     "medium": "Testbehörde (Mitteilung)",
+     "url": "https://example.org/test/1",
+     "datum": "2026-11-18",
+     "primaer": true
+    },
+    {
+     "titel": "Testartikel 2 (fiktiv)",
+     "medium": "Testzeitung Nord",
+     "url": "https://example.org/test/2",
+     "datum": "2026-11-18",
+     "primaer": false
+    },
+    {
+     "titel": "Testartikel 3 (fiktiv)",
+     "medium": "Testradio West",
+     "url": "https://example.org/test/3",
+     "datum": "2026-11-18",
+     "primaer": false
+    }
+   ],
+   "vertiefung": {
+    "text": "Kontext zu Testmeldung 18.11.: Dies ist fiktiver Platzhaltertext für die Vorschau. Er erklärt die Vorgeschichte in einigen Sätzen. Die echte Redaktion füllt dieses Feld täglich. Hier geht es nur um die Darstellung.",
+    "links": [
+     {
+      "titel": "Erklärstück zu Testmeldung 18.11. (fiktiv)",
+      "medium": "Testmedium Lesen",
+      "url": "https://example.org/lesen/1"
+     },
+     {
+      "titel": "Chronik zum Thema (fiktiv)",
+      "medium": "Testmedium Archiv",
+      "url": "https://example.org/lesen/2"
+     }
+    ],
+    "chat_prompt": "Erklär mir den Hintergrund zu Testmeldung 18.11.."
+   },
+   "modelle": null,
+   "benchmarks": null,
+   "positionen": null,
+   "interessenkonflikt": false,
+   "korrigiert": null
+  },
+  {
+   "id": "2026-11-18-welt-01",
+   "bereich": "welt",
+   "schlagzeile": "Testmeldung: Streit um fiktives Abkommen – beide Seiten widersprechen sich",
+   "kurz": "Fiktive Kurzfassung mit den wichtigsten Fakten. Sie dient nur zum Testen der Ansicht.",
+   "status": "umstritten",
+   "laeuft_noch": false,
+   "ereignis_datum": "2026-11-09",
+   "stand": "2026-11-18T05:40:00+01:00",
+   "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Hier steht Platzhaltertext. Er ist absichtlich etwas länger, damit man sieht, wie Ebene 2 mit mehr Text wirkt. Die echte Redaktion schreibt hier drei bis fünf Sätze.",
+   "warum_wichtig": "Fiktiv: Warum das für den Alltag oder die Wirtschaft zählt, in ein bis zwei Sätzen.",
+   "quellen": [
+    {
+     "titel": "Testartikel 4 (fiktiv)",
+     "medium": "Testagentur International",
+     "url": "https://example.org/test/4",
+     "datum": "2026-11-09",
+     "primaer": false
+    },
+    {
+     "titel": "Testartikel 5 (fiktiv)",
+     "medium": "Testzeitung Süd",
+     "url": "https://example.org/test/5",
+     "datum": "2026-11-09",
+     "primaer": false
+    }
+   ],
+   "vertiefung": {
+    "text": "Kontext zu Testmeldung: Dies ist fiktiver Platzhaltertext für die Vorschau. Er erklärt die Vorgeschichte in einigen Sätzen. Die echte Redaktion füllt dieses Feld täglich. Hier geht es nur um die Darstellung.",
+    "links": [
+     {
+      "titel": "Erklärstück zu Testmeldung (fiktiv)",
+      "medium": "Testmedium Lesen",
+      "url": "https://example.org/lesen/1"
+     },
+     {
+      "titel": "Chronik zum Thema (fiktiv)",
+      "medium": "Testmedium Archiv",
+      "url": "https://example.org/lesen/2"
+     }
+    ],
+    "chat_prompt": "Erklär mir den Hintergrund zu Testmeldung."
+   },
+   "modelle": null,
+   "benchmarks": null,
+   "positionen": [
+    {
+     "seite": "Regierung (fiktiv)",
+     "position": "Das Abkommen sichere Handel und Stabilität, sagt die Regierung."
+    },
+    {
+     "seite": "Opposition (fiktiv)",
+     "position": "Die Opposition hält die Zusagen für zu vage und fordert Nachverhandlungen."
+    }
+   ],
+   "interessenkonflikt": false,
+   "korrigiert": null,
+   "hinweis_quellen": "Fiktiver Hinweis: Die Originalerklärungen beider Seiten wurden nicht direkt geprüft."
+  },
+  {
+   "id": "2026-11-18-wirt-01",
+   "bereich": "wirtschaft",
+   "schlagzeile": "Testmeldung: Fiktiver Konzern plant Übernahme <Zeichen & \"Sonderzeichen\">",
+   "kurz": "Fiktive Kurzfassung mit den wichtigsten Fakten. Sie dient nur zum Testen der Ansicht.",
+   "status": "eine_quelle",
+   "laeuft_noch": false,
+   "ereignis_datum": "2026-11-18",
+   "stand": "2026-11-18T06:00:00+01:00",
+   "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Hier steht Platzhaltertext. Er ist absichtlich etwas länger, damit man sieht, wie Ebene 2 mit mehr Text wirkt. Die echte Redaktion schreibt hier drei bis fünf Sätze.",
+   "warum_wichtig": "Fiktiv: Warum das für den Alltag oder die Wirtschaft zählt, in ein bis zwei Sätzen.",
+   "quellen": [
+    {
+     "titel": "Testartikel 6 (fiktiv)",
+     "medium": "Testwirtschaftsblatt",
+     "url": "https://example.org/test/6",
+     "datum": "2026-11-18",
+     "primaer": false
+    }
+   ],
+   "vertiefung": {
+    "text": "Kontext zu Testmeldung: Dies ist fiktiver Platzhaltertext für die Vorschau. Er erklärt die Vorgeschichte in einigen Sätzen. Die echte Redaktion füllt dieses Feld täglich. Hier geht es nur um die Darstellung.",
+    "links": [
+     {
+      "titel": "Erklärstück zu Testmeldung (fiktiv)",
+      "medium": "Testmedium Lesen",
+      "url": "https://example.org/lesen/1"
+     },
+     {
+      "titel": "Chronik zum Thema (fiktiv)",
+      "medium": "Testmedium Archiv",
+      "url": "https://example.org/lesen/2"
+     }
+    ],
+    "chat_prompt": "Erklär mir den Hintergrund zu Testmeldung."
+   },
+   "modelle": null,
+   "benchmarks": null,
+   "positionen": null,
+   "interessenkonflikt": false,
+   "korrigiert": null
+  },
+  {
+   "id": "2026-11-18-ki-01",
+   "bereich": "ki_tech",
+   "schlagzeile": "Testmeldung: Modell Gamma 1 veröffentlicht – bisher nur Herstellerangaben",
+   "kurz": "Fiktive Kurzfassung mit den wichtigsten Fakten. Sie dient nur zum Testen der Ansicht.",
+   "status": "eine_quelle",
+   "laeuft_noch": false,
+   "ereignis_datum": "2026-11-18",
+   "stand": "2026-11-18T06:00:00+01:00",
+   "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Hier steht Platzhaltertext. Er ist absichtlich etwas länger, damit man sieht, wie Ebene 2 mit mehr Text wirkt. Die echte Redaktion schreibt hier drei bis fünf Sätze.",
+   "warum_wichtig": "Fiktiv: Warum das für den Alltag oder die Wirtschaft zählt, in ein bis zwei Sätzen.",
+   "quellen": [
+    {
+     "titel": "Testartikel 12 (fiktiv)",
+     "medium": "Hersteller C (Mitteilung)",
+     "url": "https://example.org/test/12",
+     "datum": "2026-11-18",
+     "primaer": true
+    }
+   ],
+   "vertiefung": {
+    "text": "Kontext zu Testmeldung: Dies ist fiktiver Platzhaltertext für die Vorschau. Er erklärt die Vorgeschichte in einigen Sätzen. Die echte Redaktion füllt dieses Feld täglich. Hier geht es nur um die Darstellung.",
+    "links": [
+     {
+      "titel": "Erklärstück zu Testmeldung (fiktiv)",
+      "medium": "Testmedium Lesen",
+      "url": "https://example.org/lesen/1"
+     },
+     {
+      "titel": "Chronik zum Thema (fiktiv)",
+      "medium": "Testmedium Archiv",
+      "url": "https://example.org/lesen/2"
+     }
+    ],
+    "chat_prompt": "Erklär mir den Hintergrund zu Testmeldung."
+   },
+   "modelle": [
+    "Modell Gamma 1"
+   ],
+   "benchmarks": {
+    "hersteller": [
+     {
+      "test": "Testbench Mathe (fiktiv)",
+      "modell": "Modell Gamma 1",
+      "wert": "91,2 %",
+      "quelle": "Hersteller C, Mitteilung",
+      "url": "https://example.org/bench/h3"
+     }
+    ],
+    "unabhaengig": [],
+    "hinweis": "Noch keine unabhängigen Tests – Modell erst seit gestern verfügbar."
+   },
+   "positionen": null,
+   "interessenkonflikt": false,
+   "korrigiert": null
+  },
+  {
+   "id": "2026-11-18-ki-02",
+   "bereich": "ki_tech",
+   "schlagzeile": "Testmeldung: Fiktiver Börsengang – Ausgabepreis soll heute festgelegt werden",
+   "kurz": "Fiktive Kurzfassung mit den wichtigsten Fakten. Sie dient nur zum Testen der Ansicht.",
+   "status": "unklar",
+   "laeuft_noch": true,
+   "ereignis_datum": "2026-11-18",
+   "stand": "2026-11-18T06:00:00+01:00",
+   "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Hier steht Platzhaltertext. Er ist absichtlich etwas länger, damit man sieht, wie Ebene 2 mit mehr Text wirkt. Die echte Redaktion schreibt hier drei bis fünf Sätze.",
+   "warum_wichtig": "Fiktiv: Warum das für den Alltag oder die Wirtschaft zählt, in ein bis zwei Sätzen.",
+   "quellen": [
+    {
+     "titel": "Testartikel 9 (fiktiv)",
+     "medium": "Testfinanzdienst",
+     "url": "https://example.org/test/9",
+     "datum": "2026-11-18",
+     "primaer": false
+    }
+   ],
+   "vertiefung": {
+    "text": "Kontext zu Testmeldung: Dies ist fiktiver Platzhaltertext für die Vorschau. Er erklärt die Vorgeschichte in einigen Sätzen. Die echte Redaktion füllt dieses Feld täglich. Hier geht es nur um die Darstellung.",
+    "links": [
+     {
+      "titel": "Erklärstück zu Testmeldung (fiktiv)",
+      "medium": "Testmedium Lesen",
+      "url": "https://example.org/lesen/1"
+     },
+     {
+      "titel": "Chronik zum Thema (fiktiv)",
+      "medium": "Testmedium Archiv",
+      "url": "https://example.org/lesen/2"
+     }
+    ],
+    "chat_prompt": "Erklär mir den Hintergrund zu Testmeldung."
+   },
+   "modelle": null,
+   "benchmarks": null,
+   "positionen": null,
+   "interessenkonflikt": false,
+   "korrigiert": null
+  },
+  {
+   "id": "2026-11-18-sport-01",
+   "bereich": "sport",
+   "schlagzeile": "Testmeldung: Fiktiver Verein gewinnt Pokalspiel nach Verlängerung mit einer extra langen Schlagzeile",
+   "kurz": "Fiktive Kurzfassung mit den wichtigsten Fakten. Sie dient nur zum Testen der Ansicht.",
+   "status": "bestaetigt",
+   "laeuft_noch": false,
+   "ereignis_datum": "2026-11-18",
+   "stand": "2026-11-18T06:00:00+01:00",
+   "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Hier steht Platzhaltertext. Er ist absichtlich etwas länger, damit man sieht, wie Ebene 2 mit mehr Text wirkt. Die echte Redaktion schreibt hier drei bis fünf Sätze.",
+   "warum_wichtig": "Fiktiv: Warum das für den Alltag oder die Wirtschaft zählt, in ein bis zwei Sätzen.",
+   "quellen": [
+    {
+     "titel": "Testartikel 10 (fiktiv)",
+     "medium": "Testsportportal",
+     "url": "https://example.org/test/10",
+     "datum": "2026-11-18",
+     "primaer": false
+    },
+    {
+     "titel": "Testartikel 11 (fiktiv)",
+     "medium": "Testverband (Mitteilung)",
+     "url": "https://example.org/test/11",
+     "datum": "2026-11-18",
+     "primaer": true
+    }
+   ],
+   "vertiefung": {
+    "text": "Kontext zu Testmeldung: Dies ist fiktiver Platzhaltertext für die Vorschau. Er erklärt die Vorgeschichte in einigen Sätzen. Die echte Redaktion füllt dieses Feld täglich. Hier geht es nur um die Darstellung.",
+    "links": [
+     {
+      "titel": "Erklärstück zu Testmeldung (fiktiv)",
+      "medium": "Testmedium Lesen",
+      "url": "https://example.org/lesen/1"
+     },
+     {
+      "titel": "Chronik zum Thema (fiktiv)",
+      "medium": "Testmedium Archiv",
+      "url": "https://example.org/lesen/2"
+     }
+    ],
+    "chat_prompt": "Erklär mir den Hintergrund zu Testmeldung."
+   },
+   "modelle": null,
+   "benchmarks": null,
+   "positionen": null,
+   "interessenkonflikt": false,
+   "korrigiert": null
+  }
+ ],
+ "facts": [
+  {
+   "id": "2026-11-18-fact-1",
+   "art": "aktuell",
+   "thema": "ki",
+   "titel": "Test-Fact 1",
+   "text": "Fiktiver Fact Nummer 1 zum Thema ki. Nur für die Vorschau.",
+   "status": "bestaetigt",
+   "quellen": [
+    {
+     "titel": "Testartikel 21 (fiktiv)",
+     "medium": "Teststatistikamt",
+     "url": "https://example.org/test/21",
+     "datum": "2026-11-18",
+     "primaer": true
+    },
+    {
+     "titel": "Testartikel 41 (fiktiv)",
+     "medium": "Testmagazin Zahlen",
+     "url": "https://example.org/test/41",
+     "datum": "2026-11-18",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": false
+  },
+  {
+   "id": "2026-11-18-fact-2",
+   "art": "aktuell",
+   "thema": "wirtschaft",
+   "titel": "Test-Fact 2",
+   "text": "Fiktiver Fact Nummer 2 zum Thema wirtschaft. Nur für die Vorschau.",
+   "status": "bestaetigt",
+   "quellen": [
+    {
+     "titel": "Testartikel 22 (fiktiv)",
+     "medium": "Teststatistikamt",
+     "url": "https://example.org/test/22",
+     "datum": "2026-11-18",
+     "primaer": true
+    },
+    {
+     "titel": "Testartikel 42 (fiktiv)",
+     "medium": "Testmagazin Zahlen",
+     "url": "https://example.org/test/42",
+     "datum": "2026-11-18",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": true
+  },
+  {
+   "id": "2026-11-18-fact-3",
+   "art": "zeitlos",
+   "thema": "koerper",
+   "titel": "Test-Fact 3",
+   "text": "Fiktiver Fact Nummer 3 zum Thema koerper. Nur für die Vorschau.",
+   "status": "bestaetigt",
+   "quellen": [
+    {
+     "titel": "Testartikel 23 (fiktiv)",
+     "medium": "Teststatistikamt",
+     "url": "https://example.org/test/23",
+     "datum": "2026-11-18",
+     "primaer": true
+    },
+    {
+     "titel": "Testartikel 43 (fiktiv)",
+     "medium": "Testmagazin Zahlen",
+     "url": "https://example.org/test/43",
+     "datum": "2026-11-18",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": false
+  }
+ ],
+ "extra_facts": [
+  {
+   "id": "2026-11-18-fact-4",
+   "art": "zeitlos",
+   "thema": "wissen",
+   "titel": "Test-Fact 4",
+   "text": "Fiktiver Fact Nummer 4 zum Thema wissen. Nur für die Vorschau.",
+   "status": "bestaetigt",
+   "quellen": [
+    {
+     "titel": "Testartikel 24 (fiktiv)",
+     "medium": "Teststatistikamt",
+     "url": "https://example.org/test/24",
+     "datum": "2026-11-18",
+     "primaer": true
+    },
+    {
+     "titel": "Testartikel 44 (fiktiv)",
+     "medium": "Testmagazin Zahlen",
+     "url": "https://example.org/test/44",
+     "datum": "2026-11-18",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": false
+  },
+  {
+   "id": "2026-11-18-fact-5",
+   "art": "zeitlos",
+   "thema": "wissen",
+   "titel": "Test-Fact 5",
+   "text": "Fiktiver Fact Nummer 5 zum Thema wissen. Nur für die Vorschau.",
+   "status": "bestaetigt",
+   "quellen": [
+    {
+     "titel": "Testartikel 25 (fiktiv)",
+     "medium": "Teststatistikamt",
+     "url": "https://example.org/test/25",
+     "datum": "2026-11-18",
+     "primaer": true
+    },
+    {
+     "titel": "Testartikel 45 (fiktiv)",
+     "medium": "Testmagazin Zahlen",
+     "url": "https://example.org/test/45",
+     "datum": "2026-11-18",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": false
+  },
+  {
+   "id": "2026-11-18-fact-6",
+   "art": "zeitlos",
+   "thema": "wissen",
+   "titel": "Test-Fact 6",
+   "text": "Fiktiver Fact Nummer 6 zum Thema wissen. Nur für die Vorschau.",
+   "status": "bestaetigt",
+   "quellen": [
+    {
+     "titel": "Testartikel 26 (fiktiv)",
+     "medium": "Teststatistikamt",
+     "url": "https://example.org/test/26",
+     "datum": "2026-11-18",
+     "primaer": true
+    },
+    {
+     "titel": "Testartikel 46 (fiktiv)",
+     "medium": "Testmagazin Zahlen",
+     "url": "https://example.org/test/46",
+     "datum": "2026-11-18",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": false
+  },
+  {
+   "id": "2026-11-18-fact-7",
+   "art": "zeitlos",
+   "thema": "wissen",
+   "titel": "Test-Fact 7",
+   "text": "Fiktiver Fact Nummer 7 zum Thema wissen. Nur für die Vorschau.",
+   "status": "bestaetigt",
+   "quellen": [
+    {
+     "titel": "Testartikel 27 (fiktiv)",
+     "medium": "Teststatistikamt",
+     "url": "https://example.org/test/27",
+     "datum": "2026-11-18",
+     "primaer": true
+    },
+    {
+     "titel": "Testartikel 47 (fiktiv)",
+     "medium": "Testmagazin Zahlen",
+     "url": "https://example.org/test/47",
+     "datum": "2026-11-18",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": false
+  },
+  {
+   "id": "2026-11-18-fact-8",
+   "art": "zeitlos",
+   "thema": "wissen",
+   "titel": "Test-Fact 8",
+   "text": "Fiktiver Fact Nummer 8 zum Thema wissen. Nur für die Vorschau.",
+   "status": "bestaetigt",
+   "quellen": [
+    {
+     "titel": "Testartikel 28 (fiktiv)",
+     "medium": "Teststatistikamt",
+     "url": "https://example.org/test/28",
+     "datum": "2026-11-18",
+     "primaer": true
+    },
+    {
+     "titel": "Testartikel 48 (fiktiv)",
+     "medium": "Testmagazin Zahlen",
+     "url": "https://example.org/test/48",
+     "datum": "2026-11-18",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": false
+  }
+ ],
+ "begriff": {
+  "wort": "Testbegriff",
+  "erklaerung": "Ein fiktiver Begriff, kurz und ohne Fachjargon erklärt.",
+  "meldung_id": "2026-11-18-wirt-01",
+  "status": "bestaetigt",
+  "quellen": [
+   {
+    "titel": "Testartikel 30 (fiktiv)",
+    "medium": "Testlexikon",
+    "url": "https://example.org/test/30",
+    "datum": null,
+    "primaer": false
+   }
+  ]
+ }
 }

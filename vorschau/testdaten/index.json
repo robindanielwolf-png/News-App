@@ -5,22 +5,240 @@
     {
       "datum": "2026-11-19",
       "datei": "2026-11-19.json",
-      "meldungen": 6
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 19.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
     },
     {
       "datum": "2026-11-18",
       "datei": "2026-11-18.json",
-      "meldungen": 6
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 18.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
     },
     {
       "datum": "2026-11-17",
       "datei": "2026-11-17.json",
-      "meldungen": 6
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 17.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 1
     },
     {
       "datum": "2026-11-16",
       "datei": "2026-11-16.json",
-      "meldungen": 6
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 16.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-15",
+      "datei": "2026-11-15.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 15.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-14",
+      "datei": "2026-11-14.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 14.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-13",
+      "datei": "2026-11-13.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 13.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-12",
+      "datei": "2026-11-12.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 12.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-11",
+      "datei": "2026-11-11.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 11.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-10",
+      "datei": "2026-11-10.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 10.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-09",
+      "datei": "2026-11-09.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 09.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-07",
+      "datei": "2026-11-07.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 07.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-06",
+      "datei": "2026-11-06.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 06.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-05",
+      "datei": "2026-11-05.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 05.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-04",
+      "datei": "2026-11-04.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 04.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-03",
+      "datei": "2026-11-03.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 03.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-02",
+      "datei": "2026-11-02.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 02.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-11-01",
+      "datei": "2026-11-01.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 01.11.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-31",
+      "datei": "2026-10-31.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 31.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-30",
+      "datei": "2026-10-30.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 30.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-29",
+      "datei": "2026-10-29.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 29.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-28",
+      "datei": "2026-10-28.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 28.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-27",
+      "datei": "2026-10-27.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 27.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-26",
+      "datei": "2026-10-26.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 26.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-25",
+      "datei": "2026-10-25.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 25.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-24",
+      "datei": "2026-10-24.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 24.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-23",
+      "datei": "2026-10-23.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 23.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-22",
+      "datei": "2026-10-22.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 22.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-21",
+      "datei": "2026-10-21.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 21.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-20",
+      "datei": "2026-10-20.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 20.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-19",
+      "datei": "2026-10-19.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 19.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-18",
+      "datei": "2026-10-18.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 18.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-17",
+      "datei": "2026-10-17.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 17.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
+    },
+    {
+      "datum": "2026-10-16",
+      "datei": "2026-10-16.json",
+      "meldungen": 6,
+      "schlagzeile": "Testmeldung 16.10.: Bundestag beschließt fiktives Gesetz zur Verwaltung",
+      "korrigiert": 0
     }
   ]
 }

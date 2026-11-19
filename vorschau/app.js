@@ -1,8 +1,10 @@
 // Daily News – Schritt 1: Tagesdatei laden, 7 Tage offline speichern, Hinweise, nie leerer Bildschirm.
 // Schritt 2: Wisch-Modus mit Ebene 1 (Meldung), Ebene 2 (Hintergrund, Quellen, Positionen, Benchmarks), Ebene 3 (Tiefer einsteigen).
 // Schritt 3: Facts einzeln mit „Nächster Fact“ / „Noch einer“ (Extra-Facts), Begriff des Tages.
-const VERSION = '0.3.0';
+// Schritt 4: Archiv – mit Netz die letzten 30 Tage, offline die 7 gespeicherten.
+const VERSION = '0.4.0';
 const OFFLINE_TAGE = 7;
+const ARCHIV_TAGE = 30;
 
 // Datenquelle: ?daten=test / ?daten=test-kaputt nur für die Vorschau; sonst echter Datenordner.
 const param = new URLSearchParams(location.search).get('daten');
@@ -83,7 +85,11 @@ async function holeJSON(url) {
   return r.json();
 }
 
-let zustand = { ausgabe: null, offline: false, neuesteKaputt: null, indexLeer: false };
+let zustand = { ausgabe: null, offline: false, neuesteKaputt: null, indexLeer: false, indexTage: null };
+// Was gerade gezeigt wird: 'heute', 'archiv' (Liste) oder 'archivtag' (eine ältere Ausgabe).
+const ansicht = { tab: 'heute', tag: null, archivScroll: 0 };
+const archivSpeicher = new Map(); // ältere Tage nur im Arbeitsspeicher, offline bleiben die 7 neuesten
+const gezeigteAusgabe = () => (ansicht.tab === 'archivtag' && ansicht.tag) ? ansicht.tag : zustand.ausgabe;
 let letzterAbruf = 0;
 
 async function aktualisieren() {
@@ -98,7 +104,9 @@ async function aktualisieren() {
   }
   zustand.offline = false;
   zustand.neuesteKaputt = null;
-  const tage = Array.isArray(index?.tage) ? index.tage.slice(0, OFFLINE_TAGE) : [];
+  const alleTage = Array.isArray(index?.tage) ? index.tage.filter(t => t && /^\d{4}-\d{2}-\d{2}$/.test(t.datum)) : [];
+  zustand.indexTage = alleTage.slice(0, ARCHIV_TAGE + 1);
+  const tage = alleTage.slice(0, OFFLINE_TAGE);
   zustand.indexLeer = tage.length === 0;
   const c = await speicher();
   const vorhanden = new Set((await gespeicherteTage()).map(t => t.datum));
@@ -151,6 +159,9 @@ function lesezeit(d) {
 
 function zeichne() {
   hinweise();
+  navi();
+  if (ansicht.tab === 'archiv') return zeichneArchiv();
+  if (ansicht.tab === 'archivtag' && ansicht.tag) return zeichneAusgabe(ansicht.tag, true);
   const d = zustand.ausgabe;
   if (!d) {
     $('inhalt').innerHTML = zustand.offline
@@ -158,6 +169,10 @@ function zeichne() {
       : `<div class="leer"><h2>Noch keine Ausgabe</h2><p>${zustand.indexLeer ? 'Die erste Ausgabe erscheint morgen um 6:30.' : 'Die Ausgabe konnte nicht geladen werden. Versuch es gleich noch einmal.'}</p></div>`;
     return;
   }
+  zeichneAusgabe(d, false);
+}
+
+function zeichneAusgabe(d, archiv) {
   const reihe = reihenfolge(d);
   const gruppen = BEREICHE.map(([key, name, icon]) => {
     const m = reihe.filter(x => x.bereich === key);
@@ -176,8 +191,9 @@ function zeichne() {
   const begriffMeldung = b?.meldung_id && d.meldungen.find(m => m.id === b.meldung_id);
   $('inhalt').innerHTML = `
     <header class="kopf">
-      <h1>Daily News</h1>
-      <div class="meta">${esc(langDatum(d.datum))} · ${d.meldungen.length} Meldungen · ca. ${lesezeit(d)} Min.</div>
+      ${archiv ? `<button class="zurueck" data-tab="archiv">${svg(ICON_ZURUECK, 18)}Archiv</button>` : ''}
+      <h1${archiv ? ' class="archiv-titel"' : ''}>${archiv ? esc(langDatum(d.datum) + ' ' + d.datum.slice(0, 4)) : 'Daily News'}</h1>
+      <div class="meta">${archiv ? 'Ausgabe aus dem Archiv · ' : esc(langDatum(d.datum)) + ' · '}${d.meldungen.length} Meldungen · ca. ${lesezeit(d)} Min.</div>
       ${d.beispiel ? '<span class="beispiel">Testdaten</span>' : ''}
       <button class="knopf haupt start-wisch" data-wisch="0">${svg(ICON_WISCHEN, 18)}Durchwischen starten</button>
     </header>
@@ -390,7 +406,7 @@ function factsSeite() {
 }
 
 function zeigeFact(i) {
-  const d = zustand.ausgabe;
+  const d = gezeigteAusgabe();
   const seite = $('wisch').querySelector('.facts-seite');
   if (!d || !seite) return;
   const { haupt, extra } = alleFacts(d);
@@ -430,7 +446,7 @@ function merkeFortschritt(datum, was) {
 const wisch = { offen: false, reihe: [], index: 0, fact: 0 };
 
 function wischOeffnen(start, factStart = 0) {
-  const d = zustand.ausgabe;
+  const d = gezeigteAusgabe();
   if (!d) return;
   wisch.reihe = reihenfolge(d);
   wisch.offen = true;
@@ -488,12 +504,16 @@ function wischSchliessen() {
 document.addEventListener('click', (e) => {
   const start = e.target.closest('[data-wisch]');
   if (start && !wisch.offen) return wischOeffnen(Number(start.dataset.wisch) || 0);
+  const tab = e.target.closest('[data-tab]');
+  if (tab && !wisch.offen) return zeigeTab(tab.dataset.tab);
+  const archivTag = e.target.closest('[data-tag]');
+  if (archivTag && !wisch.offen) return oeffneArchivTag(archivTag.dataset.tag);
   const factStart = e.target.closest('[data-fact]');
-  if (factStart && !wisch.offen) return wischOeffnen(reihenfolge(zustand.ausgabe).length, Number(factStart.dataset.fact) || 0);
+  if (factStart && !wisch.offen) return wischOeffnen(reihenfolge(gezeigteAusgabe()).length, Number(factStart.dataset.fact) || 0);
   const begriff = e.target.closest('[data-begriff]');
   if (begriff && !wisch.offen) {
-    merkeFortschritt(zustand.ausgabe.datum, 'begriff');
-    const i = reihenfolge(zustand.ausgabe).findIndex(m => m.id === begriff.dataset.begriff);
+    merkeFortschritt(gezeigteAusgabe().datum, 'begriff');
+    const i = reihenfolge(gezeigteAusgabe()).findIndex(m => m.id === begriff.dataset.begriff);
     if (i >= 0) wischOeffnen(i);
     return;
   }
@@ -524,6 +544,104 @@ window.addEventListener('resize', () => {
   const spur = $('wisch').querySelector('.spur');
   spur.scrollLeft = wisch.index * spur.clientWidth;
 });
+
+// ---------- Archiv (Schritt 4) ----------
+const ICON_ZURUECK = '<path d="M10 3L5 8l5 5"/>';
+const ICON_WEITER = '<path d="M6 3l5 5-5 5"/>';
+const WOCHENTAG = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
+
+function navi() {
+  const aktiv = ansicht.tab === 'heute' ? 'heute' : 'archiv';
+  document.querySelectorAll('.navi [data-tab]').forEach(b => {
+    const an = b.dataset.tab === aktiv;
+    b.classList.toggle('aktiv', an);
+    if (an) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current');
+  });
+}
+
+function zeigeTab(tab) {
+  if (ansicht.tab === 'archiv') ansicht.archivScroll = window.scrollY;
+  if (tab === 'heute' && ansicht.tab === 'heute') return window.scrollTo({ top: 0, behavior: 'smooth' });
+  ansicht.tab = tab === 'archiv' ? 'archiv' : 'heute';
+  ansicht.tag = null;
+  ansicht.scrollNachZeichnen = ansicht.tab === 'archiv' ? ansicht.archivScroll : 0;
+  zeichne();
+  if (ansicht.tab === 'heute') window.scrollTo(0, 0);
+}
+
+// Einträge fürs Archiv: mit Netz aus index.json (bis 30 Tage), offline nur die gespeicherten Tage.
+async function archivEintraege() {
+  const gespeichert = await gespeicherteTage();
+  const offlineDa = new Set(gespeichert.map(t => t.datum));
+  const heute = zustand.ausgabe?.datum;
+  let liste = !zustand.offline && zustand.indexTage
+    ? zustand.indexTage.map(t => ({ datum: t.datum, schlagzeile: t.schlagzeile, meldungen: t.meldungen, korrigiert: t.korrigiert }))
+    : gespeichert.map(t => ({ datum: t.datum }));
+  liste = liste.filter(t => t.datum !== heute).slice(0, ARCHIV_TAGE);
+  for (const t of liste) {
+    t.offline = offlineDa.has(t.datum);
+    if (!t.schlagzeile && t.offline) { // Fallback: aus der gespeicherten Datei
+      try {
+        const d = await ladeGespeichert(t.datum);
+        t.schlagzeile = d?.meldungen?.[0]?.schlagzeile; t.meldungen = d?.meldungen?.length;
+        t.korrigiert = (d?.meldungen || []).filter(m => m?.korrigiert).length;
+      } catch {}
+    }
+  }
+  return liste;
+}
+
+let archivLauf = 0;
+async function zeichneArchiv() {
+  const lauf = ++archivLauf;
+  const kopf = `<header class="kopf archiv-kopf"><h1>Archiv</h1>
+    <div class="meta">${zustand.offline ? `Offline – nur die ${OFFLINE_TAGE} gespeicherten Tage` : `Letzte ${ARCHIV_TAGE} Tage · ${OFFLINE_TAGE} Tage offline gespeichert`}</div></header>`;
+  let liste = [];
+  try { liste = await archivEintraege(); } catch {}
+  if (lauf !== archivLauf || ansicht.tab !== 'archiv') return; // inzwischen woanders hin gewechselt
+  const scrollZiel = ansicht.scrollNachZeichnen; ansicht.scrollNachZeichnen = null;
+  $('inhalt').innerHTML = kopf + (liste.length ? `<ul class="archiv-liste">${liste.map(t => {
+    const tag = new Date(t.datum + 'T12:00:00Z');
+    const nurOnline = zustand.offline && !t.offline;
+    const zusatz = [
+      Number.isFinite(t.meldungen) ? `${t.meldungen} Meldungen` : '',
+      t.korrigiert ? `<span class="korr-chip">${t.korrigiert} korrigiert</span>` : '',
+      nurOnline ? '<span>nur mit Internet</span>' : '',
+    ].filter(Boolean).join('');
+    return `<li><button class="archiv-zeile" data-tag="${esc(t.datum)}"${nurOnline ? ' aria-disabled="true"' : ''}>
+      <span class="archiv-datum"><span class="archiv-tag">${tag.getUTCDate()}</span><span class="archiv-wt">${WOCHENTAG[tag.getUTCDay()]}</span></span>
+      <span class="archiv-text"><span class="archiv-schlagzeile">${esc(t.schlagzeile || 'Ausgabe vom ' + kurzDatum(t.datum))}</span>
+        <span class="archiv-meta">${zusatz}</span></span>
+      ${svg(ICON_WEITER)}
+    </button></li>`;
+  }).join('')}</ul>` : `<div class="leer"><h2>Noch kein Archiv</h2><p>${zustand.offline ? 'Offline sind noch keine älteren Ausgaben gespeichert.' : 'Ältere Ausgaben erscheinen hier ab dem zweiten Tag.'}</p></div>`);
+  if (scrollZiel != null) window.scrollTo(0, scrollZiel); // erst nach dem Zeichnen, sonst ist die Liste noch zu kurz
+}
+
+async function ladeArchivTag(datum) {
+  if (archivSpeicher.has(datum)) return archivSpeicher.get(datum);
+  try { const d = await ladeGespeichert(datum); if (istGueltig(d) && d.datum === datum) return d; } catch {}
+  const d = await holeJSON(DATEN + datum + '.json');
+  if (!istGueltig(d) || d.datum !== datum) throw new Error('ungültig');
+  archivSpeicher.set(datum, d);
+  return d;
+}
+
+async function oeffneArchivTag(datum) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(datum)) return;
+  ansicht.archivScroll = window.scrollY;
+  try {
+    const d = await ladeArchivTag(datum);
+    if (ansicht.tab !== 'archiv') return;
+    ansicht.tab = 'archivtag'; ansicht.tag = d;
+    zeichne();
+    window.scrollTo(0, 0);
+  } catch {
+    toast(zustand.offline || !navigator.onLine
+      ? `Die Ausgabe vom ${kurzDatum(datum)} gibt es nur mit Internet`
+      : `Die Ausgabe vom ${kurzDatum(datum)} konnte nicht geladen werden`);
+  }
+}
 
 function toast(text) {
   const t = $('toast'); t.textContent = text; t.classList.add('sichtbar');

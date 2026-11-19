@@ -203,3 +203,23 @@ a.quelle:active { background: var(--akzent-flaeche); }
 section.begriff { margin-top: 1.5rem; padding: 16px; background: var(--akzent-flaeche); border-radius: 12px; display: flex; flex-direction: column; gap: 6px; }
 .begriff-wort { margin: 0; font-family: var(--serif); font-size: 1.3rem; font-weight: 700; }
 .begriff-text { margin: 0; font-size: .88rem; line-height: 1.45; color: #2C2F36; }
+
+/* ---------- Archiv (Schritt 4) ---------- */
+.archiv-kopf { border-bottom: 1px solid var(--text); }
+.archiv-liste { list-style: none; margin: 0; padding: 0; }
+.archiv-liste li { border-bottom: 1px solid var(--linie); }
+.archiv-zeile { display: flex; gap: 14px; align-items: center; width: 100%; min-height: 44px; padding: 14px 0;
+  background: none; border: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+.archiv-zeile:active { background: var(--akzent-flaeche); }
+.archiv-zeile[aria-disabled="true"] { opacity: .5; }
+.archiv-zeile > svg { flex: none; color: var(--gedaempft); }
+.archiv-datum { width: 44px; flex: none; display: flex; flex-direction: column; align-items: center; }
+.archiv-tag { font-family: var(--serif); font-size: 1.41rem; font-weight: 700; line-height: 1; }
+.archiv-wt { font-size: .647rem; font-weight: 600; text-transform: uppercase; color: var(--gedaempft); }
+.archiv-text { flex: 1; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.archiv-schlagzeile { font-family: var(--serif); font-size: 1rem; line-height: 1.25; font-weight: 600; overflow-wrap: break-word; }
+.archiv-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: .706rem; color: var(--gedaempft); }
+.korr-chip { font-weight: 600; color: var(--warn); background: var(--warn-f); padding: 2px 6px; border-radius: 4px; }
+.zurueck { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; margin: -8px 0 4px -6px; padding: 0 6px;
+  background: none; border: 0; font: inherit; font-size: .88rem; font-weight: 600; color: var(--akzent); cursor: pointer; }
+.kopf h1.archiv-titel { font-size: 1.76rem; line-height: 1.15; }
