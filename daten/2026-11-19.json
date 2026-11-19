@@ -1,0 +1,638 @@
+{
+ "version": 1,
+ "datum": "2026-11-19",
+ "erstellt_um": "2026-11-19T18:30:00+01:00",
+ "transparenz": "Recherche per Websuche; Abruf der meisten Nachrichtenseiten (z. B. tagesschau.de, bundesregierung.de, orf.at) war in der Cloud nicht möglich, Quellen stammen aus Suchergebnissen. Mehrere Meldungen betreffen frühe Berichte oder Sekundärquellen und sind entsprechend gekennzeichnet. Meldungen zu Anthropic/Claude tragen einen Interessenkonflikt-Hinweis.",
+ "korrekturen": [],
+ "meldungen": [
+  {
+   "id": "2026-11-19-welt-01",
+   "bereich": "welt",
+   "schlagzeile": "Erstes Dreiergipfel von Trump, Xi und Putin in Shenzhen",
+   "kurz": "Die Präsidenten der USA, Chinas und Russlands haben sich erstmals zu dritt getroffen (Shenzhen, am Rand des APEC-Gipfels). Laut CNBC kündigten sie an, die Ölförderung erhöhen und die UN reformieren zu wollen; Trump will über nukleare Abrüstung sprechen.",
+   "status": "bestaetigt",
+   "laeuft_noch": true,
+   "ereignis_datum": "2026-11-19",
+   "stand": "2026-11-19T15:00:00+01:00",
+   "hintergrund": "Das Treffen wurde am 16. November vom chinesischen Außenministerium angekündigt. Vorab erwarteten US-Beamte laut CNN keine großen Vereinbarungen. Laut Vorberichten stand Atomwaffenkontrolle auf der Tagesordnung; die Ukraine sollte nach Angaben des Weißen Hauses nicht im Mittelpunkt stehen. Die Berichte vom Tag sind frühe Meldungen, Details können sich ändern.",
+   "warum_wichtig": "Drei Atommächte und größte Volkswirtschaften sprechen erstmals gemeinsam – das beeinflusst Rüstungskontrolle, Handel und den Ukraine-Krieg.",
+   "quellen": [
+    {
+     "titel": "Trump, Xi, Putin said they plan to boost oil production, revamp UN after trilateral talks",
+     "medium": "CNBC",
+     "url": "https://www.cnbc.com/2026/11/19/trump-xi-putin-trilateral-meeting-china.html",
+     "datum": "2026-11-19",
+     "primaer": false
+    },
+    {
+     "titel": "‘Groundbreaking’ Trump-Xi-Putin summit: Five key takeaways",
+     "medium": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/11/19/groundbreaking-trump-xi-putin-summit-five-key-takeaways",
+     "datum": "2026-11-19",
+     "primaer": false
+    },
+    {
+     "titel": "Strongman ‘friends,’ AI’s potential and other takeaways from Trump’s China trip and sitdown with Putin and Xi",
+     "medium": "CNN",
+     "url": "https://www.cnn.com/2026/11/19/politics/trump-putin-xi-meeting-takeaways",
+     "datum": "2026-11-19",
+     "primaer": false
+    },
+    {
+     "titel": "Xi Jinping to Hold the China-Russia-U.S. Summit with President Vladimir Putin and President Donald J. Trump",
+     "medium": "Außenministerium der VR China (Ankündigung)",
+     "url": "https://www.mfa.gov.cn/mfa_eng/xw/wsrc/202611/t20261116_12059663.html",
+     "datum": "2026-11-16",
+     "primaer": true
+    }
+   ],
+   "vertiefung": {
+    "text": "Zuletzt hatte Trump im Mai 2026 China besucht. Für Dezember ist ein Besuch von Xi beim G20-Gipfel in Miami geplant. Der Rüstungskontrollvertrag New START ist im Februar ausgelaufen; China lehnt trilaterale Gespräche bisher mit Verweis auf sein kleineres Arsenal ab (Vorberichte).",
+    "links": [
+     {
+      "titel": "What Trump, Putin, and Xi want from their meeting in Shenzhen",
+      "medium": "Atlantic Council",
+      "url": "https://www.atlanticcouncil.org/?p=961216"
+     },
+     {
+      "titel": "Historic first summit among Trump, Xi, Putin will not focus on Ukraine, White House says",
+      "medium": "Kyiv Independent",
+      "url": "https://kyivindependent.com/historic-first-summit-among-trump-xi-putin-will-not-focus-on-ukraine-white-house-says/"
+     }
+    ],
+    "chat_prompt": "Was wurde beim Dreiergipfel in Shenzhen konkret vereinbart, und was bleibt unverbindlich?"
+   },
+   "modelle": null,
+   "benchmarks": null,
+   "positionen": null,
+   "interessenkonflikt": false,
+   "korrigiert": null,
+   "hinweis_quellen": "Nur frühe Berichte vom Gipfeltag; gemeinsame Abschlusserklärung nicht geprüft."
+  },
+  {
+   "id": "2026-11-19-de_eu-01",
+   "bereich": "de_eu",
+   "schlagzeile": "Berlin: Treffen der „Koalition der Willigen“ zur Ukraine mit Merz, Macron und Burnham",
+   "kurz": "Bundeskanzler Merz hat gemeinsam mit Frankreichs Präsident Macron und dem britischen Premier Burnham zum Treffen der „Koalition der Willigen“ ins Kanzleramt geladen. Es ging um laufende Diplomatie, Sicherheitsgarantien für die Ukraine nach dem Krieg und weitere Unterstützung.",
+   "status": "bestaetigt",
+   "laeuft_noch": true,
+   "ereignis_datum": "2026-11-19",
+   "stand": "2026-11-19T16:00:00+01:00",
+   "hintergrund": "Die Bundesregierung hatte das Treffen vorab angekündigt und die Schwerpunkte genannt. Laut ORF nahm auch der ukrainische Präsident Selenskyj teil, die Schlagzeile lautet „Hilfe für Kiew so lange wie nötig“. Die Teilnehmerzahlen werden unterschiedlich angegeben: ORF nennt 26 Staats- und Regierungschefs, die taz 37 Vertreter des Bündnisses, offiziell gehören 34 Staaten dazu. Das Treffen fiel auf denselben Tag wie der Gipfel von Trump, Xi und Putin in China.",
+   "warum_wichtig": "Deutschland steht als Gastgeber im Zentrum der europäischen Ukraine-Diplomatie; es geht um Sicherheitsgarantien für die Zeit nach einem Kriegsende.",
+   "quellen": [
+    {
+     "titel": "Treffen der Koalition der Willigen in Berlin",
+     "medium": "Bundesregierung",
+     "url": "https://www.bundesregierung.de/breg-de/aktuelles/koalition-der-willigen-in-berlin-2461162",
+     "datum": "2026-11-19",
+     "primaer": true
+    },
+    {
+     "titel": "Bundeskanzler Merz lädt zu Treffen der „Koalition der Willigen“ am 19. November in Berlin ein",
+     "medium": "Bundesregierung (Pressemitteilung)",
+     "url": "https://www.bundesregierung.de/breg-de/aktuelles/pressemitteilungen/bundeskanzler-merz-laedt-zu-treffen-der-koalition-der-willigen-am-19-november-in-berlin-ein-2461054",
+     "datum": "2026-11-13",
+     "primaer": true
+    },
+    {
+     "titel": "„Koalition der Willigen“: Hilfe für Kiew „so lange wie nötig“",
+     "medium": "ORF",
+     "url": "https://orf.at/stories/3448674/",
+     "datum": "2026-11-19",
+     "primaer": false
+    },
+    {
+     "titel": "„Koalition der Willigen“ in Berlin: Die große Merz-Show",
+     "medium": "taz",
+     "url": "https://taz.de/Koalition-der-Willigen-in-Berlin/!6231331/",
+     "datum": "2026-11-19",
+     "primaer": false
+    }
+   ],
+   "vertiefung": {
+    "text": "Die „Koalition der Willigen“ ist ein Bündnis von Staaten, das die Ukraine militärisch, finanziell und diplomatisch stützen und nach einem Waffenstillstand Sicherheitsgarantien tragen will. Aussagen einzelner Teilnehmer stammen hier nur aus Medienberichten; Berichte von Staatsmedien wurden nicht als Beleg genutzt.",
+    "links": [
+     {
+      "titel": "Treffen der Koalition der Willigen – Bundeskanzler",
+      "medium": "Bundeskanzler.de",
+      "url": "https://www.bundeskanzler.de/bk-de/aktuelles/treffen-der-koalition-der-willigen-2460904"
+     }
+    ],
+    "chat_prompt": "Welche Sicherheitsgarantien für die Ukraine diskutiert die Koalition der Willigen, und wer würde sie tragen?"
+   },
+   "modelle": null,
+   "benchmarks": null,
+   "positionen": null,
+   "interessenkonflikt": false,
+   "korrigiert": null,
+   "hinweis_quellen": "Teilnehmerzahl je nach Quelle unterschiedlich (26 / 34 / 37)."
+  },
+  {
+   "id": "2026-11-19-wirt-01",
+   "bereich": "wirtschaft",
+   "schlagzeile": "Nvidia: Rekordumsatz von 115,8 Mrd. Dollar, Ausblick 130 Mrd.",
+   "kurz": "Nvidia meldet für das dritte Quartal des Geschäftsjahres 2027 einen Umsatz von 115,8 Mrd. US-Dollar (+103 % zum Vorjahr), davon 107,6 Mrd. im Rechenzentrumsgeschäft. Für das Schlussquartal peilt der Konzern rund 130 Mrd. Dollar an, ohne Rechenzentrums-Chips für China.",
+   "status": "bestaetigt",
+   "laeuft_noch": false,
+   "ereignis_datum": "2026-11-17",
+   "stand": "2026-11-19T12:00:00+01:00",
+   "hintergrund": "Die Zahlen stammen aus der Pressemitteilung des Konzerns; Analysten (LSEG) hatten laut 247wallst rund 109,1 Mrd. Dollar erwartet. Die Bruttomarge lag bei 74,8 % (GAAP). Es war die erste Bilanz nach dem Rücktritt von Gründer Jensen Huang am 11. November; Finanzchefin Colette Kress führt das Unternehmen kommissarisch. Das Veröffentlichungsdatum wird in Quellen teils als 17., teils als 18. November genannt.",
+   "warum_wichtig": "Nvidia gilt als Gradmesser für die KI-Investitionen; das Wachstum zeigt, wie stark die Nachfrage nach KI-Rechenzentren weiter ist.",
+   "quellen": [
+    {
+     "titel": "NVIDIA Announces Financial Results for Third Quarter Fiscal 2027",
+     "medium": "Nvidia Investor Relations",
+     "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx",
+     "datum": "2026-11-17",
+     "primaer": true
+    },
+    {
+     "titel": "NVIDIA Q3 2027: $115.8 Billion Revenue, Six Straight Beats, and What Comes Next",
+     "medium": "24/7 Wall St.",
+     "url": "https://247wallst.com/cards/nvidia-q3-2027-earnings-nvda-01m7nph36m2fmpwcfatxg16f2z",
+     "datum": "2026-11-17",
+     "primaer": false
+    },
+    {
+     "titel": "NVIDIA legt Quartalszahlen vor",
+     "medium": "finanzen.net",
+     "url": "https://www.finanzen.net/nachricht/zertifikate/nvidia-legt-quartalszahlen-vor-16073116",
+     "datum": "2026-11-18",
+     "primaer": false
+    }
+   ],
+   "vertiefung": {
+    "text": "Nvidia liefert die Chips für den Großteil der KI-Rechenzentren. Am 11. November hatte der Verwaltungsrat laut SEC-Meldung den Rücktritt von Huang als CEO und Verwaltungsratsmitglied akzeptiert; Harvey C. Jones wurde erster Verwaltungsratsvorsitzender. Hintergründe zum Rücktritt aus Nebenquellen sind nicht gesichert und werden hier nicht berichtet.",
+    "links": [
+     {
+      "titel": "NVIDIA CORP – Form 8-K (CEO-Wechsel)",
+      "medium": "SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvda-20261111.htm"
+     }
+    ],
+    "chat_prompt": "Was bedeuten Nvidias Quartalszahlen und der CEO-Wechsel für den KI-Markt?"
+   },
+   "modelle": null,
+   "benchmarks": null,
+   "positionen": null,
+   "interessenkonflikt": false,
+   "korrigiert": null
+  },
+  {
+   "id": "2026-11-19-wirt-02",
+   "bereich": "wirtschaft",
+   "schlagzeile": "Anthropic-Börsengang: Ausgabepreis 83 Dollar, Schlusskurs rund 97 Dollar",
+   "kurz": "Anthropic ist an der Nasdaq (Kürzel ANT) gestartet: Ausgabepreis 83 Dollar, erster Kurs 111,50 Dollar, Schluss am ersten Handelstag rund 97 Dollar (ca. +17 %). Angaben zu Bewertung und Erlös gehen in den Quellen auseinander.",
+   "status": "umstritten",
+   "laeuft_noch": false,
+   "ereignis_datum": "2026-11-19",
+   "stand": "2026-11-19T18:00:00+01:00",
+   "hintergrund": "Die Preisspanne lag zunächst bei 70 bis 78 Dollar; das Angebot wurde laut Berichten wegen hoher Nachfrage von 825 auf 980 Millionen Aktien erhöht. Zur Bewertung nennen Quellen rund 1,5 Billionen bis rund 2 Billionen Dollar, zum Emissionserlös 81,3 bis 107,3 Mrd. Dollar. Schlusskurs: 97,17 bzw. 96,97 Dollar je nach Quelle. Der DAX schloss am 18.11. laut dpa-AFX 1,19 % tiefer bei 25.736 Punkten.",
+   "warum_wichtig": "Einer der größten Börsengänge überhaupt – er zeigt, wie hoch der Markt KI-Unternehmen bewertet.",
+   "quellen": [
+    {
+     "titel": "Anthropic Aktie: Rekord-IPO schließt über Ausgabepreis, Märkte geraten unter Druck",
+     "medium": "Goldesel",
+     "url": "https://goldesel.de/aktien/news/anthropic-aktie-rekord-ipo-schliesst-uber-ausgabepreis-markte-geraten-unter-druck",
+     "datum": "2026-11-19",
+     "primaer": false
+    },
+    {
+     "titel": "Anthropic-IPO: Fulminanter Börsenstart – Erstkurs liegt deutlich über Ausgabepreis",
+     "medium": "finanzen.at",
+     "url": "https://www.finanzen.at/nachrichten/aktien/anthropic-ipo-fulminanter-boersenstart-erstkurs-liegt-deutlich-ueber-ausgabepreis-1036784696",
+     "datum": "2026-11-19",
+     "primaer": false
+    },
+    {
+     "titel": "Anthropic-IPO: Der erste Kurs ist da!",
+     "medium": "Der Aktionär",
+     "url": "https://www.deraktionaer.de/artikel/aktien/anthropic-ipo-der-erste-kurs-ist-da-20446730.html",
+     "datum": "2026-11-19",
+     "primaer": false
+    }
+   ],
+   "vertiefung": {
+    "text": "Ein Börsengang (IPO) macht ein Unternehmen erstmals an der Börse handelbar. Diese Meldung betrifft den Arbeitgeber der Redaktions-KI (Claude); deshalb ist ein Interessenkonflikt vermerkt. Quellen sind Börsen- und Finanzportale; Primärquelle (Prospekt/Pressemitteilung) wurde nicht abgerufen.",
+    "links": [
+     {
+      "titel": "Anthropic-IPO: Das müssen Anleger zum Rekord-Börsengang wissen",
+      "medium": "Börse Online",
+      "url": "https://www.boerse-online.de/nachrichten/aktien/anthropic-ipo-das-muessen-anleger-zum-rekord-boersengang-wissen-20446089.html"
+     }
+    ],
+    "chat_prompt": "Wie ist der Anthropic-Börsengang im Vergleich zu anderen Mega-IPOs einzuordnen?"
+   },
+   "modelle": null,
+   "benchmarks": null,
+   "positionen": [
+    {
+     "seite": "Quellen mit rund 1,5 Billionen Dollar",
+     "position": "Bewertung ca. 1,5 Billionen Dollar, Erlös aus dem Hauptteil 81,3 Mrd. Dollar."
+    },
+    {
+     "seite": "Quellen mit rund 2 Billionen Dollar",
+     "position": "Börsenwert zum ersten Kurs ca. 2 Billionen Dollar, Emissionserlös 107,3 Mrd. Dollar."
+    }
+   ],
+   "interessenkonflikt": true,
+   "korrigiert": null,
+   "hinweis_quellen": "Bewertung/Erlös zwischen Quellen widersprüchlich; nur Börsen-/Finanzportale gefunden."
+  },
+  {
+   "id": "2026-11-19-ki-01",
+   "bereich": "ki_tech",
+   "schlagzeile": "Claude Fable 5.2: vorn im Artificial-Analysis-Index, Konkurrenz führt in anderen Tests",
+   "kurz": "Anthropic hat am 9. November Claude Fable 5.2 (öffentlich) und Mythos 5.2 (beschränkter Zugang) vorgestellt. Im Artificial-Analysis-Index liegt Fable 5.2 mit 65 vor Gemini 4 Carbon (60); bei der LMArena-Textwertung führte zuletzt Gemini 4 Carbon (Fable 5.2 dort nicht belegt).",
+   "status": "unklar",
+   "laeuft_noch": false,
+   "ereignis_datum": "2026-11-09",
+   "stand": "2026-11-19T12:00:00+01:00",
+   "hintergrund": "Fable 5.2 erreicht den Spitzenwert nur mit höchstem Rechenaufwand und dafür deutlich höheren Kosten pro Aufgabe als Opus 5.5. Laut einem Bericht schneidet es bei mehreren Tests mit „high“ besser ab als mit „max“. Der Preis pro Token sei um 20 % auf 8 $ (Eingabe) und 40 $ (Ausgabe) gesenkt worden. Unabhängige Tests zu Mythos 5.2 fehlen; die Zahlen dort stammen vom Hersteller. Die meisten Einzelwerte stammen aus Sekundärseiten, nicht direkt von Artificial Analysis.",
+   "warum_wichtig": "Zeigt, wie eng die Spitzenmodelle beieinander liegen und dass „Platz 1“ stark vom Test und Rechenaufwand abhängt.",
+   "quellen": [
+    {
+     "titel": "Introducing Claude Fable 5.2 and Claude Mythos 5.2",
+     "medium": "Anthropic",
+     "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+     "datum": "2026-11-09",
+     "primaer": true
+    },
+    {
+     "titel": "Claude Fable 5.2 Knocks Gemini Off the A.I. Throne",
+     "medium": "Trending Topics",
+     "url": "https://www.trendingtopics.eu/anthropic-fable-5-2-gemini-ai-throne/",
+     "datum": "2026-11",
+     "primaer": false
+    },
+    {
+     "titel": "Claude Fable 5.2 Takes the #1 Benchmark Spot, Then Tells You Not to Use Its Top Setting",
+     "medium": "Admix",
+     "url": "https://admix.software/blog/claude-fable-5-2-mythos-5-2-launch",
+     "datum": "2026-11",
+     "primaer": false
+    }
+   ],
+   "vertiefung": {
+    "text": "Redaktionshinweis: Diese Meldung betrifft Anthropic/Claude, also die Redaktions-KI selbst (Interessenkonflikt). Der Gemini-4-Carbon-Wert der LMArena stammt aus einem früheren Zeitpunkt und ist nicht direkt mit Fable 5.2 verglichen. Ein direkter Vergleich mit GPT-6 Astra wurde nicht gefunden.",
+    "links": [
+     {
+      "titel": "Artificial Analysis: Gemini 4 Argon / Top-3-Labs",
+      "medium": "Artificial Analysis",
+      "url": "https://artificialanalysis.ai/articles/gemini-4-argon-google-top-three-labs"
+     },
+     {
+      "titel": "Claude Fable 5.2: Review, Benchmarks and Reactions",
+      "medium": "GPTunneL",
+      "url": "https://www.gptunnel.ru/en/blog/claude-fable-5-2"
+     }
+    ],
+    "chat_prompt": "Vergleiche Claude Fable 5.2, Gemini 4 Carbon und GPT-6 Astra: Wo liegt wer vorn, und wie belastbar sind die Tests?"
+   },
+   "modelle": [
+    "Claude Fable 5.2",
+    "Gemini 4 Carbon",
+    "GPT-6 Astra"
+   ],
+   "benchmarks": {
+    "hersteller": [
+     {
+      "test": "Hersteller-Benchmarks (CVE Rediscovery, Mythos 5.2)",
+      "modell": "Claude Mythos 5.2",
+      "wert": "89,6 % (Vorgänger Mythos 5.1: 78,3 %) – eigene Angabe, Zugang beschränkt",
+      "quelle": "Anthropic, Ankündigung",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+     }
+    ],
+    "unabhaengig": [
+     {
+      "test": "Artificial Analysis Intelligence Index v5.0.1 (max. Aufwand)",
+      "wert": "Fable 5.2: 65 · Gemini 4 Carbon: 60 · Opus 5.5: 59",
+      "vorn": "Fable 5.2",
+      "vergleich_mit": null,
+      "nur_eine_quelle": true,
+      "quelle": "Trending Topics (berichtet Artificial Analysis)",
+      "url": "https://www.trendingtopics.eu/anthropic-fable-5-2-gemini-ai-throne/"
+     },
+     {
+      "test": "LMArena Text (Debüt von Gemini 4 Carbon, Oktober; Fable 5.2 dort nicht belegt)",
+      "wert": "Gemini 4 Carbon: 1.528 Elo · Gemini 4 Argon: 1.520",
+      "vorn": "Gemini 4 Carbon",
+      "vergleich_mit": null,
+      "nur_eine_quelle": true,
+      "quelle": "OfficeChai (Sekundärbericht)",
+      "url": "https://officechai.com/ai/gemini-4-carbon-tops-text-arena-places-2nd-on-agent-arena/"
+     },
+     {
+      "test": "Kosten pro Aufgabe (Artificial Analysis, max. Aufwand)",
+      "wert": "Fable 5.2: ca. 26,50 $ · Opus 5.5: ca. 10 $",
+      "vorn": "Claude Opus 5.5",
+      "vergleich_mit": null,
+      "nur_eine_quelle": true,
+      "quelle": "Admix (berichtet Artificial Analysis)",
+      "url": "https://admix.software/blog/claude-fable-5-2-mythos-5-2-launch"
+     }
+    ],
+    "hinweis": "Kein direkter Test mit GPT-6 Astra gefunden; Tests nutzen unterschiedliche Indexversionen/Zeitpunkte."
+   },
+   "positionen": null,
+   "interessenkonflikt": true,
+   "korrigiert": null,
+   "hinweis_quellen": "Unabhängige Werte nur über Sekundärseiten."
+  },
+  {
+   "id": "2026-11-19-ki-02",
+   "bereich": "ki_tech",
+   "schlagzeile": "Nvidia-Gründer Jensen Huang tritt als CEO zurück – Kress übernimmt kommissarisch",
+   "kurz": "Der Nvidia-Verwaltungsrat hat laut SEC-Meldung am 11. November den Rücktritt von Jensen Huang als Präsident, CEO und Verwaltungsratsmitglied akzeptiert. CFO Colette Kress führt das Unternehmen kommissarisch, die Nachfolgesuche läuft.",
+   "status": "bestaetigt",
+   "laeuft_noch": true,
+   "ereignis_datum": "2026-11-11",
+   "stand": "2026-11-19T12:00:00+01:00",
+   "hintergrund": "Der Rücktritt wurde mit sofortiger Wirkung angenommen; Harvey C. Jones wurde erster Verwaltungsratsvorsitzender. Mehrere Medien berichten übereinstimmend, die Aktie sei vorbörslich um mehr als 10 % gefallen. Spekulative Hintergründe aus Einzelmeldungen sind nicht bestätigt und werden hier nicht aufgeführt. Die Quartalszahlen vom 17. November waren die ersten ohne Huang.",
+   "warum_wichtig": "Nvidia ist das wichtigste Unternehmen der KI-Hardware; ein Führungswechsel an der Spitze betrifft Anleger und die gesamte Branche.",
+   "quellen": [
+    {
+     "titel": "NVIDIA CORP – Form 8-K: Announces CEO Transition",
+     "medium": "SEC",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+     "datum": "2026-11-11",
+     "primaer": true
+    },
+    {
+     "titel": "Nvidia CEO and co-founder Jensen Huang steps down",
+     "medium": "Onmanorama",
+     "url": "https://www.onmanorama.com/news/business/2026/11/12/nvidia-ceo-and-co-founder-jensen-huang-steps-down.amp.html",
+     "datum": "2026-11-12",
+     "primaer": false
+    },
+    {
+     "titel": "Jensen Huang leaves Nvidia, Colette Kress takes over on an interim basis",
+     "medium": "Paperjam",
+     "url": "https://en.paperjam.lu/article/jensen-huang-leaves-nvidia-colette-kress-takes-over-on-an-interim-basis",
+     "datum": "2026-11-12",
+     "primaer": false
+    }
+   ],
+   "vertiefung": {
+    "text": "Huang hatte Nvidia 33 Jahre geprägt. Die Meldung ist älter als 24 Stunden, wird aber wegen der Nvidia-Zahlen vom 17.11. und der laufenden Nachfolgesuche aufgenommen.",
+    "links": [
+     {
+      "titel": "Jensen Huang resigns after 33 years at Nvidia",
+      "medium": "YourStory",
+      "url": "https://yourstory.com/2026/11/jensen-huang-resigns-after-33-years-at-nvidia"
+     }
+    ],
+    "chat_prompt": "Wer kommt als neuer Nvidia-CEO infrage, und welche Folgen hat der Wechsel?"
+   },
+   "modelle": null,
+   "benchmarks": null,
+   "positionen": null,
+   "interessenkonflikt": false,
+   "korrigiert": null
+  },
+  {
+   "id": "2026-11-19-sport-01",
+   "bereich": "sport",
+   "schlagzeile": "Fußball: DFB-Elf schlägt die Niederlande 5:0 und gewinnt Nations-League-Gruppe",
+   "kurz": "Die deutsche Nationalmannschaft hat am 16. November im Berliner Olympiastadion die Niederlande 5:0 (1:0) besiegt und die Nations-League-Gruppe gewonnen. Das Viertelfinale steigt im März 2027.",
+   "status": "bestaetigt",
+   "laeuft_noch": false,
+   "ereignis_datum": "2026-11-16",
+   "stand": "2026-11-19T12:00:00+01:00",
+   "hintergrund": "Die Tore erzielten laut Spielbericht Scherhant, Wirtz (2), Schlotterbeck und Gruda. Die Niederlande wurden mit gleichen Punkten Zweiter. Die Gruppe wird in Quellen als A2 oder A4 bezeichnet, überwiegend A2. Am 18. und 19. November gab es kein Länderspiel der deutschen Männer; die Auslosung der K.o.-Runde ist am Freitag.",
+   "warum_wichtig": "Deutschland steht nach dem höchsten Sieg gegen die Niederlande im Viertelfinale; das ist das sportliche Highlight der Länderspielwoche.",
+   "quellen": [
+    {
+     "titel": "5:0 – DFB-Team gegen Niederlande wie entfesselt",
+     "medium": "DFB",
+     "url": "https://www.dfb.de/news/50-dfb-team-gegen-niederlande-wie-entfesselt",
+     "datum": "2026-11-16",
+     "primaer": true
+    },
+    {
+     "titel": "Germany thrash Netherlands to book quarterfinal spot",
+     "medium": "Al Jazeera",
+     "url": "https://www.aljazeera.com/sports/2026/11/16/germany-thrash-netherlands-to-book-quarterfinal-spot",
+     "datum": "2026-11-16",
+     "primaer": false
+    },
+    {
+     "titel": "Klopp: Wahnsinn in Berlin – Deutschland überrollt Erzfeind Holland",
+     "medium": "Euronews",
+     "url": "https://de.euronews.com/2026/11/17/klopp-wahnsinn-in-berlin-deutschland-uberollt-erzfeind-holland",
+     "datum": "2026-11-17",
+     "primaer": false
+    }
+   ],
+   "vertiefung": {
+    "text": "Die Nations League wird in Gruppen gespielt; die Gruppensieger der Liga A erreichen das Viertelfinale. Torschützen und Gruppenbezeichnung stammen aus Spielberichten.",
+    "links": [
+     {
+      "titel": "Germany routs Netherlands to claim top spot in Nations League group",
+      "medium": "theScore",
+      "url": "https://www.thescore.com/news/3657303/sms:"
+     }
+    ],
+    "chat_prompt": "Wie lief die Nations-League-Gruppe der DFB-Elf, und wer könnten die Viertelfinalgegner sein?"
+   },
+   "modelle": null,
+   "benchmarks": null,
+   "positionen": null,
+   "interessenkonflikt": false,
+   "korrigiert": null
+  }
+ ],
+ "facts": [
+  {
+   "id": "2026-11-19-fact-1",
+   "art": "aktuell",
+   "thema": "wirtschaft",
+   "titel": "Rechenzentrum liefert fast alles bei Nvidia",
+   "text": "Von 115,8 Mrd. Dollar Quartalsumsatz kamen 107,6 Mrd. aus dem Rechenzentrumsgeschäft – rund 93 % (eigene Rechnung aus den Herstellerzahlen, Stand 17.11.2026).",
+   "status": "bestaetigt",
+   "quellen": [
+    {
+     "titel": "NVIDIA Announces Financial Results for Third Quarter Fiscal 2027",
+     "medium": "Nvidia Investor Relations",
+     "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx",
+     "datum": "2026-11-17",
+     "primaer": true
+    },
+    {
+     "titel": "NVIDIA legt Quartalszahlen vor",
+     "medium": "finanzen.net",
+     "url": "https://www.finanzen.net/nachricht/zertifikate/nvidia-legt-quartalszahlen-vor-16073116",
+     "datum": "2026-11-18",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": false
+  },
+  {
+   "id": "2026-11-19-fact-2",
+   "art": "aktuell",
+   "thema": "ki",
+   "titel": "Anthropic erhöhte das Aktienangebot",
+   "text": "Wegen hoher Nachfrage wurde das Angebot laut Bericht von 825 auf 980 Millionen Aktien aufgestockt (Stand 19.11.2026). Betrifft Anthropic/Claude, daher Interessenkonflikt.",
+   "status": "eine_quelle",
+   "quellen": [
+    {
+     "titel": "Anthropic Aktie: Rekord-IPO schließt über Ausgabepreis",
+     "medium": "Goldesel",
+     "url": "https://goldesel.de/aktien/news/anthropic-aktie-rekord-ipo-schliesst-uber-ausgabepreis-markte-geraten-unter-druck",
+     "datum": "2026-11-19",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": true
+  },
+  {
+   "id": "2026-11-19-fact-3",
+   "art": "zeitlos",
+   "thema": "sport",
+   "titel": "Warum der Marathon 42,195 km lang ist",
+   "text": "Die Distanz stammt von den Olympischen Spielen 1908 in London: 26 Meilen und 385 Yards von Windsor Castle ins White-City-Stadion. Laut IOC sollte die Königsfamilie den Start gut sehen können; als feste Norm gilt sie erst später (Quellen nennen 1921 bzw. 1924).",
+   "status": "bestaetigt",
+   "quellen": [
+    {
+     "titel": "The inaugural modern Olympic marathon",
+     "medium": "IOC / olympics.com",
+     "url": "https://www.olympics.com/ioc/news/the-inaugural-modern-olympic-marathon",
+     "datum": null,
+     "primaer": true
+    },
+    {
+     "titel": "Athletics at the 1908 Summer Olympics – Men's marathon",
+     "medium": "Olympedia",
+     "url": "https://www.olympedia.org/results/56369",
+     "datum": null,
+     "primaer": true
+    }
+   ],
+   "interessenkonflikt": false
+  }
+ ],
+ "extra_facts": [
+  {
+   "id": "2026-11-19-fact-4",
+   "art": "aktuell",
+   "thema": "wirtschaft",
+   "titel": "Nvidia-Ausblick ohne China",
+   "text": "Für das vierte Quartal erwartet Nvidia rund 130 Mrd. Dollar Umsatz (±3 %); Rechenzentrums-Chips für China sind darin nicht enthalten (Stand 17.11.2026).",
+   "status": "bestaetigt",
+   "quellen": [
+    {
+     "titel": "NVIDIA Announces Financial Results for Third Quarter Fiscal 2027",
+     "medium": "Nvidia Investor Relations",
+     "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx",
+     "datum": "2026-11-17",
+     "primaer": true
+    },
+    {
+     "titel": "NVIDIA Q3 2027: $115.8 Billion Revenue",
+     "medium": "24/7 Wall St.",
+     "url": "https://247wallst.com/cards/nvidia-q3-2027-earnings-nvda-01m7nph36m2fmpwcfatxg16f2z",
+     "datum": "2026-11-17",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": false
+  },
+  {
+   "id": "2026-11-19-fact-5",
+   "art": "aktuell",
+   "thema": "wirtschaft",
+   "titel": "Nvidias Aktienrückkauf",
+   "text": "Nvidia gab im Quartal 28,1 Mrd. Dollar an Aktionäre zurück; rund 227,3 Mrd. Dollar bleiben im Rückkaufprogramm (Stand 17.11.2026).",
+   "status": "eine_quelle",
+   "quellen": [
+    {
+     "titel": "NVIDIA Q3 2027 earnings",
+     "medium": "24/7 Wall St.",
+     "url": "https://247wallst.com/cards/nvidia-q3-2027-earnings-nvda-01m7nph36m2fmpwcfatxg16f2z",
+     "datum": "2026-11-17",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": false
+  },
+  {
+   "id": "2026-11-19-fact-6",
+   "art": "aktuell",
+   "thema": "sport",
+   "titel": "Höchste Niederlage für die Niederlande",
+   "text": "Das 0:5 in Berlin war laut NL Times die höchste Niederlage der Niederlande in einem offiziellen Pflichtspiel (Stand 16.11.2026).",
+   "status": "eine_quelle",
+   "quellen": [
+    {
+     "titel": "nltimes.nl: Germany 5-0 Netherlands",
+     "medium": "NL Times",
+     "url": "https://nltimes.nl/node/93211",
+     "datum": "2026-11-16",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": false
+  },
+  {
+   "id": "2026-11-19-fact-7",
+   "art": "aktuell",
+   "thema": "ki",
+   "titel": "KI-Modelle: teurer Spitzenplatz",
+   "text": "Fable 5.2 kostete bei Artificial Analysis auf höchster Stufe rund 26,50 $ pro Aufgabe, Opus 5.5 etwa 10 $ (laut Sekundärbericht). Betrifft Anthropic, Interessenkonflikt.",
+   "status": "eine_quelle",
+   "quellen": [
+    {
+     "titel": "Claude Fable 5.2 Takes the #1 Benchmark Spot",
+     "medium": "Admix",
+     "url": "https://admix.software/blog/claude-fable-5-2-mythos-5-2-launch",
+     "datum": "2026-11",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": true
+  },
+  {
+   "id": "2026-11-19-fact-8",
+   "art": "aktuell",
+   "thema": "wirtschaft",
+   "titel": "Bundestag stimmt am 27. November über Haushalt 2027 ab",
+   "text": "Die dritte Lesung des Bundeshaushalts 2027 ist für den 27. November 2026 geplant; die angekündigte Stromsteuer-Senkung wäre erst dort rechtlich verankert (Stand 19.11., Berichte uneinheitlich).",
+   "status": "eine_quelle",
+   "quellen": [
+    {
+     "titel": "Stromsteuersenkung 2027: Koalition entscheidet über Entlastung für alle",
+     "medium": "cash-online",
+     "url": "https://www.cash-online.de/a/stromsteuersenkung-2027-koalition-entscheidet-ueber-entlastung-fuer-alle-730659/",
+     "datum": "2026-11-16",
+     "primaer": false
+    }
+   ],
+   "interessenkonflikt": false
+  }
+ ],
+ "begriff": {
+  "wort": "Börsengang (IPO)",
+  "erklaerung": "Ein Unternehmen verkauft erstmals Aktien an die Öffentlichkeit und wird an der Börse handelbar. Der Ausgabepreis ist der Preis, zu dem Anleger beim Start kaufen.",
+  "meldung_id": "2026-11-19-wirt-02",
+  "status": "bestaetigt",
+  "quellen": [
+   {
+    "titel": "Anthropic-IPO: Das müssen Anleger zum Rekord-Börsengang wissen",
+    "medium": "Börse Online",
+    "url": "https://www.boerse-online.de/nachrichten/aktien/anthropic-ipo-das-muessen-anleger-zum-rekord-boersengang-wissen-20446089.html",
+    "datum": "2026-11-19",
+    "primaer": false
+   },
+   {
+    "titel": "Anthropic-IPO: Fulminanter Börsenstart",
+    "medium": "finanzen.at",
+    "url": "https://www.finanzen.at/nachrichten/aktien/anthropic-ipo-fulminanter-boersenstart-erstkurs-liegt-deutlich-ueber-ausgabepreis-1036784696",
+    "datum": "2026-11-19",
+    "primaer": false
+   }
+  ]
+ }
+}

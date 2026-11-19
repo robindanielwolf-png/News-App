@@ -1,1 +1,13 @@
-{ "version": 1, "aktualisiert": null, "tage": [] }
+{
+  "version": 1,
+  "aktualisiert": "2026-11-19T21:41:26.222Z",
+  "tage": [
+    {
+      "datum": "2026-11-19",
+      "datei": "2026-11-19.json",
+      "meldungen": 7,
+      "schlagzeile": "Erstes Dreiergipfel von Trump, Xi und Putin in Shenzhen",
+      "korrigiert": 0
+    }
+  ]
+}
