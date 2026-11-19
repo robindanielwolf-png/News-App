@@ -3,7 +3,8 @@
 // Schritt 3: Facts einzeln mit „Nächster Fact“ / „Noch einer“ (Extra-Facts), Begriff des Tages.
 // Schritt 4: Archiv – mit Netz die letzten 30 Tage, offline die 7 gespeicherten.
 // Schritt 5: Korrekturen – Kasten oben in der neuen Ausgabe, Banner über der korrigierten Meldung (Original bleibt).
-const VERSION = '0.5.0';
+// Schritt 6: Einstellungen – Bereiche an/aus, nur lokal auf dem Gerät.
+const VERSION = '0.6.0';
 const OFFLINE_TAGE = 7;
 const ARCHIV_TAGE = 30;
 
@@ -20,10 +21,10 @@ const STATUS = {
   umstritten:  { text: 'umstritten',     svg: '<path d="M8 2.5v11M4.5 13.5h7M3 4.5h10M3 4.5L1.5 9h3zM13 4.5L11.5 9h3z"/>' },
   unklar:      { text: 'unklar',         svg: '<path d="M5.8 5.8a2.2 2.2 0 114 1.4c-.9.6-1.8 1-1.8 2.3"/><path d="M8 12.5v.1"/>' },
 };
-const BEREICHE = [
+const BEREICHE = [ // Reihenfolge wie Design/Produkt: KI & Tech zuerst
+  ['ki_tech', 'KI & Tech', '<rect x="4" y="4" width="8" height="8" rx="1.5"/><path d="M6 1.5v2.5M10 1.5v2.5M6 12v2.5M10 12v2.5M1.5 6h2.5M1.5 10h2.5M12 6h2.5M12 10h2.5"/>'],
   ['de_eu', 'Deutschland & EU', '<path d="M2 6l6-3.5L14 6M3 6v6M6 6v6M10 6v6M13 6v6M2 13.5h12"/>'],
   ['wirtschaft', 'Wirtschaft & Finanzen', '<path d="M2 13.5h12M3 11l3.5-4 3 2.5L14 4"/>'],
-  ['ki_tech', 'KI & Tech', '<rect x="4" y="4" width="8" height="8" rx="1.5"/><path d="M6 1.5v2.5M10 1.5v2.5M6 12v2.5M10 12v2.5M1.5 6h2.5M1.5 10h2.5M12 6h2.5M12 10h2.5"/>'],
   ['welt', 'Weltpolitik & Konflikte', '<circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2.8 4.2 2.8 6.5S10 12.5 8 14.5C6 12.5 5.2 10.3 5.2 8S6 3.5 8 1.5z"/>'],
   ['sport', 'Sport', '<circle cx="8" cy="8" r="6.5"/><path d="M8 4.5l3 2.2-1.1 3.5H6.1L5 6.7z"/>'],
 ];
@@ -154,7 +155,7 @@ function statusChip(s) {
 }
 
 function lesezeit(d) {
-  const text = d.meldungen.map(m => `${m.schlagzeile} ${m.kurz}`).join(' ') + (d.facts || []).map(f => f.text).join(' ');
+  const text = reihenfolge(d).map(m => `${m.schlagzeile} ${m.kurz}`).join(' ') + (d.facts || []).map(f => f.text).join(' ');
   return Math.max(1, Math.round(text.split(/\s+/).length / 200));
 }
 
@@ -162,6 +163,7 @@ function zeichne() {
   hinweise();
   navi();
   if (ansicht.tab === 'archiv') return zeichneArchiv();
+  if (ansicht.tab === 'einstellungen') return zeichneEinstellungen();
   if (ansicht.tab === 'archivtag' && ansicht.tag) return zeichneAusgabe(ansicht.tag, true);
   const d = zustand.ausgabe;
   if (!d) {
@@ -189,17 +191,17 @@ function zeichneAusgabe(d, archiv) {
     </button>`).join('');
   const extraAnzahl = Array.isArray(d.extra_facts) ? d.extra_facts.length : 0;
   const b = d.begriff;
-  const begriffMeldung = b?.meldung_id && d.meldungen.find(m => m.id === b.meldung_id);
+  const begriffMeldung = b?.meldung_id && reihe.find(m => m.id === b.meldung_id); // ausgeblendeter Bereich → kein Sprung
   $('inhalt').innerHTML = `
     <header class="kopf">
       ${archiv ? `<button class="zurueck" data-tab="${ansicht.herkunft === 'heute' ? 'heute' : 'archiv'}">${svg(ICON_ZURUECK, 18)}${ansicht.herkunft === 'heute' ? 'Heute' : 'Archiv'}</button>` : ''}
       <h1${archiv ? ' class="archiv-titel"' : ''}>${archiv ? esc(langDatum(d.datum) + ' ' + d.datum.slice(0, 4)) : 'Daily News'}</h1>
-      <div class="meta">${archiv ? 'Ausgabe aus dem Archiv · ' : esc(langDatum(d.datum)) + ' · '}${d.meldungen.length} Meldungen · ca. ${lesezeit(d)} Min.</div>
+      <div class="meta">${archiv ? 'Ausgabe aus dem Archiv · ' : esc(langDatum(d.datum)) + ' · '}${reihe.length} Meldungen${reihe.length < d.meldungen.length ? ` (${d.meldungen.length - reihe.length} ausgeblendet)` : ''} · ca. ${lesezeit(d)} Min.</div>
       ${d.beispiel ? '<span class="beispiel">Testdaten</span>' : ''}
       ${korrekturKasten(d)}
       <button class="knopf haupt start-wisch" data-wisch="0">${svg(ICON_WISCHEN, 18)}Durchwischen starten</button>
     </header>
-    ${gruppen}
+    ${gruppen || (d.meldungen.length ? `<div class="leer klein-leer"><p>Alle Bereiche sind ausgeblendet.</p><button class="knopf" data-tab="einstellungen">Bereiche in den Einstellungen einschalten</button></div>` : '')}
     ${facts ? `<h2 class="abschnitt">${d.facts.length === 3 ? '3 Facts' : 'Facts'}</h2>${facts}
       ${extraAnzahl ? `<p class="unterzeile">+ ${extraAnzahl} weitere · „Noch einer“ am Ende des Durchwischens</p>` : ''}` : ''}
     ${b?.wort ? `<section class="begriff">
@@ -215,7 +217,8 @@ function zeichneAusgabe(d, archiv) {
 // ---------- Wisch-Modus (Schritt 2) ----------
 // Reihenfolge wie in der Liste (nach Bereichen), damit Wischen und Liste übereinstimmen.
 function reihenfolge(d) {
-  return BEREICHE.flatMap(([key]) => d.meldungen.filter(x => x.bereich === key));
+  const aus = bereicheAus();
+  return BEREICHE.filter(([key]) => !aus.has(key)).flatMap(([key]) => d.meldungen.filter(x => x.bereich === key));
 }
 const ICON_X = '<path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/>';
 const ICON_HOCH = '<path d="M8 13V3M4 7l4-4 4 4"/>';
@@ -508,6 +511,8 @@ function wischSchliessen() {
 document.addEventListener('click', (e) => {
   const start = e.target.closest('[data-wisch]');
   if (start && !wisch.offen) return wischOeffnen(Number(start.dataset.wisch) || 0);
+  const schalter = e.target.closest('[data-bereich-schalter]');
+  if (schalter && !wisch.offen) return bereichUmschalten(schalter.dataset.bereichSchalter);
   const tab = e.target.closest('[data-tab]');
   if (tab && !wisch.offen) return zeigeTab(tab.dataset.tab);
   const korr = e.target.closest('[data-korrektur]');
@@ -557,7 +562,8 @@ const ICON_WEITER = '<path d="M6 3l5 5-5 5"/>';
 const WOCHENTAG = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
 
 function navi() {
-  const aktiv = ansicht.tab === 'heute' || (ansicht.tab === 'archivtag' && ansicht.herkunft === 'heute') ? 'heute' : 'archiv';
+  const aktiv = ansicht.tab === 'einstellungen' ? 'einstellungen'
+    : ansicht.tab === 'heute' || (ansicht.tab === 'archivtag' && ansicht.herkunft === 'heute') ? 'heute' : 'archiv';
   document.querySelectorAll('.navi [data-tab]').forEach(b => {
     const an = b.dataset.tab === aktiv;
     b.classList.toggle('aktiv', an);
@@ -568,11 +574,11 @@ function navi() {
 function zeigeTab(tab) {
   if (ansicht.tab === 'archiv') ansicht.archivScroll = window.scrollY;
   if (tab === 'heute' && ansicht.tab === 'heute') return window.scrollTo({ top: 0, behavior: 'smooth' });
-  ansicht.tab = tab === 'archiv' ? 'archiv' : 'heute';
+  ansicht.tab = ['archiv', 'einstellungen'].includes(tab) ? tab : 'heute';
   ansicht.tag = null;
   ansicht.scrollNachZeichnen = ansicht.tab === 'archiv' ? ansicht.archivScroll : 0;
   zeichne();
-  if (ansicht.tab === 'heute') window.scrollTo(0, 0);
+  if (ansicht.tab !== 'archiv') window.scrollTo(0, 0);
 }
 
 // Einträge fürs Archiv: mit Netz aus index.json (bis 30 Tage), offline nur die gespeicherten Tage.
@@ -640,6 +646,7 @@ async function oeffneArchivTag(datum, meldungId = null) {
   try {
     const d = await ladeArchivTag(datum);
     if (ansicht.tab !== von) return; // inzwischen woanders hin gewechselt
+    if (meldungId && reihenfolge(d).every(m => m.id !== meldungId)) return toast('Diese Meldung gehört zu einem ausgeblendeten Bereich');
     ansicht.herkunft = von === 'heute' ? 'heute' : 'archiv';
     ansicht.tab = 'archivtag'; ansicht.tag = d;
     zeichne();
@@ -653,6 +660,53 @@ async function oeffneArchivTag(datum, meldungId = null) {
       ? `Die Ausgabe vom ${kurzDatum(datum)} gibt es nur mit Internet`
       : `Die Ausgabe vom ${kurzDatum(datum)} konnte nicht geladen werden`);
   }
+}
+
+// ---------- Einstellungen (Schritt 6): Bereiche an/aus, nur lokal ----------
+const SPEICHER_BEREICHE = 'bereiche-aus';
+let bereicheCache = null;
+function bereicheAus() {
+  if (bereicheCache) return bereicheCache;
+  let liste = [];
+  try { liste = JSON.parse(localStorage.getItem(SPEICHER_BEREICHE) || '[]'); } catch {}
+  bereicheCache = new Set(Array.isArray(liste) ? liste.filter(k => BEREICHE.some(b => b[0] === k)) : []);
+  return bereicheCache;
+}
+function bereichUmschalten(key) {
+  if (!BEREICHE.some(b => b[0] === key)) return;
+  const aus = new Set(bereicheAus());
+  if (aus.has(key)) aus.delete(key); else aus.add(key);
+  bereicheCache = aus;
+  try { localStorage.setItem(SPEICHER_BEREICHE, JSON.stringify([...aus])); }
+  catch { toast('Konnte nicht gespeichert werden – gilt nur bis zum Schließen'); }
+  const knopf = document.querySelector(`[data-bereich-schalter="${key}"]`);
+  if (knopf) knopf.setAttribute('aria-checked', String(!aus.has(key)));
+}
+
+function zeichneEinstellungen() {
+  const aus = bereicheAus();
+  $('inhalt').innerHTML = `
+    <header class="kopf archiv-kopf"><h1>Einstellungen</h1></header>
+    <section class="einst-block">
+      <h2 class="label">Bereiche anzeigen</h2>
+      <div class="einst-liste">${BEREICHE.map(([key, name, icon]) => `
+        <div class="einst-zeile">
+          <span class="einst-name">${svg(icon)}${esc(name)}</span>
+          <button class="schalter" role="switch" aria-checked="${!aus.has(key)}" aria-label="${esc(name.replace('&', 'und'))}" data-bereich-schalter="${key}"><span></span></button>
+        </div>`).join('')}
+      </div>
+      <p class="unterzeile">Nur auf diesem iPhone gespeichert. Ausgeblendete Bereiche fehlen in der Liste und beim Durchwischen – Facts und Begriff bleiben.</p>
+    </section>
+    <section class="einst-block">
+      <h2 class="label">Darstellung</h2>
+      <p class="einst-text">Immer hell – der Dunkelmodus ist vorerst aus.</p>
+      <p class="unterzeile">Schriftgröße folgt der iPhone-Einstellung.</p>
+    </section>
+    <section class="einst-block">
+      <h2 class="label">Über</h2>
+      <p class="einst-text">Recherchiert und geschrieben mit Claude, einem KI-Modell von Anthropic. Jede Meldung mit Status und Quellen.</p>
+      <p class="unterzeile">Version ${esc(VERSION)}${DATEN.includes('testdaten') ? ' · Testdaten' : ''}</p>
+    </section>`;
 }
 
 // ---------- Korrekturen (Schritt 5) ----------
@@ -687,7 +741,7 @@ function oeffneKorrigierteMeldung(datum, meldungId) {
   const aktuell = gezeigteAusgabe();
   if (aktuell && aktuell.datum === datum) {
     const i = reihenfolge(aktuell).findIndex(m => m.id === meldungId);
-    return i >= 0 ? wischOeffnen(i) : undefined;
+    return i >= 0 ? wischOeffnen(i) : toast('Diese Meldung gehört zu einem ausgeblendeten Bereich');
   }
   return oeffneArchivTag(datum, meldungId);
 }
