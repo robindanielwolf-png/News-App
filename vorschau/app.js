@@ -1,5 +1,6 @@
 // Daily News – Schritt 1: Tagesdatei laden, 7 Tage offline speichern, Hinweise, nie leerer Bildschirm.
-const VERSION = '0.1.2';
+// Schritt 2: Wisch-Modus mit Ebene 1 (Meldung), Ebene 2 (Hintergrund, Quellen, Positionen, Benchmarks), Ebene 3 (Tiefer einsteigen).
+const VERSION = '0.2.0';
 const OFFLINE_TAGE = 7;
 
 // Datenquelle: ?daten=test / ?daten=test-kaputt nur für die Vorschau; sonst echter Datenordner.
@@ -156,11 +157,12 @@ function zeichne() {
       : `<div class="leer"><h2>Noch keine Ausgabe</h2><p>${zustand.indexLeer ? 'Die erste Ausgabe erscheint morgen um 6:30.' : 'Die Ausgabe konnte nicht geladen werden. Versuch es gleich noch einmal.'}</p></div>`;
     return;
   }
+  const reihe = reihenfolge(d);
   const gruppen = BEREICHE.map(([key, name, icon]) => {
-    const m = d.meldungen.filter(x => x.bereich === key);
+    const m = reihe.filter(x => x.bereich === key);
     if (!m.length) return '';
     return `<section class="bereich"><h2 class="bereich-titel">${svg(icon, 14)}${esc(name)}</h2><ul class="liste">${
-      m.map(x => `<li><span class="schlagzeile">${esc(x.schlagzeile)}</span>${statusChip(x.status)}</li>`).join('')
+      m.map(x => `<li><button class="zeile" data-wisch="${reihe.indexOf(x)}"><span class="schlagzeile">${esc(x.schlagzeile)}</span>${statusChip(x.status)}</button></li>`).join('')
     }</ul></section>`;
   }).join('');
   const facts = (d.facts || []).map(f => `<div class="karte"><h3>${esc(f.titel || '')}</h3><p>${esc(f.text)}</p></div>`).join('');
@@ -170,12 +172,268 @@ function zeichne() {
       <h1>Daily News</h1>
       <div class="meta">${esc(langDatum(d.datum))} · ${d.meldungen.length} Meldungen · ca. ${lesezeit(d)} Min.</div>
       ${d.beispiel ? '<span class="beispiel">Testdaten</span>' : ''}
+      <button class="knopf haupt start-wisch" data-wisch="0">${svg(ICON_WISCHEN, 18)}Durchwischen starten</button>
     </header>
     ${gruppen}
     ${facts ? `<h2 class="abschnitt">3 Facts</h2>${facts}` : ''}
     ${b?.wort ? `<div class="karte begriff"><div class="label">Begriff des Tages</div><h3>${esc(b.wort)}</h3><p>${esc(b.erklaerung)}</p></div>` : ''}
     <p class="transparenz">${esc(d.transparenz || '')}</p>`;
 }
+
+// ---------- Wisch-Modus (Schritt 2) ----------
+// Reihenfolge wie in der Liste (nach Bereichen), damit Wischen und Liste übereinstimmen.
+function reihenfolge(d) {
+  return BEREICHE.flatMap(([key]) => d.meldungen.filter(x => x.bereich === key));
+}
+const ICON_X = '<path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/>';
+const ICON_HOCH = '<path d="M8 13V3M4 7l4-4 4 4"/>';
+const ICON_RUNTER = '<path d="M8 3v10M4 9l4 4 4-4"/>';
+const ICON_EXTERN = '<path d="M6 3h7v7M13 3L4 12"/>';
+const ICON_CHAT = '<path d="M2.5 3.5h11v7h-6l-3 2.5v-2.5h-2z"/>';
+const ICON_WISCHEN = '<path d="M2 8h12M10 4l4 4-4 4"/>';
+
+// Nur https-Links werden klickbar; alles andere bleibt Text.
+const sicherUrl = (u) => (typeof u === 'string' && /^https:\/\//i.test(u)) ? esc(u) : null;
+const link = (url, inhalt, klasse = '') => {
+  const u = sicherUrl(url);
+  return u ? `<a class="${klasse}" href="${u}" target="_blank" rel="noopener noreferrer">${inhalt}</a>` : `<span class="${klasse}">${inhalt}</span>`;
+};
+const tageZwischen = (von, bis) => Math.round((Date.parse(bis + 'T12:00:00Z') - Date.parse(von + 'T12:00:00Z')) / 864e5);
+const vollDatum = (datum) => `${datum.slice(8, 10)}.${datum.slice(5, 7)}.${datum.slice(0, 4)}`;
+function relativ(ereignis, ausgabe) {
+  const n = tageZwischen(ereignis, ausgabe);
+  return n <= 0 ? 'heute' : n === 1 ? 'gestern' : `vor ${n} Tagen`;
+}
+function standText(iso) {
+  const t = Date.parse(iso);
+  if (isNaN(t)) return '';
+  const f = new Intl.DateTimeFormat('de-DE', { timeZone: 'Europe/Berlin', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
+  const p = Object.fromEntries(f.formatToParts(new Date(t)).map(x => [x.type, x.value]));
+  return `${p.day}.${p.month}., ${p.hour}:${p.minute}`;
+}
+const label = (text, extra = '') => `<h2 class="label ${extra}">${esc(text)}</h2>`;
+
+function statusGross(m) {
+  const st = STATUS[m.status] || STATUS.unklar;
+  const n = Array.isArray(m.quellen) ? m.quellen.length : 0;
+  const zusatz = m.status === 'unklar' && m.laeuft_noch ? 'läuft noch' : `${n} ${n === 1 ? 'Quelle' : 'Quellen'}`;
+  return `<span class="status gross ${esc(m.status)}">${svg(st.svg, 14)}${esc(st.text)} · ${esc(zusatz)}</span>`;
+}
+
+function ebene1(m, d) {
+  const bereich = BEREICHE.find(b => b[0] === m.bereich) || ['', m.bereich, ''];
+  const alt = m.ereignis_datum && tageZwischen(m.ereignis_datum, d.datum) > 1;
+  const chips = [
+    alt ? `<span class="chip info">${svg(ICON_UHR, 13)}Ereignis vom ${esc(kurzDatum(m.ereignis_datum))} – nicht von heute</span>` : '',
+    m.interessenkonflikt ? '<span class="chip neutral">Meldung über Anthropic</span>' : '',
+  ].join('');
+  const einMedium = m.status === 'eine_quelle' ? (m.quellen?.[0]?.medium || m.quellen?.[0]?.titel || 'einem Medium') : '';
+  return `<div class="ebene1">
+    <div class="zeile-oben">
+      <span class="bereich-label">${bereich[2] ? svg(bereich[2]) : ''}${esc(bereich[1])}</span>
+      ${statusGross(m)}
+    </div>
+    ${chips ? `<div class="chips">${chips}</div>` : ''}
+    <h1 class="wisch-titel">${esc(m.schlagzeile)}</h1>
+    <p class="kurz">${esc(m.kurz)}</p>
+    ${einMedium ? `<p class="kasten warn">Bisher nur von ${esc(einMedium)} berichtet – noch nicht unabhängig bestätigt.</p>` : ''}
+    ${m.status === 'unklar' && m.laeuft_noch ? '<p class="kasten grau">Läuft noch: Das Ergebnis steht aus und kommt in einer späteren Ausgabe.</p>' : ''}
+    <div class="luft"></div>
+    <button class="knopf" data-ziel="ebene2">${svg(ICON_HOCH, 18)}Hintergrund, Warum wichtig, Quellen</button>
+    <p class="wisch-tipp">Seitlich wischen für die nächste Meldung</p>
+  </div>`;
+}
+
+function quellenKarten(quellen) {
+  return (quellen || []).map(q => link(q.url, `
+      <span class="q-kopf"><span class="q-medium">${esc(q.medium || '')}</span>${q.primaer ? '<span class="primaer">Primärquelle</span>' : ''}</span>
+      <span class="q-titel">${esc(q.titel || q.url || '')}</span>
+      ${q.datum && /^\d{4}-\d{2}-\d{2}$/.test(q.datum) ? `<span class="q-datum">${esc(vollDatum(q.datum))}</span>` : ''}`, 'quelle')).join('');
+}
+
+function positionenBlock(m) {
+  if (m.status !== 'umstritten' || !Array.isArray(m.positionen) || !m.positionen.length) return '';
+  return `<section class="block">
+    <div><h2 class="abschnitt-titel">Die Positionen</h2><p class="unterzeile">Gleich gewichtet, Reihenfolge ohne Wertung</p></div>
+    ${m.positionen.map(p => `<article class="position">
+      <span class="label streit">${esc(p.seite || '')}</span>
+      <p>${esc(p.position || '')}</p>
+      ${p.quelle || p.url ? link(p.url, esc(p.quelle || 'Quelle'), 'klein') : ''}
+    </article>`).join('')}
+  </section>`;
+}
+
+// Benchmarks: unabhängige Tests zuerst, Herstellerangaben getrennt darunter.
+// Chips „vorn“ und „nur eine Quelle“ bewusst weggelassen (Vorgabe 18.11.) – Felder werden noch nicht angezeigt.
+function benchmarkBlock(m) {
+  const b = m.benchmarks;
+  if (!b || typeof b !== 'object') return '';
+  const unabh = Array.isArray(b.unabhaengig) ? b.unabhaengig : [];
+  const herst = Array.isArray(b.hersteller) ? b.hersteller : [];
+  const quelleZeile = (x) => x.quelle || x.url ? link(x.url, esc(x.quelle || 'Quelle'), 'klein') : '';
+  const unabhHtml = unabh.length
+    ? `<div class="tests">${unabh.map(x => `<div class="test">
+        <span class="test-name">${esc(x.test || '')}</span>
+        <span class="test-wert">${esc(x.wert || '')}</span>
+        ${x.vergleich_mit ? `<span class="unterzeile">Verglichen mit Vorgänger ${esc(x.vergleich_mit)}</span>` : ''}
+        ${quelleZeile(x)}
+      </div>`).join('')}</div>`
+    : `<div class="tests gestrichelt leer-test"><span class="test-name">Noch keine unabhängigen Tests</span><span class="unterzeile">${
+        esc(String(b.hinweis || '').replace(/^\s*noch keine unabhängigen tests\.?\s*[–-]?\s*/i, '') || 'Bisher nur Herstellerangaben (siehe unten).')}</span></div>`;
+  const herstHtml = herst.length ? `<section class="block">
+      <div class="kopfzeile"><h2 class="abschnitt-titel">Herstellerangaben</h2><span class="status eine_quelle">${svg(STATUS.eine_quelle.svg, 12)}nicht unabhängig geprüft</span></div>
+      <div class="tests gestrichelt">${herst.map(x => `<div class="test">
+        <span class="test-name">${esc(x.test || '')}</span>
+        <span class="test-wert">${x.modell ? esc(x.modell) + ': ' : ''}${esc(x.wert || '')}</span>
+        ${quelleZeile(x)}
+      </div>`).join('')}</div>
+    </section>` : '';
+  return `<section class="block">
+      <div class="kopfzeile"><h2 class="abschnitt-titel">Unabhängige Tests</h2>${unabh.length ? `<span class="unterzeile">${unabh.length} ${unabh.length === 1 ? 'Test' : 'Tests'}</span>` : ''}</div>
+      ${unabhHtml}
+    </section>${herstHtml}`;
+}
+
+function ebene2(m, d, nr, gesamt) {
+  const bereich = BEREICHE.find(b => b[0] === m.bereich)?.[1] || m.bereich;
+  const meta = [
+    m.ereignis_datum ? `Ereignis: ${vollDatum(m.ereignis_datum)} (${relativ(m.ereignis_datum, d.datum)})` : '',
+    m.stand ? `Stand: ${standText(m.stand)}` : '',
+  ].filter(Boolean).join(' · ');
+  const umstritten = m.status === 'umstritten';
+  return `<div class="ebene2" data-ebene="ebene2">
+    <div class="ebene-kopf">
+      <span class="label akzent">${esc(bereich)} · ${nr} / ${gesamt}</span>
+      <h2 class="ebene-titel">${esc(m.schlagzeile)}</h2>
+      ${meta ? `<p class="unterzeile">${esc(meta)}</p>` : ''}
+    </div>
+    ${m.interessenkonflikt ? '<p class="kasten neutral"><strong>Meldung über Anthropic</strong>, den Hersteller von Claude. Geprüft nach denselben Regeln wie alle anderen.</p>' : ''}
+    <section class="block">${label(umstritten ? 'Was feststeht' : 'Hintergrund')}<p>${esc(m.hintergrund)}</p></section>
+    ${positionenBlock(m)}
+    <section class="kasten akzent warum">${label('Warum wichtig', 'akzent')}<p>${esc(m.warum_wichtig)}</p></section>
+    ${benchmarkBlock(m)}
+    <section class="block">
+      <div class="kopfzeile">${label('Quellen')}${statusChip(m.status)}</div>
+      ${quellenKarten(m.quellen)}
+    </section>
+    ${m.hinweis_quellen ? `<section class="kasten akzent">${label('Hinweis zu den Quellen', 'akzent')}<p class="klein-text">${esc(m.hinweis_quellen)}</p></section>` : ''}
+    <button class="knopf haupt" data-ziel="ebene3">Tiefer einsteigen${svg(ICON_RUNTER, 18)}</button>
+  </div>`;
+}
+
+function ebene3(m) {
+  const v = m.vertiefung || {};
+  const links = (v.links || []).map(l => link(l.url, `
+      <span class="q-text"><span class="q-medium">${esc(l.medium || '')}</span><span class="q-titel">${esc(l.titel || '')}</span></span>${svg(ICON_EXTERN)}`, 'quelle quer')).join('');
+  return `<div class="ebene3" data-ebene="ebene3">
+    <div class="ebene-kopf dick">
+      <span class="label akzent">Tiefer einsteigen</span>
+      <h2 class="ebene-titel">${esc(m.schlagzeile)}</h2>
+    </div>
+    ${v.text ? `<section class="block">${label('Kontext')}<p class="serif-text">${esc(v.text)}</p></section>` : ''}
+    ${links ? `<section class="block">${label('Weiterlesen')}${links}</section>` : ''}
+    <section class="lernen">
+      <span class="lernen-titel">Noch Fragen dazu?</span>
+      <span class="lernen-text">Kopiert eine fertige Frage und öffnet Claude. Dort im Chat News &amp; Facts einfügen.</span>
+      <button class="knopf weiss" data-platzhalter="lernen" aria-disabled="true">${svg(ICON_CHAT, 18)}Mehr dazu lernen</button>
+    </section>
+    <p class="wisch-tipp">Seitlich wischen für die nächste Meldung</p>
+  </div>`;
+}
+
+function factsSeite(d) {
+  const facts = (d.facts || []).map(f => `<div class="karte"><h3>${esc(f.titel || '')}</h3><p>${esc(f.text)}</p></div>`).join('');
+  return `<div class="ebene1 facts-seite">
+    <span class="label akzent">Zum Schluss</span>
+    <h1 class="wisch-titel">3 Facts</h1>
+    ${facts}
+    <div class="luft"></div>
+    <button class="knopf haupt" data-aktion="schliessen">Fertig – zurück zur Startseite</button>
+  </div>`;
+}
+
+const wisch = { offen: false, reihe: [], index: 0 };
+
+function wischOeffnen(start) {
+  const d = zustand.ausgabe;
+  if (!d) return;
+  wisch.reihe = reihenfolge(d);
+  wisch.offen = true;
+  const n = wisch.reihe.length;
+  const el = $('wisch');
+  el.innerHTML = `
+    <div class="wisch-leiste">
+      <div class="fortschritt" role="img" aria-label="Fortschritt">${'<span></span>'.repeat(n + 1)}</div>
+      <div class="wisch-kopf">
+        <button class="rund" data-aktion="schliessen" aria-label="Zurück zur Liste">${svg(ICON_X, 20)}</button>
+        <span class="zaehler" aria-live="polite"></span>
+        <span class="rund-platz" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="spur" tabindex="-1">${
+      wisch.reihe.map((m, i) => `<article class="seite" aria-label="Meldung ${i + 1} von ${n}">${ebene1(m, d)}${ebene2(m, d, i + 1, n)}${ebene3(m)}</article>`).join('')
+    }<article class="seite" aria-label="Facts">${factsSeite(d)}</article></div>`;
+  el.hidden = false;
+  document.body.classList.add('wisch-offen');
+  const spur = el.querySelector('.spur');
+  spur.scrollLeft = start * spur.clientWidth;
+  wischStand(start);
+  spur.addEventListener('scroll', () => {
+    if (!wisch.offen || !spur.isConnected || !spur.clientWidth) return; // Nachzügler nach dem Schließen
+    const i = Math.round(spur.scrollLeft / spur.clientWidth);
+    if (i !== wisch.index) wischStand(i);
+  }, { passive: true });
+  spur.focus({ preventScroll: true });
+}
+
+function wischStand(i) {
+  const n = wisch.reihe.length;
+  wisch.index = Math.max(0, Math.min(i, n));
+  const el = $('wisch');
+  if (!el.querySelector('.fortschritt')) return;
+  el.querySelectorAll('.fortschritt span').forEach((s, k) => s.classList.toggle('an', k <= wisch.index));
+  el.querySelector('.fortschritt').setAttribute('aria-label', wisch.index < n ? `Meldung ${wisch.index + 1} von ${n}` : 'Facts');
+  el.querySelector('.zaehler').textContent = wisch.index < n ? `${wisch.index + 1} / ${n}` : 'Facts';
+}
+
+function wischGeheZu(i) {
+  const spur = $('wisch').querySelector('.spur');
+  spur.scrollTo({ left: Math.max(0, Math.min(i, wisch.reihe.length)) * spur.clientWidth, behavior: 'smooth' });
+}
+
+function wischSchliessen() {
+  wisch.offen = false;
+  const el = $('wisch');
+  el.hidden = true;
+  el.innerHTML = '';
+  document.body.classList.remove('wisch-offen');
+}
+
+document.addEventListener('click', (e) => {
+  const start = e.target.closest('[data-wisch]');
+  if (start && !wisch.offen) return wischOeffnen(Number(start.dataset.wisch) || 0);
+  if (!wisch.offen) return;
+  if (e.target.closest('[data-aktion="schliessen"]')) return wischSchliessen();
+  const ziel = e.target.closest('[data-ziel]');
+  if (ziel) {
+    const seite = ziel.closest('.seite');
+    const block = seite.querySelector(`[data-ebene="${ziel.dataset.ziel}"]`);
+    if (block) seite.scrollTo({ top: block.offsetTop - 8, behavior: 'smooth' });
+    return;
+  }
+  if (e.target.closest('[data-platzhalter="lernen"]')) toast('„Mehr dazu lernen“ kommt in einem späteren Schritt');
+});
+document.addEventListener('keydown', (e) => {
+  if (!wisch.offen) return;
+  if (e.key === 'Escape') wischSchliessen();
+  else if (e.key === 'ArrowRight') wischGeheZu(wisch.index + 1);
+  else if (e.key === 'ArrowLeft') wischGeheZu(wisch.index - 1);
+});
+window.addEventListener('resize', () => {
+  if (!wisch.offen) return;
+  const spur = $('wisch').querySelector('.spur');
+  spur.scrollLeft = wisch.index * spur.clientWidth;
+});
 
 function toast(text) {
   const t = $('toast'); t.textContent = text; t.classList.add('sichtbar');
