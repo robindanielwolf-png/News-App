@@ -77,7 +77,10 @@
    "benchmarks": null,
    "positionen": null,
    "interessenkonflikt": false,
-   "korrigiert": null
+   "korrigiert": {
+    "am": "2026-11-19",
+    "text": "Fiktive Korrektur: Das Gesetz gilt erst ab 2027, nicht ab sofort."
+   }
   },
   {
    "id": "2026-11-18-welt-01",

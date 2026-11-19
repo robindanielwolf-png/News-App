@@ -223,3 +223,17 @@ section.begriff { margin-top: 1.5rem; padding: 16px; background: var(--akzent-fl
 .zurueck { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; margin: -8px 0 4px -6px; padding: 0 6px;
   background: none; border: 0; font: inherit; font-size: .88rem; font-weight: 600; color: var(--akzent); cursor: pointer; }
 .kopf h1.archiv-titel { font-size: 1.76rem; line-height: 1.15; }
+
+/* ---------- Korrekturen (Schritt 5) – ⚠️-Farben mit Stift ---------- */
+.korr-kasten { margin-top: 1rem; padding: 14px 16px; border-radius: 12px; background: var(--warn-f); display: flex; flex-direction: column; gap: 6px; }
+.korr-titel { display: flex; align-items: center; gap: 8px; font-size: .706rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--warn); }
+.korr-text { font-size: .88rem; line-height: 1.45; color: var(--text); }
+.korr-kasten .fact-quellen a { color: var(--warn); }
+.korr-link { align-self: flex-start; min-height: 44px; margin: -6px 0 -10px; padding: 0; background: none; border: 0; font: inherit;
+  font-size: .824rem; font-weight: 600; color: var(--warn); text-decoration: underline; cursor: pointer; }
+.korr-banner { margin: 0; display: flex; gap: 8px; align-items: flex-start; padding: 10px 14px; border-radius: 10px;
+  background: var(--warn-f); color: var(--warn); font-size: .765rem; line-height: 1.4; }
+.korr-banner svg { flex: none; margin-top: 2px; }
+.korr-banner strong { font-weight: 600; }
+.korr-banner.klein-banner { margin-top: 12px; border-radius: 8px; }
+.zeile.ist-korrigiert .schlagzeile { color: var(--gedaempft); }

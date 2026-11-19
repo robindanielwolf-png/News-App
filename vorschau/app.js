@@ -2,7 +2,8 @@
 // Schritt 2: Wisch-Modus mit Ebene 1 (Meldung), Ebene 2 (Hintergrund, Quellen, Positionen, Benchmarks), Ebene 3 (Tiefer einsteigen).
 // Schritt 3: Facts einzeln mit „Nächster Fact“ / „Noch einer“ (Extra-Facts), Begriff des Tages.
 // Schritt 4: Archiv – mit Netz die letzten 30 Tage, offline die 7 gespeicherten.
-const VERSION = '0.4.0';
+// Schritt 5: Korrekturen – Kasten oben in der neuen Ausgabe, Banner über der korrigierten Meldung (Original bleibt).
+const VERSION = '0.5.0';
 const OFFLINE_TAGE = 7;
 const ARCHIV_TAGE = 30;
 
@@ -178,7 +179,7 @@ function zeichneAusgabe(d, archiv) {
     const m = reihe.filter(x => x.bereich === key);
     if (!m.length) return '';
     return `<section class="bereich"><h2 class="bereich-titel">${svg(icon, 14)}${esc(name)}</h2><ul class="liste">${
-      m.map(x => `<li><button class="zeile" data-wisch="${reihe.indexOf(x)}"><span class="schlagzeile">${esc(x.schlagzeile)}</span>${statusChip(x.status)}</button></li>`).join('')
+      m.map(x => `<li>${x.korrigiert ? korrBanner(x.korrigiert, true) : ''}<button class="zeile${x.korrigiert ? ' ist-korrigiert' : ''}" data-wisch="${reihe.indexOf(x)}"><span class="schlagzeile">${esc(x.schlagzeile)}</span>${statusChip(x.status)}</button></li>`).join('')
     }</ul></section>`;
   }).join('');
   const facts = (Array.isArray(d.facts) ? d.facts : []).map((f, i) => `<button class="karte fact-teaser" data-fact="${i}">
@@ -191,10 +192,11 @@ function zeichneAusgabe(d, archiv) {
   const begriffMeldung = b?.meldung_id && d.meldungen.find(m => m.id === b.meldung_id);
   $('inhalt').innerHTML = `
     <header class="kopf">
-      ${archiv ? `<button class="zurueck" data-tab="archiv">${svg(ICON_ZURUECK, 18)}Archiv</button>` : ''}
+      ${archiv ? `<button class="zurueck" data-tab="${ansicht.herkunft === 'heute' ? 'heute' : 'archiv'}">${svg(ICON_ZURUECK, 18)}${ansicht.herkunft === 'heute' ? 'Heute' : 'Archiv'}</button>` : ''}
       <h1${archiv ? ' class="archiv-titel"' : ''}>${archiv ? esc(langDatum(d.datum) + ' ' + d.datum.slice(0, 4)) : 'Daily News'}</h1>
       <div class="meta">${archiv ? 'Ausgabe aus dem Archiv · ' : esc(langDatum(d.datum)) + ' · '}${d.meldungen.length} Meldungen · ca. ${lesezeit(d)} Min.</div>
       ${d.beispiel ? '<span class="beispiel">Testdaten</span>' : ''}
+      ${korrekturKasten(d)}
       <button class="knopf haupt start-wisch" data-wisch="0">${svg(ICON_WISCHEN, 18)}Durchwischen starten</button>
     </header>
     ${gruppen}
@@ -259,6 +261,7 @@ function ebene1(m, d) {
   ].join('');
   const einMedium = m.status === 'eine_quelle' ? (m.quellen?.[0]?.medium || m.quellen?.[0]?.titel || 'einem Medium') : '';
   return `<div class="ebene1">
+    ${m.korrigiert ? korrBanner(m.korrigiert) : ''}
     <div class="zeile-oben">
       <span class="bereich-label">${bereich[2] ? svg(bereich[2]) : ''}${esc(bereich[1])}</span>
       ${statusGross(m)}
@@ -332,6 +335,7 @@ function ebene2(m, d, nr, gesamt) {
   ].filter(Boolean).join(' · ');
   const umstritten = m.status === 'umstritten';
   return `<div class="ebene2" data-ebene="ebene2">
+    ${m.korrigiert ? korrBanner(m.korrigiert) : ''}
     <div class="ebene-kopf">
       <span class="label akzent">${esc(bereich)} · ${nr} / ${gesamt}</span>
       <h2 class="ebene-titel">${esc(m.schlagzeile)}</h2>
@@ -506,6 +510,8 @@ document.addEventListener('click', (e) => {
   if (start && !wisch.offen) return wischOeffnen(Number(start.dataset.wisch) || 0);
   const tab = e.target.closest('[data-tab]');
   if (tab && !wisch.offen) return zeigeTab(tab.dataset.tab);
+  const korr = e.target.closest('[data-korrektur]');
+  if (korr && !wisch.offen) return oeffneKorrigierteMeldung(korr.dataset.korrektur, korr.dataset.meldung);
   const archivTag = e.target.closest('[data-tag]');
   if (archivTag && !wisch.offen) return oeffneArchivTag(archivTag.dataset.tag);
   const factStart = e.target.closest('[data-fact]');
@@ -551,7 +557,7 @@ const ICON_WEITER = '<path d="M6 3l5 5-5 5"/>';
 const WOCHENTAG = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
 
 function navi() {
-  const aktiv = ansicht.tab === 'heute' ? 'heute' : 'archiv';
+  const aktiv = ansicht.tab === 'heute' || (ansicht.tab === 'archivtag' && ansicht.herkunft === 'heute') ? 'heute' : 'archiv';
   document.querySelectorAll('.navi [data-tab]').forEach(b => {
     const an = b.dataset.tab === aktiv;
     b.classList.toggle('aktiv', an);
@@ -627,20 +633,63 @@ async function ladeArchivTag(datum) {
   return d;
 }
 
-async function oeffneArchivTag(datum) {
+async function oeffneArchivTag(datum, meldungId = null) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(datum)) return;
-  ansicht.archivScroll = window.scrollY;
+  const von = ansicht.tab;
+  if (von === 'archiv') ansicht.archivScroll = window.scrollY;
   try {
     const d = await ladeArchivTag(datum);
-    if (ansicht.tab !== 'archiv') return;
+    if (ansicht.tab !== von) return; // inzwischen woanders hin gewechselt
+    ansicht.herkunft = von === 'heute' ? 'heute' : 'archiv';
     ansicht.tab = 'archivtag'; ansicht.tag = d;
     zeichne();
     window.scrollTo(0, 0);
+    if (meldungId) {
+      const i = reihenfolge(d).findIndex(m => m.id === meldungId);
+      if (i >= 0) wischOeffnen(i);
+    }
   } catch {
     toast(zustand.offline || !navigator.onLine
       ? `Die Ausgabe vom ${kurzDatum(datum)} gibt es nur mit Internet`
       : `Die Ausgabe vom ${kurzDatum(datum)} konnte nicht geladen werden`);
   }
+}
+
+// ---------- Korrekturen (Schritt 5) ----------
+const ICON_STIFT = '<path d="M10.5 2.5l3 3L6 13H3v-3z"/><path d="M9 4l3 3"/>';
+
+// Banner über einer korrigierten Meldung: { am, text }. Der Originaltext darunter bleibt unverändert.
+function korrBanner(k, klein = false) {
+  const am = typeof k?.am === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(k.am) ? ` am ${kurzDatum(k.am)}` : '';
+  return `<p class="korr-banner${klein ? ' klein-banner' : ''}">${svg(ICON_STIFT, 14)}<span><strong>Korrigiert${esc(am)}:</strong> ${esc(k?.text || 'Diese Meldung wurde nachträglich korrigiert.')}</span></p>`;
+}
+
+// Kasten oben in der Ausgabe: eine Zeile je Eintrag in `korrekturen`.
+function korrekturKasten(d) {
+  const liste = (Array.isArray(d.korrekturen) ? d.korrekturen : []).filter(k => k && (k.was_falsch || k.richtig));
+  if (!liste.length) return '';
+  return liste.map(k => {
+    const datum = typeof k.datum_meldung === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(k.datum_meldung) ? k.datum_meldung : null;
+    const abstand = datum ? tageZwischen(datum, d.datum) : null;
+    const titel = abstand === 1 ? 'Korrektur zu gestern' : datum ? `Korrektur zur Ausgabe vom ${kurzDatum(datum)}` : 'Korrektur';
+    const text = [k.was_falsch, k.richtig].filter(Boolean).map(esc).join(' → ');
+    return `<section class="korr-kasten" aria-label="Korrektur">
+      <span class="korr-titel">${svg(ICON_STIFT, 14)}${esc(titel)}</span>
+      <span class="korr-text">${text}</span>
+      ${quellenZeile(k.quellen)}
+      ${datum && k.meldung_id ? `<button class="korr-link" data-korrektur="${esc(datum)}" data-meldung="${esc(k.meldung_id)}">Zur Meldung vom ${esc(kurzDatum(datum))}</button>` : ''}
+    </section>`;
+  }).join('');
+}
+
+// Öffnet die ursprüngliche (korrigierte) Meldung: ältere Ausgabe laden, dann direkt im Wisch-Modus.
+function oeffneKorrigierteMeldung(datum, meldungId) {
+  const aktuell = gezeigteAusgabe();
+  if (aktuell && aktuell.datum === datum) {
+    const i = reihenfolge(aktuell).findIndex(m => m.id === meldungId);
+    return i >= 0 ? wischOeffnen(i) : undefined;
+  }
+  return oeffneArchivTag(datum, meldungId);
 }
 
 function toast(text) {

@@ -4,7 +4,24 @@
  "erstellt_um": "2026-11-19T06:10:00+01:00",
  "beispiel": true,
  "transparenz": "TESTDATEN – keine echten Nachrichten. Erstellt für die Vorschau der App.",
- "korrekturen": [],
+ "korrekturen": [
+  {
+   "meldung_id": "2026-11-18-de-01",
+   "datum_meldung": "2026-11-18",
+   "korrigiert_am": "2026-11-19",
+   "was_falsch": "Fiktiv: Das Gesetz gelte ab sofort.",
+   "richtig": "Fiktiv: Es gilt erst ab 2027.",
+   "quellen": [
+    {
+     "titel": "Testartikel 51 (fiktiv)",
+     "medium": "Testbehörde (Mitteilung)",
+     "url": "https://example.org/test/51",
+     "datum": "2026-11-19",
+     "primaer": true
+    }
+   ]
+  }
+ ],
  "meldungen": [
   {
    "id": "2026-11-19-de-01",
