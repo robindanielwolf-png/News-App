@@ -10,7 +10,8 @@
 // 0.9.1: Bugfixes aus der Abnahme; Vorschau und Live getrennt (eigener Speicher, eigener Cache, Test-Daten nur in der Vorschau).
 // 0.10.0: Fortschritt – Serie, Lexikon mit „Verstanden“, Seite „Mein Fortschritt“, Wiederholung am Samstag. Alles nur lokal.
 // 0.10.1: Kopfzeile „Serie · Begriffe“ aktualisiert sich nach dem Schließen des Durchwischens.
-const VERSION = '0.10.1';
+// 0.10.2: Start auch bei gesperrtem Speicher; „noch nicht verfügbar“ ohne Ausgabe; Übergang bei „Bewegung reduzieren“ aus.
+const VERSION = '0.10.2';
 const OFFLINE_TAGE = 7;
 const ARCHIV_TAGE = 30;
 
@@ -203,7 +204,11 @@ function zeichne() {
   if (!d) {
     $('inhalt').innerHTML = zustand.offline
       ? `<div class="leer"><h2>Noch nichts gespeichert</h2><p>Öffne die App einmal mit Internet, dann sind die letzten ${OFFLINE_TAGE} Tage auch offline lesbar.</p></div>`
-      : `<div class="leer"><h2>Noch keine Ausgabe</h2><p>${zustand.indexLeer ? 'Die erste Ausgabe erscheint morgen um 6:30.' : 'Die Ausgabe konnte nicht geladen werden. Versuch es gleich noch einmal.'}</p></div>`;
+      : zustand.neuesteFehlt
+        ? `<div class="leer"><h2>Noch keine Ausgabe</h2><p>Die Ausgabe vom ${kurzDatum(zustand.neuesteFehlt)} ist noch nicht verfügbar.</p></div>`
+        : zustand.neuesteKaputt
+          ? `<div class="leer"><h2>Noch keine Ausgabe</h2><p>Die Ausgabe vom ${kurzDatum(zustand.neuesteKaputt)} ist fehlerhaft.</p></div>`
+          : `<div class="leer"><h2>Noch keine Ausgabe</h2><p>${zustand.indexLeer ? 'Die erste Ausgabe erscheint morgen um 6:30.' : 'Die Ausgabe konnte nicht geladen werden. Versuch es gleich noch einmal.'}</p></div>`;
     return;
   }
   zeichneAusgabe(d, false);
@@ -1227,9 +1232,10 @@ function toast(text) {
 
 // ---------- App-Updates: neue Version beim nächsten Öffnen ----------
 function updates() {
-  const alt = localStorage.getItem(SPEICHER_PRAEFIX + 'app-version');
+  let alt = null;
+  try { alt = localStorage.getItem(SPEICHER_PRAEFIX + 'app-version'); } catch {} // gesperrter Speicher: kein Hinweis, Start geht weiter
   if (alt && alt !== VERSION) toast(`App aktualisiert (Version ${VERSION})`);
-  localStorage.setItem(SPEICHER_PRAEFIX + 'app-version', VERSION);
+  try { localStorage.setItem(SPEICHER_PRAEFIX + 'app-version', VERSION); } catch {}
   if (!('serviceWorker' in navigator)) return;
   const start = Date.now();
   let neuLaden = false;
@@ -1248,7 +1254,7 @@ function updates() {
 
 // ---------- Start ----------
 (async function start() {
-  updates();
+  try { updates(); } catch {} // Speicherfehler dürfen den Start nie verhindern
   haltDauerhaft();
   try { zustand.ausgabe = await neuesteGespeicherte(); if (zustand.ausgabe) zeichne(); } catch {}
   await aktualisieren();

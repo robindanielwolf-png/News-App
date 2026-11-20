@@ -343,3 +343,4 @@ button.wdh-karte:active { background: var(--akzent-flaeche); }
 .knopf.im-lexikon { background: var(--akzent-flaeche); border: 0; color: var(--akzent); font-size: .94rem; opacity: 1; }
 .knopf.im-lexikon:disabled { cursor: default; }
 .verstanden-hinweis { margin: 0; font-size: .765rem; line-height: 1.4; color: var(--gedaempft); }
+@media (prefers-reduced-motion: reduce) { .knopf.verstanden-knopf { transition: none; } }
