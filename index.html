@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Daily News</title>
+  <meta name="theme-color" content="#FAF8F3">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Daily News">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="schriften/newsreader-latin-opsz.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="schriften/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hinweise" aria-live="polite"></div>
+  <main id="inhalt">
+    <p class="laden">Lädt …</p>
+  </main>
+  <nav class="navi" aria-label="Navigation">
+    <button class="aktiv" aria-current="page" data-tab="heute">Heute</button>
+    <button data-tab="archiv">Archiv</button>
+    <button data-tab="gemerkt">Gemerkt</button>
+    <button data-tab="einstellungen">Einstellungen</button>
+  </nav>
+  <div id="wisch" class="wisch" hidden role="dialog" aria-modal="true" aria-label="Meldungen durchwischen"></div>
+  <div id="toast" role="status"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
