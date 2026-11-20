@@ -1,0 +1,626 @@
+{
+  "version": 1,
+  "datum": "2026-11-20",
+  "erstellt_um": "2026-11-20T11:00:00+01:00",
+  "transparenz": "Recherche per Websuche (rund 45 Suchen); tagesschau.de war per Abruf nicht erreichbar, Quellen stammen aus Suchergebnissen. Mehrere Meldungen stützen sich auf Vorberichte oder Sekundärquellen und sind entsprechend gekennzeichnet; die Auslosung der Nations League lag zur Recherche noch nicht als Ergebnis vor. Meldungen zu Claude/Anthropic tragen einen Interessenkonflikt-Hinweis.",
+  "korrekturen": [],
+  "meldungen": [
+    {
+      "id": "2026-11-20-welt-01",
+      "bereich": "welt",
+      "schlagzeile": "Dreiergipfel Trump–Xi–Putin in Shenzhen: viel Symbolik, kaum Ergebnisse",
+      "kurz": "Das erste Treffen von Trump, Xi und Putin zu dritt am Rande des APEC-Gipfels in Shenzhen hat laut ZDFheute und t-online wenig Konkretes gebracht. Ukraine-Krieg, Iran-Krieg und Atomwaffen blieben ohne belastbare Zusagen.",
+      "status": "bestaetigt",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-19",
+      "stand": "2026-11-20T10:00:00+01:00",
+      "hintergrund": "Das Treffen am 19. November war der erste Dreiergipfel der Staatschefs der USA, Chinas und Russlands. Trump sprach zu Beginn von „Geschichte schreiben“, Xi und Putin nannten die Gespräche konstruktiv beziehungsweise offen. Die taz berichtete live, Putin habe erst von Frieden gesprochen und dann mit Angriffen gedroht. Laut Greek City Times dauerte das Treffen rund 80 Minuten und endete mit einer Vier-Punkte-Erklärung; das ist nur in dieser einen Quelle belegt. Im Vorfeld hatte der Atlantic Council keine konkreten Abkommen erwartet.",
+      "warum_wichtig": "Drei Atommächte und große Volkswirtschaften sprechen miteinander – dass wenig herauskommt, zeigt, wie begrenzt der Einfluss bei Ukraine, Iran und Rüstungskontrolle ist.",
+      "quellen": [
+        {
+          "titel": "Trump, Xi und Putin in Shenzhen: Viel Symbolik, wenig Ergebnis",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/trump-xi-putin-shenzen-ergebnis-100.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        },
+        {
+          "titel": "Apec-Gipfel in Shenzhen: Trumps Treffen mit Xi und Putin ist eine Blamage",
+          "medium": "t-online",
+          "url": "https://www.t-online.de/nachrichten/ausland/internationale-politik/id_101536356/apec-gipfel-in-shenzhen-trumps-treffen-mit-xi-und-putin-ist-eine-blamage.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        },
+        {
+          "titel": "Treffen von Putin, Trump und Xi: Erst spricht Putin von Frieden, dann droht er mit Angriffen",
+          "medium": "taz",
+          "url": "https://taz.de/-Treffen-von-Putin-Trump-und-XI-/!6231342/",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "vertiefung": {
+        "text": "Gestern lief der Gipfel noch; heute liegen erste Bewertungen vor. Bereits im Mai 2026 hatten Trump und Xi in Peking verhandelt, im September in Washington – beide Treffen brachten laut Berichten wenig sichtbare Fortschritte. Alle Details zum Abschlusspapier sind noch nicht unabhängig geprüft.",
+        "links": [
+          {
+            "titel": "Trump-Xi-Putin trilateral meeting at APEC: What to expect",
+            "medium": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/14/trump-xi-putin-trilateral-meeting-at-apec-what-to-expect"
+          },
+          {
+            "titel": "What Trump, Putin, and Xi want from their meeting in Shenzhen",
+            "medium": "Atlantic Council",
+            "url": "https://www.atlanticcouncil.org/?p=961216"
+          }
+        ],
+        "chat_prompt": "Was wurde in Shenzhen konkret beschlossen, und wo gehen die Bewertungen auseinander?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "hinweis_quellen": "Bewertung stützt sich auf Kommentar- und Liveberichte; Details des Abschlusspapiers (Greek City Times) nur eine Quelle."
+    },
+    {
+      "id": "2026-11-20-de_eu-01",
+      "bereich": "de_eu",
+      "schlagzeile": "Berlin: „Koalition der Willigen“ sagt Kiew Hilfe „so lange wie nötig“ zu",
+      "kurz": "Bundeskanzler Merz war Gastgeber des Gipfels der „Koalition der Willigen“ in Berlin. Laut ORF lautet die Linie: Hilfe für Kiew „so lange wie nötig“; US-Unterhändler trafen Präsident Selenskyj am Rande.",
+      "status": "bestaetigt",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-19",
+      "stand": "2026-11-20T10:00:00+01:00",
+      "hintergrund": "Das Kanzleramt hatte das Treffen als Abstimmung zu laufender Diplomatie und Sicherheitsgarantien für die Ukraine angekündigt. ORF beschreibt es als eine Art Gegenveranstaltung zum Dreiergipfel in China. Die taz nennt den Gipfel eine „Merz-Show“ und sieht ihn auch als Vorbereitung eines EU-Sondergipfels in der kommenden Woche. Konkrete Beschlüsse zu den Sicherheitsgarantien sind in den gefundenen Berichten nicht belegt.",
+      "warum_wichtig": "Deutschland ist Gastgeber der europäischen Ukraine-Diplomatie, während die USA, China und Russland parallel verhandeln.",
+      "quellen": [
+        {
+          "titel": "Treffen der Koalition der Willigen in Berlin",
+          "medium": "Bundesregierung",
+          "url": "https://www.bundesregierung.de/breg-de/aktuelles/koalition-der-willigen-in-berlin-2461162",
+          "datum": "2026-11-20",
+          "primaer": true
+        },
+        {
+          "titel": "„Koalition der Willigen“: Hilfe für Kiew „so lange wie nötig“",
+          "medium": "ORF",
+          "url": "https://orf.at/stories/3448674/",
+          "datum": "2026-11-20",
+          "primaer": false
+        },
+        {
+          "titel": "„Koalition der Willigen“ in Berlin: Die große Merz-Show",
+          "medium": "taz",
+          "url": "https://taz.de/Koalition-der-Willigen-in-Berlin/!6231331/",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "vertiefung": {
+        "text": "Die Koalition der Willigen besteht aus rund drei Dutzend Staaten, die Sicherheitsgarantien für die Ukraine nach einem Kriegsende vorbereiten. Frühere Treffen gab es etwa in Paris im Januar 2026.",
+        "links": [
+          {
+            "titel": "Treffen der Koalition der Willigen zur Lage in der Ukraine",
+            "medium": "Bundesregierung",
+            "url": "https://www.bundesregierung.de/breg-de/aktuelles/treffen-der-koalition-der-willigen-zur-lage-in-der-ukraine-2382966"
+          }
+        ],
+        "chat_prompt": "Was ist beim Berliner Gipfel der Koalition der Willigen konkret beschlossen worden?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "hinweis_quellen": "Ergebnisdetails (z. B. Pressekonferenz) nicht abgerufen; Teilnehmerzahlen werden in Medien unterschiedlich genannt."
+    },
+    {
+      "id": "2026-11-20-de_eu-02",
+      "bereich": "de_eu",
+      "schlagzeile": "EU-Kommission will Ukraine-Kredit von 45 Mrd. Euro mit russischem Vermögen absichern",
+      "kurz": "Die EU-Kommission will laut Berliner Zeitung rund 45 Milliarden Euro für die Ukraine mit russischem Vermögen absichern. Zwei Drittel sollen die EU, den Rest internationale Partner tragen. Entscheiden soll ein Sondergipfel in Brüssel Ende November.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-18",
+      "stand": "2026-11-20T10:00:00+01:00",
+      "hintergrund": "In der EU liegen rund 210 Milliarden Euro russischer Vermögenswerte, der größte Teil beim Finanzdienstleister Euroclear in Belgien. Ein direkter Zugriff („Reparationskredit“) scheiterte im Dezember 2025 am Widerstand Belgiens; stattdessen beschloss die EU einen gemeinsamen Kredit von 90 Milliarden Euro für 2026 und 2027. Ein weiterer Bericht (Datum unklar) meldet, Belgien blockiere den Reparationskredit nicht mehr; das widerspricht dem Stand der Berliner Zeitung und ist nicht belegt.",
+      "warum_wichtig": "Die Finanzierung der Ukraine und der Umgang mit russischem Staatsvermögen sind eine der großen offenen Fragen der EU.",
+      "quellen": [
+        {
+          "titel": "Ukraine-Kredit: Von der Leyen will 45 Milliarden mit russischem Vermögen absichern",
+          "medium": "Berliner Zeitung",
+          "url": "https://www.berliner-zeitung.de/article/ukraine-kredit-von-der-leyen-russisches-vermoegen-45-milliarden-10610384",
+          "datum": "2026-11-18",
+          "primaer": false
+        },
+        {
+          "titel": "90 Milliarden Euro: EU einigt sich auf Kredit für Ukraine (Hintergrund, Dezember 2025)",
+          "medium": "ORF",
+          "url": "https://orf.at/stories/3414842/",
+          "datum": "2025-12-19",
+          "primaer": false
+        }
+      ],
+      "vertiefung": {
+        "text": "Hintergrund ist der Finanzierungsbedarf der Ukraine für die kommenden Jahre. Die Quellenlage zum aktuellen Plan ist dünn: nur ein aktueller Bericht.",
+        "links": [
+          {
+            "titel": "Russland-Gelder: EU-Gipfel ringt intensiv um Lösung",
+            "medium": "ORF",
+            "url": "https://orf.at/stories/3414841/"
+          }
+        ],
+        "chat_prompt": "Wie funktioniert die geplante Absicherung des Ukraine-Kredits mit russischem Vermögen?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "hinweis_quellen": "Zum aktuellen Plan nur eine Quelle (Berliner Zeitung); zweite Quelle betrifft den Hintergrund."
+    },
+    {
+      "id": "2026-11-20-wirtschaft-01",
+      "bereich": "wirtschaft",
+      "schlagzeile": "DAX fällt auf Drei-Wochen-Tief – BASF gibt Evonik-Übernahme auf",
+      "kurz": "Der DAX schloss am 19. November laut dpa-AFX 1,06 % tiefer bei 25.463,81 Punkten, dem niedrigsten Stand seit über drei Wochen. Evonik-Aktien brachen um mehr als 16 % ein, nachdem BASF seine Übernahmebemühungen beendet hatte.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-19",
+      "stand": "2026-11-20T10:00:00+01:00",
+      "hintergrund": "Die Zahlen stammen aus dem dpa-AFX-Börsenbericht, den mehrere Portale übernommen haben (eine Agentur). Der DAX hatte sich seit dem kurzen Sprung über 27.000 Punkte vor einer Woche um knapp 5 % verringert. Henkel und Lanxess gaben nach Abstufungen von Kepler Cheuvreux nach. Die Börsen-Zeitung berichtet unabhängig, BASF und Evonik hätten sich „unverrichteter Dinge“ getrennt; Evonik halte das Angebot für zu niedrig. Der Börsengang von Anthropic hob die Stimmung nur zeitweise.",
+      "warum_wichtig": "Ein schwacher Leitindex und ein geplatzter Branchen-Deal zeigen die Lage der deutschen Chemieindustrie.",
+      "quellen": [
+        {
+          "titel": "ROUNDUP/Aktien Frankfurt Schluss: Verluste - US-Börsen belasten trotz Anthropic",
+          "medium": "boerse.de (dpa-AFX)",
+          "url": "https://www.boerse.de/nachrichten/ROUNDUP-Aktien-Frankfurt-Schluss-Verluste-US-Boersen-belasten-trotz-Anthropic/38729275",
+          "datum": "2026-11-20",
+          "primaer": false
+        },
+        {
+          "titel": "BASF und Evonik trennen sich unverrichteter Dinge",
+          "medium": "Börsen-Zeitung",
+          "url": "https://www.boersen-zeitung.de/unternehmen-branchen/basf-und-evonik-trennen-sich-unverrichteter-dinge",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "vertiefung": {
+        "text": "BASF hatte im September 2026 Sondierungen zu einer möglichen Evonik-Übernahme bestätigt; Evonik lehnte ein erstes Angebot ab. Das Datum des Börsen-Zeitung-Artikels ist im Suchergebnis nicht genannt.",
+        "links": [
+          {
+            "titel": "BASF streckt die Hand nach Evonik aus",
+            "medium": "Börsen-Zeitung",
+            "url": "https://www.boersen-zeitung.de/unternehmen-branchen/evonik-schiessen-hoch-nach-bericht-ueber-basf-interesse"
+          }
+        ],
+        "chat_prompt": "Warum scheiterte die Übernahme von Evonik durch BASF, und was heißt das für die Chemiebranche?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "hinweis_quellen": "Kursdaten nur aus der Agentur dpa-AFX; Datum der Börsen-Zeitung-Meldung nicht geprüft."
+    },
+    {
+      "id": "2026-11-20-ki_tech-01",
+      "bereich": "ki_tech",
+      "schlagzeile": "Google startet Gemini 4 Neon: Mittelklasse-Modell mit Carbon-Qualität, aber ohne unabhängige Tests",
+      "kurz": "Google hat am 18. November Gemini 4 Neon veröffentlicht, ein Mittelklasse-Modell für Coding und Analyse. Laut Google ist es etwa dreimal schneller und rund 60 % günstiger als Gemini 4 Carbon. Unabhängige Benchmarks fehlen noch.",
+      "status": "bestaetigt",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-18",
+      "stand": "2026-11-20T10:00:00+01:00",
+      "hintergrund": "Neon liegt laut Google zwischen Gemini 4 Carbon und Gemini 4 Hydrogen. Es ist im Gemini-API, Google AI Studio, Gemini für Unternehmen, Google Antigravity und für Pro- und Ultra-Abonnenten in der Gemini-App verfügbar. Eine Cyber-Variante geht an geprüfte Verteidiger. Alle Leistungsangaben stammen von Google; eine unabhängige Einordnung gegenüber den aktuellen Modellen von OpenAI oder Anthropic fehlt.",
+      "warum_wichtig": "Schnellere, günstigere Modelle bestimmen, was sich im Alltag und in Unternehmen wirtschaftlich einsetzen lässt.",
+      "quellen": [
+        {
+          "titel": "Introducing Gemini 4 Neon",
+          "medium": "Google (Blog)",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon",
+          "datum": "2026-11-18",
+          "primaer": true
+        },
+        {
+          "titel": "Google launches Gemini 4 Neon with Carbon quality at Flash speeds, live for AI Pro",
+          "medium": "9to5Google",
+          "url": "https://9to5google.com/2026/11/18/gemini-4-neon-announcement/",
+          "datum": "2026-11-18",
+          "primaer": false
+        },
+        {
+          "titel": "Google launches Gemini 4 Neon, its new mid-tier AI model",
+          "medium": "GSMArena",
+          "url": "https://www.gsmarena.com/google_launches_gemini_4_neon_its_new_midtier_ai_model-news-75544.php",
+          "datum": "2026-11-18",
+          "primaer": false
+        }
+      ],
+      "vertiefung": {
+        "text": "Die Gemini-4-Familie hatte mit Gemini 4 Argon im September bei Artificial Analysis Platz drei der Labore erreicht; Neon ist eine günstigere Stufe darunter.",
+        "links": [
+          {
+            "titel": "Gemini 4 Argon matches GPT-6 Astra and hallucinates far less in early tests",
+            "medium": "The Next Web",
+            "url": "https://thenextweb.com/news/gemini-4-argon-artificial-analysis-gpt-6-astra-hallucination"
+          }
+        ],
+        "chat_prompt": "Wie schlägt sich Gemini 4 Neon gegen GPT-6.2 Sol und Claude-Modelle, sobald unabhängige Tests vorliegen?"
+      },
+      "modelle": [
+        "Gemini 4 Neon",
+        "Gemini 4 Carbon"
+      ],
+      "benchmarks": {
+        "hersteller": [
+          {
+            "test": "Tempo und Kosten gegenüber Gemini 4 Carbon",
+            "modell": "Gemini 4 Neon",
+            "wert": "ca. dreimal schneller bei rund 60 % niedrigeren Kosten",
+            "quelle": "Google, Ankündigung",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon"
+          },
+          {
+            "test": "Preis laut Berichten (nur ein Medium)",
+            "modell": "Gemini 4 Neon",
+            "wert": "3 $ pro Mio. Eingabe-Tokens, 15 $ pro Mio. Ausgabe-Tokens",
+            "quelle": "9to5Google",
+            "url": "https://9to5google.com/2026/11/18/gemini-4-neon-announcement/"
+          }
+        ],
+        "unabhaengig": [],
+        "hinweis": "noch keine unabhängigen Tests; auch kein direkter Vergleich mit Modellen anderer Hersteller gefunden"
+      },
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-20-ki_tech-02",
+      "bereich": "ki_tech",
+      "schlagzeile": "GPT-6.2 Astra und Sol: OpenAI meldet Bestwerte, unabhängige Tests zeigen ein gemischtes Bild",
+      "kurz": "OpenAI hat am 17. November GPT-6.2 Astra (Spitzenmodell) und GPT-6.2 Sol (günstiger) veröffentlicht. OpenAI sieht Astra vorn; laut Decrypt liegt Astra in unabhängigen Tests hinter Claude Fable 5.2.",
+      "status": "umstritten",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-17",
+      "stand": "2026-11-20T10:00:00+01:00",
+      "hintergrund": "Astra kostet in der API 8 $ (Eingabe) und 40 $ (Ausgabe) pro Million Tokens, 20 % weniger als GPT-6 Astra; Sol behält die Preise von GPT-6.1 Sol. OpenAI stuft beide Modelle im Cyber-Bereich als „Critical“ ein und startet mit strengeren Schutzmaßnahmen. Die Herstellerangaben sind nicht unabhängig geprüft; die unabhängigen Angaben stammen bisher aus Sekundärquellen.",
+      "warum_wichtig": "Die Frage, welches Modell vorn liegt, hängt stark vom Test ab; Hersteller- und Fremdangaben weichen hier sichtbar ab.",
+      "quellen": [
+        {
+          "titel": "Introducing GPT-6.2 Astra and Sol",
+          "medium": "OpenAI",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+          "datum": "2026-11-17",
+          "primaer": true
+        },
+        {
+          "titel": "OpenAI GPT-6.2 Astra challenges Anthropic on price, but not every benchmark",
+          "medium": "Decrypt",
+          "url": "https://decrypt.co/383488/openai-gpt-6-2-astra-challenges-anthropic-price-but-not-every-benchmark",
+          "datum": "2026-11-17",
+          "primaer": false
+        },
+        {
+          "titel": "OpenAI GPT-6.2 Astra Sol launch",
+          "medium": "Digital Trends",
+          "url": "https://www.digitaltrends.com/computing/openai-gpt-6-2-astra-sol-launch/",
+          "datum": "2026-11-17",
+          "primaer": false
+        }
+      ],
+      "vertiefung": {
+        "text": "Der Vorgänger GPT-6 Astra lag im Herbst bei Artificial Analysis in der Spitzengruppe; je nach Index-Version wechselte die Reihenfolge mit Claude Fable. Meldung wegen Vergleich mit Claude: Interessenkonflikt, da der Autor selbst ein Claude-Modell ist.",
+        "links": [
+          {
+            "titel": "OpenAI GPT-6.2 Sol and Astra benchmarks",
+            "medium": "OfficeChai",
+            "url": "https://officechai.com/ai/gpt-6-2-sol-gpt-6-2-astra-benchmarks/"
+          }
+        ],
+        "chat_prompt": "Welche Tests sehen GPT-6.2 Astra vorn, welche Claude Fable 5.2, und warum unterscheiden sie sich?"
+      },
+      "modelle": [
+        "GPT-6.2 Astra",
+        "Claude Fable 5.2"
+      ],
+      "benchmarks": {
+        "hersteller": [
+          {
+            "test": "Erfolgsquote bei schweren Aufgaben (OpenAI-Angabe)",
+            "modell": "GPT-6.2 Astra",
+            "wert": "mehr als doppelt so hoch wie bei Claude Fable 5.2, bei etwa einem Sechstel der Kosten",
+            "quelle": "OpenAI, Ankündigung (laut Decrypt)",
+            "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol"
+          },
+          {
+            "test": "AA-3D (Präferenz-Test, Elo)",
+            "modell": "GPT-6.2 Astra",
+            "wert": "1.318 (Claude Fable 5.2: 1.271 · GPT-6.2 Sol: 1.259)",
+            "quelle": "Decrypt, zitiert Herstellerangaben",
+            "url": "https://decrypt.co/383488/openai-gpt-6-2-astra-challenges-anthropic-price-but-not-every-benchmark"
+          }
+        ],
+        "unabhaengig": [
+          {
+            "test": "Unabhängige Tests (Gesamtbild laut Decrypt)",
+            "wert": "Astra auf Platz zwei hinter Claude Fable 5.2, keine Verbesserung bei Coding-Agenten",
+            "vorn": "Claude Fable 5.2",
+            "vergleich_mit": null,
+            "nur_eine_quelle": true,
+            "quelle": "Decrypt",
+            "url": "https://decrypt.co/383488/openai-gpt-6-2-astra-challenges-anthropic-price-but-not-every-benchmark"
+          },
+          {
+            "test": "Coding Agent Index (Artificial Analysis, laut Digg)",
+            "wert": "Astra unverändert zum Vorgänger; Sol 3 Punkte schlechter als GPT-6.1 Sol",
+            "vorn": null,
+            "vergleich_mit": "GPT-6 Astra",
+            "nur_eine_quelle": true,
+            "quelle": "Digg (Zusammenfassung von Artificial-Analysis-Daten)",
+            "url": "https://digg.com/ai/y8atmdxk"
+          }
+        ],
+        "hinweis": "Nur Vergleich mit Vorgänger beim Coding Agent Index; direkter Vergleich mit Fable 5.2 dort fehlt. Unabhängige Angaben nur aus Sekundärquellen."
+      },
+      "positionen": [
+        {
+          "seite": "OpenAI",
+          "position": "Astra setze einen neuen Bestwert: mehr als doppelte Erfolgsquote wie Claude Fable 5.2 bei rund einem Sechstel der Kosten (Herstellerangabe)."
+        },
+        {
+          "seite": "Unabhängige Tests (laut Decrypt)",
+          "position": "Astra liegt auf Platz zwei hinter Claude Fable 5.2 und zeigt keine Verbesserung bei Coding-Agenten."
+        }
+      ],
+      "interessenkonflikt": true,
+      "korrigiert": null,
+      "hinweis_quellen": "Unabhängige Ergebnisse nur aus Sekundärberichten (Decrypt, Digg)."
+    },
+    {
+      "id": "2026-11-20-sport-01",
+      "bereich": "sport",
+      "schlagzeile": "Nations League: Auslosung des Viertelfinals für das DFB-Team heute in Nyon",
+      "kurz": "Heute um 12 Uhr wird in Nyon das Nations-League-Viertelfinale ausgelost. Das DFB-Team ist als Gruppensieger gesetzt; laut Berichten sind Belgien, Spanien oder Norwegen mögliche Gegner. Das Ergebnis der Ziehung wurde nicht geprüft.",
+      "status": "unklar",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-20",
+      "stand": "2026-11-20T10:00:00+01:00",
+      "hintergrund": "Deutschland hatte die Gruppenphase der Liga A am 17. November als Gruppensieger beendet. Das Viertelfinale ist für März 2027 mit Hin- und Rückspiel angesetzt, das Rückspiel in Deutschland. Die Niederlande scheiden als Gegner aus, weil beide Teams schon in der Gruppe aufeinandertrafen. Berichte nennen die möglichen Gegner nicht einheitlich (teils auch Portugal oder Dänemark). Bundestrainer ist Jürgen Klopp.",
+      "warum_wichtig": "Der Weg ins Halbfinale entscheidet, wie weit die Nationalmannschaft in der Nations League kommt.",
+      "quellen": [
+        {
+          "titel": "Deutschland im Nations-League-Viertelfinale: Wann ist die Auslosung, wer sind mögliche Gegner?",
+          "medium": "Eurosport",
+          "url": "https://www.eurosport.de/fussball/uefa-nations-league/2026-2027/viertelfinal-auslosung-moegliche-gegner-dfb-team-so-geht-es-fuer-deutschland-weiter_sto23356253/story.shtml",
+          "datum": "2026-11-20",
+          "primaer": false
+        },
+        {
+          "titel": "Nations League 2026/27: Deutschlands mögliche Viertelfinal-Gegner, Auslosung und Termine",
+          "medium": "Sky Sport",
+          "url": "https://sport.sky.de/fussball/artikel/nations-league-2026-27-deutschlands-moegliche-viertelfinal-gegner-auslosung-und-termine/13612926/34130",
+          "datum": "2026-11-20",
+          "primaer": false
+        },
+        {
+          "titel": "Gegen wen spielt Deutschland im Viertelfinale der Nations League?",
+          "medium": "spox",
+          "url": "https://www.spox.com/fussball/news/deutschland-gegner-im-viertelfinale-der-nations-league-auf-wen-koennte-das-dfb-team-treffen/blt379e1974b4696793",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "vertiefung": {
+        "text": "Gestern berichteten wir über das 5:0 gegen die Niederlande; heute folgt die Auslosung für die K.-o.-Runde.",
+        "links": [
+          {
+            "titel": "Nations League: Das müssen Fans zur Auslosung wissen",
+            "medium": "DFB",
+            "url": "https://www.dfb.de/news/nations-league-viertelfinale-das-muessen-fans-zur-auslosung-wissen"
+          }
+        ],
+        "chat_prompt": "Gegen wen spielt Deutschland im Nations-League-Viertelfinale, und wann sind die Spiele?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "hinweis_quellen": "Nur Vorberichte; Ergebnis der Auslosung nicht abgerufen. Quellen nennen mögliche Gegner uneinheitlich."
+    }
+  ],
+  "facts": [
+    {
+      "id": "2026-11-20-fact-1",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Großhandelspreise 8,8 % über Vorjahr",
+      "text": "Die Großhandelspreise lagen im Oktober 2026 um 8,8 % über dem Vorjahresmonat und um 0,4 % über dem Vormonat (Destatis, Meldung vom 13.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Großhandelspreise im Oktober 2026: +8,8 % gegenüber Oktober 2025",
+          "medium": "Destatis",
+          "url": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/11/PD26_396_61281.html",
+          "datum": "2026-11-13",
+          "primaer": true
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-20-fact-2",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "GPT-6.2 Astra: 20 % billiger als der Vorgänger",
+      "text": "Die API-Preise von GPT-6.2 Astra liegen bei 8 $ (Eingabe) und 40 $ (Ausgabe) pro Million Tokens, 20 % unter GPT-6 Astra (Herstellerangabe, Stand 17.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Introducing GPT-6.2 Astra and Sol",
+          "medium": "OpenAI",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+          "datum": "2026-11-17",
+          "primaer": true
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-20-fact-3",
+      "art": "zeitlos",
+      "thema": "ki",
+      "titel": "Der Transformer kam 2017 aus einem Google-Paper",
+      "text": "Das Paper „Attention Is All You Need“ (arXiv, Juni 2017) führte die Transformer-Architektur ein, die heute fast allen großen Sprachmodellen zugrunde liegt. Sie erreichte 28,4 BLEU auf WMT 2014 Englisch–Deutsch.",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Attention Is All You Need",
+          "medium": "arXiv",
+          "url": "https://arxiv.org/abs/1706.03762",
+          "datum": "2017-06-12",
+          "primaer": true
+        },
+        {
+          "titel": "Attention is All You Need",
+          "medium": "Google Research",
+          "url": "https://research.google/pubs/attention-is-all-you-need/",
+          "datum": "2017-06-12",
+          "primaer": true
+        }
+      ],
+      "interessenkonflikt": false
+    }
+  ],
+  "extra_facts": [
+    {
+      "id": "2026-11-20-fact-4",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "18 DAX-Rekorde in 2026",
+      "text": "Der DAX hat 2026 laut Deutscher Börse bislang 18 neue Allzeithochs erreicht (Stand Wochenausblick, 16.11.2026); am 19.11. schloss er bei 25.463,81 Punkten.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Wochenausblick: Starke Zahlen beflügeln den DAX",
+          "medium": "Deutsche Börse",
+          "url": "https://live.deutsche-boerse.com/nachrichten/wochenausblick-starke-zahlen-befluegeln-den-dax",
+          "datum": "2026-11-16",
+          "primaer": true
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-20-fact-5",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "Offenes Modell nur 3 Punkte hinter der Spitze",
+      "text": "Kimi K3.1 Pro erreichte 55 Punkte im Artificial-Analysis-Index (Platz 4). Mit veröffentlichten Gewichten sinkt laut Artificial Analysis der Abstand offener zu proprietären Spitzenmodellen von 12 auf 3 Punkte (Stand 23.10.2026).",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Kimi K3.1 Pro launch benchmarks",
+          "medium": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/articles/kimi-k3-1-pro-launch-benchmarks",
+          "datum": "2026-10-23",
+          "primaer": true
+        },
+        {
+          "titel": "Kimi K3.1 Pro Places 4th On Artificial Analysis Intelligence Index",
+          "medium": "OfficeChai",
+          "url": "https://officechai.com/ai/kimi-k3-1-pro-places-4th-on-artificial-analysis-intelligence-index-ahead-of-gpt-6-astra-gemini-4-argon/",
+          "datum": "2026-10-24",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-20-fact-6",
+      "art": "zeitlos",
+      "thema": "wirtschaft",
+      "titel": "Zinseszins: 10.000 € bei 4 % werden zu rund 32.400 €",
+      "text": "Bei 4 % Zins auf 10.000 € ergeben sich nach 30 Jahren etwa 32.434 € (Formel: Anfangsbetrag × (1 + Zinssatz)^Jahre). Bei 2 % verdoppelt sich ein Betrag in ca. 35 Jahren, bei 5 % in knapp 15.",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Zinseszins – Kurz und kompakt",
+          "medium": "VR Bank",
+          "url": "https://www.vr.de/privatkunden/themenwelten/finanzen/investieren-anlegen/zinseszins.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        },
+        {
+          "titel": "Das sollten Sie zum Zinseszins wissen",
+          "medium": "ING",
+          "url": "https://www.ing.de/wissen/zinseszins/",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-20-fact-7",
+      "art": "zeitlos",
+      "thema": "sport",
+      "titel": "Trainierte haben oft einen niedrigeren Ruhepuls",
+      "text": "Gut trainierte Ausdauersportler haben häufig deutlich niedrigere Ruhepulswerte als der Durchschnitt (Erwachsene meist ca. 60–80 Schläge/min; Quellen nennen teils 60–90). Dauerhaft über 100 in Ruhe sollte ärztlich geklärt werden.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Wie sich Ausdauertraining auf den Ruhepuls auswirkt",
+          "medium": "Apotheken Umschau",
+          "url": "https://www.apotheken-umschau.de/gesund-bleiben/sport-und-bewegung/was-der-ruhepuls-bedeutet-und-wie-du-den-wert-mit-training-senkst-1557733.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-20-fact-8",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "Anthropic-IPO: größtes Börsenlisting aller Zeiten",
+      "text": "Der Anthropic-Börsengang brachte laut CNBC rund 81,3 Mrd. $ ein und übertraf damit das SpaceX-Listing (Stand 18.11.2026). Interessenkonflikt: Meldung betrifft Anthropic.",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Anthropic IPO raises over $81 billion in largest offering on record, topping SpaceX",
+          "medium": "CNBC",
+          "url": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html",
+          "datum": "2026-11-18",
+          "primaer": false
+        },
+        {
+          "titel": "Anthropic IPO Prices Above Expectations, Markets Steady Ahead of Debut",
+          "medium": "Newsweek",
+          "url": "https://www.newsweek.com/anthropic-ipo-price-expectations-markets-ahead-debut-12738498",
+          "datum": "2026-11-18",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": true
+    }
+  ],
+  "begriff": {
+    "wort": "Reparationskredit",
+    "erklaerung": "Ein Kredit an die Ukraine, der mit eingefrorenem russischem Staatsvermögen abgesichert oder zurückgezahlt werden soll. Die Ukraine muss ihn erst zurückzahlen, wenn Russland Kriegsschäden ersetzt.",
+    "meldung_id": "2026-11-20-de_eu-02",
+    "status": "eine_quelle",
+    "quellen": [
+      {
+        "titel": "Ukraine-Kredit: Von der Leyen will 45 Milliarden mit russischem Vermögen absichern",
+        "medium": "Berliner Zeitung",
+        "url": "https://www.berliner-zeitung.de/article/ukraine-kredit-von-der-leyen-russisches-vermoegen-45-milliarden-10610384",
+        "datum": "2026-11-18",
+        "primaer": false
+      }
+    ]
+  }
+}

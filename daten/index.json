@@ -1,7 +1,14 @@
 {
   "version": 1,
-  "aktualisiert": "2026-11-19T21:41:26.222Z",
+  "aktualisiert": "2026-11-20T04:40:12.793Z",
   "tage": [
+    {
+      "datum": "2026-11-20",
+      "datei": "2026-11-20.json",
+      "meldungen": 7,
+      "schlagzeile": "Dreiergipfel Trump–Xi–Putin in Shenzhen: viel Symbolik, kaum Ergebnisse",
+      "korrigiert": 0
+    },
     {
       "datum": "2026-11-19",
       "datei": "2026-11-19.json",
