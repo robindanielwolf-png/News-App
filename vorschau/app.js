@@ -9,7 +9,8 @@
 // Schritt 8: „Mehr dazu lernen“ – fertige Frage in die Zwischenablage, dann Claude öffnen (kein Prompt in der URL).
 // 0.9.1: Bugfixes aus der Abnahme; Vorschau und Live getrennt (eigener Speicher, eigener Cache, Test-Daten nur in der Vorschau).
 // 0.10.0: Fortschritt – Serie, Lexikon mit „Verstanden“, Seite „Mein Fortschritt“, Wiederholung am Samstag. Alles nur lokal.
-const VERSION = '0.10.0';
+// 0.10.1: Kopfzeile „Serie · Begriffe“ aktualisiert sich nach dem Schließen des Durchwischens.
+const VERSION = '0.10.1';
 const OFFLINE_TAGE = 7;
 const ARCHIV_TAGE = 30;
 
@@ -554,6 +555,8 @@ function wischSchliessen() {
   el.innerHTML = '';
   document.body.classList.remove('wisch-offen');
   if (ansicht.tab === 'gemerkt') zeichne(); // Liste kann sich durch Merken/Entfernen geändert haben
+  // Startseite: nur die Kopfzeile „Serie · Begriffe“ erneuern, die Scrollposition bleibt.
+  if (ansicht.tab === 'heute') { const k = document.querySelector('.fortschritt-kopf'); if (k) k.outerHTML = fortschrittKopf(); }
 }
 
 document.addEventListener('click', (e) => {
