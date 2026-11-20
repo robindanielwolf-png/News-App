@@ -8,7 +8,8 @@
 // 0.9.0: Schriften Newsreader + Inter lokal (Styleguide).
 // Schritt 8: „Mehr dazu lernen“ – fertige Frage in die Zwischenablage, dann Claude öffnen (kein Prompt in der URL).
 // 0.9.1: Bugfixes aus der Abnahme; Vorschau und Live getrennt (eigener Speicher, eigener Cache, Test-Daten nur in der Vorschau).
-const VERSION = '0.9.1';
+// 0.10.0: Fortschritt – Serie, Lexikon mit „Verstanden“, Seite „Mein Fortschritt“, Wiederholung am Samstag. Alles nur lokal.
+const VERSION = '0.10.0';
 const OFFLINE_TAGE = 7;
 const ARCHIV_TAGE = 30;
 
@@ -22,6 +23,11 @@ const DATEN = param === 'test' ? './testdaten/'
   : param === 'test-kaputt' ? './testdaten-kaputt/'
   : IN_VORSCHAU ? '../daten/' : './daten/';
 const CACHE_TAGE = 'news-tage:' + SPEICHER_PRAEFIX + new URL(DATEN, location.href).pathname;
+// Testhilfe (nur Vorschau und ?daten=test): ?heute=JJJJ-MM-TT setzt „heute“ für Serie, Verlauf, Wiederholung.
+const TEST_HEUTE = (IN_VORSCHAU && param === 'test' && /^\d{4}-\d{2}-\d{2}$/.test(new URLSearchParams(location.search).get('heute') || ''))
+  ? new URLSearchParams(location.search).get('heute') : null;
+// Fortschritt-Daten: Live ohne Präfix (wie V1), Vorschau mit „vorschau:“, Testmodus mit eigenem Präfix.
+const FORT_PRAEFIX = (IN_VORSCHAU && param === 'test') ? 'vorschau:test:' : SPEICHER_PRAEFIX;
 
 const STATUS = {
   bestaetigt:  { text: 'bestätigt',      svg: '<path d="M3 8.5l3 3 7-7"/>' },
@@ -48,7 +54,7 @@ const $ = (id) => document.getElementById(id);
 function berlinJetzt() {
   const t = Object.fromEntries(new Intl.DateTimeFormat('de-DE', { timeZone: 'Europe/Berlin', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
     .formatToParts(new Date()).map(p => [p.type, p.value]));
-  return { datum: `${t.year}-${t.month}-${t.day}`, minuten: Number(t.hour) * 60 + Number(t.minute) };
+  return { datum: TEST_HEUTE || `${t.year}-${t.month}-${t.day}`, minuten: Number(t.hour) * 60 + Number(t.minute) };
 }
 function vortag(datum) { const d = new Date(datum + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() - 1); return d.toISOString().slice(0, 10); }
 const kurzDatum = (datum) => `${datum.slice(8, 10)}.${datum.slice(5, 7)}.`;
@@ -56,7 +62,7 @@ const langDatum = (datum) => new Date(datum + 'T12:00:00Z').toLocaleDateString('
 
 // ---------- Prüfung einer Tagesdatei (leicht; der strenge Check läuft vor dem Commit) ----------
 function istGueltig(d) {
-  return d && d.version === 1 && /^\d{4}-\d{2}-\d{2}$/.test(d.datum) && Array.isArray(d.meldungen) && d.meldungen.length > 0
+  return d && (d.version === 1 || d.version === 2) && /^\d{4}-\d{2}-\d{2}$/.test(d.datum) && Array.isArray(d.meldungen) && d.meldungen.length > 0
     && d.meldungen.every(m => m && m.schlagzeile && STATUS[m.status] && Array.isArray(m.quellen) && m.quellen.length > 0);
 }
 
@@ -102,7 +108,7 @@ async function holeJSON(url) {
 
 let zustand = { ausgabe: null, offline: false, ladeFehler: false, neuesteKaputt: null, neuesteFehlt: null, indexLeer: false, indexTage: null };
 // Was gerade gezeigt wird: 'heute', 'archiv' (Liste) oder 'archivtag' (eine ältere Ausgabe).
-const ansicht = { tab: 'heute', tag: null, archivScroll: 0 };
+const ansicht = { tab: 'heute', tag: null, archivScroll: 0, lexId: null, wdh: null };
 const archivSpeicher = new Map(); // ältere Tage nur im Arbeitsspeicher, offline bleiben die 7 neuesten
 const gezeigteAusgabe = () => (ansicht.tab === 'archivtag' && ansicht.tag) ? ansicht.tag : zustand.ausgabe;
 let letzterAbruf = 0;
@@ -188,6 +194,9 @@ function zeichne() {
   if (ansicht.tab === 'archiv') return zeichneArchiv();
   if (ansicht.tab === 'einstellungen') return zeichneEinstellungen();
   if (ansicht.tab === 'gemerkt') return zeichneGemerkt();
+  if (ansicht.tab === 'fortschritt') return zeichneFortschritt();
+  if (ansicht.tab === 'lexikon') return zeichneLexikonEintrag();
+  if (ansicht.tab === 'wiederholung') return zeichneWiederholung();
   if (ansicht.tab === 'archivtag' && ansicht.tag) return zeichneAusgabe(ansicht.tag, true);
   const d = zustand.ausgabe;
   if (!d) {
@@ -222,6 +231,7 @@ function zeichneAusgabe(d, archiv) {
       <h1${archiv ? ' class="archiv-titel"' : ''}>${archiv ? esc(langDatum(d.datum) + ' ' + d.datum.slice(0, 4)) : 'Daily News'}</h1>
       <div class="meta">${archiv ? 'Ausgabe aus dem Archiv · ' : esc(langDatum(d.datum)) + ' · '}${reihe.length} Meldungen${reihe.length < d.meldungen.length ? ` (${d.meldungen.length - reihe.length} ausgeblendet)` : ''} · ca. ${lesezeit(d)} Min.</div>
       ${d.beispiel ? '<span class="beispiel">Testdaten</span>' : ''}
+      ${archiv ? '' : fortschrittKopf()}
       ${korrekturKasten(d)}
       <button class="knopf haupt start-wisch" data-wisch="0">${svg(ICON_WISCHEN, 18)}Durchwischen starten</button>
     </header>
@@ -456,7 +466,14 @@ function zeigeFact(i) {
   seite.querySelector('.fact-zaehler').textContent = istExtra
     ? `Extra ${wisch.fact - haupt.length + 1} / ${extra.length}`
     : `${wisch.fact + 1} / ${haupt.length}`;
-  seite.querySelector('.fact-platz').innerHTML = factKarte(alle[wisch.fact]);
+  // Serie (R1): zählt erst, wenn alle 3 Facts dieser Ausgabe in dieser Sitzung zu sehen waren. Ein Sprung auf Fact 3 allein zählt nicht.
+  if (wisch.modus === 'ausgabe') {
+    wisch.gesehen.add(wisch.fact);
+    if (haupt.length && haupt.every((_, k) => wisch.gesehen.has(k))) markiereDurchgewischt(d.datum);
+  }
+  // Begriff des Tages: ab dem 3. Fact (auch bei den Extra-Facts), damit der Knopf „Verstanden“ nicht verloren geht.
+  const begriffZeigen = wisch.modus === 'ausgabe' && wisch.fact >= haupt.length - 1 && !!d.begriff?.wort;
+  seite.querySelector('.fact-platz').innerHTML = factKarte(alle[wisch.fact]) + (begriffZeigen ? begriffKarte(d.begriff) : '');
   merkenKnoepfe();
   if (wisch.modus === 'fact') {
     seite.querySelector('.fact-zaehler').textContent = d.datum ? kurzDatum(d.datum) : '';
@@ -464,27 +481,16 @@ function zeigeFact(i) {
     return;
   }
   const fertig = '<button class="knopf text" data-aktion="schliessen">Fertig – zurück zur Startseite</button>';
-  seite.querySelector('.fact-knoepfe').innerHTML = wisch.fact < haupt.length - 1
+  const knoepfe = wisch.fact < haupt.length - 1
     ? '<button class="knopf" data-aktion="naechster-fact">Nächster Fact</button>'
     : uebrig > 0
       ? `<button class="knopf haupt" data-aktion="naechster-fact">${svg(ICON_PLUS, 18)}Noch einer <span class="uebrig">(${uebrig} übrig)</span></button>${fertig}`
       : `<p class="unterzeile mitte">Das waren alle Facts für heute.</p><button class="knopf haupt" data-aktion="schliessen">Fertig – zurück zur Startseite</button>`;
-  if (wisch.modus === 'ausgabe' && wisch.fact >= haupt.length - 1) merkeFortschritt(d.datum, 'durchgewischt');
-}
-
-// Für V2 „Fortschritt“ vorbereitet: pro Tag nur lokal festhalten, was gelesen wurde. Nie im Repo.
-function merkeFortschritt(datum, was) {
-  try {
-    const f = JSON.parse(localStorage.getItem(SPEICHER_PRAEFIX + 'fortschritt') || '{}');
-    f[datum] = { ...(f[datum] || {}), [was]: true };
-    const tage = Object.keys(f).sort().reverse();
-    for (const t of tage.slice(400)) delete f[t];
-    localStorage.setItem(SPEICHER_PRAEFIX + 'fortschritt', JSON.stringify(f));
-  } catch {}
+  seite.querySelector('.fact-knoepfe').innerHTML = (begriffZeigen ? verstandenBlock(d) : '') + knoepfe;
 }
 
 // modus: 'ausgabe' (normal), 'meldung' / 'fact' (ein einzelner gemerkter Eintrag)
-const wisch = { offen: false, reihe: [], index: 0, fact: 0, ausgabe: null, modus: 'ausgabe' };
+const wisch = { offen: false, reihe: [], index: 0, fact: 0, ausgabe: null, modus: 'ausgabe', gesehen: new Set() };
 const mitFactsSeite = () => wisch.modus !== 'meldung';
 
 function wischOeffnen(start, factStart = 0, opt = {}) {
@@ -492,6 +498,7 @@ function wischOeffnen(start, factStart = 0, opt = {}) {
   if (!d) return;
   wisch.ausgabe = d;
   wisch.modus = opt.modus || 'ausgabe';
+  wisch.gesehen = new Set();
   wisch.reihe = wisch.modus === 'meldung' ? d.meldungen : wisch.modus === 'fact' ? [] : reihenfolge(d);
   wisch.offen = true;
   const n = wisch.reihe.length;
@@ -564,7 +571,6 @@ document.addEventListener('click', (e) => {
   if (factStart && !wisch.offen) return wischOeffnen(reihenfolge(gezeigteAusgabe()).length, Number(factStart.dataset.fact) || 0);
   const begriff = e.target.closest('[data-begriff]');
   if (begriff && !wisch.offen) {
-    merkeFortschritt(gezeigteAusgabe().datum, 'begriff');
     const i = reihenfolge(gezeigteAusgabe()).findIndex(m => m.id === begriff.dataset.begriff);
     if (i >= 0) wischOeffnen(i);
     return;
@@ -573,6 +579,10 @@ document.addEventListener('click', (e) => {
   if (gOeffnen && !wisch.offen) return oeffneGemerkt(gOeffnen.dataset.gemerktOeffnen);
   const gWeg = e.target.closest('[data-gemerkt-weg]');
   if (gWeg && !wisch.offen) return entferneGemerkt(gWeg.dataset.gemerktWeg);
+  const verst = e.target.closest('[data-verstanden]');
+  if (verst && wisch.offen) return verstandenTippen(verst.dataset.verstanden);
+  const fpAktion = e.target.closest('[data-fp]');
+  if (fpAktion && !wisch.offen) return fortschrittAktion(fpAktion.dataset.fp, fpAktion.dataset.wert);
   if (!wisch.offen) return;
   if (e.target.closest('[data-aktion="schliessen"]')) return wischSchliessen();
   if (e.target.closest('[data-merken-aktuell]')) return merkenUmschalten(aktuellerEintrag());
@@ -616,7 +626,7 @@ const WOCHENTAG = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
 
 function navi() {
   const aktiv = ['einstellungen', 'gemerkt'].includes(ansicht.tab) ? ansicht.tab
-    : ansicht.tab === 'heute' || (ansicht.tab === 'archivtag' && ansicht.herkunft === 'heute') ? 'heute' : 'archiv';
+    : ['heute', 'fortschritt', 'lexikon', 'wiederholung'].includes(ansicht.tab) || (ansicht.tab === 'archivtag' && ansicht.herkunft === 'heute') ? 'heute' : 'archiv';
   document.querySelectorAll('.navi [data-tab]').forEach(b => {
     const an = b.dataset.tab === aktiv;
     b.classList.toggle('aktiv', an);
@@ -627,7 +637,7 @@ function navi() {
 function zeigeTab(tab) {
   if (ansicht.tab === 'archiv') ansicht.archivScroll = window.scrollY;
   if (tab === 'heute' && ansicht.tab === 'heute') return window.scrollTo({ top: 0, behavior: 'smooth' });
-  ansicht.tab = ['archiv', 'einstellungen', 'gemerkt'].includes(tab) ? tab : 'heute';
+  ansicht.tab = ['archiv', 'einstellungen', 'gemerkt', 'fortschritt'].includes(tab) ? tab : 'heute';
   ansicht.tag = null;
   ansicht.scrollNachZeichnen = ansicht.tab === 'archiv' ? ansicht.archivScroll : 0;
   zeichne();
@@ -858,6 +868,271 @@ async function oeffneGemerkt(k) {
   wischOeffnen(0, 0, { ausgabe, modus: x.art });
 }
 
+// ---------- Fortschritt (V2 #1, 0.10.0): Serie, Lexikon, Wiederholung – nur lokal, nie ins Netz ----------
+// Serie: fortschritt[JJJJ-MM-TT].durchgewischt (Format aus V1). Lexikon: lexikon[<begriff-id>] = { wort, erklaerung, erstmals }.
+const DATUM_MUSTER = /^\d{4}-\d{2}-\d{2}$/;
+const BEGRIFF_ID = /^begriff-[a-z0-9]+(-[a-z0-9]+)*$/;
+const ICON_HAKEN = '<path d="M3 8.5l3 3 7-7"/>';
+const ZAHLWORT = { 2: 'zwei', 3: 'drei', 4: 'vier' };
+const plural = (n, ein, mehr) => `${n} ${n === 1 ? ein : mehr}`;
+const heuteDatum = () => berlinJetzt().datum;
+const tagVor = (datum, n) => { const d = new Date(datum + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() - n); return d.toISOString().slice(0, 10); };
+const istSamstag = (datum) => new Date(datum + 'T12:00:00Z').getUTCDay() === 6;
+const nurObjekt = (v) => (v && typeof v === 'object' && !Array.isArray(v)) ? v : {};
+const passtDatum = (s) => typeof s === 'string' && DATUM_MUSTER.test(s);
+const begriffId = (b) => (typeof b?.id === 'string' && BEGRIFF_ID.test(b.id)) ? b.id : null;
+
+// localStorage nie ohne try/catch: Lesen schlägt fehl → Vorgabe, Schreiben schlägt fehl → false.
+function lsLesen(schluessel, vorgabe) {
+  try { return JSON.parse(localStorage.getItem(schluessel) ?? 'null') ?? vorgabe; }
+  catch { return vorgabe; }
+}
+function lsSchreiben(schluessel, wert) {
+  try { localStorage.setItem(schluessel, JSON.stringify(wert)); return true; }
+  catch { return false; }
+}
+// Dauerhaften Speicher anfragen – still, nur wenn der Browser es kennt. Keine Netzanfrage.
+function haltDauerhaft() {
+  try { const p = navigator.storage?.persist?.(); if (p && typeof p.catch === 'function') p.catch(() => {}); }
+  catch {}
+}
+
+const fortKey = () => FORT_PRAEFIX + 'fortschritt';
+const lexKey = () => FORT_PRAEFIX + 'lexikon';
+const bestKey = () => FORT_PRAEFIX + 'serie-bestwert';
+const fortschrittLesen = () => nurObjekt(lsLesen(fortKey(), {}));
+const gelesen = (f, datum) => f[datum]?.durchgewischt === true;
+
+// Schreibt die Felder eines Tages (Format bleibt { durchgewischt, begriff }). Behält die neuesten 400 Tage.
+function fortschrittSchreiben(datum, teil) {
+  const f = fortschrittLesen();
+  f[datum] = { ...nurObjekt(f[datum]), ...teil };
+  const neu = {};
+  Object.keys(f).filter(passtDatum).sort().reverse().slice(0, 400).forEach(t => { neu[t] = f[t]; });
+  return lsSchreiben(fortKey(), neu);
+}
+
+// Serie: aufeinanderfolgende Kalendertage mit durchgewischt, bis heute. Ist heute noch nicht gelesen, zählt sie bis gestern.
+function serieStand(f, heute) {
+  let t = gelesen(f, heute) ? heute : tagVor(heute, 1);
+  let n = 0;
+  while (gelesen(f, t) && n < 400) { n++; t = tagVor(t, 1); }
+  return n;
+}
+function laengsteSerie(f) {
+  const tage = Object.keys(f).filter(t => passtDatum(t) && gelesen(f, t)).sort();
+  let best = 0, lauf = 0, vorher = null;
+  for (const t of tage) {
+    lauf = (vorher && tageZwischen(vorher, t) === 1) ? lauf + 1 : 1;
+    best = Math.max(best, lauf);
+    vorher = t;
+  }
+  return best;
+}
+// Bestwert: größte je erreichte Serie. Gespeichert, damit er bleibt, wenn alte Tage aus dem Speicher fallen.
+function bestwertStand(f, serie) {
+  const gespeichert = Number(lsLesen(bestKey(), 0)) || 0;
+  const best = Math.max(gespeichert, laengsteSerie(f), serie);
+  if (best > gespeichert) lsSchreiben(bestKey(), best);
+  return best;
+}
+
+// R1: nur die heutige Ausgabe zählt. Nachgeholte alte Ausgaben schreiben nichts in die Serie.
+function markiereDurchgewischt(datum) {
+  if (datum !== heuteDatum() || gelesen(fortschrittLesen(), datum)) return;
+  if (fortschrittSchreiben(datum, { durchgewischt: true })) {
+    const f = fortschrittLesen();
+    bestwertStand(f, serieStand(f, datum));
+  }
+}
+
+// Lexikon: neueste oben, bei gleichem Tag alphabetisch.
+const lexikonLesen = () => nurObjekt(lsLesen(lexKey(), {}));
+function lexikonListe(lex) {
+  return Object.entries(lex)
+    .filter(([id, e]) => BEGRIFF_ID.test(id) && typeof e?.wort === 'string')
+    .map(([id, e]) => ({
+      id,
+      wort: e.wort,
+      erklaerung: typeof e.erklaerung === 'string' ? e.erklaerung : '',
+      erstmals: passtDatum(e.erstmals) ? e.erstmals : '',
+    }))
+    .sort((a, b) => b.erstmals.localeCompare(a.erstmals) || a.wort.localeCompare(b.wort, 'de'));
+}
+
+// „Verstanden“ (R4): erst dieser Tipp zählt. Kopie ins Lexikon, pro ID einmal.
+function verstandenTippen(id) {
+  const d = wisch.ausgabe;
+  const b = d?.begriff;
+  if (!d || !wisch.offen || begriffId(b) !== id || typeof b.wort !== 'string') return;
+  const lex = lexikonLesen();
+  if (!lex[id]) {
+    lex[id] = { wort: b.wort, erklaerung: typeof b.erklaerung === 'string' ? b.erklaerung : '', erstmals: heuteDatum() };
+    if (!lsSchreiben(lexKey(), lex)) return toast('Konnte nicht gespeichert werden – Speicher voll oder gesperrt');
+    fortschrittSchreiben(d.datum, { begriff: id });
+  }
+  zeigeFact(wisch.fact);
+}
+
+// Begriff-Karte auf der Facts-Seite (ab dem 3. Fact). Ohne ID bleibt sie ohne Knopf.
+function begriffKarte(b) {
+  return `<section class="begriff">
+    <span class="label akzent">Begriff des Tages</span>
+    <h3 class="begriff-wort">${esc(b.wort)}</h3>
+    <p class="begriff-text">${esc(b.erklaerung ?? '')}</p>
+  </section>`;
+}
+function verstandenBlock(d) {
+  const id = begriffId(d.begriff);
+  if (!id) return '';
+  const eintrag = lexikonLesen()[id];
+  if (eintrag) {
+    const seit = passtDatum(eintrag.erstmals) ? ` seit ${kurzDatum(eintrag.erstmals)}` : '';
+    return `<div class="verstanden">
+      <button class="knopf im-lexikon" disabled>${svg(ICON_HAKEN, 16)}Im Lexikon</button>
+      <p class="verstanden-hinweis">Im Lexikon${esc(seit)}</p>
+    </div>`;
+  }
+  return `<div class="verstanden">
+      <button class="knopf verstanden-knopf" data-verstanden="${esc(id)}">Verstanden</button>
+      <p class="verstanden-hinweis">Tippe, wenn du den Begriff verstanden hast. Erst dann landet er in deinem Lexikon.</p>
+    </div>`;
+}
+
+// Kopfzeile Startseite: „Serie N Tage · M Begriffe“ (nur Text, tippbar).
+function fortschrittKopf() {
+  const serie = serieStand(fortschrittLesen(), heuteDatum());
+  const n = lexikonListe(lexikonLesen()).length;
+  const text = `Serie ${plural(serie, 'Tag', 'Tage')} · ${plural(n, 'Begriff', 'Begriffe')}`;
+  return `<button class="fortschritt-kopf" data-tab="fortschritt" aria-label="${esc(text)}, Mein Fortschritt öffnen"><span>${esc(text)}</span>${svg(ICON_WEITER, 14)}</button>`;
+}
+
+// Seite „Mein Fortschritt“: Serie, Verlauf, Wiederholung, Lexikon.
+function zeichneFortschritt() {
+  const heute = heuteDatum();
+  const f = fortschrittLesen();
+  const serie = serieStand(f, heute);
+  const best = bestwertStand(f, serie);
+  const liste = lexikonListe(lexikonLesen());
+  const n = liste.length;
+  const neu = serie === 0 && best === 0;
+  const tage = Array.from({ length: 30 }, (_, k) => tagVor(heute, 29 - k));
+  const samstag = istSamstag(heute);
+
+  const serieHtml = `<section class="fp-block">
+      <h2 class="label">Serie</h2>
+      <div class="fp-serie"><span class="fp-gross">${serie}</span><span class="fp-serie-text">${neu ? 'Noch keine Serie.' : serie === 1 ? 'Tag in Folge' : 'Tage in Folge'}</span></div>
+      ${neu ? '<p class="fp-erklaer">Die Serie beginnt, wenn du eine Ausgabe bis zu den 3 Facts durchgewischt hast.</p>' : ''}
+      ${best > 0 ? `<p class="fp-erklaer">Bestwert: ${plural(best, 'Tag', 'Tage')}${best === serie && serie > 0 ? ' (aktuelle Serie)' : ''}</p>` : ''}
+    </section>`;
+
+  const verlaufHtml = `<section class="fp-block">
+      <h2 class="label">Letzte 30 Tage</h2>
+      <div class="raster30">${tage.map(t => {
+        const an = gelesen(f, t);
+        return `<span class="${an ? 'an' : ''}${t === heute ? ' heute' : ''}" role="img" aria-label="${esc(vollDatum(t))}, ${an ? 'gelesen' : 'nicht gelesen'}"></span>`;
+      }).join('')}</div>
+      <div class="raster-beschr"><span>${kurzDatum(tage[0])}</span><span>heute</span></div>
+      <div class="raster-legende"><span class="legende"><span class="mini an"></span>gelesen</span><span class="legende"><span class="mini"></span>nicht gelesen</span></div>
+    </section>`;
+
+  let wdhText;
+  let wdhKnopf = '';
+  if (!n) wdhText = 'Sobald du Begriffe gelernt hast, wiederholst du sie hier samstags.';
+  else if (samstag) {
+    wdhText = n >= 5 ? '5 zufällige Begriffe aus deinem ganzen Lexikon. Ohne Punkte und ohne Bewertung.'
+      : n === 1 ? 'Dein Lexikon hat 1 Begriff. Du wiederholst ihn.'
+      : `Dein Lexikon hat ${n} Begriffe. Du wiederholst alle ${ZAHLWORT[n]}.`;
+    wdhKnopf = '<button class="knopf haupt" data-fp="wiederholen">Wiederholen</button>';
+  } else wdhText = 'Nächste Wiederholung: Samstag';
+  const wdhHtml = `<section class="fp-block">
+      <h2 class="label">Wiederholung</h2>
+      <div class="fp-wdh"><p class="fp-wdh-text${!samstag && n ? ' gedaempft' : ''}">${esc(wdhText)}</p>${wdhKnopf}</div>
+    </section>`;
+
+  const lexHtml = `<section class="fp-block">
+      <h2 class="abschnitt-titel">Lexikon</h2>
+      ${n ? `<p class="fp-erklaer">${plural(n, 'Begriff', 'Begriffe')} gelernt</p>
+      <ul class="lex-liste">${liste.map(e => `<li><button class="lex-zeile" data-fp="lexikon" data-wert="${esc(e.id)}"><span class="lex-text"><span class="lex-wort">${esc(e.wort)}</span>${e.erstmals ? `<span class="unterzeile">erstmals gelernt am ${esc(kurzDatum(e.erstmals))}</span>` : ''}</span>${svg(ICON_WEITER, 14)}</button></li>`).join('')}</ul>`
+      : '<p class="fp-leer">Noch kein Begriff gelernt.</p><p class="fp-erklaer">Unter dem Begriff des Tages auf der Facts-Seite erscheint der Knopf „Verstanden“. Dann landet der Begriff hier.</p>'}
+    </section>`;
+
+  $('inhalt').innerHTML = `
+    <header class="kopf archiv-kopf">
+      <button class="zurueck" data-tab="heute">${svg(ICON_ZURUECK, 18)}Zurück</button>
+      <h1 class="fp-titel">Mein Fortschritt</h1>
+    </header>
+    ${serieHtml}${verlaufHtml}${wdhHtml}${lexHtml}`;
+}
+
+// Lexikon-Eintrag: Wort, Erklärung, „erstmals gelernt am“.
+function oeffneLexikon(id) {
+  ansicht.tab = 'lexikon';
+  ansicht.lexId = id;
+  zeichne();
+  window.scrollTo(0, 0);
+}
+function zeichneLexikonEintrag() {
+  const e = lexikonLesen()[ansicht.lexId];
+  if (!e || typeof e.wort !== 'string') { ansicht.tab = 'fortschritt'; return zeichne(); }
+  $('inhalt').innerHTML = `
+    <header class="kopf archiv-kopf">
+      <button class="zurueck" data-tab="fortschritt">${svg(ICON_ZURUECK, 18)}Mein Fortschritt</button>
+    </header>
+    <section class="lex-eintrag">
+      <span class="label akzent">Begriff</span>
+      <h1 class="lex-wort-gross">${esc(e.wort)}</h1>
+      <p class="lex-erklaerung">${esc(typeof e.erklaerung === 'string' ? e.erklaerung : '')}</p>
+      ${passtDatum(e.erstmals) ? `<p class="fp-erklaer">Erstmals gelernt am ${esc(kurzDatum(e.erstmals))}</p>` : ''}
+    </section>
+    <button class="knopf text" data-tab="fortschritt">Zurück zur Liste</button>`;
+}
+
+// Wiederholung (nur samstags): 5 zufällige Begriffe aus dem ganzen Lexikon, ohne Bewertung, nichts gespeichert.
+function startWiederholung() {
+  const liste = lexikonListe(lexikonLesen());
+  if (!istSamstag(heuteDatum()) || !liste.length) return zeichne();
+  const misch = [...liste];
+  for (let k = misch.length - 1; k > 0; k--) {
+    const j = Math.floor(Math.random() * (k + 1));
+    [misch[k], misch[j]] = [misch[j], misch[k]];
+  }
+  ansicht.wdh = { liste: misch.slice(0, 5), i: 0, aufgedeckt: false };
+  ansicht.tab = 'wiederholung';
+  zeichne();
+  window.scrollTo(0, 0);
+}
+function zeichneWiederholung() {
+  const w = ansicht.wdh;
+  const n = w?.liste?.length ?? 0;
+  if (!n) { ansicht.tab = 'fortschritt'; return zeichne(); }
+  const kopf = `<header class="kopf archiv-kopf">
+      <div class="wdh-kopf"><button class="rund" data-tab="fortschritt" aria-label="Schließen">${svg(ICON_X, 20)}</button>${w.i < n ? `<span class="zaehler">${w.i + 1} von ${n}</span>` : ''}</div>
+      <h1 class="fp-titel">Wiederholung</h1>
+    </header>`;
+  if (w.i >= n) {
+    $('inhalt').innerHTML = `${kopf}
+      <section class="wdh-ende"><h2>${plural(n, 'Begriff', 'Begriffe')} wiederholt.</h2><p class="fp-erklaer">Keine Bewertung. Die Begriffe bleiben in deinem Lexikon.</p></section>
+      <button class="knopf haupt" data-tab="fortschritt">Fertig</button>`;
+    return;
+  }
+  const e = w.liste[w.i];
+  const leiste = `<div class="fortschritt wdh-leiste">${w.liste.map((_, k) => `<span class="${k <= w.i ? 'an' : ''}"></span>`).join('')}</div>`;
+  const inhalt = `<span class="label akzent">Begriff</span><span class="wdh-wort">${esc(e.wort)}</span>${w.aufgedeckt
+    ? `<span class="wdh-erkl">${esc(e.erklaerung)}</span>`
+    : '<span class="fp-erklaer wdh-hinweis">Tippen, um die Erklärung zu sehen</span>'}`;
+  const karte = w.aufgedeckt ? `<div class="wdh-karte">${inhalt}</div>` : `<button class="wdh-karte" data-fp="aufdecken">${inhalt}</button>`;
+  $('inhalt').innerHTML = `${kopf}${leiste}${karte}${w.aufgedeckt ? '<button class="knopf haupt" data-fp="weiter">Weiter</button>' : ''}`;
+}
+
+// Klicks auf die Fortschritt-Seiten
+function fortschrittAktion(aktion, wert) {
+  if (aktion === 'wiederholen') return startWiederholung();
+  if (aktion === 'lexikon') return oeffneLexikon(wert);
+  if (aktion === 'aufdecken' && ansicht.wdh) { ansicht.wdh.aufgedeckt = true; return zeichne(); }
+  if (aktion === 'weiter' && ansicht.wdh) { ansicht.wdh.i++; ansicht.wdh.aufgedeckt = false; return zeichne(); }
+}
+
 // ---------- Einstellungen (Schritt 6): Bereiche an/aus, nur lokal ----------
 const SPEICHER_BEREICHE = SPEICHER_PRAEFIX + 'bereiche-aus';
 let bereicheCache = null;
@@ -971,6 +1246,7 @@ function updates() {
 // ---------- Start ----------
 (async function start() {
   updates();
+  haltDauerhaft();
   try { zustand.ausgabe = await neuesteGespeicherte(); if (zustand.ausgabe) zeichne(); } catch {}
   await aktualisieren();
 })();

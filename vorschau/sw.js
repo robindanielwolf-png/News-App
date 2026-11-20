@@ -1,6 +1,6 @@
 // Service Worker: App-Hülle offline. Tagesdateien speichert app.js selbst (7 Tage).
 // 0.9.1: Cache-Namen mit Pfad, damit Vorschau und Live getrennt bleiben. Der Live-SW bedient nie die Vorschau.
-const VERSION = '0.9.1';
+const VERSION = '0.10.0';
 const BEREICH = new URL(self.registration.scope).pathname; // '/…/News-App/' (Live) bzw. '/…/News-App/vorschau/'
 const IST_VORSCHAU = BEREICH.endsWith('/vorschau/');
 const PRAEFIX = 'news-app-huelle:' + BEREICH + ':';

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Automatischer Check der Tagesdatei (Format v1) – läuft vor jedem Commit der täglichen Aufgabe.
+// Automatischer Check der Tagesdatei (Format v1 und v2) – läuft vor jedem Commit der täglichen Aufgabe.
+// Version 2: begriff.id ist Pflicht (begriff-<slug>). Version 1: id optional, wenn vorhanden, muss sie passen.
 // Aufruf: node werkzeuge/pruefe-tagesdatei.mjs daten/JJJJ-MM-TT.json [--test] [--archiv]
 //   --test    Testdaten (beispiel: true ist erlaubt, datum darf von heute abweichen)
 //   --archiv  Korrektur an einer alten Tagesdatei: datum darf von heute abweichen
@@ -18,6 +19,7 @@ const fehler = [];
 const f = (m) => fehler.push(m);
 const istText = (v) => typeof v === 'string' && v.trim().length > 0;
 const DATUM = /^\d{4}-\d{2}-\d{2}$/;
+const BEGRIFF_ID = /^begriff-[a-z0-9]+(-[a-z0-9]+)*$/;
 const STATUS = ['bestaetigt', 'eine_quelle', 'umstritten', 'unklar'];
 const BEREICHE = ['de_eu', 'wirtschaft', 'ki_tech', 'welt', 'sport'];
 const heuteBerlin = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Berlin' }).format(new Date()); // JJJJ-MM-TT
@@ -41,7 +43,7 @@ function pruefeQuellen(q, wo, min = 1) {
 }
 
 // Oberste Ebene
-if (d.version !== 1) f('version muss 1 sein');
+if (d.version !== 1 && d.version !== 2) f('version muss 1 oder 2 sein');
 if (!DATUM.test(d.datum ?? '')) f('datum fehlt oder nicht JJJJ-MM-TT');
 else {
   if (basename(pfad) !== `${d.datum}.json`) f(`Dateiname passt nicht zum datum (${d.datum}.json erwartet)`);
@@ -86,7 +88,13 @@ if (extra.length !== 5) f(`genau 5 extra_facts nötig, gefunden: ${extra.length}
 });
 const b = d.begriff;
 if (!istText(b?.wort) || !istText(b?.erklaerung)) f('begriff: wort/erklaerung fehlt');
-else { if (!STATUS.includes(b.status)) f('begriff: status fehlt/ungültig'); pruefeQuellen(b.quellen, 'begriff'); }
+else {
+  if (!STATUS.includes(b.status)) f('begriff: status fehlt/ungültig');
+  pruefeQuellen(b.quellen, 'begriff');
+  const idOk = istText(b.id) && BEGRIFF_ID.test(b.id);
+  if (d.version === 2 && !idOk) f('begriff.id fehlt oder ist nicht begriff-<slug> (Format Version 2)');
+  if (d.version !== 2 && b.id !== undefined && !idOk) f('begriff.id ist nicht begriff-<slug>');
+}
 
 // Alle Links https
 (function alleUrls(o, weg) {

@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "datum": "2026-11-14",
  "erstellt_um": "2026-11-14T06:10:00+01:00",
  "beispiel": true,
@@ -569,8 +569,9 @@
   }
  ],
  "begriff": {
-  "wort": "Testbegriff",
-  "erklaerung": "Ein fiktiver Begriff, kurz und ohne Fachjargon erklärt.",
+  "id": "begriff-testbegriff-vier",
+  "wort": "Testbegriff Vier",
+  "erklaerung": "Fiktiver Testbegriff vier, kurz und ohne Fachjargon erklärt.",
   "meldung_id": "2026-11-14-wirt-01",
   "status": "bestaetigt",
   "quellen": [
