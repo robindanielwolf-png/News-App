@@ -1,14 +1,18 @@
 #!/usr/bin/env node
 // Automatischer Check der Tagesdatei (Format v1) – läuft vor jedem Commit der täglichen Aufgabe.
-// Aufruf: node werkzeuge/pruefe-tagesdatei.mjs daten/JJJJ-MM-TT.json [--test]
+// Aufruf: node werkzeuge/pruefe-tagesdatei.mjs daten/JJJJ-MM-TT.json [--test] [--archiv]
+//   --test    Testdaten (beispiel: true ist erlaubt, datum darf von heute abweichen)
+//   --archiv  Korrektur an einer alten Tagesdatei: datum darf von heute abweichen
+// Das datum muss sonst dem heutigen Datum in Europe/Berlin entsprechen.
 // Exit 0 = ok, Exit 1 = durchgefallen (Datei NICHT committen).
 import { readFileSync } from 'node:fs';
 import { basename } from 'node:path';
 
 const args = process.argv.slice(2);
 const testModus = args.includes('--test');
+const archivModus = args.includes('--archiv');
 const pfad = args.find(a => !a.startsWith('--'));
-if (!pfad) { console.error('Aufruf: node werkzeuge/pruefe-tagesdatei.mjs daten/JJJJ-MM-TT.json'); process.exit(2); }
+if (!pfad) { console.error('Aufruf: node werkzeuge/pruefe-tagesdatei.mjs daten/JJJJ-MM-TT.json [--test] [--archiv]'); process.exit(2); }
 
 const fehler = [];
 const f = (m) => fehler.push(m);
@@ -16,6 +20,13 @@ const istText = (v) => typeof v === 'string' && v.trim().length > 0;
 const DATUM = /^\d{4}-\d{2}-\d{2}$/;
 const STATUS = ['bestaetigt', 'eine_quelle', 'umstritten', 'unklar'];
 const BEREICHE = ['de_eu', 'wirtschaft', 'ki_tech', 'welt', 'sport'];
+const heuteBerlin = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Berlin' }).format(new Date()); // JJJJ-MM-TT
+
+// Gültige https-URL: parsbar, ohne Leerzeichen, nicht mit „:“ am Ende (z. B. „…/sms:“ aus einem Quelltext).
+function urlGueltig(u) {
+  if (typeof u !== 'string' || !u.startsWith('https://') || /\s/.test(u) || /:$/.test(u)) return false;
+  try { return new URL(u).protocol === 'https:'; } catch { return false; }
+}
 
 let roh, d;
 try { roh = readFileSync(pfad, 'utf8'); } catch { console.error(`Datei nicht lesbar: ${pfad}`); process.exit(1); }
@@ -24,7 +35,7 @@ try { d = JSON.parse(roh); } catch (e) { console.error(`Kein gültiges JSON: ${e
 function pruefeQuellen(q, wo, min = 1) {
   if (!Array.isArray(q) || q.length < min) { f(`${wo}: mind. ${min} Quelle(n) nötig`); return; }
   q.forEach((x, i) => {
-    if (!istText(x?.url) || !x.url.startsWith('https://')) f(`${wo}: Quelle ${i + 1} ohne https://-Link`);
+    if (!istText(x?.url) || !urlGueltig(x.url)) f(`${wo}: Quelle ${i + 1} ohne gültigen https://-Link`);
     if (!istText(x?.titel) && !istText(x?.medium)) f(`${wo}: Quelle ${i + 1} ohne Titel/Medium`);
   });
 }
@@ -32,7 +43,10 @@ function pruefeQuellen(q, wo, min = 1) {
 // Oberste Ebene
 if (d.version !== 1) f('version muss 1 sein');
 if (!DATUM.test(d.datum ?? '')) f('datum fehlt oder nicht JJJJ-MM-TT');
-else if (basename(pfad) !== `${d.datum}.json`) f(`Dateiname passt nicht zum datum (${d.datum}.json erwartet)`);
+else {
+  if (basename(pfad) !== `${d.datum}.json`) f(`Dateiname passt nicht zum datum (${d.datum}.json erwartet)`);
+  if (!testModus && !archivModus && d.datum !== heuteBerlin) f(`datum ist ${d.datum}, heute (Europe/Berlin) ist ${heuteBerlin} – für alte Ausgaben --archiv`);
+}
 if (!istText(d.erstellt_um) || isNaN(Date.parse(d.erstellt_um))) f('erstellt_um fehlt oder ist keine ISO-Zeit');
 if (!istText(d.transparenz)) f('transparenz fehlt');
 if (!Array.isArray(d.korrekturen)) f('korrekturen muss eine Liste sein (auch leer)');
@@ -78,7 +92,7 @@ else { if (!STATUS.includes(b.status)) f('begriff: status fehlt/ungültig'); pru
 (function alleUrls(o, weg) {
   if (Array.isArray(o)) o.forEach((v, i) => alleUrls(v, `${weg}[${i}]`));
   else if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) {
-    if (k === 'url' && (typeof v !== 'string' || !v.startsWith('https://'))) f(`${weg}.url ist kein https://-Link`);
+    if (k === 'url' && !urlGueltig(v)) f(`${weg}.url ist kein gültiger https://-Link`);
     else alleUrls(v, `${weg}.${k}`);
   }
 })(d, 'datei');

@@ -7,16 +7,21 @@
 // Schritt 7: Merken – Lesezeichen für Meldungen und Facts, mit Inhalt lokal gespeichert, Übersicht „Gemerkt“.
 // 0.9.0: Schriften Newsreader + Inter lokal (Styleguide).
 // Schritt 8: „Mehr dazu lernen“ – fertige Frage in die Zwischenablage, dann Claude öffnen (kein Prompt in der URL).
-const VERSION = '0.9.0';
+// 0.9.1: Bugfixes aus der Abnahme; Vorschau und Live getrennt (eigener Speicher, eigener Cache, Test-Daten nur in der Vorschau).
+const VERSION = '0.9.1';
 const OFFLINE_TAGE = 7;
 const ARCHIV_TAGE = 30;
 
-// Datenquelle: ?daten=test / ?daten=test-kaputt nur für die Vorschau; sonst echter Datenordner.
-const param = new URLSearchParams(location.search).get('daten');
+// Vorschau oder Live. Alles, was auf dem Gerät gespeichert wird, bekommt in der Vorschau ein eigenes Präfix.
+const IN_VORSCHAU = location.pathname.includes('/vorschau/');
+const SPEICHER_PRAEFIX = IN_VORSCHAU ? 'vorschau:' : '';
+
+// Datenquelle: ?daten=test / ?daten=test-kaputt nur in der Vorschau; sonst echter Datenordner.
+const param = IN_VORSCHAU ? new URLSearchParams(location.search).get('daten') : null;
 const DATEN = param === 'test' ? './testdaten/'
   : param === 'test-kaputt' ? './testdaten-kaputt/'
-  : location.pathname.includes('/vorschau/') ? '../daten/' : './daten/';
-const CACHE_TAGE = 'news-tage:' + new URL(DATEN, location.href).pathname;
+  : IN_VORSCHAU ? '../daten/' : './daten/';
+const CACHE_TAGE = 'news-tage:' + SPEICHER_PRAEFIX + new URL(DATEN, location.href).pathname;
 
 const STATUS = {
   bestaetigt:  { text: 'bestätigt',      svg: '<path d="M3 8.5l3 3 7-7"/>' },
@@ -84,13 +89,18 @@ async function aufraeumen() {
 }
 
 // ---------- Laden ----------
+// NetzFehler: keine Verbindung (fetch wirft). HttpFehler: der Server antwortet, aber mit Fehler (404, 500 …).
+class NetzFehler extends Error {}
+class HttpFehler extends Error {}
 async function holeJSON(url) {
-  const r = await fetch(url, { cache: 'no-store' });
-  if (!r.ok) throw new Error('HTTP ' + r.status);
+  let r;
+  try { r = await fetch(url, { cache: 'no-store' }); }
+  catch { throw new NetzFehler(); }
+  if (!r.ok) throw new HttpFehler('HTTP ' + r.status);
   return r.json();
 }
 
-let zustand = { ausgabe: null, offline: false, neuesteKaputt: null, indexLeer: false, indexTage: null };
+let zustand = { ausgabe: null, offline: false, ladeFehler: false, neuesteKaputt: null, neuesteFehlt: null, indexLeer: false, indexTage: null };
 // Was gerade gezeigt wird: 'heute', 'archiv' (Liste) oder 'archivtag' (eine ältere Ausgabe).
 const ansicht = { tab: 'heute', tag: null, archivScroll: 0 };
 const archivSpeicher = new Map(); // ältere Tage nur im Arbeitsspeicher, offline bleiben die 7 neuesten
@@ -102,13 +112,17 @@ async function aktualisieren() {
   let index;
   try {
     index = await holeJSON(DATEN + 'index.json');
-  } catch {
-    zustand.offline = true;
+  } catch (e) {
+    // Nur ein Netzfehler heißt „offline“. Antwortet der Server mit Fehler, bleibt der alte Stand mit eigenem Hinweis.
+    zustand.offline = e instanceof NetzFehler;
+    zustand.ladeFehler = !zustand.offline;
     zustand.ausgabe = zustand.ausgabe || await neuesteGespeicherte();
     return zeichne();
   }
   zustand.offline = false;
+  zustand.ladeFehler = false;
   zustand.neuesteKaputt = null;
+  zustand.neuesteFehlt = null;
   const alleTage = Array.isArray(index?.tage) ? index.tage.filter(t => t && /^\d{4}-\d{2}-\d{2}$/.test(t.datum)) : [];
   zustand.indexTage = alleTage.slice(0, ARCHIV_TAGE + 1);
   const tage = alleTage.slice(0, OFFLINE_TAGE);
@@ -120,14 +134,17 @@ async function aktualisieren() {
     if (!t?.datum || (vorhanden.has(t.datum) && i > 0)) continue; // neuesten Tag immer neu holen (Korrekturen)
     const url = new URL(DATEN + t.datum + '.json', location.href);
     try {
-      const r = await fetch(url, { cache: 'no-store' });
-      if (!r.ok) throw new Error('HTTP ' + r.status);
+      let r;
+      try { r = await fetch(url, { cache: 'no-store' }); } catch { throw new NetzFehler(); }
+      if (!r.ok) throw new HttpFehler('HTTP ' + r.status); // Datei im Index, aber nicht abrufbar (z. B. 404)
       const text = await r.text();
       const d = JSON.parse(text);
       if (!istGueltig(d) || d.datum !== t.datum) throw new Error('ungültig');
       await c.put(url, new Response(text, { headers: { 'Content-Type': 'application/json' } }));
-    } catch {
-      if (i === 0) zustand.neuesteKaputt = t.datum; // alter guter Stand bleibt
+    } catch (e) {
+      // alter guter Stand bleibt; nur der neueste Tag bekommt einen Hinweis
+      if (i === 0 && e instanceof HttpFehler) zustand.neuesteFehlt = t.datum;
+      else if (i === 0 && !(e instanceof NetzFehler)) zustand.neuesteKaputt = t.datum;
     }
   }
   await aufraeumen();
@@ -140,9 +157,12 @@ function hinweise() {
   const h = [];
   const { ausgabe, offline, neuesteKaputt } = zustand;
   const jetzt = berlinJetzt();
+  const { ladeFehler, neuesteFehlt } = zustand;
   if (offline) h.push(['offline', ICON_OFFLINE, ausgabe ? `Offline – gespeicherte Ausgabe vom ${kurzDatum(ausgabe.datum)}` : 'Offline – keine Verbindung']);
+  if (ladeFehler) h.push(['', ICON_HINWEIS, ausgabe ? `Die Ausgabe konnte gerade nicht geladen werden – Stand vom ${kurzDatum(ausgabe.datum)}` : 'Die Ausgabe konnte gerade nicht geladen werden']);
+  if (neuesteFehlt && ausgabe) h.push(['', ICON_HINWEIS, `Die Ausgabe vom ${kurzDatum(neuesteFehlt)} ist noch nicht verfügbar – Stand vom ${kurzDatum(ausgabe.datum)}`]);
   if (neuesteKaputt && ausgabe) h.push(['', ICON_HINWEIS, `Die Ausgabe vom ${kurzDatum(neuesteKaputt)} ist fehlerhaft – Stand vom ${kurzDatum(ausgabe.datum)}`]);
-  if (ausgabe && ausgabe.datum !== jetzt.datum && !neuesteKaputt) {
+  if (ausgabe && ausgabe.datum !== jetzt.datum && !neuesteKaputt && !neuesteFehlt) {
     if (jetzt.minuten < 6 * 60 + 30 && ausgabe.datum === vortag(jetzt.datum)) {
       h.push(['info', ICON_UHR, `Die heutige Ausgabe kommt um 6:30 – bis dahin: Ausgabe vom ${kurzDatum(ausgabe.datum)}`]);
     } else {
@@ -455,11 +475,11 @@ function zeigeFact(i) {
 // Für V2 „Fortschritt“ vorbereitet: pro Tag nur lokal festhalten, was gelesen wurde. Nie im Repo.
 function merkeFortschritt(datum, was) {
   try {
-    const f = JSON.parse(localStorage.getItem('fortschritt') || '{}');
+    const f = JSON.parse(localStorage.getItem(SPEICHER_PRAEFIX + 'fortschritt') || '{}');
     f[datum] = { ...(f[datum] || {}), [was]: true };
     const tage = Object.keys(f).sort().reverse();
     for (const t of tage.slice(400)) delete f[t];
-    localStorage.setItem('fortschritt', JSON.stringify(f));
+    localStorage.setItem(SPEICHER_PRAEFIX + 'fortschritt', JSON.stringify(f));
   } catch {}
 }
 
@@ -745,7 +765,7 @@ function lernFensterZu() { $('wisch')?.querySelector('.lern-fenster')?.remove();
 
 // ---------- Merken (Schritt 7): nur lokal, mit Inhalt, bleibt dauerhaft ----------
 const ICON_LESEZEICHEN = '<path d="M4 2h8v12l-4-3-4 3z"/>';
-const SPEICHER_GEMERKT = 'gemerkt';
+const SPEICHER_GEMERKT = SPEICHER_PRAEFIX + 'gemerkt';
 // Eintrag: { art: 'meldung'|'fact', id, datum, am (ISO), inhalt (komplette Meldung bzw. Fact) }
 
 function gemerktListe() {
@@ -839,7 +859,7 @@ async function oeffneGemerkt(k) {
 }
 
 // ---------- Einstellungen (Schritt 6): Bereiche an/aus, nur lokal ----------
-const SPEICHER_BEREICHE = 'bereiche-aus';
+const SPEICHER_BEREICHE = SPEICHER_PRAEFIX + 'bereiche-aus';
 let bereicheCache = null;
 function bereicheAus() {
   if (bereicheCache) return bereicheCache;
@@ -929,9 +949,9 @@ function toast(text) {
 
 // ---------- App-Updates: neue Version beim nächsten Öffnen ----------
 function updates() {
-  const alt = localStorage.getItem('app-version');
+  const alt = localStorage.getItem(SPEICHER_PRAEFIX + 'app-version');
   if (alt && alt !== VERSION) toast(`App aktualisiert (Version ${VERSION})`);
-  localStorage.setItem('app-version', VERSION);
+  localStorage.setItem(SPEICHER_PRAEFIX + 'app-version', VERSION);
   if (!('serviceWorker' in navigator)) return;
   const start = Date.now();
   let neuLaden = false;

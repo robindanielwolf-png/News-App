@@ -32,7 +32,7 @@
    "laeuft_noch": false,
    "ereignis_datum": "2026-11-19",
    "stand": "2026-11-19T06:00:00+01:00",
-   "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Hier steht Platzhaltertext. Er ist absichtlich etwas länger, damit man sieht, wie Ebene 2 mit mehr Text wirkt. Die echte Redaktion schreibt hier drei bis fünf Sätze.",
+   "hintergrund": "Fiktiver Hintergrund in mehreren Sätzen. Dieser Absatz ist absichtlich sehr lang, damit die Vorschau zeigt, wie Ebene 2 bei einer langen Meldung aussieht. Der erste Teil erklärt die Ausgangslage im fiktiven Testfall. Danach folgt die Vorgeschichte mit mehreren Stationen, die alle frei erfunden sind. Es folgt ein Abschnitt über die beteiligten Stellen und ihre Rollen im Verfahren. Dann wird beschrieben, welche Fristen gelten und ab wann Regeln wirksam werden. Ein weiterer Satz erläutert die Kritik aus der fiktiven Opposition, ohne sie zu bewerten. Der nächste Teil zeigt, was bisher offen ist und welche Fragen noch geklärt werden müssen. Außerdem gibt es einen Hinweis auf frühere Testfälle, die ähnlich gelagert waren. Zum Schluss steht ein Ausblick auf die nächsten Schritte im Testszenario. Die echte Redaktion schreibt hier drei bis fünf Sätze; dieser Text ist nur ein Längentest für die Darstellung.",
    "warum_wichtig": "Fiktiv: Warum das für den Alltag oder die Wirtschaft zählt, in ein bis zwei Sätzen.",
    "quellen": [
     {
@@ -53,6 +53,27 @@
      "titel": "Testartikel 3 (fiktiv)",
      "medium": "Testradio West",
      "url": "https://example.org/test/3",
+     "datum": "2026-11-19",
+     "primaer": false
+    },
+    {
+     "titel": "Testartikel 4 (fiktiv)",
+     "medium": "Testagentur Süd",
+     "url": "https://example.org/test/4",
+     "datum": "2026-11-19",
+     "primaer": false
+    },
+    {
+     "titel": "Testartikel 5 (fiktiv)",
+     "medium": "Testportal Ost",
+     "url": "https://example.org/test/5",
+     "datum": "2026-11-19",
+     "primaer": false
+    },
+    {
+     "titel": "Testartikel 6 (fiktiv)",
+     "medium": "Testmagazin Mitte",
+     "url": "https://example.org/test/6",
      "datum": "2026-11-19",
      "primaer": false
     }
