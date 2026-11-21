@@ -1,0 +1,516 @@
+{
+  "version": 2,
+  "datum": "2026-11-21",
+  "erstellt_um": "2026-11-21T05:47:04+01:00",
+  "transparenz": "Diese Ausgabe wurde erstellt mit Claude (Anthropic). Recherche und Gegencheck erfolgten automatisch; Fehler sind möglich. Korrekturen werden offen ausgewiesen.",
+  "korrekturen": [],
+  "meldungen": [
+    {
+      "id": "2026-11-21-wirtschaft-01",
+      "bereich": "wirtschaft",
+      "schlagzeile": "KI-Ausverkauf an den Börsen: Nasdaq −3,8 %, Dax unter 25.000 Punkten",
+      "kurz": "Laut ZDFheute fiel die Nasdaq am 20. November zeitweise um 3,8 %, der S&P 500 um 2,3 %; der Dax gab um 2,6 % auf 24.802 Punkte nach. Die Anthropic-Aktie verlor am zweiten Handelstag 14,5 % und lag nur noch knapp über dem Ausgabepreis von 83 US-Dollar.",
+      "status": "unklar",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-20",
+      "stand": "2026-11-21T05:47:04+01:00",
+      "hintergrund": "Auslöser sind laut ZDFheute Zweifel an hohen Bewertungen, an der Profitabilität und daran, ob sich die hohen KI-Investitionen auszahlen. Chiphersteller wie AMD, Marvell und Micron verloren bis zu 13 %. Zinssorgen belasteten zusätzlich Gold und Bitcoin (unter 60.000 US-Dollar). S&P 500 und Dow lagen laut Bericht mehr als 10 % unter ihren Rekordhochs; die Woche war die schwächste seit April 2025. Der Dax lag erstmals seit Anfang Oktober unter 25.000 Punkten, rund 8 % unter seinem Rekord der Vorwoche. Die Zahlen sind Zwischenstände vom Freitagabend und können sich im Schlussbericht ändern.",
+      "warum_wichtig": "Kursrückgänge bei KI-Werten treffen Fonds und ETFs, die große Tech-Konzerne enthalten, und damit viele Privatanleger.",
+      "quellen": [
+        {
+          "titel": "US-Börsen: Ausverkauf bei KI-Aktien setzt sich fort",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/boerse-ki-aktien-verlust-100.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine Quelle (ZDFheute); Zahlen sind Zwischenstände, kein dpa-AFX-Schlussbericht abrufbar. Meldung betrifft Anthropic (Interessenkonflikt).",
+      "vertiefung": {
+        "text": "Schon Anfang November hatte ein KI-Ausverkauf die Börsen erfasst (ZDFheute, 6. November). Der Börsengang von Anthropic am 19. November mit rund 107 Mrd. Dollar Volumen und die Nvidia-Zahlen waren die wichtigsten Tests für die Stimmung im KI-Sektor.",
+        "links": [
+          {
+            "titel": "KI-Aktien im Sinkflug: Warum die Börsen nach der US-Wahl zittern",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/wirtschaft/boerse-aktien-kursrutsch-ki-usa-midterms-deutschland-100.html"
+          }
+        ],
+        "chat_prompt": "Warum fallen KI-Aktien weltweit, und was bedeuten die Kursverluste von Nvidia, Chipherstellern und Anthropic für Anleger in Deutschland?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": true,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-21-ki_tech-01",
+      "bereich": "ki_tech",
+      "schlagzeile": "Thinking Machines: Inkling 2 Mini läuft mit 5,4 Mrd. aktiven Parametern",
+      "kurz": "Thinking Machines hat Inkling 2 Mini als Open-Weights-Modell (Apache 2.0) veröffentlicht: 26 Mrd. Parameter, 5,4 Mrd. aktiv pro Token, 1 Mio. Token Kontext. Laut Artificial Analysis erreicht es 20 Punkte im Intelligence Index, gleichauf mit Qwen3.8 27B, bei etwa 6-fach niedrigeren Kosten pro Aufgabe.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-20",
+      "stand": "2026-11-21T05:47:04+01:00",
+      "hintergrund": "Das Modell ist ein Mixture-of-Experts-Modell mit einem „Looped Transformer“: 12 seiner 24 Schichten laufen dreimal pro Token, was Rechenleistung ohne mehr Ausgabetext bringt. Es nimmt Text und Bilder an und soll klein genug für einen MacBook oder DGX Spark sein (Aussage des Testers, nicht unabhängig geprüft). Es braucht mit rund 152.000 Ausgabetokens pro Aufgabe etwa 38 % mehr als Qwen3.8 27B. Pro Aufgabe kostet es 0,59 $ und dauert 9,0 Minuten (Qwen3.8 27B: 3,53 $, 38,2 Minuten). GPT-6 Luna erreicht 28 Punkte für 0,15 $ pro Aufgabe und liegt damit vorn.",
+      "warum_wichtig": "Kleine Modelle, die lokal laufen, senken Kosten und Abhängigkeit von großen Anbietern; der Test zeigt aber, dass sie bei der Leistung hinter Spitzenmodellen liegen.",
+      "quellen": [
+        {
+          "titel": "Thinking Machines Inkling 2 Mini",
+          "medium": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/articles/inkling-2-mini",
+          "datum": "2026-11-20",
+          "primaer": true
+        }
+      ],
+      "hinweis_quellen": "Nur eine Quelle (Artificial Analysis, Testseite selbst); keine unabhängige Zweitquelle abrufbar.",
+      "vertiefung": {
+        "text": "Thinking Machines hatte im Juli 2026 sein erstes Open-Weights-Modell Inkling vorgestellt und am 5. November Inkling 2 Small. Artificial Analysis bewertet Modelle mit einem Gesamtindex; ältere Index-Versionen sind nicht direkt vergleichbar.",
+        "links": [
+          {
+            "titel": "Gemini 4 Neon: Intelligence Index und Kosten",
+            "medium": "Artificial Analysis",
+            "url": "https://artificialanalysis.ai/articles/gemini-4-neon-intelligence-gain"
+          },
+          {
+            "titel": "GPT-6.2 Astra und Sol im Intelligence Index",
+            "medium": "Artificial Analysis",
+            "url": "https://artificialanalysis.ai/articles/openai-has-the-2-model-in-the-intelligence-index-with-the-release-of-gpt-6-2-astra-and-gpt-6-2-sol"
+          }
+        ],
+        "chat_prompt": "Was ist ein Looped Transformer, und wie schneidet Inkling 2 Mini von Thinking Machines im Artificial-Analysis-Intelligence-Index gegenüber Qwen3.8 27B und GPT-6 Luna ab?"
+      },
+      "modelle": [
+        "Inkling 2 Mini",
+        "Qwen3.8 27B",
+        "GPT-6 Luna"
+      ],
+      "benchmarks": {
+        "hersteller": [],
+        "unabhaengig": [
+          {
+            "test": "Artificial Analysis Intelligence Index",
+            "wert": "Inkling 2 Mini: 20 · Qwen3.8 27B (xhigh): 20 · GPT-6 Luna (max): 28",
+            "vorn": "GPT-6 Luna",
+            "vergleich_mit": null,
+            "nur_eine_quelle": false,
+            "quelle": "Artificial Analysis",
+            "url": "https://artificialanalysis.ai/articles/inkling-2-mini"
+          },
+          {
+            "test": "Kosten pro Index-Aufgabe (Artificial Analysis)",
+            "wert": "Inkling 2 Mini: 0,59 $ · Qwen3.8 27B: 3,53 $ · GPT-6 Luna: 0,15 $",
+            "vorn": "GPT-6 Luna",
+            "vergleich_mit": null,
+            "nur_eine_quelle": false,
+            "quelle": "Artificial Analysis",
+            "url": "https://artificialanalysis.ai/articles/inkling-2-mini"
+          }
+        ],
+        "hinweis": "Nur ein unabhängiger Tester (Artificial Analysis); Herstellerangaben von Thinking Machines wurden nicht geprüft. Kein Vergleich mit Spitzenmodellen (GPT-6.2 Astra, Claude Fable 5.2 liegen über 60 Punkten): Inkling 2 Mini ist ein kleines Modell."
+      },
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-21-ki_tech-02",
+      "bereich": "ki_tech",
+      "schlagzeile": "USA: Nationaler Cyberdirektor Cairncross geht nach Serie von IT-Pannen",
+      "kurz": "Sean Cairncross, Cyberdirektor des Weißen Hauses, verlässt laut ZDFheute sein Amt; Nachfolgerin soll Kirsten Davies werden. Vorausgegangen waren ein weltweiter Microsoft-Ausfall, eine Panne im NSA-Netz und ein landesweiter Flugstopp.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-19",
+      "stand": "2026-11-21T05:47:04+01:00",
+      "hintergrund": "Laut ZDFheute fielen bei Microsoft in der Vorwoche Outlook und Teams stundenlang aus, am Dienstag fiel ein hochgeheimes NSA-Kommunikationsnetz aus. Am 13. November gab es einen landesweiten Flugstopp mit Tausenden gestrichenen Flügen; mobile Zahlungen waren zeitweise eingeschränkt. Regierungsvertreter sagten wiederholt, die Vorfälle hätten nichts miteinander zu tun und es habe keine Cyberangriffe gegeben. Zur Begründung des Abgangs berichtet AFP, Trump habe die Entlassung unterstützt, weil Cairncross nicht ausreichend qualifiziert sei; Axios berichtet, Cairncross wolle nicht weitere zwei Jahre bleiben. Außenminister Rubio gab die Nachfolge auf X bekannt.",
+      "warum_wichtig": "Der Rücktritt zeigt, wie sehr Ausfälle in Luftfahrt, Zahlungsverkehr und Behördennetzen zu einem politischen Thema werden.",
+      "quellen": [
+        {
+          "titel": "USA: Rücktritt von Trumps Cyberchef nach IT-Störungen",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/usa-it-stoerung-technik-panne-ruecktritt-cyberchef-100.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine Quelle (ZDFheute, nennt AFP und Axios); Gründe des Rücktritts werden unterschiedlich berichtet. Der Abruf einer Zweitquelle war nicht möglich.",
+      "vertiefung": {
+        "text": "Cairncross war im August 2025 vom Senat als Nationaler Cyberdirektor bestätigt worden. Sein Rücktritt fällt in eine Reihe von Abgängen nach den Zwischenwahlen; die Demokraten übernehmen im Januar die Kontrolle im Kongress.",
+        "links": [
+          {
+            "titel": "Trump taps RNC executive as national cyber director",
+            "medium": "Axios",
+            "url": "https://www.axios.com/2025/02/12/trump-names-rnc-executive-national-cyber-director"
+          }
+        ],
+        "chat_prompt": "Warum ist der US-Cyberdirektor Sean Cairncross zurückgetreten, und was ist über die jüngsten IT-Ausfälle bei Microsoft, NSA und Flugsicherung bekannt?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-21-de_eu-01",
+      "bereich": "de_eu",
+      "schlagzeile": "Gen-Z-Proteste: knapp 90.000 Teilnehmende bundesweit, überwiegend friedlich",
+      "kurz": "Laut ZDFheute beteiligten sich am 20. November knapp 90.000 Menschen an den „Gen Z regelt“-Protesten in Deutschland. Die Demonstrationen verliefen weitgehend friedlich; in Stuttgart gab es laut Polizei über 20 vorläufige Festnahmen.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-20",
+      "stand": "2026-11-21T05:47:04+01:00",
+      "hintergrund": "Protestiert wurde unter anderem in Hamburg (zeitweise etwa 4.000 laut Polizei), Berlin (etwa 1.100 beim Marsch „Merz muss weg“), Frankfurt (höchstens etwa 1.000) und Stuttgart (mehrere Hundert). Die Forderungen reichen von bezahlbarem Wohnraum und mehr Therapieplätzen bis zum Protest gegen Wehrpflicht und Aufrüstung. In Hamburg flogen Böller und Flaschen auf Polizisten, in Leipzig wurden mehrere Hundert Menschen eingekesselt. Hessens Innenminister Poseck (CDU) sagte, die Bilder vom 31. Oktober hätten sich nicht wiederholt; damals waren mehr als 180 Polizisten verletzt worden. Auch in Italien, Österreich, Spanien und Großbritannien gab es Proteste.",
+      "warum_wichtig": "Die Proteste zeigen die Stimmung junger Menschen zu Wehrpflicht, Wohnen und Bildung, über die die Bundesregierung gerade berät.",
+      "quellen": [
+        {
+          "titel": "Gen-Z-Proteste: Liveblog zu den Demonstrationen",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/deutschland/gen-z-proteste-schulpolitik-militaerdienst-liveblog-100.html",
+          "datum": "2026-11-21",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine Quelle (ZDFheute-Liveblog); ob die Zahl „knapp 90.000“ von Polizei oder Veranstaltern stammt, ist dort nicht angegeben.",
+      "vertiefung": {
+        "text": "Die Bewegung „Gen Z regelt“ hatte für den 20. November Demonstrationen in 39 Städten angekündigt. Am 31. Oktober hatte sie nach eigenen Angaben rund 120.000 Menschen in mehr als 30 Städten mobilisiert, Berichte sahen das unter den Erwartungen.",
+        "links": [
+          {
+            "titel": "Neue Proteste der Gen Z – mit deutlich weniger Teilnehmern",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/deutschland/genz-z-demonstration-weniger-teilnehmer-100.html"
+          }
+        ],
+        "chat_prompt": "Was fordert die Bewegung „Gen Z regelt“, und wie viele Menschen haben sich an den Protesten am 20. November beteiligt?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-21-de_eu-02",
+      "bereich": "de_eu",
+      "schlagzeile": "EU und Großbritannien vereinbaren Neustart in „vielen kleinen Schritten“",
+      "kurz": "Beim Gipfel in Brüssel haben Premier Burnham, Kommissionspräsidentin von der Leyen und Ratspräsident Costa laut ZDFheute einen Neustart der Beziehungen vereinbart: 100.000 Jugendvisa pro Jahr, Handel mit Lebensmitteln ohne Kontrollen ab März 2028 und die Verknüpfung der Emissionshandelssysteme.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-20",
+      "stand": "2026-11-21T05:47:04+01:00",
+      "hintergrund": "Die Jugendmobilität hängt von einer noch offenen Einigung über Studiengebühren ab; die Verhandlungen sollen binnen sechs Monaten abgeschlossen werden. Für den Lebensmittelhandel verpflichtet sich Großbritannien zur Einhaltung europäischer Standards, was seine Handelsabkommen mit Drittstaaten wie den USA einschränkt. Verteidigung, Sicherheit und Migration wurden besprochen, konkrete Beschlüsse dazu nennt der Bericht nicht. Ein EU-Wiedereintritt ist laut ZDF-Korrespondent vorerst nicht in Sicht. Die britische Regierung hatte vorab erklärt, die Pakete verlangten keine Zahlungen in den EU-Haushalt.",
+      "warum_wichtig": "Es ist die engste Annäherung zwischen London und Brüssel seit dem Brexit, mit Folgen für Handel, Reisen und Klimapolitik.",
+      "quellen": [
+        {
+          "titel": "EU und Großbritannien: Annäherung in kleinen Schritten",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/eu-grossbritannien-annaeherung-burnham-von-der-leyen-costa-100.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        },
+        {
+          "titel": "EU-UK summit: leaked draft reveals ambition and limits of Brexit reset (Vorbericht)",
+          "medium": "Euronews",
+          "url": "https://www.euronews.com/2026/11/18/eu-uk-summit-leaked-draft-reveals-ambition-and-limits-of-brexit-reset",
+          "datum": "2026-11-18",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Ergebnis des Gipfels nur durch ZDFheute belegt; die zweite Quelle ist ein Vorbericht (Euronews, Stand 18.11.) zu denselben Paketen.",
+      "vertiefung": {
+        "text": "Der Gipfel war nach dem Rücktritt von Premier Starmer verschoben worden. Die Pakete zu Lebensmittelstandards (SPS), Emissionshandel (ETS) und Jugendaustausch (YES) waren seit dem Gipfel im Mai 2025 vorbereitet worden.",
+        "links": [
+          {
+            "titel": "UK-EU summit package: factsheet and mythbuster",
+            "medium": "GOV.UK",
+            "url": "https://www.gov.uk/government/news/uk-eu-summit-package-factsheet-and-mythbuster"
+          }
+        ],
+        "chat_prompt": "Was haben die EU und Großbritannien beim Gipfel am 20. November 2026 vereinbart, und was bedeutet das für Handel, Jugendmobilität und Emissionshandel?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-21-welt-01",
+      "bereich": "welt",
+      "schlagzeile": "Polen: mutmaßlich russischer Marschflugkörper Kh-101 abgestürzt",
+      "kurz": "Ein Flugobjekt ist am 20. November im Südosten Polens abgestürzt; Verteidigungsminister Kosiniak-Kamysz sprach von einem mutmaßlich russischen Marschflugkörper Kh-101 und einer „Provokation“. Verletzte gab es laut ZDFheute nicht.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-20",
+      "stand": "2026-11-21T05:47:04+01:00",
+      "hintergrund": "Laut ZDFheute stürzte das Objekt bei Nowy Lipowiec im Kreis Biłgoraj ab; ein weiterer Flugkörper soll an anderer Stelle eingeschlagen sein, eine Düsendrohne an einem dritten Ort. Der Minister verwies darauf, dass dies während einer Übung der „Koalition der Willigen“ in Polen geschah. Ministerpräsident Tusk berief eine Krisensitzung ein, NATO-Jets stiegen auf, NATO-Generalsekretär Rutte kritisierte die Luftraumverletzungen. In Litauen schoss die NATO eine mutmaßlich aus Belarus gestartete Drohne bei Kaunas ab. Eine Reaktion Russlands nennt der Bericht nicht. Es ist laut ZDF der zweite Absturz eines Kh-101 in Polen nach dem Vorfall Ende Juli.",
+      "warum_wichtig": "Wiederholte Luftraumverletzungen an der NATO-Ostflanke erhöhen das Risiko einer Eskalation im Ukraine-Krieg.",
+      "quellen": [
+        {
+          "titel": "Polen: Marschflugkörper aus Russland abgestürzt",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/polen-marschflugkoerper-russland-100.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine Quelle (ZDFheute); Einstufung als Kh-101 ist die Aussage der polnischen Regierung („mutmaßlich“), eine Untersuchung und Reaktion Russlands stehen aus.",
+      "vertiefung": {
+        "text": "Ende Juli 2026 war bereits ein Kh-101 bei Tarnawa Kolonia südlich von Lublin abgestürzt; Polen bestätigte später die russische Herkunft. Polen wirft Russland seit 2022 wiederholt Sabotage und Luftraumverletzungen vor.",
+        "links": [
+          {
+            "titel": "Polen: Abgestürztes Geschoß war russische Rakete (Juli 2026)",
+            "medium": "ORF",
+            "url": "https://orf.at/stories/3437812/"
+          }
+        ],
+        "chat_prompt": "Was ist am 20. November 2026 in Polen abgestürzt, wer macht wen verantwortlich, und wie reagiert die NATO?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-21-welt-02",
+      "bereich": "welt",
+      "schlagzeile": "COP31 in Antalya geht in die Verlängerung – Streit um Ausstieg aus Fossilen",
+      "kurz": "Die Weltklimakonferenz COP31 überzieht das geplante Ende am 20. November um 18 Uhr; Ergebnisse werden laut ZDFheute frühestens am Samstag erwartet. Der Entwurf nennt den Ausstieg aus fossilen Energien nicht, die EU hält ihn für nicht akzeptabel.",
+      "status": "unklar",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-20",
+      "stand": "2026-11-21T05:47:04+01:00",
+      "hintergrund": "Frankreich und elf weitere Staaten fordern ein klares Bekenntnis zum Ausstieg und schnellere Methan-Reduktion; die französische Ministerin Barbut nannte das Fehlen einen „Schlag ins Gesicht“. Beobachter vermuten Blockaden durch Ölförderstaaten. Beschlüsse brauchen den Konsens von knapp 200 Staaten. Die afrikanische Gruppe kritisiert, dass der Vorschlag zur Verdreifachung der Anpassungsgelder nicht auf die Tagesordnung kam. Das 1,5-Grad-Ziel gilt als nicht mehr erreichbar; laut UN-Umweltprogramm steuert die Welt bei der aktuellen Politik auf 2,8 Grad bis Ende des Jahrhunderts.",
+      "warum_wichtig": "Die Abschlusserklärung entscheidet mit, wie schnell Länder Öl, Gas und Kohle zurückfahren und wie viel Geld ärmere Staaten für Klimaanpassung erhalten.",
+      "quellen": [
+        {
+          "titel": "Klimakonferenz Antalya: Verlängerung und Unzufriedenheit",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/klimakonferenz-antalya-cop-31-verlaengerung-unzufriedenheit-100.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine Quelle (ZDFheute, Stand 20.11. 20:30 Uhr); Verhandlung läuft, Ergebnis offen.",
+      "vertiefung": {
+        "text": "Am 16. November lag ein erster Entwurf vor; die Verhandlungen sollten am Freitag enden. Der Streit dreht sich seit Beginn um Fossile, Klimafinanzierung und die Überschreitung der 1,5-Grad-Grenze.",
+        "links": [
+          {
+            "titel": "Antalya UN Climate Change Conference – COP31 (Earth Negotiations Bulletin)",
+            "medium": "IISD",
+            "url": "https://enb.iisd.org/antalya-un-climate-change-conference-cop31-14Nov2026"
+          }
+        ],
+        "chat_prompt": "Worum wird bei der COP31 in Antalya gestritten, und warum ist die Abschlusserklärung zum Ausstieg aus fossilen Energien umstritten?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-21-sport-01",
+      "bereich": "sport",
+      "schlagzeile": "Bayern nur 1:1 gegen Köln – Kane fällt mit Syndesmoseriss mehrere Monate aus",
+      "kurz": "Der FC Bayern spielte am 20. November 1:1 gegen den 1. FC Köln. Harry Kane zog sich laut ZDFheute einen Syndesmoseriss zu und fällt mehrere Monate aus.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-20",
+      "stand": "2026-11-21T05:47:04+01:00",
+      "hintergrund": "Köln ging in der 12. Minute durch Mikey Moore in Führung, Nathaniel Brown glich in der 37. Minute aus. Kane wurde in der 15. Minute von Joel Schmied gefoult, versuchte weiterzuspielen und musste in der 20. Minute raus. Trainer Vincent Kompany sprach von einem „Schlag“ und hoffte, dass es Michael Olise „ab Montag wieder gut geht“.",
+      "warum_wichtig": "Kane ist Bayerns wichtigster Torschütze; sein Ausfall betrifft Bundesliga, Champions League und die englische Nationalmannschaft.",
+      "quellen": [
+        {
+          "titel": "Bundesliga: Bayern gegen Köln, Kane verletzt",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-bayern-koeln-kane-verletzt-100.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine Quelle (ZDFheute, 20.11. 23:52); genaue Ausfalldauer nicht vom Verein beziffert („mehrere Monate“).",
+      "vertiefung": {
+        "text": "Eine Syndesmose ist das Band zwischen Schien- und Wadenbein oberhalb des Sprunggelenks; Risse brauchen oft eine Operation und lange Pause. Kane hatte schon in früheren Saisons Verletzungsprobleme beim FC Bayern.",
+        "links": [
+          {
+            "titel": "Kane-Verletzung (frühere Meldung)",
+            "medium": "bundesliga.com",
+            "url": "https://www.bundesliga.com/de/bundesliga/news/fc-bayern-munchen-harry-kane-verletzung-29140"
+          }
+        ],
+        "chat_prompt": "Wie schwer ist Harry Kanes Syndesmoseriss, wie lange fällt er aus, und was bedeutet das für den FC Bayern?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    }
+  ],
+  "facts": [
+    {
+      "id": "2026-11-21-fact-1",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "Looped Transformer: 12 von 24 Schichten laufen dreimal",
+      "text": "Thinking Machines' Inkling 2 Mini wiederholt 12 seiner 24 Schichten dreimal pro Token. Das erhöht die Rechenleistung, ohne mehr Ausgabetext zu erzeugen (Artificial Analysis, Stand 20.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Thinking Machines Inkling 2 Mini",
+          "medium": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/articles/inkling-2-mini",
+          "datum": "2026-11-20",
+          "primaer": true
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-21-fact-2",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Dax erstmals seit Oktober unter 25.000 Punkten",
+      "text": "Der Dax fiel am 20.11.2026 um 2,6 % auf 24.802 Punkte und lag damit erstmals seit Anfang Oktober unter 25.000, rund 8 % unter seinem Rekord der Vorwoche (ZDFheute, Zwischenstand).",
+      "status": "unklar",
+      "quellen": [
+        {
+          "titel": "US-Börsen: Ausverkauf bei KI-Aktien setzt sich fort",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/boerse-ki-aktien-verlust-100.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-21-fact-3",
+      "art": "zeitlos",
+      "thema": "wirtschaft",
+      "titel": "Euro-Bargeld gibt es erst seit 2002",
+      "text": "Der Euro startete am 1. Januar 1999 zunächst als reines Buchgeld; Münzen und Scheine folgten am 1. Januar 2002. Heute ist er in 21 der 27 EU-Staaten gesetzliches Zahlungsmittel (EZB).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Introduction to the euro",
+          "medium": "Europäische Zentralbank",
+          "url": "https://www.ecb.europa.eu/euro/intro/html/index.en.html",
+          "datum": null,
+          "primaer": true
+        }
+      ],
+      "interessenkonflikt": false
+    }
+  ],
+  "extra_facts": [
+    {
+      "id": "2026-11-21-extra-1",
+      "art": "aktuell",
+      "thema": "klima",
+      "titel": "Klimaanpassung: 28–32 Mrd. $ gezahlt, 305 Mrd. $ nötig",
+      "text": "Die Industriestaaten zahlten 2024 laut Angaben 28,2 bis 31,7 Mrd. US-Dollar für Klimaanpassung. Der Bedarf liegt bei rund 305 Mrd. US-Dollar jährlich bis 2035 (ZDFheute zur COP31, Stand 20.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Klimakonferenz Antalya: Verlängerung und Unzufriedenheit",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/klimakonferenz-antalya-cop-31-verlaengerung-unzufriedenheit-100.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-21-extra-2",
+      "art": "aktuell",
+      "thema": "sport",
+      "titel": "Nations League: Belgien–Deutschland im Viertelfinale",
+      "text": "Die Auslosung am 20.11.2026 in Nyon ergab für das Viertelfinale im März 2027 Belgien gegen Deutschland, Spanien–Frankreich, Norwegen–England und Niederlande–Portugal. Das Finalturnier steht für den 9.–13. Juni 2027 an (UEFA).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "2026/27 UEFA Nations League knockout stage and play-off draw",
+          "medium": "UEFA",
+          "url": "https://www.uefa.com/uefanationsleague/news/02ab-220bd5e4fa4b-2e01193538ad-1000--2026-27-uefa-nations-league-knockout-stage-and-play-off-draw/",
+          "datum": "2026-11-20",
+          "primaer": true
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-21-extra-3",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Bitcoin fällt unter 60.000 Dollar",
+      "text": "Im KI-Ausverkauf vom 20.11.2026 fiel der Bitcoin unter 60.000 US-Dollar; auch Gold gab nach, getrieben von Sorgen um steigende Zinsen (ZDFheute).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "US-Börsen: Ausverkauf bei KI-Aktien setzt sich fort",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/boerse-ki-aktien-verlust-100.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-21-extra-4",
+      "art": "aktuell",
+      "thema": "klima",
+      "titel": "UN: 2,8 Grad Erwärmung bei aktueller Politik",
+      "text": "Laut UN-Umweltprogramm steuert die Welt bei der aktuellen Klimapolitik auf 2,8 Grad Erwärmung bis Ende des Jahrhunderts zu; das 1,5-Grad-Ziel gilt als nicht mehr erreichbar (ZDFheute zur COP31, 20.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Klimakonferenz Antalya: Verlängerung und Unzufriedenheit",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/klimakonferenz-antalya-cop-31-verlaengerung-unzufriedenheit-100.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-21-extra-5",
+      "art": "aktuell",
+      "thema": "politik",
+      "titel": "Litauen: NATO-Jets schießen Drohne bei Kaunas ab",
+      "text": "In Litauen schossen NATO-Kampfjets am 20.11.2026 eine Drohne am Kaunas-See ab; sie soll mutmaßlich aus Belarus gestartet sein (ZDFheute).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Polen: Marschflugkörper aus Russland abgestürzt",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/polen-marschflugkoerper-russland-100.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    }
+  ],
+  "begriff": {
+    "id": "begriff-looped-transformer",
+    "wort": "Looped Transformer",
+    "erklaerung": "Ein Sprachmodell, bei dem einige Schichten pro Wort mehrmals hintereinander durchlaufen werden. So rechnet es mehr nach, ohne größer zu werden oder mehr Text auszugeben.",
+    "meldung_id": "2026-11-21-ki_tech-01",
+    "status": "eine_quelle",
+    "quellen": [
+      {
+        "titel": "Thinking Machines Inkling 2 Mini",
+        "medium": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/articles/inkling-2-mini",
+        "datum": "2026-11-20",
+        "primaer": true
+      }
+    ]
+  }
+}

@@ -1,7 +1,14 @@
 {
   "version": 1,
-  "aktualisiert": "2026-11-20T04:40:12.793Z",
+  "aktualisiert": "2026-11-21T04:47:04.431Z",
   "tage": [
+    {
+      "datum": "2026-11-21",
+      "datei": "2026-11-21.json",
+      "meldungen": 8,
+      "schlagzeile": "KI-Ausverkauf an den Börsen: Nasdaq −3,8 %, Dax unter 25.000 Punkten",
+      "korrigiert": 0
+    },
     {
       "datum": "2026-11-20",
       "datei": "2026-11-20.json",
