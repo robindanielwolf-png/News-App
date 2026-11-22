@@ -1,7 +1,14 @@
 {
   "version": 1,
-  "aktualisiert": "2026-11-21T04:47:04.431Z",
+  "aktualisiert": "2026-11-22T04:45:37.061Z",
   "tage": [
+    {
+      "datum": "2026-11-22",
+      "datei": "2026-11-22.json",
+      "meldungen": 6,
+      "schlagzeile": "EU-Haushalt 2028–34: Costa legt 1,78-Billionen-Plan vor, Merz lehnt ihn ab",
+      "korrigiert": 0
+    },
     {
       "datum": "2026-11-21",
       "datei": "2026-11-21.json",

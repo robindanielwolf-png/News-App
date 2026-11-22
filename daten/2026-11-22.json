@@ -1,0 +1,429 @@
+{
+  "version": 2,
+  "datum": "2026-11-22",
+  "erstellt_um": "2026-11-22T05:45:34+01:00",
+  "transparenz": "Diese Ausgabe wurde erstellt mit Claude (Anthropic). Recherche und Gegencheck erfolgten automatisch; Fehler sind möglich. Korrekturen werden offen ausgewiesen.",
+  "korrekturen": [],
+  "meldungen": [
+    {
+      "id": "2026-11-22-de_eu-01",
+      "bereich": "de_eu",
+      "schlagzeile": "EU-Haushalt 2028–34: Costa legt 1,78-Billionen-Plan vor, Merz lehnt ihn ab",
+      "kurz": "Ratspräsident Costa schlägt für 2028–2034 einen EU-Haushalt von 1,781 Billionen Euro samt Digitalsteuer vor. Bundeskanzler Merz hält das Volumen laut ZDFheute weiterhin für zu hoch; Frankreich nennt den Plan „sehr enttäuschend“.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-21",
+      "stand": "2026-11-22T05:45:34+01:00",
+      "hintergrund": "Der Vorschlag liegt 204 Mrd. Euro unter dem Kommissionsplan vom Juli 2025 (1,985 Billionen) und 44 Mrd. unter dem Oktober-Kompromiss der irischen Ratspräsidentschaft (1,825 Billionen). Die nationalen Beiträge sollen von 0,80 auf 0,82 % des Bruttonationaleinkommens steigen. Die Digitalsteuer auf Online-Werbung und digitale Dienste soll über 5 Mrd. Euro jährlich bringen und träfe Konzerne ab 750 Mio. Euro Weltumsatz. Merz verlangt Korrekturen auf der Einnahmeseite und droht nach dem Nein mehrerer Staaten zu einem Ukraine-Darlehen mit Blockade. Ein Sondergipfel ist für den 26./27. November angesetzt, eine Einigung wird frühestens im Dezember erwartet.",
+      "warum_wichtig": "Der Haushalt legt fest, wie viel Deutschland und die anderen Staaten bis 2034 einzahlen und wofür die EU Geld ausgibt.",
+      "quellen": [
+        {
+          "titel": "Streit um EU-Haushalt: Merz lehnt Costas Vorschlag ab",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/streit-eu-haushalt-costa-merz-digitalsteuer-100.html",
+          "datum": "2026-11-21",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine gelesene Quelle (ZDFheute). Die Bundesregierung hatte schon am 10.10.2026 zum früheren Vorschlag erklärt, die Höhe sei keine Grundlage für eine Einigung (bundesregierung.de).",
+      "vertiefung": {
+        "text": "Der Haushalt braucht Einstimmigkeit im Rat und die Zustimmung des EU-Parlaments; neue Eigenmittel wie die Digitalsteuer müssten in allen 27 Staaten ratifiziert werden. Das EU-Parlament (Verhandler Mureșan) hält die Kürzungen für inakzeptabel, Schweden für zu gering, Kohäsionsländer fürchten weniger Regionalhilfen.",
+        "links": [
+          {
+            "titel": "Merz zum Vorschlag der irischen Ratspräsidentschaft (10.10.2026)",
+            "medium": "Bundesregierung",
+            "url": "https://www.bundesregierung.de/breg-de/aktuelles/pressemitteilungen/bundeskanzler-friedrich-merz-erklaert-zu-dem-von-der-irischen-ratspr%C3%A4sidentschaft-vorgelegten-vorschlag-fuer-die-anstehenden-eu-haushaltsverhandlungen--2456522"
+          }
+        ],
+        "chat_prompt": "Was steht in Costas Vorschlag für den EU-Haushalt 2028–2034 vom 21. November 2026, und warum lehnen Merz und Frankreich ihn ab?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-22-wirtschaft-02",
+      "bereich": "wirtschaft",
+      "schlagzeile": "Bayer: US-Richter billigt 7,25-Milliarden-Vergleich zu Glyphosat-Klagen",
+      "kurz": "Ein Richter in Missouri hat den Sammelvergleich von Bayer über 7,25 Mrd. US-Dollar zu Roundup-Krebsklagen endgültig gebilligt, laut ZDFheute als „fair, vernünftig und angemessen“. Die Zahlungen laufen bis zu 21 Jahre.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-20",
+      "stand": "2026-11-22T05:45:34+01:00",
+      "hintergrund": "Der Vergleich betrifft Zehntausende Kläger in den USA und deckt laufende und mögliche künftige Klagen wegen Non-Hodgkin-Lymphom ab. Er wurde im Februar ausgehandelt; Richter Timothy Boyer billigte ihn nun endgültig. Bayer-Chef Bill Anderson nannte das einen „entscheidenden Meilenstein“, um die Glyphosat-Klagen einzudämmen. Laut Suchtreffern anderer Medien fiel die Entscheidung am Freitag, 20. November, und kann noch angefochten werden; das ist hier nicht durch einen gelesenen Artikel belegt.",
+      "warum_wichtig": "Die Klagewelle um Glyphosat belastet Bayer seit Jahren; der Vergleich soll das finanzielle Risiko begrenzen.",
+      "quellen": [
+        {
+          "titel": "Bayer-Glyphosat-Sammelvergleich: US-Richter billigt Einigung",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/bayer-glyphosat-sammelvergleich-usa-richter-100.html",
+          "datum": "2026-11-21",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine gelesene Quelle (ZDFheute, 21.11.); das genaue Datum der Entscheidung (20.11.) stammt aus Suchausschnitten, nicht aus einem gelesenen Artikel. Anderes Medium (PBS/Bloomberg Law) war nicht abrufbar.",
+      "vertiefung": {
+        "text": "Bayer hatte sich Monsanto 2018 gekauft und seither mehrere Milliarden für Glyphosat-Klagen zurückgestellt. Im Juni 2026 gab es laut ZDFheute einen Erfolg Bayers vor dem Obersten Gericht der USA.",
+        "links": [
+          {
+            "titel": "Bayer-Glyphosat-Sammelvergleich (ZDFheute)",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/wirtschaft/unternehmen/bayer-glyphosat-sammelvergleich-usa-richter-100.html"
+          }
+        ],
+        "chat_prompt": "Was regelt der 7,25-Milliarden-Dollar-Vergleich von Bayer zu den Glyphosat-Klagen in den USA, und was bedeutet die Genehmigung durch den Richter für den Konzern?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-22-ki_tech-03",
+      "bereich": "ki_tech",
+      "schlagzeile": "Anthropic-Börsengang abgeschlossen – Aktie fällt unter dem Druck des KI-Ausverkaufs",
+      "kurz": "Anthropic hat laut eigener Mitteilung vom 20. November den Börsengang samt vollständig ausgeübter Mehrzuteilungsoption abgeschlossen. Die Aktie (Ausgabepreis 83 US-Dollar) schloss am Debüttag laut Al Jazeera bei 97,17 US-Dollar und lag am 20. November zeitweise bei 87,95 US-Dollar.",
+      "status": "unklar",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-20",
+      "stand": "2026-11-22T05:45:34+01:00",
+      "hintergrund": "Am ersten Handelstag (19. November) stieg die Aktie zunächst um 34 % auf 111,50 US-Dollar und schloss laut Al Jazeera rund 17 % über dem Ausgabepreis. Am 20. November fiel sie zeitweise um rund 9,5 % unter den Vortagesschluss, Nvidia lag etwa 7 % im Minus, AMD etwa 11 %. Al Jazeera nennt Blasenängste und den Machtwechsel im US-Kongress als Gründe. Zum Emissionserlös widersprechen sich die Berichte: ZDFheute nennt rund 107 Mrd. US-Dollar, Al Jazeera 81,3 Mrd.; die Zahl ist hier deshalb nicht übernommen. Die Kurse sind Zwischenstände und ändern sich.",
+      "warum_wichtig": "Der Börsengang gilt als Test, ob Anleger die hohen Bewertungen von KI-Firmen mittragen; viele Fonds halten KI-Aktien.",
+      "quellen": [
+        {
+          "titel": "Anthropic announces closing of initial public offering (Newsroom-Übersicht)",
+          "medium": "Anthropic",
+          "url": "https://www.anthropic.com/news",
+          "datum": "2026-11-20",
+          "primaer": true
+        },
+        {
+          "titel": "Anthropic-Börsengang: Aktie startet mit Plus von 34 Prozent",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/anthropic-boersengang-ipo-aktie-100.html",
+          "datum": "2026-11-19",
+          "primaer": false
+        },
+        {
+          "titel": "US tech sell-off continues as Anthropic tumbles after mega IPO",
+          "medium": "Al Jazeera",
+          "url": "https://www.aljazeera.com/economy/2026/11/20/us-tech-sell-off-continues-as-anthropic-tumbles-after-mega-ipo",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Meldung betrifft Anthropic (Interessenkonflikt). Anthropic-Pressemitteilung nur über die Newsroom-Übersicht gelesen (Titel und Datum); Preis und Kurse stammen von Al Jazeera (Klasse B) und ZDFheute. Emissionserlös in den Quellen widersprüchlich.",
+      "vertiefung": {
+        "text": "Anthropic wurde 2021 gegründet und hat laut ZDFheute nie einen Gewinn gemacht. Nvidia und Microsoft hatten sich laut ZDFheute als Ankerinvestoren verpflichtet.",
+        "links": [
+          {
+            "titel": "Anthropic-Börsengang: Aktie startet mit Plus von 34 Prozent",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/wirtschaft/anthropic-boersengang-ipo-aktie-100.html"
+          }
+        ],
+        "chat_prompt": "Wie ist der Börsengang von Anthropic am 19. November 2026 gelaufen, und warum fiel die Aktie danach im KI-Ausverkauf?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": true,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-22-welt-04",
+      "bereich": "welt",
+      "schlagzeile": "Straße von Hormus: erneut Tanker getroffen, Bahrain wehrt iranische Angriffe ab",
+      "kurz": "Die britische Behörde UKMTO meldete am 21. November zwei Tanker, die in der Straße von Hormus von Projektilen getroffen wurden, ohne Verletzte. Bahrain wehrte laut ZDFheute iranische Luftangriffe ab; Trump will über neue Angriffe auf Iran laut Reuters erst nach Jahresbeginn sprechen.",
+      "status": "unklar",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-21",
+      "stand": "2026-11-22T05:45:34+01:00",
+      "hintergrund": "Laut Al Jazeera wurde ein Tanker am Heck 20 km nördlich von Khasab getroffen, ein zweiter im Maschinenraum 31 km östlich davon; unklar ist, ob es zwei Schiffe waren. Iran spricht von einer Minenexplosion bei einem Tanker und beansprucht die Kontrolle über die Meerenge, was unabhängig nicht überprüfbar ist. Laut ZDFheute griffen die Huthi Riad an, der US-Senat lehnte mit 51 zu 48 Stimmen eine Resolution ab, die Trumps Spielraum im Iran-Krieg beschränkt hätte. Merz sagte, eine diplomatische Lösung bleibe möglich. Laut Pentagon kostete der Krieg die USA bis 13. November 48,3 Mrd. US-Dollar.",
+      "warum_wichtig": "Vor dem Krieg lief knapp ein Fünftel des weltweiten Rohöls durch die Meerenge; Angriffe wirken auf Energiepreise und Schifffahrt.",
+      "quellen": [
+        {
+          "titel": "Iran-Liveblog: Bahrain unter Beschuss, Trump will Gespräche über Angriffe erst nach Jahresbeginn",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/iran-israel-usa-angriff-liveblog-100.html",
+          "datum": "2026-11-22",
+          "primaer": false
+        },
+        {
+          "titel": "Tankers hit in Strait of Hormuz as Iran tightens grip on shipping",
+          "medium": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping",
+          "datum": "2026-11-21",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Angaben der Kriegsparteien sind unabhängig nicht überprüfbar; Al Jazeera ist hier ergänzend (Klasse B), die Lage ändert sich laufend.",
+      "vertiefung": {
+        "text": "Der Krieg begann laut Al Jazeera Ende Februar mit Angriffen der USA und Israels auf Iran. Die USA blockieren iranische Häfen und eskortieren Tanker.",
+        "links": [
+          {
+            "titel": "Tankers hit in Strait of Hormuz",
+            "medium": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping"
+          }
+        ],
+        "chat_prompt": "Was ist am 21. November 2026 in der Straße von Hormus passiert, und wie ist der Stand im Iran-Krieg?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-22-welt-05",
+      "bereich": "welt",
+      "schlagzeile": "Polen: Rutte sichert Verteidigung zu, Marschflugkörper-Teile geborgen",
+      "kurz": "Nato-Generalsekretär Rutte nannte in Warschau den Absturz von drei Flugobjekten einen „gefährlichen Vorfall“ und sagte, die Nato verteidige „jeden Zentimeter“ polnischen Gebiets. Laut Staatsanwaltschaft war eines ein russischer Marschflugkörper Ch-101.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-21",
+      "stand": "2026-11-22T05:45:34+01:00",
+      "hintergrund": "Die drei Flugobjekte stürzten am 20. November während russischer Angriffe auf die Ukraine in Polen ab; niemand wurde verletzt. Antriebs- und Steuerteile wurden bei Nowy Lipowiec geborgen. Der Nordatlantikrat berät am Montag in Brüssel, laut Nato-Vertreter eine reguläre Konsultation. Ministerpräsident Tusk wirft Moskau vor, die Nato bei einer Übung der „Koalition der Willigen“ (2.800 Soldaten aus elf Staaten) gezielt zu provozieren; die US-Denkfabrik ISW sieht das ähnlich. Eine Äußerung des Kreml nennt der Artikel nicht.",
+      "warum_wichtig": "Wiederholte Luftraumverletzungen an der Nato-Ostflanke erhöhen das Eskalationsrisiko im Ukraine-Krieg.",
+      "quellen": [
+        {
+          "titel": "Rutte in Warschau: Nato sichert Polen Verteidigung zu",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/rutte-polen-nato-russland-100.html",
+          "datum": "2026-11-21",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine gelesene Quelle (ZDFheute); Einordnung als Absicht ist Aussage Tusks und des ISW, nicht gesichert.",
+      "vertiefung": {
+        "text": "Schon Ende Juli 2026 war ein Ch-101 in Polen abgestürzt. Die Ausgabe vom 21.11. berichtete über den Vorfall selbst; neu ist die Reaktion der Nato.",
+        "links": [
+          {
+            "titel": "Rutte in Warschau (ZDFheute)",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/ausland/rutte-polen-nato-russland-100.html"
+          }
+        ],
+        "chat_prompt": "Was hat Nato-Chef Rutte nach dem Absturz der Flugobjekte in Polen am 20. November 2026 gesagt, und wie geht es weiter?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-22-sport-06",
+      "bereich": "sport",
+      "schlagzeile": "Dortmund gewinnt 1:0 in Gladbach und übernimmt Tabellenspitze von Bayern",
+      "kurz": "Borussia Dortmund gewann am 21. November 1:0 bei Borussia Mönchengladbach (Tor Felix Nmecha, 80. Minute) und führt mit 24 Punkten vor Bayern München (22). Bayern hatte am Vortag 1:1 gegen Köln gespielt.",
+      "status": "bestaetigt",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-21",
+      "stand": "2026-11-22T05:45:34+01:00",
+      "hintergrund": "Das Ergebnis und die Tabelle nach dem 10. Spieltag bestätigt die Bundesliga-Tabellenseite: Dortmund 24 Punkte, Bayern und Freiburg je 22. Den Torschützen und die Minute nennt ZDFheute (sid/dpa). Dortmund spielte ohne Serhou Guirassy (Oberschenkel) und Carney Chukwuemeka. Gladbach bleibt Tabellenletzter und wartet auf den ersten Heimsieg. Am Dienstag spielt Dortmund in der Champions League gegen Arsenal.",
+      "warum_wichtig": "Die Tabellenspitze ist nach Kanes Verletzung bei Bayern wieder offen.",
+      "quellen": [
+        {
+          "titel": "Dortmund verdrängt Bayern von der Spitze",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-10-spieltag-borussia-moenchengladbach-borussia-dortmund-100.html",
+          "datum": "2026-11-21",
+          "primaer": false
+        },
+        {
+          "titel": "Bundesliga-Tabelle 2026/27, 10. Spieltag",
+          "medium": "bundesliga.com (DFL)",
+          "url": "https://www.bundesliga.com/de/bundesliga/tabelle",
+          "datum": "2026-11-21",
+          "primaer": true
+        }
+      ],
+      "hinweis_quellen": "Ergebnis und Tabelle durch ZDFheute und bundesliga.com übereinstimmend; Torschütze und Minute nur aus ZDFheute.",
+      "vertiefung": {
+        "text": "Die 10. Spieltage-Ergebnisse: u. a. Leverkusen 4:0 Paderborn, Union 1:5 Leipzig, Schalke 0:0 Stuttgart.",
+        "links": [
+          {
+            "titel": "Bundesliga-Tabelle",
+            "medium": "bundesliga.com",
+            "url": "https://www.bundesliga.com/de/bundesliga/tabelle"
+          }
+        ],
+        "chat_prompt": "Wie steht die Bundesliga nach dem 10. Spieltag 2026/27, und wie hat Dortmund die Tabellenführung übernommen?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    }
+  ],
+  "facts": [
+    {
+      "id": "2026-11-22-fact-1",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "KI-Rangliste: Claude Fable 5.2 vor GPT-6.2 Astra und Gemini 4 Neon",
+      "text": "Im Intelligence Index von Artificial Analysis liegt Claude Fable 5.2 (Max) mit 65 Punkten vorn, danach GPT-6.2 Astra (Max) mit 62 und Gemini 4 Neon (xhigh) mit 61. Die Seite nennt in ihrem FAQ-Text teils andere Varianten und Werte; Stand der Abfrage 22.11.2026.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Artificial Analysis Intelligence Index – Leaderboard",
+          "medium": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/leaderboards/models",
+          "datum": "2026-11-22",
+          "primaer": true
+        }
+      ],
+      "interessenkonflikt": true
+    },
+    {
+      "id": "2026-11-22-fact-2",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Bayer-Vergleich: 7,25 Mrd. Dollar über bis zu 21 Jahre",
+      "text": "Der gebilligte Glyphosat-Sammelvergleich hat ein Volumen von 7,25 Mrd. US-Dollar, die Zahlungen erstrecken sich über bis zu 21 Jahre (ZDFheute, 21.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Bayer-Glyphosat-Sammelvergleich: US-Richter billigt Einigung",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/bayer-glyphosat-sammelvergleich-usa-richter-100.html",
+          "datum": "2026-11-21",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-22-fact-3",
+      "art": "zeitlos",
+      "thema": "wirtschaft",
+      "titel": "EZB-Ziel: 2 % Inflation mittelfristig",
+      "text": "Die EZB hält Preisstabilität für am besten gesichert, wenn sie mittelfristig 2 % Inflation anstrebt. Der EU-Vertrag definiert Preisstabilität nicht genau; die Festlegung traf der EZB-Rat nach der Strategieüberprüfung im Juli 2021.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Price stability",
+          "medium": "Europäische Zentralbank",
+          "url": "https://www.ecb.europa.eu/mopo/strategy/pricestab/html/index.en.html",
+          "datum": null,
+          "primaer": true
+        }
+      ],
+      "interessenkonflikt": false
+    }
+  ],
+  "extra_facts": [
+    {
+      "id": "2026-11-22-extra-1",
+      "art": "aktuell",
+      "thema": "politik",
+      "titel": "EU-Haushalt: 1,781 Billionen Euro vorgeschlagen",
+      "text": "Costas Entwurf für 2028–2034 umfasst 1,781 Billionen Euro inklusive Inflation, 204 Mrd. weniger als der Kommissionsplan vom Juli 2025 (ZDFheute, 21.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Streit um EU-Haushalt: Merz lehnt Costas Vorschlag ab",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/streit-eu-haushalt-costa-merz-digitalsteuer-100.html",
+          "datum": "2026-11-21",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-22-extra-2",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Digitalsteuer: über 5 Mrd. Euro jährlich geschätzt",
+      "text": "Die im EU-Haushaltsentwurf vorgesehene Abgabe träfe Konzerne mit über 50 Mio. Euro EU-Digitalumsatz und über 750 Mio. Euro Weltumsatz und soll über 5 Mrd. Euro jährlich bringen (ZDFheute, 21.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Streit um EU-Haushalt: Merz lehnt Costas Vorschlag ab",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/streit-eu-haushalt-costa-merz-digitalsteuer-100.html",
+          "datum": "2026-11-21",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-22-extra-3",
+      "art": "aktuell",
+      "thema": "politik",
+      "titel": "Iran-Krieg kostete USA 48,3 Mrd. Dollar",
+      "text": "Laut Pentagon kostete der Iran-Krieg die USA bis zum 13. November 48,3 Mrd. US-Dollar, ohne Reparaturkosten (ZDFheute-Liveblog, Stand 22.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Iran-Liveblog: Bahrain unter Beschuss, Trump will Gespräche über Angriffe erst nach Jahresbeginn",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/iran-israel-usa-angriff-liveblog-100.html",
+          "datum": "2026-11-22",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-22-extra-4",
+      "art": "aktuell",
+      "thema": "klima",
+      "titel": "COP31: Strom soll bis 2035 auf 35 % des Endenergiebedarfs",
+      "text": "Die türkische COP-Präsidentschaft schlägt vor, den Stromanteil am Endenergieverbrauch von rund 20 % auf 35 % bis 2035 zu erhöhen; der Artikel nennt zugleich „knapp über 22 %“ als aktuellen Anteil (ZDFheute, Stand 22.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Klimakonferenz verlängert: Streit um fossile Energien",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/cop-klimakonferenz-antalya-streit-fossile-energien-100.html",
+          "datum": "2026-11-22",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    },
+    {
+      "id": "2026-11-22-extra-5",
+      "art": "aktuell",
+      "thema": "sport",
+      "titel": "Zverev steht im Finale der ATP Finals",
+      "text": "Alexander Zverev besiegte im Halbfinale der ATP Finals Daniil Medwedew in zwei Sätzen und folgt Carlos Alcaraz ins Endspiel (ZDFheute, 21.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Zverev folgt Alcaraz ins Endspiel der ATP Finals",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/tennis-atp-finals-alexander-zverev-endspiel-100.html",
+          "datum": "2026-11-21",
+          "primaer": false
+        }
+      ],
+      "interessenkonflikt": false
+    }
+  ],
+  "begriff": {
+    "id": "begriff-eigenmittel",
+    "wort": "Eigenmittel (EU)",
+    "erklaerung": "Eigenmittel sind Einnahmen, die der EU direkt zustehen, etwa Zölle oder neue EU-Steuern. Sie sollen die Beiträge der Mitgliedstaaten verringern.",
+    "meldung_id": "2026-11-22-de_eu-01",
+    "status": "eine_quelle",
+    "quellen": [
+      {
+        "titel": "Streit um EU-Haushalt: Merz lehnt Costas Vorschlag ab",
+        "medium": "ZDFheute",
+        "url": "https://www.zdfheute.de/politik/ausland/streit-eu-haushalt-costa-merz-digitalsteuer-100.html",
+        "datum": "2026-11-21",
+        "primaer": false
+      }
+    ]
+  }
+}
