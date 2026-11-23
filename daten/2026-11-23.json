@@ -1,0 +1,459 @@
+{
+  "version": 2,
+  "datum": "2026-11-23",
+  "erstellt_um": "2026-11-23T06:00:00+01:00",
+  "transparenz": "Diese Ausgabe wurde erstellt mit Claude (Anthropic). Recherche und Gegencheck erfolgten automatisch; Fehler sind möglich. Korrekturen werden offen ausgewiesen.",
+  "korrekturen": [],
+  "meldungen": [
+    {
+      "id": "2026-11-23-de_eu-01",
+      "bereich": "de_eu",
+      "schlagzeile": "Hubig will Mordparagrafen verschärfen: Femizide sollen klar als Mord gelten",
+      "kurz": "Justizministerin Hubig (SPD) will § 211 StGB so ändern, dass Tötungen aus geschlechtsspezifischen oder sonstigen menschenverachtenden Beweggründen als niedrige Beweggründe und damit als Mord gelten. Der Entwurf ist laut ZDFheute fertig.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-22",
+      "stand": "2026-11-23T06:00:00+01:00",
+      "hintergrund": "Mord verjährt nicht und wird in der Regel mit lebenslanger Haft bestraft. Laut Ministerium haben Gerichte bei Trennungstötungen teils die Verzweiflung des Täters gegen niedrige Beweggründe gewertet; Hubig nennt das Gesetz „an diesem Punkt nicht eindeutig“. Ein eigener Straftatbestand Femizid ist für sie keine Option. Zudem soll die Formulierung „Mörder ist, wer …“ entfallen, die auf die NS-Tätertypenlehre zurückgeht. Als Nächstes folgen laut ZDFheute die Abstimmung in der Regierung, noch dieses Jahr die Länder- und Verbändeanhörung, danach Kabinett, Bundestag und Bundesrat. Schon im Mai hatte Hubig eine „Klarstellung im Gesetz“ angekündigt (ZDFheute, 10.05.2026).",
+      "warum_wichtig": "Die Reform soll regeln, wann Tötungen von Frauen als Mord statt als Totschlag gelten, mit Folgen für das Strafmaß.",
+      "quellen": [
+        {
+          "titel": "Hubig will Mordparagrafen verschärfen",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/deutschland/hubig-mordparagraph-femizide-100.html",
+          "datum": "2026-11-22",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine gelesene Quelle (ZDFheute, 22.11.). Der Entwurf selbst ist noch nicht veröffentlicht; Details stammen aus Ministeriumskreisen. Eine Gegenposition ist nicht belegt.",
+      "vertiefung": {
+        "text": "Der Auftrag stammt aus dem Koalitionsvertrag. SPD-Fraktionsvize Eichwede fordert einen schnellen Kabinettsbeschluss: Femizide dürften nicht als „Eifersuchtsdrama“ bagatellisiert werden.",
+        "links": [
+          {
+            "titel": "Medienbericht: Hubig will Strafrecht bei Femiziden schärfen (10.05.2026)",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/deutschland/justiz-deutschland-hubig-femizide-strafrecht-100.html"
+          }
+        ],
+        "chat_prompt": "Was plant Justizministerin Hubig am Mordparagrafen § 211 StGB bei Femiziden (Stand 22. November 2026), und wie begründet sie die Änderung?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-23-wirtschaft-02",
+      "bereich": "wirtschaft",
+      "schlagzeile": "Metall-Tarifstreit eskaliert: 24-Stunden-Streiks bei BMW, VW-Verhandlung am Dienstag",
+      "kurz": "Die IG Metall hat in der Metall-Tarifrunde 24-Stunden-Streiks ausgeweitet; laut Handelsblatt ruhten zuerst drei BMW-Werke mit normal rund 2.400 Autos pro Tag. Bei VW beginnt am 24. November in Emden die Haustarifrunde, der Konzern verlangt Nullrunden.",
+      "status": "unklar",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-22",
+      "stand": "2026-11-23T06:00:00+01:00",
+      "hintergrund": "Die IG Metall fordert 5 % mehr für die Branche. Streiks waren laut Handelsblatt für Freitag, Montag und Dienstag mit jeweils 24 Stunden angesetzt; es sind die ersten 24-Stunden-Streiks großer Werke seit acht Jahren. VW will laut Handelsblatt und ZDFheute Nullrunden und längeres Arbeiten ohne Lohnausgleich, die IG Metall nennt das einen „Katalog des Grauens“. Die Friedenspflicht bei VW endet Ende 2026, ab Januar drohen Streiks. Arbeitgeber wollen laut Handelsblatt-Schlagzeile am Mittwoch weiterverhandeln.",
+      "warum_wichtig": "Der Streit um Löhne und Arbeitszeit in der Autoindustrie betrifft Hunderttausende Beschäftigte und Lieferketten.",
+      "quellen": [
+        {
+          "titel": "„Brauchen jetzt Wut“: Tarifverhandlungen eskalieren",
+          "medium": "Handelsblatt",
+          "url": "https://www.handelsblatt.com/unternehmen/industrie/autoindustrie-brauchen-jetzt-wut-die-tarifverhandlungen-eskalieren/100271257.html",
+          "datum": "2026-11-22",
+          "primaer": false
+        },
+        {
+          "titel": "Die Kriegserklärung – VW und IG Metall auf Konfrontationskurs",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/vw-ig-metall-tarifstreit-35-stunden-woche-100.html",
+          "datum": "2026-11-19",
+          "primaer": false
+        },
+        {
+          "titel": "Was die VW-Vorstände im Krisenjahr bekommen könnten",
+          "medium": "Handelsblatt",
+          "url": "https://www.handelsblatt.com/unternehmen/industrie/volkswagen-welche-boni-die-vw-vorstaende-im-krisenjahr-bekommen-koennten/100268729.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Zahl der Streikenden uneinheitlich: Handelsblatt nennt rund 100.000, ZDFheute 150.000 (Angabe nicht übernommen). Lage läuft, Verhandlungen stehen bevor.",
+      "vertiefung": {
+        "text": "Die Metall-Tarifrunde (Flächentarif) und die VW-Haustarifrunde laufen parallel. VW gibt hohe Kosten, Zölle, das schwache China-Geschäft und chinesische Konkurrenz als Gründe an.",
+        "links": [
+          {
+            "titel": "Streik- und Tarifstreit bei VW",
+            "medium": "Handelsblatt",
+            "url": "https://www.handelsblatt.com/unternehmen/industrie/volkswagen-welche-boni-die-vw-vorstaende-im-krisenjahr-bekommen-koennten/100268729.html"
+          }
+        ],
+        "chat_prompt": "Worum geht es im Metall-Tarifstreit und bei VW (Stand 23. November 2026): Forderungen, Streiks und nächste Verhandlungstermine?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-23-wirtschaft-03",
+      "bereich": "wirtschaft",
+      "schlagzeile": "KI-Ausverkauf geht weiter: Kospi über 5 % im Minus, Anthropic-Aktie unter Druck",
+      "kurz": "Nach hohen Verlusten an der Wall Street erwarten Anlageexperten laut Handelsblatt keine rasche Beruhigung bei KI-Aktien. Der südkoreanische Kospi lag am Montag zur Mittagspause mehr als 5 % im Minus.",
+      "status": "unklar",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-23",
+      "stand": "2026-11-23T06:00:00+01:00",
+      "hintergrund": "Der Börsengang von Anthropic habe der schlechten Stimmung bei KI-Aktien nur eine kurze Pause verschafft, sagt Michael Field von Morningstar; die Pause sei vorbei. Nasdaq-Futures lagen am späten Sonntagabend (Ortszeit) mehr als 2 % im Plus. Ein Cboe-Vertreter warnt, eine Erholung bedeute nicht zwingend das Ende der Korrektur. Nvidia fiel am Freitag weiter (siehe eigene Meldung). Kursangaben zur Anthropic-Aktie nennt der Artikel nicht.",
+      "warum_wichtig": "Viele Fonds und Altersvorsorgedepots halten KI-Aktien; stärkere Kursschwankungen treffen auch Privatanleger.",
+      "quellen": [
+        {
+          "titel": "Anthropic-Aktie stürzt Richtung Ausgabekurs – ist der KI-Boom vorbei?",
+          "medium": "Handelsblatt",
+          "url": "https://www.handelsblatt.com/finanzen/maerkte/maerkte-euphorie-weicht-furcht-sorge-vor-einem-ende-des-ki-booms-waechst/100271863.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine gelesene Quelle (Handelsblatt, 23.11.). Kurse sind Zwischenstände. Meldung betrifft auch Anthropic (Interessenkonflikt).",
+      "vertiefung": {
+        "text": "Die Börsen in Asien starteten schwach in die Woche. Der Kommentarteil des Handelsblatts bewertet die Lage kontrovers; hier nur Fakten.",
+        "links": [
+          {
+            "titel": "Märkte: Euphorie weicht Furcht",
+            "medium": "Handelsblatt",
+            "url": "https://www.handelsblatt.com/finanzen/maerkte/maerkte-euphorie-weicht-furcht-sorge-vor-einem-ende-des-ki-booms-waechst/100271863.html"
+          }
+        ],
+        "chat_prompt": "Warum fallen KI-Aktien seit Mitte November 2026 und was bedeutet der Kospi-Absturz vom 23. November?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": true,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-23-ki_tech-04",
+      "bereich": "ki_tech",
+      "schlagzeile": "Nvidia: SEC prüft laut Reuters-Bericht die Bilanzierung, Aktie fällt auf 128 Dollar",
+      "kurz": "Die US-Börsenaufsicht SEC überprüft laut einem Reuters-Bericht die Bilanzierung von Nvidia. Die Aktie fiel am Freitag um weitere 14 % auf 128 Dollar, ihren tiefsten Stand seit Mai 2025.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-21",
+      "stand": "2026-11-23T06:00:00+01:00",
+      "hintergrund": "Binnen eines Monats verlor die Aktie laut Handelsblatt mehr als 42 % vom Rekord von rund 243 Dollar im Oktober. Das Wall Street Journal hatte am Dienstag berichtet, die SEC ermittle, ohne Schwerpunkt zu nennen. Die SEC lehnte einen Kommentar ab, Nvidia reagierte laut Handelsblatt zunächst nicht. Kaliforniens Generalstaatsanwalt Bonta fragt Nvidia zu möglichen China-Lieferungen und Anlegerinformation; Gründer Jensen Huang war in der Vorwoche zurückgetreten. Vorwürfe sind nicht bewiesen.",
+      "warum_wichtig": "Nvidia liefert die wichtigsten Chips für KI-Rechenzentren; Zweifel an dem Konzern wirken auf den ganzen KI-Markt.",
+      "quellen": [
+        {
+          "titel": "SEC überprüft laut Bericht Nvidia-Bilanzierung – Aktie fällt weiter",
+          "medium": "Handelsblatt",
+          "url": "https://www.handelsblatt.com/technik/ki/chip-konzern-aufsicht-sec-ueberprueft-laut-bericht-nvidia-bilanzierung/100271678.html",
+          "datum": "2026-11-21",
+          "primaer": false
+        },
+        {
+          "titel": "Huang-Affäre: Kalifornien will Aufklärung zu China-Lieferungen",
+          "medium": "Handelsblatt",
+          "url": "https://www.handelsblatt.com/technik/ki/huang-affaere-kalifornien-will-von-nvidia-aufklaerung-zu-china-lieferungen/100271418.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Die SEC-Prüfung stammt aus einem Reuters-Bericht, zitiert im Handelsblatt (Reuters-Artikel selbst nicht abrufbar); keine Bestätigung durch SEC oder Nvidia. Status daher eine_quelle.",
+      "vertiefung": {
+        "text": "Die Affäre um Huang betrifft laut Handelsblatt Verdachtsmomente zu Kontakten ins Umfeld chinesischer Chipbeschaffung; belegt ist das bisher nicht.",
+        "links": [
+          {
+            "titel": "Kalifornien will von Nvidia Aufklärung",
+            "medium": "Handelsblatt",
+            "url": "https://www.handelsblatt.com/technik/ki/huang-affaere-kalifornien-will-von-nvidia-aufklaerung-zu-china-lieferungen/100271418.html"
+          }
+        ],
+        "chat_prompt": "Was ist über die SEC-Prüfung der Nvidia-Bilanzierung und die Untersuchung in Kalifornien bekannt (Stand 23. November 2026)?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-23-welt-05",
+      "bereich": "welt",
+      "schlagzeile": "COP31 in Antalya endet ohne Abschlusserklärung",
+      "kurz": "Die Weltklimakonferenz COP31 ist nach Verlängerung ohne gemeinsamen Beschluss zu Ende gegangen. Die EU und weitere Staaten lehnten den Entwurf der Präsidentschaft ab, vor allem wegen fehlendem Fahrplan zum Ausstieg aus fossilen Energien.",
+      "status": "bestaetigt",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-22",
+      "stand": "2026-11-23T06:00:00+01:00",
+      "hintergrund": "Konferenzpräsident Murat Kurum räumte laut Handelsblatt ein, dass kein Konsens bestehe und keine Beschlüsse gefasst wurden. Laut ZDFheute verlangten Saudi-Arabien und die arabische Gruppe einen Ausbau von CO2-Speicherung (CCS), unterstützt von Russland und Indien. Die Frage der Anpassungsfinanzierung wurde auf die nächste COP in Äthiopien verschoben. Positiv: Rund 30 Länder kündigten Ausstiegsfahrpläne an oder legten sie vor, die freiwillige „Action Agenda“ brachte mehr als die Verhandlungen.",
+      "warum_wichtig": "Ohne Beschluss fehlt ein gemeinsamer Rahmen für Klimaschutz und Klimafinanzierung der knapp 200 Staaten.",
+      "quellen": [
+        {
+          "titel": "COP31 gescheitert: „Kein Text ist besser als dieser Text“",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/cop-31-tuerkei-endet-ergebnislos-100.html",
+          "datum": "2026-11-22",
+          "primaer": false
+        },
+        {
+          "titel": "Einigung bei Weltklimakonferenz gescheitert",
+          "medium": "Handelsblatt",
+          "url": "https://www.handelsblatt.com/politik/deutschland/cop31-einigung-bei-weltklimakonferenz-gescheitert/100270720.html",
+          "datum": "2026-11-22",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Beide Quellen stimmen im Kernfakt überein; Details zu Positionen einzelner Staaten stammen aus ZDFheute.",
+      "vertiefung": {
+        "text": "Umweltminister Schneider nannte den Entwurf „nicht zustimmungsfähig“. Die frühere Klima-Sonderbeauftragte Jennifer Morgan sagte laut ZDFheute, erstmals in 31 Konferenzen sei „kein Text besser als dieser Text“.",
+        "links": [
+          {
+            "titel": "Weltklimakonferenz endet ergebnislos",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/ausland/cop-31-tuerkei-endet-ergebnislos-100.html"
+          }
+        ],
+        "chat_prompt": "Warum ist die Weltklimakonferenz COP31 in Antalya im November 2026 ohne Abschlusserklärung zu Ende gegangen?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-23-welt-06",
+      "bereich": "welt",
+      "schlagzeile": "Ukraine: Neun Tote nach russischem Angriff in Dymer, Drohnenangriffe vor Libyen",
+      "kurz": "Nach einem russischen Angriff auf ein Hochhaus in Dymer bei Kiew stieg die Zahl der Toten laut Militärgouverneur Tkatschenko auf neun. Vor der libyschen Küste wurden Schiffe, darunter ein russisches, von Drohnen getroffen; die UN verurteilten das.",
+      "status": "unklar",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-23",
+      "stand": "2026-11-23T06:00:00+01:00",
+      "hintergrund": "Selenskyj verurteilte Angriffe auf zivile Ziele und die Energieversorgung; in einer Woche habe Russland rund 2.700 Drohnen, 1.460 Gleitbomben und 165 Raketen eingesetzt (Angabe Selenskyjs). Das russische Frachtschiff „Sparta II“ wird nach einem ukrainischen Drohnenangriff abgeschleppt. Rutte sagte zu, die NATO werde jeden Teil Polens verteidigen. Zur Herkunft der Libyen-Angriffe liegen laut Blog widersprüchliche Berichte vor.",
+      "warum_wichtig": "Die Angriffe zeigen Intensität des Krieges und eine mögliche Ausweitung auf Handelswege im Mittelmeer.",
+      "quellen": [
+        {
+          "titel": "Ukraine-Liveblog",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine gelesene Quelle (ZDFheute-Liveblog, Stand 23.11., 05:37). Todeszahl und Angaben zu Libyen ändern sich; Zahlen zu Angriffen sind Angaben Selenskyjs.",
+      "vertiefung": {
+        "text": "Der Liveblog wird laufend aktualisiert; die Opferzahl kann steigen.",
+        "links": [
+          {
+            "titel": "Ukraine-Liveblog",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html"
+          }
+        ],
+        "chat_prompt": "Was ist über den russischen Angriff auf Dymer bei Kiew und die Drohnenangriffe auf Schiffe vor Libyen bekannt (Stand 23. November 2026)?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-23-sport-07",
+      "bereich": "sport",
+      "schlagzeile": "ATP Finals: Zverev verliert Endspiel gegen Alcaraz 2:6, 6:7",
+      "kurz": "Alexander Zverev hat das Finale der ATP Finals in Turin gegen Carlos Alcaraz in zwei Sätzen mit 2:6, 6:7 verloren. Zverev hatte zuvor in vier Turnierspielen keinen Aufschlag abgegeben.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-22",
+      "stand": "2026-11-23T06:00:00+01:00",
+      "hintergrund": "Alcaraz gelangen im ersten Satz drei Breaks. Im zweiten Satz führte Zverev 5:4, Alcaraz behielt die Nerven. Boris Becker bleibt mit drei Titeln (1988, 1992, 1995) alleiniger deutscher Rekordsieger des Turniers. Zverev hat nächste Woche mit dem deutschen Team beim Davis Cup eine weitere Titelchance.",
+      "warum_wichtig": "Das Turnier beschließt die Tennis-Saison der acht besten Spieler.",
+      "quellen": [
+        {
+          "titel": "Zverev unterliegt überragendem Alcaraz",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/tennis-atp-finals-turin-endspiel-zverev-alcaraz-100.html",
+          "datum": "2026-11-22",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine gelesene Quelle (ZDFheute, 22.11.20:16); Seiten der ATP waren nicht abrufbar.",
+      "vertiefung": {
+        "text": "Das Finale fand am Sonntag, 22. November, in Turin statt.",
+        "links": [
+          {
+            "titel": "Zverev unterliegt überragendem Alcaraz",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/sport/tennis-atp-finals-turin-endspiel-zverev-alcaraz-100.html"
+          }
+        ],
+        "chat_prompt": "Wie verlief das Finale der ATP Finals 2026 zwischen Zverev und Alcaraz in Turin?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    }
+  ],
+  "facts": [
+    {
+      "id": "2026-11-23-fact-1",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "Nvidia-Aktie: minus 42 % in einem Monat",
+      "text": "Die Nvidia-Aktie fiel am 21.11.2026 um 14 % auf 128 US-Dollar, den tiefsten Stand seit Mai 2025. Seit dem Rekord von rund 243 Dollar im Oktober verlor sie mehr als 42 %.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "SEC überprüft laut Bericht Nvidia-Bilanzierung",
+          "medium": "Handelsblatt",
+          "url": "https://www.handelsblatt.com/technik/ki/chip-konzern-aufsicht-sec-ueberprueft-laut-bericht-nvidia-bilanzierung/100271678.html",
+          "datum": "2026-11-21",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-23-fact-2",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Altersvorsorgedepot: bis 540 Euro Grundzulage",
+      "text": "Im neuen Altersvorsorgedepot gibt es bis 360 Euro Sparbetrag 50 Cent Zuschuss je Euro, bis 1.800 Euro 25 Cent je Euro; die Grundzulage beträgt maximal 540 Euro pro Jahr. Start ist der 1. Januar 2027, die staatliche Basisvariante kommt später.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Staatliches Altersvorsorgedepot: Basisvariante kommt später",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/altersvorsorge-basisdepot-2027-verzoegerung-100.html",
+          "datum": "2026-11-21",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-23-fact-3",
+      "art": "zeitlos",
+      "thema": "recht",
+      "titel": "Mord verjährt in Deutschland nicht",
+      "text": "Anders als die meisten Straftaten verjährt Mord in Deutschland nicht und wird in der Regel mit lebenslanger Freiheitsstrafe bestraft; Totschlag erlaubt nur eine zeitlich begrenzte Strafe.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Hubig will Mordparagrafen verschärfen",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/deutschland/hubig-mordparagraph-femizide-100.html",
+          "datum": "2026-11-22",
+          "primaer": false
+        }
+      ]
+    }
+  ],
+  "extra_facts": [
+    {
+      "id": "2026-11-23-fact-4",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Stromsteuer sinkt ab 2027 auf EU-Mindestmaß",
+      "text": "Union und SPD einigten sich im Koalitionsausschuss auf eine Senkung der Stromsteuer für alle ab 2027 auf das europäische Mindestmaß; das Entlastungsvolumen beträgt rund 5 Mrd. Euro.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Wüst zu Söder-Vorschlag",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/deutschland/hendrik-wuest-cdu-koalition-stromsteuer-ukraine-100.html",
+          "datum": "2026-11-22",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-23-fact-5",
+      "art": "aktuell",
+      "thema": "sport",
+      "titel": "Becker bleibt deutscher Rekordsieger der ATP Finals",
+      "text": "Boris Becker gewann die ATP Finals dreimal (1988, 1992, 1995) und bleibt alleiniger deutscher Rekordsieger; Zverev verlor 2026 das Finale.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Zverev unterliegt überragendem Alcaraz",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/tennis-atp-finals-turin-endspiel-zverev-alcaraz-100.html",
+          "datum": "2026-11-22",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-23-fact-6",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Strom: gut 22 % des weltweiten Energieverbrauchs",
+      "text": "Strom macht laut ZDFheute gut 22 % des globalen Energieverbrauchs aus; die Türkei als COP31-Gastgeber treibt eine schnellere Elektrifizierung voran.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "COP31 gescheitert",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/cop-31-tuerkei-endet-ergebnislos-100.html",
+          "datum": "2026-11-22",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-23-fact-7",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "Kalifornien befragt Nvidia zu China-Lieferungen",
+      "text": "Kaliforniens Generalstaatsanwalt Rob Bonta schickte Nvidia am 20.11.2026 einen Fragenkatalog zu möglichen Chip-Lieferungen nach China und zur Information von Anlegern. Vorwürfe sind nicht bewiesen.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Huang-Affäre: Kalifornien will Aufklärung",
+          "medium": "Handelsblatt",
+          "url": "https://www.handelsblatt.com/technik/ki/huang-affaere-kalifornien-will-von-nvidia-aufklaerung-zu-china-lieferungen/100271418.html",
+          "datum": "2026-11-20",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-23-fact-8",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "KI-Index: Fable 5.2 (65) vor GPT-6.2 Astra (62)",
+      "text": "Im Intelligence Index von Artificial Analysis lagen am 23.11.2026 Claude Fable 5.2 (Max) mit 65 vor GPT-6.2 Astra (Max) mit 62 und Gemini 4 Neon (xhigh) mit 61. Das ist ein Test von vielen; andere Tests können andere Ergebnisse zeigen.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Artificial Analysis Leaderboard",
+          "medium": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/leaderboards/models",
+          "datum": "2026-11-23",
+          "primaer": true
+        }
+      ]
+    }
+  ],
+  "begriff": {
+    "id": "begriff-friedenspflicht",
+    "wort": "Friedenspflicht",
+    "erklaerung": "Solange ein Tarifvertrag gilt, dürfen Gewerkschaft und Arbeitgeber keine Arbeitskämpfe wie Streiks führen. Endet die Friedenspflicht, sind Streiks wieder erlaubt.",
+    "meldung_id": "2026-11-23-wirtschaft-02",
+    "status": "eine_quelle",
+    "quellen": [
+      {
+        "titel": "Die Kriegserklärung – VW und IG Metall auf Konfrontationskurs",
+        "medium": "ZDFheute",
+        "url": "https://www.zdfheute.de/wirtschaft/unternehmen/vw-ig-metall-tarifstreit-35-stunden-woche-100.html",
+        "datum": "2026-11-19",
+        "primaer": false
+      }
+    ]
+  }
+}

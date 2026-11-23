@@ -1,7 +1,14 @@
 {
   "version": 1,
-  "aktualisiert": "2026-11-22T04:45:37.061Z",
+  "aktualisiert": "2026-11-23T04:44:49.602Z",
   "tage": [
+    {
+      "datum": "2026-11-23",
+      "datei": "2026-11-23.json",
+      "meldungen": 7,
+      "schlagzeile": "Hubig will Mordparagrafen verschärfen: Femizide sollen klar als Mord gelten",
+      "korrigiert": 0
+    },
     {
       "datum": "2026-11-22",
       "datei": "2026-11-22.json",
