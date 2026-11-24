@@ -1,0 +1,445 @@
+{
+  "version": 2,
+  "datum": "2026-11-24",
+  "erstellt_um": "2026-11-24T08:00:00+01:00",
+  "transparenz": "Diese Ausgabe wurde erstellt mit Claude (Anthropic). Recherche und Gegencheck erfolgten automatisch; Fehler sind möglich. Korrekturen werden offen ausgewiesen.",
+  "korrekturen": [],
+  "meldungen": [
+    {
+      "id": "2026-11-24-de_eu-01",
+      "bereich": "de_eu",
+      "schlagzeile": "Spritpreisdeckel ab Januar: Entwurf mit Ausnahmen und Garantiemarge",
+      "kurz": "Laut Entwurf des Wirtschaftsministeriums zur Kraftstoffhöchstpreisverordnung soll der Deckel vom 1. Januar bis 31. März 2027 gelten. Autobahntankstellen sind ausgenommen, Tankstellen bekommen eine garantierte Bruttomarge von 15 bis 20 Cent je Liter.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-23",
+      "stand": "2026-11-24T08:00:00+01:00",
+      "hintergrund": "Der Mechanismus aus dem ersten Entwurf von Anfang November sollte greifen, wenn der Preis drei Wochen in Folge mehr als fünf Prozentpunkte über dem EU-Durchschnitt lag. Experten zufolge hätte er 2026 nie gegriffen; die EU-Vergleichswerte wurden daraufhin gestrichen. Regionale Unterschiede fließen nun in die Höchstpreisberechnung ein. Die garantierte Bruttomarge liegt bei 15 Cent (E10), 18 Cent (E5) und 20 Cent (Diesel). Wirtschaftsministerin Reiche gilt als Gegnerin staatlicher Markteingriffe.",
+      "warum_wichtig": "Der Deckel würde Spritpreise ab 2027 für drei Monate begrenzen; wie wirksam er ist, hängt an den Ausnahmen.",
+      "quellen": [
+        {
+          "titel": "Spritpreisdeckel ab Januar: So löchrig ist Reiches neuer Plan",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/spritpreisdeckel-reiche-koalition-tanken-benzin-koalition-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine gelesene Quelle (ZDFheute, 23.11.). Der Entwurf ist nicht veröffentlicht; die Regierung hat ihn noch nicht beschlossen. Kritik von SPD und Ökonomen wird im Artikel nur kurz genannt.",
+      "vertiefung": {
+        "text": "Hintergrund sind hohe Energiepreise nach der Sperrung der Straße von Hormus. Der Artikel nennt Kritik der SPD am ersten Entwurf und von Ökonomen an der Maßnahme.",
+        "links": [
+          {
+            "titel": "Heizöl: Wie Kunden unter hohen Preisen ächzen",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/deutschland/heizoelpreise-waermepumpe-iran-oel-preisentwicklung-100.html"
+          }
+        ],
+        "chat_prompt": "Was sieht der Entwurf von Wirtschaftsministerin Reiche für den Spritpreisdeckel ab Januar 2027 vor (Stand 23. November 2026), und welche Kritik gibt es?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-24-wirtschaft-01",
+      "bereich": "wirtschaft",
+      "schlagzeile": "Metall-Tarifstreit: 24-Stunden-Streik bei Mercedes, Verhandlung am Mittwoch",
+      "kurz": "Rund 32.000 Beschäftigte legten bei Mercedes in Sindelfingen mit der Nachtschicht die Arbeit nieder. Die IG Metall fordert 5 % für zwölf Monate; die Arbeitgeber bieten eine Einmalzahlung im Juli 2027 und 1,3 % ab Juli 2028.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-23",
+      "stand": "2026-11-24T08:00:00+01:00",
+      "hintergrund": "Es ist die erste Eskalationsstufe dieser Art seit vielen Jahren. Weitere Warnstreiks gab es unter anderem bei Siemens (Dortmund), den Emder Werften, Bosch, Porsche, Audi und BMW; sie sollen bis einschließlich Dienstag laufen. Die IG Metall nennt das Angebot ein „Minusangebot“, die Arbeitgeber halten die Forderung für „völlig realitätsfern“. Am Mittwoch wird in Mannheim für den möglichen Pilotbezirk Südwest weiterverhandelt.",
+      "warum_wichtig": "Die Tarifrunde betrifft die Metall- und Elektroindustrie; ein Abschluss im Pilotbezirk setzt meist den Maßstab für die ganze Branche.",
+      "quellen": [
+        {
+          "titel": "Neue Eskalationsstufe im Tarifstreit: 24-Stunden-Streik bei Mercedes",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/ig-metall-streik-mercedes-sindelfingen-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine gelesene Quelle (ZDFheute, 23.11.). Die Zahl der Streikenden stammt aus dem Artikel; eine unabhängige Zählung liegt nicht vor.",
+      "vertiefung": {
+        "text": "Die Friedenspflicht in der Branche ist ausgelaufen, seither gibt es Warnstreiks. Das Durchschnittsentgelt liegt laut Südwestmetall bei rund 80.000 Euro im Jahr.",
+        "links": [
+          {
+            "titel": "Heizöl: Wie Kunden unter hohen Preisen ächzen",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/deutschland/heizoelpreise-waermepumpe-iran-oel-preisentwicklung-100.html"
+          }
+        ],
+        "chat_prompt": "Wie steht es im Metall-Tarifstreit nach dem 24-Stunden-Streik bei Mercedes am 23. November 2026: Forderung der IG Metall, Angebot der Arbeitgeber, nächste Termine?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-24-ki_tech-01",
+      "bereich": "ki_tech",
+      "schlagzeile": "Nvidia holt Jensen Huang zurück an die Firmenspitze",
+      "kurz": "Nvidia hat den Mitgründer Jensen Huang am 23. November mit sofortiger Wirkung wieder zum CEO ernannt, 11 Tage nach seinem Rücktritt. Die Aktie legte laut ZDFheute zeitweise 30 bis 33 % zu.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-23",
+      "stand": "2026-11-24T08:00:00+01:00",
+      "hintergrund": "Huang war am 12. November nach Berichten über außereheliche Beziehungen zurückgetreten; eine Frau soll mit chinesischem Geheimdienst in Verbindung stehen. Verwaltungsratschef Harvey Jones hatte eine Rückkehr in der Vorwoche noch ausgeschlossen. Der Verwaltungsrat bildet nun einen Ausschuss, der prüft, ob Huang Ziel eines ausländischen Geheimdienstes wurde, und sucht einen Compliance-Chef. Finanzchefin Colette Kress bleibt CFO. Offen sind eine FBI-Untersuchung, eine Aktionärs-Sammelklage und Vorwürfe zu Chip-Lieferungen nach China; Huang soll am 1. Dezember vor dem Kongress aussagen.",
+      "warum_wichtig": "Nvidia liefert den Großteil der KI-Chips; Führung und Aufsichtsverfahren wirken auf den ganzen KI-Markt.",
+      "quellen": [
+        {
+          "titel": "Nvidia holt Jensen Huang zurück an die Firmenspitze",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/nvidia-huang-rueckkehr-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        },
+        {
+          "titel": "Fall Huang: Nvidia zwischen Alternativlosigkeit und Versagen",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/nvidia-chef-jensen-huang-rueckkehr-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Beide Quellen sind ZDFheute und zählen nicht als unabhängige Bestätigung. Der Kursanstieg wird mit „fast 30 % vorbörslich“ und „mehr als 33 % an der Wall Street“ unterschiedlich angegeben; ein Schlusskurs liegt nicht vor. Trump nennt seinen Einsatz „sehr wichtig“; das ist seine Darstellung.",
+      "vertiefung": {
+        "text": "Ein Governance-Experte (Nell Minow) kritisiert, der Verwaltungsrat habe die Nachfolge nicht geplant. Anleger bewerteten laut Artikel eine Neubesetzung als größeres Risiko als Huangs Rückkehr.",
+        "links": [
+          {
+            "titel": "Der Mann mit der Lederjacke ist zurück",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/wirtschaft/unternehmen/nvidia-jensen-huang-ki-visionaer-portraet-100.html"
+          }
+        ],
+        "chat_prompt": "Warum hat Nvidia Jensen Huang am 23. November 2026 wieder zum CEO gemacht, und welche Untersuchungen laufen weiter?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-24-ki_tech-02",
+      "bereich": "ki_tech",
+      "schlagzeile": "Megaspeed auf US-Sperrliste: Nvidia-Chips nur noch mit Sondergenehmigung",
+      "kurz": "Das US-Handelsministerium setzte Nvidias Cloud-Partner Megaspeed und die Tochter Speedmatrix auf eine Handelssperrliste; fünf weitere Firmen sind betroffen. Als Grund nennt es ein „erhebliches Risiko“ der Weitergabe von Technik an Unbefugte.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-24",
+      "stand": "2026-11-24T08:00:00+01:00",
+      "hintergrund": "Behörden prüfen Megaspeed seit etwa zwei Jahren wegen des Verdachts, Nvidia-Chips trotz Verboten nach China geleitet zu haben; Megaspeed bestreitet das. Die Ermittlungen richten sich gegen die Mehrheitseignerin, der Spionage für China vorgeworfen wird. Megaspeed sagt, sie sei im Sommer 2025 ausgeschieden; Nvidia setzte die Firma nach eigenen Angaben im Juni 2025 auf eine Verkaufsstopp-Liste. Finanzminister Bessent sagte, Finanz-, Außen- und Verteidigungsministerium hätten schärfere Exportregeln gewollt, das Handelsministerium habe gebremst.",
+      "warum_wichtig": "Die Liste zeigt, wie die USA den Chip-Export nach China kontrollieren wollen.",
+      "quellen": [
+        {
+          "titel": "Nvidia-Kontroverse: Chip-Firma auf schwarze Liste gesetzt",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/nvidia-spionageverdacht-megaspeed-sperrliste-chips-usa-100.html",
+          "datum": "2026-11-24",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine gelesene Quelle (ZDFheute). Die Weitergabe-Vorwürfe sind unbewiesen; Megaspeed weist sie zurück.",
+      "vertiefung": {
+        "text": "Der Fall hängt mit dem Rücktritt und der Rückkehr von Nvidia-Chef Huang zusammen: Eine Beziehung zu einer früheren Megaspeed-Managerin war Auslöser der Berichte.",
+        "links": [
+          {
+            "titel": "Fall Huang",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/wirtschaft/unternehmen/nvidia-chef-jensen-huang-rueckkehr-100.html"
+          }
+        ],
+        "chat_prompt": "Was bedeutet die Aufnahme von Megaspeed in die US-Sperrliste (Stand 24. November 2026) für Nvidia-Chips und den Verdacht der Weitergabe nach China?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-24-welt-01",
+      "bereich": "welt",
+      "schlagzeile": "Merz nach Raketeneinschlägen in Polen: Nato-Beitritt der Ukraine 2008 „Fehler“",
+      "kurz": "Bei einer Pressekonferenz mit Nato-Generalsekretär Rutte nannte Kanzler Merz am 23. November die Nicht-Aufnahme der Ukraine 2008 einen Fehler und forderte „Artikel-5-ähnliche“ Sicherheitsgarantien. Anlass sind drei russische Flugkörper, die in der Nacht zum 20. November in Polen einschlugen.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-23",
+      "stand": "2026-11-24T08:00:00+01:00",
+      "hintergrund": "Die Staatsanwaltschaft erklärte am 22. November, alle drei Flugkörper seien Ch-101 aus neuer Produktion gewesen; Verletzte gab es nicht. Ermittler prüfen technische Defekte, Treibstoffmangel und Navigationsstörungen. Polen beantragte für den 23. November eine Sondersitzung des Nato-Rates. Rutte sah die Verantwortung klar bei Moskau, Merz sicherte Polen Solidarität zu und nannte einen Bericht über einen möglichen russischen Atomwaffen-Satelliten „schockierend“.",
+      "warum_wichtig": "Die Vorfälle an der Nato-Ostflanke und die Debatte über Sicherheitsgarantien betreffen die Sicherheit Deutschlands direkt.",
+      "quellen": [
+        {
+          "titel": "Merz: Keine Nato-Aufnahme der Ukraine 2008 war Fehler",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/merz-ukraine-nato-nicht-aufnahme-fehler-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        },
+        {
+          "titel": "Marschflugkörper-Einschläge als Drohung Russlands?",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/polen-marschflugkoerper-ukraine-krieg-russland-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Beide Quellen sind ZDFheute. Eine Absicht Russlands ist nicht belegt; der Artikel hält eine Drohung für möglich. Eine offizielle russische Stellungnahme zu den Einschlägen nennt er nicht.",
+      "vertiefung": {
+        "text": "Frankreichs Präsident Macron hatte eine Debatte über einen Nato-Beitritt der Ukraine angestoßen; Merz nannte dessen Position „sachlogisch“. Polen will den russischen Botschafter einbestellen.",
+        "links": [
+          {
+            "titel": "Russische Atomwaffen im All: Wie groß ist die Bedrohung?",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/ausland/russland-satellit-atomwaffe-weltraum-warnung-100.html"
+          }
+        ],
+        "chat_prompt": "Was hat Kanzler Merz am 23. November 2026 zum Nato-Beitritt der Ukraine gesagt, und was ist über die russischen Flugkörper in Polen bekannt?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-24-welt-02",
+      "bereich": "welt",
+      "schlagzeile": "Ukraine meldet versenkte russische Korvette im libyschen Bengasi",
+      "kurz": "Selenskyj erklärte, sieben Seedrohnen hätten die russische Korvette „Merkury“ im Hafen von Bengasi versenkt. Die ostlibysche Regierung sieht eine Souveränitätsverletzung, die UN-Mission fordert eine unabhängige Untersuchung.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-23",
+      "stand": "2026-11-24T08:00:00+01:00",
+      "hintergrund": "Die Ukraine bekannte sich auch zu einem Angriff auf einen Frachter. Experten bewerten die Rechtslage unterschiedlich: Moritz Brake sagt, Angriffe auf Schiffe in neutralen Häfen seien grundsätzlich nicht erlaubt; Johannes Peters meint, die anerkannte Regierung in Tripolis habe in Bengasi keine Kontrolle, Kiew habe wohl deren Billigung gehabt. Libyen ist seit 2011 geteilt; Russland unterstützt die Kräfte um Haftar im Osten und kann sich im Mittelmeer praktisch nur dort versorgen.",
+      "warum_wichtig": "Der Angriff weitet den Krieg ins Mittelmeer aus und wirft völkerrechtliche Fragen auf.",
+      "quellen": [
+        {
+          "titel": "Drohnen versenken Korvette in Bengasi: Darf Kiew russische Kriegsschiffe in Libyen angreifen?",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/libyen-merkury-angriff-ukraine-krieg-russland-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine gelesene Quelle (ZDFheute). Das Versenken beruht auf Angaben Selenskyjs; das genaue Datum des Angriffs nennt der gelesene Artikel nicht, die Berichterstattung stammt vom 23.11. Eine russische Bestätigung liegt nicht vor.",
+      "vertiefung": {
+        "text": "Der Frachter „Sparta II“ im Finnischen Meerbusen wird ebenfalls der Ukraine zugeordnet, Kiew hat sich dazu nicht geäußert. Sicherheitsexperte Nico Lange warnt vor einer globalen Hungerkrise, falls die Schifffahrt ausfällt.",
+        "links": [
+          {
+            "titel": "Polen: Russische Drohne im Luftraum",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html"
+          }
+        ],
+        "chat_prompt": "Was ist über den ukrainischen Angriff auf die russische Korvette Merkury im libyschen Hafen Bengasi bekannt (Stand 23. November 2026), und wie bewerten Experten die Rechtslage?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-24-sport-01",
+      "bereich": "sport",
+      "schlagzeile": "Frauen-Fußball-WM 2031 in USA, Mexiko, Costa Rica und Jamaika, 2035 im Vereinigten Königreich",
+      "kurz": "Die FIFA hat auf einem außerordentlichen Video-Kongress die Frauen-WM 2031 an die USA (mit Mexiko, Costa Rica, Jamaika) und 2035 an England, Nordirland, Schottland und Wales vergeben. 2031 spielen erstmals 48 statt 32 Teams, geplant sind 104 Spiele.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-23",
+      "stand": "2026-11-24T08:00:00+01:00",
+      "hintergrund": "Für jedes Turnier gab es nur zwei Bewerbungen, jeweils von mehreren nationalen Verbänden. 2031 sind 14 US-Städte, 4 Städte in Mexiko, San José und Kingston vorgesehen. Die Gastgeber und FIFA-Präsident Infantino versprachen wirtschaftlich erfolgreiche Turniere, Gewinne sollen in den Frauenfußball fließen.",
+      "warum_wichtig": "Die Vergabe legt Ort und Größe der nächsten Frauen-Weltmeisterschaften fest.",
+      "quellen": [
+        {
+          "titel": "Frauen-WM 2031 und 2035 in USA und Großbritannien",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/fussball-frauen-wm-2031-2035-in-usa-und-grossbritannien-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur eine gelesene Quelle (ZDFheute, 23.11.), keine FIFA-Mitteilung gelesen. Konkrete Städte für 2035 nennt der Artikel nicht.",
+      "vertiefung": {
+        "text": "Die Ausweitung auf 48 Teams entspricht dem Männer-Format. Der Artikel nennt die Zahl der Spiele und die Gastgeberländer, aber keine Stadien.",
+        "links": [
+          {
+            "titel": "Union holt Torhüterin Berger",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/sport/fussball-frauen-bundesliga-berger-zu-union-berlin-100.html"
+          }
+        ],
+        "chat_prompt": "Wer richtet die Frauen-Fußball-WM 2031 und 2035 aus (FIFA-Beschluss vom 23. November 2026), und was ändert sich am Turnierformat?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    }
+  ],
+  "facts": [
+    {
+      "id": "2026-11-24-fact-1",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "Huang-Rückkehr: Nvidia-Aktie bis zu 33 % im Plus",
+      "text": "Nach der Wiedereinsetzung von Jensen Huang am 23.11.2026 stieg die Nvidia-Aktie laut ZDFheute an der Wall Street um mehr als 33 %; vorbörslich war von fast 30 % die Rede.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Fall Huang: Nvidia zwischen Alternativlosigkeit und Versagen",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/nvidia-chef-jensen-huang-rueckkehr-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24-fact-2",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Heizöl fast doppelt so teuer wie vor einem Jahr",
+      "text": "Der Heizölpreis hat sich gegenüber dem Vorjahr fast verdoppelt; fast jeder fünfte deutsche Haushalt heizt mit Öl. Ein Energieökonom führt das auf die Sperrung der Straße von Hormus zurück, Terminpreise deuten auf sinkende Preise hin (Stand 23.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Heizöl: Wie Kunden unter hohen Preisen ächzen",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/deutschland/heizoelpreise-waermepumpe-iran-oel-preisentwicklung-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24-fact-3",
+      "art": "zeitlos",
+      "thema": "recht",
+      "titel": "Weltraumvertrag von 1967 verbietet Atomwaffen im Orbit",
+      "text": "Der Weltraumvertrag von 1967, den auch Russland unterzeichnet hat, verbietet die Stationierung von Atomwaffen und anderen Massenvernichtungswaffen im Erdorbit. Konventionelle Anti-Satelliten-Waffen sind nicht verboten.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Russische Atomwaffen im All: Wie groß ist die Bedrohung?",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/russland-satellit-atomwaffe-weltraum-warnung-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ]
+    }
+  ],
+  "extra_facts": [
+    {
+      "id": "2026-11-24-extra-1",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Spritpreisdeckel: 15 bis 20 Cent Garantiemarge",
+      "text": "Laut Entwurf sollen Tankstellen eine Bruttomarge von 15 Cent (E10), 18 Cent (E5) und 20 Cent (Diesel) je Liter behalten; Autobahntankstellen sind ausgenommen.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "So löchrig ist Reiches neuer Plan",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/spritpreisdeckel-reiche-koalition-tanken-benzin-koalition-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24-extra-2",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Metallindustrie: rund 80.000 Euro Durchschnittsentgelt",
+      "text": "Laut Südwestmetall liegt das Durchschnittsentgelt in der Metall- und Elektroindustrie bei rund 80.000 Euro pro Jahr (Stand 23.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "24-Stunden-Streik bei Mercedes",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/ig-metall-streik-mercedes-sindelfingen-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24-extra-3",
+      "art": "aktuell",
+      "thema": "sport",
+      "titel": "Frauen-WM 2031: 48 Teams, 104 Spiele",
+      "text": "Bei der Frauen-Fußball-WM 2031 steigt die Zahl der Teams von 32 auf 48; geplant sind 104 Spiele (FIFA-Beschluss vom 23.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Frauen-WM 2031 und 2035 in USA und Großbritannien",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/fussball-frauen-wm-2031-2035-in-usa-und-grossbritannien-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24-extra-4",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Wald: 600.000 Hektar neue Schäden seit 2017",
+      "text": "Der erste Waldökosystembericht der Wald-Allianz (u. a. von Greenpeace getragen) wertet Satellitenbilder von 2017 bis 2026 aus: mindestens 600.000 Hektar neue Schäden, rund 80 % in Nadelwäldern; etwa zwei Drittel der Wälder gelten als stabil.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Waldökosystembericht 2026",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/panorama/wald-hitze-duerre-deutschland-waldoekosystembericht-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24-extra-5",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "EU will Russland-Flagge bei Sportevents verbieten",
+      "text": "Die EU-Kommission schlägt im neuen Sanktionspaket vor, dass russische Teams bei Wettkämpfen in der EU nicht unter russischer Flagge antreten; die Staaten müssen noch zustimmen, angestrebt ist eine Einigung vor Weihnachten.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "EU will Teilnahme an Sportevents unter Russland-Flagge verbieten",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/sportpolitik-eu-will-russland-flagge-bei-sportevents-verbieten-100.html",
+          "datum": "2026-11-23",
+          "primaer": false
+        }
+      ]
+    }
+  ],
+  "begriff": {
+    "id": "begriff-artikel-5-nato",
+    "wort": "Artikel 5 (Nato)",
+    "erklaerung": "Im Nato-Vertrag sagt Artikel 5, dass ein Angriff auf ein Mitglied als Angriff auf alle gilt. Merz fordert für die Ukraine Sicherheitsgarantien, die so ähnlich funktionieren, ohne dass sie Mitglied wird.",
+    "meldung_id": "2026-11-24-welt-01",
+    "status": "eine_quelle",
+    "quellen": [
+      {
+        "titel": "Merz: Keine Nato-Aufnahme der Ukraine 2008 war Fehler",
+        "medium": "ZDFheute",
+        "url": "https://www.zdfheute.de/politik/ausland/merz-ukraine-nato-nicht-aufnahme-fehler-100.html",
+        "datum": "2026-11-23",
+        "primaer": false
+      }
+    ]
+  }
+}

@@ -1,7 +1,14 @@
 {
   "version": 1,
-  "aktualisiert": "2026-11-23T04:44:49.602Z",
+  "aktualisiert": "2026-11-24T04:45:19.563Z",
   "tage": [
+    {
+      "datum": "2026-11-24",
+      "datei": "2026-11-24.json",
+      "meldungen": 7,
+      "schlagzeile": "Spritpreisdeckel ab Januar: Entwurf mit Ausnahmen und Garantiemarge",
+      "korrigiert": 0
+    },
     {
       "datum": "2026-11-23",
       "datei": "2026-11-23.json",
