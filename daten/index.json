@@ -1,7 +1,14 @@
 {
   "version": 1,
-  "aktualisiert": "2026-11-24T04:45:19.563Z",
+  "aktualisiert": "2026-11-25T04:44:29.846Z",
   "tage": [
+    {
+      "datum": "2026-11-25",
+      "datei": "2026-11-25.json",
+      "meldungen": 6,
+      "schlagzeile": "Haushalt 2027: Bundestag berät Rekordetat mit rund 210 Mrd. Euro neuen Schulden",
+      "korrigiert": 0
+    },
     {
       "datum": "2026-11-24",
       "datei": "2026-11-24.json",

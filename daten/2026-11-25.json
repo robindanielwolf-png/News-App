@@ -1,0 +1,414 @@
+{
+  "version": 2,
+  "datum": "2026-11-25",
+  "erstellt_um": "2026-11-25T08:00:00+01:00",
+  "transparenz": "Diese Ausgabe wurde erstellt mit Claude (Anthropic). Recherche und Gegencheck erfolgten automatisch; Fehler sind möglich. Korrekturen werden offen ausgewiesen.",
+  "korrekturen": [],
+  "meldungen": [
+    {
+      "id": "2026-11-25-de_eu-01",
+      "bereich": "de_eu",
+      "schlagzeile": "Haushalt 2027: Bundestag berät Rekordetat mit rund 210 Mrd. Euro neuen Schulden",
+      "kurz": "Der Bundestag berät diese Woche den Bundeshaushalt 2027: rund 560 Mrd. Euro Ausgaben im Kernhaushalt, neue Schulden von rund 210 Mrd. Euro inklusive Sondervermögen. Die Verabschiedung ist für Freitag geplant.",
+      "status": "unklar",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-24",
+      "stand": "2026-11-25T08:00:00+01:00",
+      "hintergrund": "Der Haushaltsausschuss hatte den Etat am 13. November nach über 15 Stunden Verhandlung beschlossen (Gesamtneuverschuldung rund 210,4 Mrd. Euro, Kernhaushalt 560,9 Mrd. Euro). Im Kernhaushalt sind rund 123 Mrd. Euro Kredite vorgesehen, dazu kommen 57,8 Mrd. Euro Sondervermögen Infrastruktur und 29,6 Mrd. Euro Sondervermögen Bundeswehr. Der Verteidigungsetat liegt bei fast 140 Mrd. Euro. Die Koalition musste laut SPD-Haushälter eine Lücke von 34 Mrd. Euro schließen. Plastiksteuer und Zuckersteuer wurden gestrichen bzw. verschoben.",
+      "warum_wichtig": "Es ist die zweithöchste Neuverschuldung der Bundesrepublik; Schwerpunkte sind Verteidigung und Investitionen.",
+      "quellen": [
+        {
+          "titel": "Haushalt 2027: Was in dieser Woche auf dem Spiel steht",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/deutschland/bundestagswoche-haushalt-2027-100.html",
+          "datum": "2026-11-24",
+          "primaer": false
+        },
+        {
+          "titel": "Neuverschuldung steigt auf 210 Mrd. Euro",
+          "medium": "Börsen-Zeitung (Reuters)",
+          "url": "https://www.boersen-zeitung.de/konjunktur-politik/neuverschuldung-steigt-auf-210-mrd-euro",
+          "datum": "2026-11-13",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Zahlen aus ZDFheute (24.11.) und Börsen-Zeitung/Reuters (13.11.) stimmen im Kern überein; Verteidigung: ZDFheute nennt fast 140 Mrd. inkl. Kredite, die Börsen-Zeitung 109,7 Mrd. im Kernhaushalt zuzüglich Sondervermögen (unterschiedliche Abgrenzung). Endgültiger Beschluss steht noch aus.",
+      "vertiefung": {
+        "text": "Die Opposition kritisiert die Schulden (Grüne: „Bretterbude ohne Fundament“, Linke warnt vor Zinslast). Am Mittwoch ist Generaldebatte mit Kanzler Merz; zudem wird die Stromsteuersenkung (rund 5,4 Mrd. Euro) im Begleitgesetz beraten.",
+        "links": [
+          {
+            "titel": "Wie viele Schulden sind zu viel?",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/deutschland/bundeshaushalt-neuverschuldung-zinsentwicklung-100.html"
+          }
+        ],
+        "chat_prompt": "Was steht im Bundeshaushalt 2027, der diese Woche im Bundestag verabschiedet werden soll (Stand 25. November 2026): Ausgaben, Neuverschuldung, Streitpunkte?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-25-wirtschaft-01",
+      "bereich": "wirtschaft",
+      "schlagzeile": "EU legt Obergrenze für Hybridautos aus China fest: knapp 350.000 pro Jahr",
+      "kurz": "Die EU begrenzt die Einfuhr von Hybrid- und Plug-in-Hybridautos aus China ab Dezember 2026 auf knapp 350.000 Fahrzeuge pro Jahr. Die Maßnahme ist vorläufig und gilt höchstens 200 Tage.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-24",
+      "stand": "2026-11-25T08:00:00+01:00",
+      "hintergrund": "Handelskommissar Šefčovič und Chinas Handelsminister Wang Wentao hatten die Regelung im Oktober vereinbart. Im Vorjahr importierte die EU gut 300.000 Hybride aus China; die Grenze liegt höchstens etwa 15 % darüber. Ausgenommen sind unter anderem EWR-Staaten, die Ukraine und Kenia. Für eine dauerhafte Regel muss die Kommission einen Vorschlag machen, dem alle 27 Mitgliedstaaten zustimmen müssen. Seit den Sonderzöllen auf chinesische E-Autos 2024 verkauft China deutlich mehr Plug-in-Hybride in Europa.",
+      "warum_wichtig": "Die Quote trifft einen schnell wachsenden Importmarkt und soll europäische Hersteller schützen.",
+      "quellen": [
+        {
+          "titel": "Hybridautos aus China: EU legt Obergrenze fest",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/eu-importquote-hybridautos-china-100.html",
+          "datum": "2026-11-24",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur ZDFheute (24.11.) als gelesene Hauptquelle. Eine Fachseite (autoevolution, 12.10., Bloomberg-Bezug) nennt 350.000 im ersten Jahr und 6 % Anstieg pro Jahr, ist aber Klasse B. Berichte widersprachen sich im Oktober, ob Mengen über der Quote verzollt oder aufgehalten werden.",
+      "vertiefung": {
+        "text": "Die Deutsche Bundesregierung will Plug-in-Hybride trotz EU-Plänen für klimaneutrale Neuwagen ab 2035 weiter zulassen. Šefčovič will Anfang 2027 Zwischenbilanz ziehen.",
+        "links": [
+          {
+            "titel": "EU caps Chinese hybrid imports (Hintergrund)",
+            "medium": "autoevolution",
+            "url": "https://www.autoevolution.com/news/the-eu-s-new-chinese-hybrid-vehicle-import-quota-kicks-off-at-350000-vehicles-per-year-276915.html"
+          }
+        ],
+        "chat_prompt": "Wie funktioniert die neue EU-Importobergrenze für Hybridautos aus China ab Dezember 2026 und welche Ausnahmen und Fristen gelten?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-25-ki_tech-01",
+      "bereich": "ki_tech",
+      "schlagzeile": "USA setzen Chip-Firma Megaspeed auf Sperrliste – Tage nach Huangs Nvidia-Rückkehr",
+      "kurz": "Die US-Regierung hat Megaspeed (Singapur), die malaysische Tochter Speedmatrix und fünf weitere Firmen auf die Handelssperrliste gesetzt; sie dürfen ohne Genehmigung keine Nvidia-KI-Chips kaufen. Am 23. November hatte Nvidia Jensen Huang als CEO zurückgeholt.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-24",
+      "stand": "2026-11-25T08:00:00+01:00",
+      "hintergrund": "Das US-Handelsministerium sieht ein „erhebliches Risiko“ der Weitergabe an nicht berechtigte Nutzer; Megaspeed bestreitet Chipschmuggel nach China. Nvidia hatte Megaspeed nach eigenen Angaben bereits im Juni 2025 auf eine Verkaufsstopp-Liste gesetzt. Huang war nach Berichten über außereheliche Beziehungen, auch zu einer früheren Megaspeed-Managerin, zurückgetreten und wurde nach Intervention von US-Präsident Trump wieder eingesetzt. Finanzminister Bessent erklärte, mehrere Ressorts hätten strengere Exportregeln gewollt, das Handelsministerium habe gebremst. Huang soll am 1. Dezember vor dem Kongress aussagen.",
+      "warum_wichtig": "Nvidia liefert den Großteil der KI-Chips; Exportkontrollen und Führung des Konzerns wirken auf den ganzen KI-Markt.",
+      "quellen": [
+        {
+          "titel": "Nvidia-Kontroverse: Chip-Firma auf schwarze Liste gesetzt",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/nvidia-spionageverdacht-megaspeed-sperrliste-chips-usa-100.html",
+          "datum": "2026-11-24",
+          "primaer": false
+        },
+        {
+          "titel": "Fall Huang: Nvidia zwischen Alternativlosigkeit und Versagen",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/nvidia-chef-jensen-huang-rueckkehr-100.html",
+          "datum": "2026-11-24",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Beide Quellen sind ZDFheute (stützen sich auf dpa/Reuters) und zählen nicht als unabhängig. Der Spionageverdacht gegen die frühere Managerin beruht auf Medienberichten, nicht auf einer offiziellen Feststellung.",
+      "vertiefung": {
+        "text": "Die Kontroverse begann mit Huangs Rücktritt am 12. November. Offen sind FBI-Untersuchung, Aktionärsklage und Vorwürfe zu Chip-Lieferungen nach China.",
+        "links": [
+          {
+            "titel": "Fall Huang: Nvidia zwischen Alternativlosigkeit und Versagen",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/wirtschaft/unternehmen/nvidia-chef-jensen-huang-rueckkehr-100.html"
+          }
+        ],
+        "chat_prompt": "Was ist über die US-Sperrliste für Megaspeed und Jensen Huangs Rückkehr als Nvidia-CEO bekannt (Stand 25. November 2026)?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-25-ki_tech-02",
+      "bereich": "ki_tech",
+      "schlagzeile": "US-Geschworene sprechen Huawei in Brooklyn in 10 von 12 Anklagepunkten schuldig",
+      "kurz": "Eine Jury in New York hat Huawei in 10 von 12 Punkten schuldig gesprochen, darunter Verschwörung zum Diebstahl von Geschäftsgeheimnissen und Bankbetrug. Vom Vorwurf der kriminellen Vereinigung wurde der Konzern freigesprochen.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-25",
+      "stand": "2026-11-25T08:00:00+01:00",
+      "hintergrund": "Das Strafmaß soll Anfang September 2027 festgelegt werden; Huawei kündigt Berufung an und nennt die Vorwürfe „rechtlich und sachlich unbegründet“. Der Prozess dauerte elf Wochen. Vorgeworfen wurden Diebstahl von Technik, Geschäfte in sanktionierten Ländern wie Iran und Nordkorea und falsche Angaben gegenüber Banken. Hintergrund ist die Festnahme von Finanzchefin Meng Wanzhou 2018 in Kanada. In Deutschland dürfen Huawei-Komponenten laut Vereinbarung von 2024 ab Ende 2026 nicht mehr im Kernnetz stehen.",
+      "warum_wichtig": "Das Urteil verschärft den Technologiekonflikt zwischen USA und China und betrifft Telekom-Netze in Europa.",
+      "quellen": [
+        {
+          "titel": "US-Urteil: Chinesischer Tech-Konzern Huawei wegen Betrugs schuldig",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/huawei-usa-china-urteil-justiz-kriminalitaet-100.html",
+          "datum": "2026-11-25",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur ZDFheute als gelesene Quelle; eine eigene Suche fand nur Berichte über den Beginn der Jury-Beratungen am 18. November, keine zweite Bestätigung des Urteils. Das Datum des Urteils entspricht der Angabe im Artikel.",
+      "vertiefung": {
+        "text": "Die Rolle der US-Politik wird kritisiert: Außenminister Wadephul kritisierte politischen Einfluss von Präsident Trump, die Financial Times berichtete, Trump könne finanziell profitiert haben (laut ZDFheute).",
+        "links": [
+          {
+            "titel": "Huawei vor Gericht (Beginn der Jury-Beratung)",
+            "medium": "SCMP",
+            "url": "https://www.scmp.com/news/us/article/3374967/huawei-case-enters-jury-deliberations-after-2-month-battle-us-courtroom"
+          }
+        ],
+        "chat_prompt": "Was wirft die US-Justiz Huawei vor und was bedeutet das Brooklyner Urteil vom 25. November 2026 für den Konzern und für Europa?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-25-welt-01",
+      "bereich": "welt",
+      "schlagzeile": "Russische Marschflugkörper in Polen: Nato-Rat tagt, Ermittlungen laufen",
+      "kurz": "Drei russische Marschflugkörper schlugen Ende der Vorwoche in Südostpolen ein, ohne Verletzte. Polnische Ermittler stufen sie als neue Ch-101 ein; auf Antrag Polens tagte am 23. November der Nato-Rat.",
+      "status": "unklar",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-23",
+      "stand": "2026-11-25T08:00:00+01:00",
+      "hintergrund": "Die Einschläge erfolgten nach russischen Großangriffen auf die Ukraine in der Nacht zum 20. November. Polnische F-16 und schwedische Gripen stiegen auf, schossen aber nichts ab; Polen kritisiert das. Staatsanwälte prüfen technische Defekte, Treibstoffmangel, Navigationsfehler und Sprengköpfe; unklar ist, ob ukrainische Luftabwehr beteiligt war. Zur gleichen Zeit lief die Übung KOALICJA 26.2 mit Truppen aus elf Staaten. Nato-Generalsekretär Rutte versprach, jeden Zentimeter Polens zu verteidigen.",
+      "warum_wichtig": "Ob die Einschläge Absicht waren, entscheidet über das Eskalationsrisiko zwischen Russland und der Nato.",
+      "quellen": [
+        {
+          "titel": "Marschflugkörper-Einschläge als Drohung Russlands?",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/polen-marschflugkoerper-ukraine-krieg-russland-100.html",
+          "datum": "2026-11-24",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur ZDFheute als gelesene Quelle; die Ermittlungen sind nicht abgeschlossen, Absicht ist nicht belegt. Einschlagsdatum liegt vor dem 23.11.; neu ist die Nato-Ratssitzung und der Ermittlungsstand.",
+      "vertiefung": {
+        "text": "Analyst Christian Mölling hält es für möglich, dass bei Absicht die Teilnehmerstaaten der Übung eingeschüchtert werden sollten; ein Beleg dafür liegt nicht vor.",
+        "links": [
+          {
+            "titel": "Ukraine-Krieg: Liveblog",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html"
+          }
+        ],
+        "chat_prompt": "Was ist über die russischen Marschflugkörper in Polen und die Nato-Ratssitzung vom 23. November 2026 bekannt?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-25-sport-01",
+      "bereich": "sport",
+      "schlagzeile": "CAS gibt Senegal den Afrika-Cup-Titel zurück",
+      "kurz": "Der Sportgerichtshof CAS hat Senegal am 24. November einstimmig den Afrika-Cup-Titel 2025 wieder zugesprochen; das Finale gilt wieder als 1:0. Marokko will das Urteil anfechten.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-24",
+      "stand": "2026-11-25T08:00:00+01:00",
+      "hintergrund": "Im Finale am 18. Januar 2026 in Rabat verließen Senegals Spieler nach einem umstrittenen Elfmeter für Marokko den Platz; das Spiel war fast 20 Minuten unterbrochen. Marokko verschoss, Pape Gueye traf in der Verlängerung. Im März 2026 wertete die CAF-Berufungskommission das Spiel 3:0 für Marokko. Der CAS sah keinen Rechtsfehler des Schiedsrichters, der unter extremem Druck entschieden habe.",
+      "warum_wichtig": "Es ist eine der folgenreichsten Titelentscheidungen im afrikanischen Fußball.",
+      "quellen": [
+        {
+          "titel": "Nächste Wende um Afrika-Cup: Senegal erhält Titel zurück",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/fussball-cas-urteil-afrika-cup-titel-doch-an-senegal-100.html",
+          "datum": "2026-11-24",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur ZDFheute als gelesene Quelle. Marokkos Vorwurf eines Kontakts zwischen CAS-Richter und senegalesischem Verbandspräsidenten ist nach dem Artikel nicht bewiesen.",
+      "vertiefung": {
+        "text": "Marokkos Verband kündigte „alle möglichen Maßnahmen“ an; das Schweizer Bundesgericht würde nur Verfahrensfragen prüfen.",
+        "links": [
+          {
+            "titel": "EU will Teilnahme an Sportevents unter Russland-Flagge verbieten",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/sport/sportpolitik-eu-will-russland-flagge-bei-sportevents-verbieten-100.html"
+          }
+        ],
+        "chat_prompt": "Warum hat der CAS am 24. November 2026 Senegal den Afrika-Cup-Titel zurückgegeben und wie geht der Streit mit Marokko weiter?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    }
+  ],
+  "facts": [
+    {
+      "id": "2026-11-25-fact-01",
+      "art": "aktuell",
+      "thema": "Wirtschaft",
+      "titel": "Zweithöchste Neuverschuldung der Bundesrepublik",
+      "text": "Der Haushaltsausschuss beschloss am 13. November den Etat 2027 mit rund 210,4 Mrd. Euro Gesamtneuverschuldung; nur 2021 lag sie mit 215,4 Mrd. Euro höher.",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Haushalt 2027: Was in dieser Woche auf dem Spiel steht",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/deutschland/bundestagswoche-haushalt-2027-100.html",
+          "datum": "2026-11-24",
+          "primaer": false
+        },
+        {
+          "titel": "Neuverschuldung steigt auf 210 Mrd. Euro",
+          "medium": "Börsen-Zeitung (Reuters)",
+          "url": "https://www.boersen-zeitung.de/konjunktur-politik/neuverschuldung-steigt-auf-210-mrd-euro",
+          "datum": "2026-11-13",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-fact-02",
+      "art": "aktuell",
+      "thema": "KI",
+      "titel": "Nvidia-Aktie springt um mehr als 33 %",
+      "text": "Nach Jensen Huangs Rückkehr als CEO stieg die Nvidia-Aktie an der Wall Street laut ZDFheute um mehr als 33 Prozent (Stand 24. November 2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Fall Huang: Nvidia zwischen Alternativlosigkeit und Versagen",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/nvidia-chef-jensen-huang-rueckkehr-100.html",
+          "datum": "2026-11-24",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-fact-03",
+      "art": "zeitlos",
+      "thema": "Wirtschaft",
+      "titel": "EZB-Inflationsziel: 2 %",
+      "text": "Seit der Strategieüberprüfung im Juli 2021 strebt die EZB mittelfristig 2 % Inflation an.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Price stability – ECB strategy",
+          "medium": "EZB",
+          "url": "https://www.ecb.europa.eu/mopo/strategy/pricestab/html/index.en.html",
+          "datum": "2026-11-25",
+          "primaer": true
+        }
+      ]
+    }
+  ],
+  "extra_facts": [
+    {
+      "id": "2026-11-25-extra-01",
+      "art": "aktuell",
+      "thema": "Wirtschaft",
+      "titel": "300.000 Hybride aus China",
+      "text": "Im Vorjahr importierte die EU gut 300.000 Hybrid- und Plug-in-Hybridautos aus China; die neue Obergrenze liegt knapp unter 350.000.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Hybridautos aus China: EU legt Obergrenze fest",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/eu-importquote-hybridautos-china-100.html",
+          "datum": "2026-11-24",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-extra-02",
+      "art": "aktuell",
+      "thema": "KI",
+      "titel": "Elf Wochen Prozess gegen Huawei",
+      "text": "Der Prozess in Brooklyn dauerte elf Wochen; die Jury sprach Huawei in 10 von 12 Punkten schuldig.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "US-Urteil: Chinesischer Tech-Konzern Huawei wegen Betrugs schuldig",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/huawei-usa-china-urteil-justiz-kriminalitaet-100.html",
+          "datum": "2026-11-25",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-extra-03",
+      "art": "aktuell",
+      "thema": "Politik",
+      "titel": "Ch-101: Reichweite für Präzisionsschläge",
+      "text": "Laut polnischer Staatsanwaltschaft waren alle drei Flugkörper in Polen neue Ch-101-Marschflugkörper (Stand 22. November 2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Marschflugkörper-Einschläge als Drohung Russlands?",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/polen-marschflugkoerper-ukraine-krieg-russland-100.html",
+          "datum": "2026-11-24",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-extra-04",
+      "art": "zeitlos",
+      "thema": "Sport/Körper",
+      "titel": "150 Minuten Bewegung pro Woche",
+      "text": "Die WHO empfiehlt Erwachsenen mindestens 150 Minuten moderate körperliche Aktivität pro Woche.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Physical activity – Fact sheet",
+          "medium": "WHO",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity",
+          "datum": "2026-11-25",
+          "primaer": true
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-extra-05",
+      "art": "aktuell",
+      "thema": "Sport",
+      "titel": "CAF und CAS entschieden gegensätzlich",
+      "text": "Die CAF wertete das Finale im März 2026 mit 3:0 für Marokko; der CAS stellte am 24. November das 1:0 für Senegal wieder her.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Nächste Wende um Afrika-Cup: Senegal erhält Titel zurück",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/fussball-cas-urteil-afrika-cup-titel-doch-an-senegal-100.html",
+          "datum": "2026-11-24",
+          "primaer": false
+        }
+      ]
+    }
+  ],
+  "begriff": {
+    "id": "begriff-handelssperrliste",
+    "wort": "Handelssperrliste",
+    "erklaerung": "Eine Liste der US-Regierung mit Firmen, die bestimmte Waren, etwa KI-Chips, nur mit Sondergenehmigung kaufen dürfen. Sie soll verhindern, dass Technik an unerwünschte Nutzer gelangt.",
+    "meldung_id": "2026-11-25-ki_tech-01",
+    "status": "eine_quelle",
+    "quellen": [
+      {
+        "titel": "Nvidia-Kontroverse: Chip-Firma auf schwarze Liste gesetzt",
+        "medium": "ZDFheute",
+        "url": "https://www.zdfheute.de/wirtschaft/unternehmen/nvidia-spionageverdacht-megaspeed-sperrliste-chips-usa-100.html",
+        "datum": "2026-11-24",
+        "primaer": false
+      }
+    ]
+  }
+}
