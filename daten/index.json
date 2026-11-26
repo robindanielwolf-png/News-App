@@ -1,7 +1,14 @@
 {
   "version": 1,
-  "aktualisiert": "2026-11-25T04:44:29.846Z",
+  "aktualisiert": "2026-11-26T04:45:37.019Z",
   "tage": [
+    {
+      "datum": "2026-11-26",
+      "datei": "2026-11-26.json",
+      "meldungen": 6,
+      "schlagzeile": "Haushalt 2027: Generaldebatte im Bundestag – Opposition spricht von „Schuldenorgie“",
+      "korrigiert": 0
+    },
     {
       "datum": "2026-11-25",
       "datei": "2026-11-25.json",

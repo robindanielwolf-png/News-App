@@ -1,0 +1,434 @@
+{
+  "version": 2,
+  "datum": "2026-11-26",
+  "erstellt_um": "2026-11-26T05:45:33+01:00",
+  "transparenz": "Diese Ausgabe wurde erstellt mit Claude (Anthropic). Recherche und Gegencheck erfolgten automatisch; Fehler sind möglich. Korrekturen werden offen ausgewiesen.",
+  "korrekturen": [],
+  "meldungen": [
+    {
+      "id": "2026-11-26-de_eu-01",
+      "bereich": "de_eu",
+      "schlagzeile": "Haushalt 2027: Generaldebatte im Bundestag – Opposition spricht von „Schuldenorgie“",
+      "kurz": "Im Bundestag lief am 25. November die Generaldebatte zum Haushalt 2027: 560 Mrd. Euro Ausgaben, davon 210 Mrd. Euro über neue Kredite. Kanzler Merz kündigte stärkere Einschnitte an.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-25",
+      "stand": "2026-11-26T08:00:00+01:00",
+      "hintergrund": "Die abschließenden Beratungen begannen am 24. November, die Generaldebatte fand am 25. November statt. Laut ZDFheute soll rund ein Drittel der Ausgaben über Kredite finanziert werden. Merz nannte den Haushalt „vertretbar“ und sagte: „Wir haben das Geld nicht mehr für alles.“ Unionsfraktionsvize Middelberg will die Sparziele für 2028 „anschärfen“ und verteidigte die Ukraine-Hilfe von rund 11 Mrd. Euro. Die Stromsteuer soll 2027 gesenkt werden. Der Bundesrechnungshof warnt vor einem Weg in die Schuldenfalle.",
+      "warum_wichtig": "Der Etat legt fest, wofür der Bund 2027 Geld ausgibt und wie viele Schulden er dafür macht.",
+      "quellen": [
+        {
+          "titel": "Merz: „Wir haben das Geld nicht mehr für alles“",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/deutschland/generaldebatte-bundestag-haushalt-kanzler-2026-100.html",
+          "datum": "2026-11-25",
+          "primaer": false
+        },
+        {
+          "titel": "Wie viele Schulden sind zu viel?",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/deutschland/bundeshaushalt-neuverschuldung-zinsentwicklung-100.html",
+          "datum": "2026-11-25",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur ZDFheute (25.11.) als gelesene Quelle; die Zahlen 560 und 210 Mrd. Euro sind gerundet. Ein Termin der Schlussabstimmung ist im Artikel nicht genannt. Zusätzlich verlinkt ist ein ZDFheute-Hintergrundtext (selbes Medium, nicht unabhängig).",
+      "vertiefung": {
+        "text": "Die Opposition kritisiert den Etat scharf: Linke-Politiker Bartsch sprach von einer „Schuldenorgie“, Grünen-Politiker Schäfer von einer „windschiefen Bretterbude ohne Fundament“. AfD-Fraktionschef Chrupalla kündigte an, eine mögliche AfD-geführte Landesregierung in Sachsen-Anhalt könne gegen den Haushalt klagen. Ein Termin für die Schlussabstimmung steht im gelesenen Artikel nicht.",
+        "links": [
+          {
+            "titel": "Wie viele Schulden sind zu viel?",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/deutschland/bundeshaushalt-neuverschuldung-zinsentwicklung-100.html"
+          }
+        ],
+        "chat_prompt": "Was wurde in der Generaldebatte zum Bundeshaushalt 2027 am 25. November 2026 gesagt, und welche Zahlen zu Ausgaben und Kreditaufnahme stehen im Etat?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-26-de_eu-02",
+      "bereich": "de_eu",
+      "schlagzeile": "EU-Westbalkan-Gipfel: Brüssel drängt auf Reformen, 338 Mio. Euro Hilfe angekündigt",
+      "kurz": "Die EU hat die Westbalkan-Staaten aufgefordert, ihre Beitrittschance zu nutzen. Von der Leyen kündigte rund 338 Mio. Euro für Albanien, Montenegro und Nordmazedonien an; Serbien fehlte.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-26",
+      "stand": "2026-11-26T08:00:00+01:00",
+      "hintergrund": "Ratspräsident Costa sagte, Montenegro habe in diesem Jahr mit der Arbeit am Beitrittsvertrag begonnen. Die Kommission hält einen Beitritt Montenegros (rund 620.000 Einwohner) frühestens 2028 für möglich. Ab Anfang 2027 will sie mit jedem Partner über schrittweise Integration sprechen. Serbien war als einziges Land nicht vertreten und trug die Gipfelerklärung nicht mit; Übergangsphase nach der Wahl, so Costa.",
+      "warum_wichtig": "Es geht um die nächste EU-Erweiterung und um Geld für Reformländer.",
+      "quellen": [
+        {
+          "titel": "EU zu Westbalkan-Ländern: Nutzt Chance auf Beitritt",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/eu-westbalkan-gipfel-beitritt-albanien-montenegro-bosnien-herzegowina-100.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur ZDFheute (Artikel mit Datum 26.11.2026) gelesen. Ein Brussels-Times-Artikel zum Montenegro-Ziel 2028 stammt vom Gipfel in Tivat im Juni 2026 und gilt nicht als Beleg für diesen Gipfel.",
+      "vertiefung": {
+        "text": "Die Erklärung betont Aussöhnung und gute Nachbarschaft, lehnt die Verherrlichung von Kriegsverbrechern und die Leugnung von Völkermord ab. Die Kommission will Mittel stärker zu Ländern mit Reformfortschritt umlenken.",
+        "links": [
+          {
+            "titel": "EU zu Westbalkan-Ländern",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/ausland/eu-westbalkan-gipfel-beitritt-albanien-montenegro-bosnien-herzegowina-100.html"
+          }
+        ],
+        "chat_prompt": "Was hat der EU-Westbalkan-Gipfel im November 2026 beschlossen und wie realistisch ist ein EU-Beitritt Montenegros bis 2028?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-26-wirtschaft-01",
+      "bereich": "wirtschaft",
+      "schlagzeile": "USA planen neue Zölle auf 14 Handelspartner – EU soll 15 % zahlen",
+      "kurz": "Nach dem Aus für seine globalen Zölle vor dem Supreme Court plant Trump neue Abgaben auf andere Rechtsgrundlage: 15 % für die EU, 20 % (bis 40 %) für China. Frühester Start: Januar 2027.",
+      "status": "eine_quelle",
+      "laeuft_noch": true,
+      "ereignis_datum": "2026-11-25",
+      "stand": "2026-11-26T08:00:00+01:00",
+      "hintergrund": "Der Supreme Court hatte Trumps frühere weitreichende Zölle für unzulässig erklärt. Geplant sind Zölle gegen 14 Handelspartner, darunter EU, China, Japan, Südkorea, Indien und die Schweiz. Im Fokus stehen Stahl, Aluminium, E-Autos und Solarmodule; Ausnahmen sind für bestimmte Energieprodukte, Lebensmittel, Halbleiter und Pharma vorgesehen. Vorher sind öffentliche Stellungnahmen und Anhörungen nötig.",
+      "warum_wichtig": "Zölle verteuern Importe und treffen die exportstarke deutsche Wirtschaft.",
+      "quellen": [
+        {
+          "titel": "Trumps neue Zölle: Plan B nach dem Scheitern am Supreme Court",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/usa-trump-zoelle-eu-china-100.html",
+          "datum": "2026-11-25",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur ZDFheute (25.11.) gelesen; ein Zweitbeleg (Reuters, Handelsblatt) war nicht auffindbar. Der Veröffentlichungstag des Plans ist im Artikel nicht genannt, als Ereignisdatum gilt das Artikeldatum. Es handelt sich um Pläne, nicht um beschlossene Zölle.",
+      "vertiefung": {
+        "text": "Die US-Regierung begründet die Pläne mit Überkapazitäten und unfairen Handelspraktiken. Laut einer CNN-Umfrage halten rund zwei Drittel der US-Wähler Zölle für schädlich.",
+        "links": [
+          {
+            "titel": "Trumps neue Zölle",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/ausland/usa-trump-zoelle-eu-china-100.html"
+          }
+        ],
+        "chat_prompt": "Welche neuen US-Zölle plant die Trump-Regierung ab Januar 2027 und wen treffen sie (Stand 26. November 2026)?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-26-ki_tech-01",
+      "bereich": "ki_tech",
+      "schlagzeile": "Neuer Test: Wie gut steuern KI-Modelle einen Roboter? GPT-6.2 Astra vorn",
+      "kurz": "Artificial Analysis hat den Test AA-Robotics-Sim v0.1 vorgestellt, bei dem Sprachmodelle einen simulierten Humanoiden steuern. GPT-6.2 Astra erreicht 71,0 Punkte, Claude Fable 5.2 57,5.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-25",
+      "stand": "2026-11-26T08:00:00+01:00",
+      "hintergrund": "Getestet wird ein Unitree G1 in NVIDIA Isaac Sim mit zehn Haushalts- und Leichtindustrie-Aufgaben. Pro Aufgabe gibt es fünf Übungsepisoden, danach zehn Auswertungsepisoden in neuen Szenen. Neun Modelle wurden verglichen. Navigation lösten alle voll; Pick-and-Place war am schwächsten, kein Modell belud den Geschirrspüler zuverlässig. Sieben von neun Modellen zerbrachen in der Zusatzaufgabe Geschirr, obwohl sie auf Zerbrechlichkeit hingewiesen wurden.",
+      "warum_wichtig": "Er zeigt, wie weit Sprachmodelle von zuverlässiger Robotersteuerung noch entfernt sind.",
+      "quellen": [
+        {
+          "titel": "AA-Robotics-Sim v0.1",
+          "medium": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/articles/aa-robotics-sim",
+          "datum": "2026-11-25",
+          "primaer": true
+        }
+      ],
+      "hinweis_quellen": "Nur die Testseite selbst (Klasse A) gelesen, kein Zweitbericht. Meldung betrifft auch Claude (Anthropic): Interessenkonflikt.",
+      "vertiefung": {
+        "text": "Es ist eine Forschungsvorschau; der Test ist neu, andere unabhängige Tests dazu gibt es noch nicht. Claude Fable 5.2 war mit 9,01 $ pro Episode das teuerste getestete Modell.",
+        "links": [
+          {
+            "titel": "AA-Robotics-Sim v0.1",
+            "medium": "Artificial Analysis",
+            "url": "https://artificialanalysis.ai/articles/aa-robotics-sim"
+          }
+        ],
+        "chat_prompt": "Was misst der Test AA-Robotics-Sim von Artificial Analysis und wie schneiden GPT-6.2 Astra, Claude Fable 5.2 und GPT-6.2 Sol ab?"
+      },
+      "modelle": [
+        "GPT-6.2 Astra",
+        "Claude Fable 5.2",
+        "GPT-6.2 Sol"
+      ],
+      "benchmarks": {
+        "hersteller": [],
+        "unabhaengig": [
+          {
+            "test": "AA-Robotics-Sim v0.1 (Gesamtscore, 10 Aufgaben mit simuliertem Humanoiden)",
+            "wert": "GPT-6.2 Astra: 71,0 · Claude Fable 5.2: 57,5 · GPT-6.2 Sol: 53,7",
+            "vorn": "GPT-6.2 Astra",
+            "vergleich_mit": null,
+            "nur_eine_quelle": true,
+            "quelle": "Artificial Analysis (Testseite selbst)",
+            "url": "https://artificialanalysis.ai/articles/aa-robotics-sim"
+          },
+          {
+            "test": "Kosten pro Episode (AA-Robotics-Sim)",
+            "wert": "Claude Fable 5.2: 9,01 $ · GPT-6.2 Astra: 3,90 $ · GPT-6.2 Sol: 0,98 $",
+            "vorn": "GPT-6.2 Sol",
+            "vergleich_mit": null,
+            "nur_eine_quelle": true,
+            "quelle": "Artificial Analysis (Testseite selbst)",
+            "url": "https://artificialanalysis.ai/articles/aa-robotics-sim"
+          }
+        ],
+        "hinweis": "Forschungsvorschau (v0.1) eines einzigen Tests; Hersteller-Angaben liegen nicht vor. Neun Modelle getestet, darunter Gemini 4 Neon."
+      },
+      "positionen": null,
+      "interessenkonflikt": true,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-26-welt-01",
+      "bereich": "welt",
+      "schlagzeile": "China startet Shenzhou 24 – erstmals fliegt ein Ausländer zur Station Tiangong",
+      "kurz": "Mit Shenzhou 24 flog am 25. November der Pakistaner Muhammad Zeeshan Ali als erster Nicht-Chinese zur chinesischen Station Tiangong. Ein Besatzungsmitglied bleibt ein volles Jahr im Orbit.",
+      "status": "eine_quelle",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-25",
+      "stand": "2026-11-26T08:00:00+01:00",
+      "hintergrund": "Der Start erfolgte um 8:18 Uhr Ortszeit vom Weltraumbahnhof Jiuquan. Der 40-jährige Luftwaffenpilot ist Nutzlastspezialist und bleibt nur wenige Tage. Die dreiköpfige Stammbesatzung löst Shenzhou 23 ab; Zhu Yangzhu verlängert seinen Aufenthalt um sechs Monate auf ein Jahr, was nach ZDFheute erstmals geschieht. Geplant sind rund 90 Experimente. China und Pakistan hatten 2025 ein Abkommen dazu geschlossen.",
+      "warum_wichtig": "Der Flug zeigt Chinas Raumfahrtkooperation mit Partnerländern, nachdem die USA China 2011 von der ISS ausgeschlossen hatten.",
+      "quellen": [
+        {
+          "titel": "China schickt erstmals Ausländer ins All",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/panorama/china-raumfahrt-weltraumstation-pakistan-astronaut-100.html",
+          "datum": "2026-11-25",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur ZDFheute (25.11.) gelesen; Angaben der chinesischen Raumfahrtbehörde (Staatsstelle) nur indirekt über ZDFheute.",
+      "vertiefung": {
+        "text": "Pakistans Informationsminister Tarar nannte den Flug einen Grund zum Stolz; Planungsminister Iqbal sprach von „eiserner Brüderschaft“.",
+        "links": [
+          {
+            "titel": "China schickt erstmals Ausländer ins All",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/panorama/china-raumfahrt-weltraumstation-pakistan-astronaut-100.html"
+          }
+        ],
+        "chat_prompt": "Was ist über den Flug von Shenzhou 24 mit dem ersten ausländischen Astronauten zur Station Tiangong am 25. November 2026 bekannt?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    },
+    {
+      "id": "2026-11-26-sport-01",
+      "bereich": "sport",
+      "schlagzeile": "Champions League: Bayern verliert 1:2 bei Lille – erste Saisonniederlage",
+      "kurz": "Der FC Bayern hat bei OSC Lille 1:2 verloren. Nach Upamecanos Führung drehten Ueda und ein Eigentor von Pavlović das Spiel; Kane fehlte verletzt.",
+      "status": "bestaetigt",
+      "laeuft_noch": false,
+      "ereignis_datum": "2026-11-25",
+      "stand": "2026-11-26T08:00:00+01:00",
+      "hintergrund": "Spiel am 5. Spieltag der Ligaphase: 0:1 Upamecano (15.), 1:1 Ueda (62.), 2:1 Pavlović (65., Eigentor). Lille hatte vorher erst einen Punkt aus vier Spielen. Bayern steht laut Bundesliga.com mit 8 Punkten aus 5 Spielen (2 Siege, 2 Remis, 1 Niederlage, 13:7 Tore) auf Platz 15. Restliche Gegner: Slavia Prag, Manchester United, Betis Sevilla.",
+      "warum_wichtig": "Platz 15 erschwert das direkte Achtelfinale.",
+      "quellen": [
+        {
+          "titel": "Eigentor besiegelt Bayerns erste Saison-Pleite",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/fussball-champions-league/fussball-champions-league-ligaphase-osc-lille-fc-bayern-muenchen-erste-niederlage-spielbericht-100.html",
+          "datum": "2026-11-25",
+          "primaer": false
+        },
+        {
+          "titel": "LOSC Lille – FC Bayern München, Spieltag 5 (Tabelle)",
+          "medium": "Bundesliga.com (DFL)",
+          "url": "https://www.bundesliga.com/en/champions-league/matchday/2026-2027/5/losc-lille-metropole-vs-fc-bayern-muenchen/table",
+          "datum": "2026-11-25",
+          "primaer": true
+        }
+      ],
+      "hinweis_quellen": "Ergebnis und Tabelle stimmen in ZDFheute und Bundesliga.com überein; Torschützen nur aus ZDFheute. Die Bundesliga.com-Seite kennzeichnet den Stand nicht ausdrücklich als Endstand.",
+      "vertiefung": {
+        "text": "Ein Treffer von Ueda vor der Pause zählte wegen eines Fouls an Kimmich nicht. Musiala und Díaz kamen von der Bank ohne Wirkung.",
+        "links": [
+          {
+            "titel": "Spielbericht",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/sport/fussball-champions-league/fussball-champions-league-ligaphase-osc-lille-fc-bayern-muenchen-erste-niederlage-spielbericht-100.html"
+          }
+        ],
+        "chat_prompt": "Wie verlief das Champions-League-Spiel OSC Lille gegen FC Bayern am 25. November 2026 und wie ist die Tabellenlage?"
+      },
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null
+    }
+  ],
+  "facts": [
+    {
+      "id": "2026-11-26-fact-1",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "Sieben von neun KI-Modellen zerbrachen simuliertes Geschirr",
+      "text": "Im neuen Test AA-Robotics-Sim (25.11.2026) zerbrachen sieben von neun Modellen in der Zusatzaufgabe „Fragile Dishwasher“ mindestens einmal Geschirr in zehn Episoden, obwohl der Hinweis auf Zerbrechlichkeit gegeben war.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "AA-Robotics-Sim v0.1",
+          "medium": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/articles/aa-robotics-sim",
+          "datum": "2026-11-25",
+          "primaer": true
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-fact-2",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "US-Zölle: bis zu 40 % für China im Gespräch",
+      "text": "Laut ZDFheute (25.11.2026) könnten die geplanten neuen US-Zölle für China bei 20 % starten und je nach Handelsgesprächen auf 40 % steigen; für die EU sind 15 % vorgesehen. Frühester Start: Januar 2027.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Trumps neue Zölle: Plan B nach dem Scheitern am Supreme Court",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/usa-trump-zoelle-eu-china-100.html",
+          "datum": "2026-11-25",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-fact-3",
+      "art": "zeitlos",
+      "thema": "ki",
+      "titel": "Warum China nicht auf der ISS flog",
+      "text": "China wurde 2011 von der Internationalen Raumstation ausgeschlossen, nachdem der US-Kongress die Zusammenarbeit der NASA mit China eingeschränkt hatte. China baute danach die eigene Station Tiangong.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "China schickt erstmals Ausländer ins All",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/panorama/china-raumfahrt-weltraumstation-pakistan-astronaut-100.html",
+          "datum": "2026-11-25",
+          "primaer": false
+        }
+      ]
+    }
+  ],
+  "extra_facts": [
+    {
+      "id": "2026-11-26-fact-1",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Rund ein Drittel des Bundeshaushalts 2027 auf Kredit",
+      "text": "Von 560 Mrd. Euro Ausgaben sollen laut ZDFheute (25.11.2026) 210 Mrd. Euro über neue Kredite finanziert werden – rund ein Drittel.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Merz: „Wir haben das Geld nicht mehr für alles“",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/deutschland/generaldebatte-bundestag-haushalt-kanzler-2026-100.html",
+          "datum": "2026-11-25",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-fact-2",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "Erstmals ein Jahr am Stück auf Tiangong",
+      "text": "Taikonaut Zhu Yangzhu verlängert seinen Aufenthalt auf der Station Tiangong um sechs Monate auf ein volles Jahr; laut ZDFheute (25.11.2026) geschieht das erstmals.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "China schickt erstmals Ausländer ins All",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/panorama/china-raumfahrt-weltraumstation-pakistan-astronaut-100.html",
+          "datum": "2026-11-25",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-fact-3",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "Kosten pro Roboter-Episode: 0,98 bis 9,01 Dollar",
+      "text": "Im AA-Robotics-Sim kostete eine Episode bei GPT-6.2 Sol 0,98 $, bei GPT-6.2 Astra 3,90 $ und bei Claude Fable 5.2 9,01 $ (Artificial Analysis, 25.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "AA-Robotics-Sim v0.1",
+          "medium": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/articles/aa-robotics-sim",
+          "datum": "2026-11-25",
+          "primaer": true
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-fact-4",
+      "art": "aktuell",
+      "thema": "sport",
+      "titel": "Lille hatte vor dem Bayern-Spiel nur einen Punkt",
+      "text": "OSC Lille hatte vor dem 2:1 gegen Bayern am 25.11.2026 erst einen Punkt aus vier Ligaphasenspielen geholt (ZDFheute).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Eigentor besiegelt Bayerns erste Saison-Pleite",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/fussball-champions-league/fussball-champions-league-ligaphase-osc-lille-fc-bayern-muenchen-erste-niederlage-spielbericht-100.html",
+          "datum": "2026-11-25",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-fact-5",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "EU: 338 Mio. Euro für drei Westbalkan-Länder",
+      "text": "Von der Leyen kündigte laut ZDFheute (26.11.2026) rund 338 Mio. Euro für Albanien, Montenegro und Nordmazedonien an.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "EU zu Westbalkan-Ländern: Nutzt Chance auf Beitritt",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/eu-westbalkan-gipfel-beitritt-albanien-montenegro-bosnien-herzegowina-100.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        }
+      ]
+    }
+  ],
+  "begriff": {
+    "id": "begriff-kreditfinanzierungsquote",
+    "wort": "Kreditfinanzierungsquote",
+    "erklaerung": "Sie zeigt, welcher Anteil der Staatsausgaben nicht aus Einnahmen, sondern aus neuen Schulden bezahlt wird. Im Haushalt 2027 sind es rund ein Drittel.",
+    "meldung_id": "2026-11-26-de_eu-01",
+    "status": "eine_quelle",
+    "quellen": [
+      {
+        "titel": "Merz: „Wir haben das Geld nicht mehr für alles“",
+        "medium": "ZDFheute",
+        "url": "https://www.zdfheute.de/politik/deutschland/generaldebatte-bundestag-haushalt-kanzler-2026-100.html",
+        "datum": "2026-11-25",
+        "primaer": false
+      }
+    ]
+  }
+}
