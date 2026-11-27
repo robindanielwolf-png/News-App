@@ -1,0 +1,493 @@
+{
+  "version": 2,
+  "datum": "2026-11-27",
+  "erstellt_um": "2026-11-27T05:46:19+01:00",
+  "transparenz": "Diese Ausgabe wurde erstellt mit Claude (Anthropic). Recherche und Gegencheck erfolgten automatisch; Fehler sind möglich. Korrekturen werden offen ausgewiesen.",
+  "korrekturen": [],
+  "meldungen": [
+    {
+      "laeuft_noch": false,
+      "stand": "2026-11-27T07:00:00+01:00",
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "id": "2026-11-27-de_eu-01",
+      "bereich": "de_eu",
+      "schlagzeile": "EU-Sondergipfel zum Haushalt 2028–2034 endet ohne Einigung",
+      "kurz": "Der EU-Sondergipfel zum Langzeithaushalt 2028–2034 wurde am 26. November vorzeitig beendet. Ratspräsident Costas Entwurf (1,781 Billionen Euro, 204 Mrd. weniger als der Kommissionsvorschlag) ist Merz noch zu hoch; ein Abschluss ist für den Dezember-Gipfel angepeilt.",
+      "status": "bestaetigt",
+      "ereignis_datum": "2026-11-26",
+      "hintergrund": "Costa hatte den Gipfel für zwei Tage angesetzt, er endete kurz nach Mitternacht ohne Ergebnis; die Fortsetzung am Freitagmorgen entfiel. Merz sagte, die Vorstellungen lägen „weit auseinander“, die Kürzung werde „nicht bei 204“ Mrd. Euro bleiben. Deutschland, die Niederlande, Österreich, Schweden, Finnland, Dänemark und Belgien dringen auf einen kleineren Haushalt, Nettoempfänger im Süden und Osten wehren sich gegen Kürzungen bei Regional- und Agrarmitteln. Merz und Macron wollen im Dezember eine Einigung.",
+      "warum_wichtig": "Der EU-Haushalt legt fest, wie viel Geld Deutschland einzahlt und wofür Agrar-, Regional- und andere Mittel ab 2028 fließen.",
+      "quellen": [
+        {
+          "titel": "EU-Sondergipfel abgebrochen: Merz reist vorzeitig ab",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/eu-gipfel-haushalt-bruessel-europaeische-union-merz-abbruch-100.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        },
+        {
+          "titel": "Drama ums EU-Geld: Gipfel vorzeitig beendet",
+          "medium": "Handelsblatt",
+          "url": "https://www.handelsblatt.com/politik/international/langfristiger-eu-haushalt-drama-ums-eu-geld-gipfel-vorzeitig-beendet/100272852.html",
+          "datum": "2026-11-27",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Beide Artikel stimmen im Kernfakt überein. Zum Wortlaut „Lichtjahre“ (ZDFheute, Handelsblatt: Meloni) gibt es abweichende Zuordnungen in anderen Medien, daher nicht als Zitat übernommen. Uhrzeit des Abbruchs: kurz nach Mitternacht (27.11.).",
+      "vertiefung": {
+        "text": "Laut Handelsblatt warnt Frankreich, bei erneutem Scheitern im Dezember könnten die Gespräche bis nach der französischen Präsidentschaftswahl im April ruhen. Österreichs Kanzler Stocker sieht keine Eile und kritisiert Costas Verfahren.",
+        "links": [
+          {
+            "titel": "EU-Sondergipfel abgebrochen: Merz reist vorzeitig ab",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/ausland/eu-gipfel-haushalt-bruessel-europaeische-union-merz-abbruch-100.html"
+          },
+          {
+            "titel": "Drama ums EU-Geld: Gipfel vorzeitig beendet",
+            "medium": "Handelsblatt",
+            "url": "https://www.handelsblatt.com/politik/international/langfristiger-eu-haushalt-drama-ums-eu-geld-gipfel-vorzeitig-beendet/100272852.html"
+          }
+        ],
+        "chat_prompt": "Was ist beim EU-Sondergipfel zum Haushalt 2028–2034 am 26. November 2026 passiert, wer will welche Kürzungen und wie geht es bis zum Dezember-Gipfel weiter?"
+      }
+    },
+    {
+      "laeuft_noch": false,
+      "stand": "2026-11-27T07:00:00+01:00",
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "id": "2026-11-27-wirtschaft-01",
+      "bereich": "wirtschaft",
+      "schlagzeile": "Metall-Tarifeinigung: 4,3 % mehr in zwei Stufen, Laufzeit 25 Monate",
+      "kurz": "IG Metall und Arbeitgeber haben sich am 26. November auf einen Pilotabschluss geeinigt: 2,0 % ab 1. Mai 2027 und 2,3 % ab 1. April 2028, dazu Einmalzahlung von 150 bis 450 Euro im März 2027.",
+      "status": "bestaetigt",
+      "ereignis_datum": "2026-11-26",
+      "hintergrund": "Die Einigung fiel in der vierten Verhandlungsrunde der Bezirke Baden-Württemberg und Nordrhein-Westfalen; die Laufzeit beträgt 25 Monate bis 30. November 2028. Die Einmalzahlung staffelt sich nach Nettoumsatzrendite (150 Euro, 300 Euro ab 2,3 %, 450 Euro ab 4,6 %). Ein neuer „Tarifvertrag Investition und Beschäftigung“ erlaubt beigetretenen Betrieben, tarifliche Leistungen in begrenztem Umfang (höchstens acht Prozent) zu verwenden, wenn sie in Standorte investieren und keinen aktiven Personalabbau betreiben. Die Tarifkommissionen müssen noch zustimmen; die IG-Metall-Spitze empfiehlt die bundesweite Übernahme. Südwestmetall verweist auf rund 350.000 verlorene Branchen-Arbeitsplätze seit 2019.",
+      "warum_wichtig": "Der Abschluss gilt als Muster für Millionen Beschäftigte der Metall- und Elektroindustrie und ersetzt drohende Warnstreiks.",
+      "quellen": [
+        {
+          "titel": "Verhandlungsergebnis Metall-Tarifrunde 2026",
+          "medium": "IG Metall",
+          "url": "https://www.igmetall.de/tarif/tarifrunden/metall-und-elektro/tarifrunde-metall-und-elektro-2026",
+          "datum": "2026-11-26",
+          "primaer": true
+        },
+        {
+          "titel": "Tarifeinigung in der Metallindustrie",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/ig-metall-tarifstreit-einigung-100.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        },
+        {
+          "titel": "IG Metall: Einigung in Tarifverhandlungen der Metall- und Elektroindustrie erzielt",
+          "medium": "Berliner Zeitung",
+          "url": "https://www.berliner-zeitung.de/article/ig-metall-einigung-in-tarifverhandlungen-der-metall-und-elektroindustrie-erzielt-10639725",
+          "datum": "2026-11-26",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Die Zahl der Betroffenen unterscheidet sich: ZDFheute nennt rund 3,7 Mio. Beschäftigte insgesamt, die Berliner Zeitung zunächst rund 1,7 Mio. in NRW und Baden-Württemberg. Die 4,3 % sind die Summe der beiden Stufen (2,0 + 2,3), nicht eine Jahresrate. Zustimmung der regionalen Tarifkommissionen steht laut IG Metall noch aus.",
+      "vertiefung": {
+        "text": "IG Metall hatte 5 % bei einem Jahr Laufzeit gefordert. Gesamtmetall hatte zuvor laut Berliner Zeitung eine Einmalzahlung mit möglicher Aussetzung und 1,3 % mehr ab Juli 2028 bei 26 Monaten angeboten.",
+        "links": [
+          {
+            "titel": "Verhandlungsergebnis Metall-Tarifrunde 2026",
+            "medium": "IG Metall",
+            "url": "https://www.igmetall.de/tarif/tarifrunden/metall-und-elektro/tarifrunde-metall-und-elektro-2026"
+          },
+          {
+            "titel": "Tarifeinigung in der Metallindustrie",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/wirtschaft/unternehmen/ig-metall-tarifstreit-einigung-100.html"
+          }
+        ],
+        "chat_prompt": "Was steht im Metall-Tarifabschluss vom 26. November 2026 (Prozente, Laufzeit, Einmalzahlung, Tarifvertrag Investition und Beschäftigung) und für wen gilt er?"
+      }
+    },
+    {
+      "laeuft_noch": true,
+      "stand": "2026-11-27T07:00:00+01:00",
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "id": "2026-11-27-wirtschaft-02",
+      "bereich": "wirtschaft",
+      "schlagzeile": "SAP plant laut Berichten Abbau von mehr als 10.000 Stellen wegen KI",
+      "kurz": "Laut Handelsblatt und Bloomberg (über heise) will SAP mehr als 10.000 Stellen streichen, rund ein Zehntel der Belegschaft. SAP bestritt es laut Bloomberg nicht und sprach von „kontinuierlichen Prüfungen der Organisation“.",
+      "status": "unklar",
+      "ereignis_datum": "2026-11-26",
+      "hintergrund": "Nach Bloomberg sollen alle Abteilungen melden, wo Stellen wegfallen können, vor allem in Programmierung, Produktbetreuung und Vertrieb. SAP beschäftigte Ende September 110.730 Menschen. Schon 2024 wurden rund 10.000 Stellen abgebaut, meist freiwillig; seither kamen etwa 15.000 hinzu. Das Handelsblatt schreibt, offen sei, ob die Mitarbeiterzahl am Ende tatsächlich sinkt. Eine offizielle Bestätigung von SAP liegt nicht vor.",
+      "warum_wichtig": "Es wäre einer der größten KI-bedingten Stellenabbauten eines deutschen Konzerns.",
+      "quellen": [
+        {
+          "titel": "SAP: Dax-Konzern plant massiven Stellenabbau",
+          "medium": "Handelsblatt",
+          "url": "https://handelsblatt.com/technik/ki/sap-dax-konzern-plant-massiven-stellenabbau/100273115.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        },
+        {
+          "titel": "SAP: KI zuerst, 10.000 Mitarbeiter weniger",
+          "medium": "heise online",
+          "url": "https://www.heise.de/news/SAP-AI-First-10-000-Mitarbeiter-weniger-11539781.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Beide Berichte stützen sich auf anonyme Quellen (Handelsblatt: Konzernkreise; Bloomberg: Insider, nur über heise gelesen). Die Zahl ist laut Berichten nicht endgültig; Pläne, keine Entscheidung. heise (Klasse B) ist nur Weitergabe der Bloomberg-Meldung.",
+      "vertiefung": {
+        "text": "Die deutsche Beschäftigungssicherung bei SAP läuft Ende des Jahres aus; im September schloss Vorstandschef Klein laut heise eine neue Vereinbarung mit dem Betriebsrat. IG Metall kritisiert, ein ausdrücklicher Ausschluss betriebsbedingter Kündigungen fehle.",
+        "links": [
+          {
+            "titel": "SAP: Dax-Konzern plant massiven Stellenabbau",
+            "medium": "Handelsblatt",
+            "url": "https://handelsblatt.com/technik/ki/sap-dax-konzern-plant-massiven-stellenabbau/100273115.html"
+          },
+          {
+            "titel": "SAP: KI zuerst, 10.000 Mitarbeiter weniger",
+            "medium": "heise online",
+            "url": "https://www.heise.de/news/SAP-AI-First-10-000-Mitarbeiter-weniger-11539781.html"
+          }
+        ],
+        "chat_prompt": "Was ist über den geplanten Stellenabbau bei SAP mit mehr als 10.000 Stellen (Berichte vom 26. November 2026) bekannt und was ist noch unbestätigt?"
+      }
+    },
+    {
+      "laeuft_noch": true,
+      "stand": "2026-11-27T07:00:00+01:00",
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": true,
+      "korrigiert": null,
+      "id": "2026-11-27-ki_tech-01",
+      "bereich": "ki_tech",
+      "schlagzeile": "KI-Beweis zur Riemann-Vermutung: Kompaktfassung maschinell geprüft, Experten-Review läuft",
+      "kurz": "Am 26. November bestätigte der Mathematiker Michael Rubinstein per Lean-Prüfung eine auf rund 76.000 Zeilen verkürzte Fassung des Lean-Beweises von Levent Alpöge (Anthropic, mit Claude). Der Ursprung umfasst 175.187 Dateien; die mathematische Begutachtung durch Fachleute läuft noch.",
+      "status": "unklar",
+      "ereignis_datum": "2026-11-26",
+      "hintergrund": "Alpöge hatte am 20. November einen Lean-Beweis der (verallgemeinerten) Riemann-Vermutung veröffentlicht, gefunden zusammen mit Claude. Lean FRO und Mathlib bestätigten am 21. November laut Rubinsteins Seite die formale Korrektheit; am 25. November stellten Anthropic-Mitarbeiter eine kürzere Fassung vor (Kompaktfassung ca. 76.000 Zeilen, lesbare Fassung ca. 300.000), die Claude geschrieben haben soll. Rubinstein prüfte die Kompaktfassung am 26. November (794 Module, Kernel-Replay, Comparator, sandboxed Bestätigung durch Andrew Sutherland). Rubinsteins eigener 265-Seiten-Text ist ein unvollständiger Arbeitsentwurf, der die zentrale Ungleichung auf 13 unbewiesene Hypothesen zurückführt.",
+      "warum_wichtig": "Ein formal geprüfter Beweis des berühmtesten ungelösten Problems der Mathematik wäre ein historischer Schritt; die menschliche Nachvollziehbarkeit fehlt aber noch.",
+      "quellen": [
+        {
+          "titel": "Alpöge/Claude proof of the Generalized Riemann Hypothesis (Verifikationsseite)",
+          "medium": "University of Waterloo (M. Rubinstein)",
+          "url": "https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/",
+          "datum": "2026-11-26",
+          "primaer": true
+        },
+        {
+          "titel": "Anthropic mathematician proves Riemann hypothesis, most famous problem in all of math",
+          "medium": "Scientific American",
+          "url": "https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/",
+          "datum": "2026-11-21",
+          "primaer": false
+        },
+        {
+          "titel": "Riemannsche Vermutung: Claude kürzt KI-Beweis um mehr als 99 Prozent",
+          "medium": "heise online",
+          "url": "https://www.heise.de/news/Riemannsche-Vermutung-Claude-kuerzt-KI-Beweis-um-mehr-als-99-Prozent-11539145.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Hinweis auf Interessenkonflikt: Die Meldung betrifft Anthropic/Claude (der Autor dieser Ausgabe ist Claude). Die Lean-Prüfung bestätigt die formale Entwicklung, nicht automatisch die menschliche Verständlichkeit. Zahlen zur Länge stammen von der Verifikationsseite und heise; heise nennt für die Kompaktfassung 113.000 Zeilen inkl. Kommentare, Rubinstein 76.000 – unterschiedliche Zählweise. Scientific American (21.11.) deckt nur die ursprüngliche Behauptung ab.",
+      "vertiefung": {
+        "text": "Scientific American berichtet, Sutherland nenne es einen historischen Moment, die Details brauchten Zeit. Heise meldet ein geplantes Community-Projekt auf Terence Taos Blog für einen menschenlesbaren Beweis. Weitere KI-Beweise (Valiants Vermutung VP ≠ VNP durch Anthropic und OpenAI, 23. November) warten laut heise ebenfalls auf unabhängige Expertenbestätigung.",
+        "links": [
+          {
+            "titel": "Alpöge/Claude proof of the Generalized Riemann Hypothesis (Verifikationsseite)",
+            "medium": "University of Waterloo (M. Rubinstein)",
+            "url": "https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/"
+          },
+          {
+            "titel": "Anthropic mathematician proves Riemann hypothesis, most famous problem in all of math",
+            "medium": "Scientific American",
+            "url": "https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/"
+          },
+          {
+            "titel": "Riemannsche Vermutung: Claude kürzt KI-Beweis um mehr als 99 Prozent",
+            "medium": "heise online",
+            "url": "https://www.heise.de/news/Riemannsche-Vermutung-Claude-kuerzt-KI-Beweis-um-mehr-als-99-Prozent-11539145.html"
+          }
+        ],
+        "chat_prompt": "Was ist über den Lean-Beweis der Riemann-Vermutung von Levent Alpöge und Claude bekannt, was wurde bis zum 26. November 2026 geprüft und was ist noch offen?"
+      }
+    },
+    {
+      "laeuft_noch": true,
+      "stand": "2026-11-27T07:00:00+01:00",
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "id": "2026-11-27-welt-01",
+      "bereich": "welt",
+      "schlagzeile": "Iran-Krieg: Drohnenangriff in Kuwait tötet zwei Italiener, Tanker im Hormus beschädigt",
+      "kurz": "Bei einer Drohnenexplosion in Kuwait kamen laut italienischem Außenministerium zwei Techniker von Rheinmetall Italia ums Leben. Irans Revolutionsgarden melden zwei Tanker mit Seeminen in der Straße von Hormus; Iran bestreitet den Kuwait-Angriff.",
+      "status": "unklar",
+      "ereignis_datum": "2026-11-26",
+      "hintergrund": "Kuwaits Verteidigungsministerium nannte vier Verletzte durch Trümmer und ein „wichtiges Objekt“ als Ziel; es war der erste iranische Drohnenangriff auf Kuwait seit Anfang September. Irans Streitkräfte wiesen die Verantwortung zurück und sprachen von möglicher „falscher Flagge“. Die Revolutionsgarden sagten, zwei Tanker, einer mit über zwei Mio. Barrel Rohöl, seien auf Minen gelaufen; das ist unabhängig nicht bestätigt. In Saudi-Arabien traf laut Energieministerium ein „feindliches Flugobjekt“ eine Raffinerie in Jazan und tötete eine Person. Irans Chefunterhändler Ghalibaf schließt Gespräche bis zur Erfüllung „sieben Bedingungen“ aus.",
+      "warum_wichtig": "Angriffe auf Schifffahrt und Golfstaaten treffen Ölpreise und Energieversorgung weltweit.",
+      "quellen": [
+        {
+          "titel": "Iran-Krieg im Liveblog",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/iran-israel-usa-angriff-liveblog-100.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        },
+        {
+          "titel": "Iran live updates: Iranian drone attack killed 2 Italians, Kuwait says",
+          "medium": "ABC News",
+          "url": "https://abcnews.com/International/live-updates/iran-live-updates-tehran-strait-hormuz-safe-demands/?id=138369648",
+          "datum": "2026-11-26",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Gelesen wurde nur der ZDFheute-Liveblog (Stand 26.11., 22:40). ABC News (Klasse B) nur als Suchausschnitt, Artikel nicht abrufbar; zählt nicht als zweite Quelle. Fast alle Angaben stammen von Konfliktparteien (Revolutionsgarden, Ministerien, Armeen) und sind unabhängig nicht verifiziert.",
+      "vertiefung": {
+        "text": "Das Liveblog meldet zudem Huthi-Angriffe auf Riad und Jazan, einen britischen Sanktionsbeschluss gegen die Huthis sowie Drohungen des israelischen Verteidigungsministers Katz mit einer neuen Gaza-Offensive.",
+        "links": [
+          {
+            "titel": "Iran-Krieg im Liveblog",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/ausland/iran-israel-usa-angriff-liveblog-100.html"
+          }
+        ],
+        "chat_prompt": "Was ist am 26. November 2026 im Iran-Krieg passiert (Kuwait-Drohnenangriff, Tanker in der Straße von Hormus, Jazan) und was davon ist belegt?"
+      }
+    },
+    {
+      "laeuft_noch": false,
+      "stand": "2026-11-27T07:00:00+01:00",
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "id": "2026-11-27-sport-01",
+      "bereich": "sport",
+      "schlagzeile": "Davis Cup: Deutschland scheitert im Viertelfinale 1:2 an Großbritannien",
+      "kurz": "In Bologna verlor das deutsche Team am 26. November das Viertelfinale 1:2: Struff unterlag Norrie 3:6, 6:3, 2:6, Zverev gewann gegen Fery 6:3, 6:2, das Doppel Krawietz/Pütz verlor 2:6, 6:7 (6:8).",
+      "status": "bestaetigt",
+      "ereignis_datum": "2026-11-26",
+      "hintergrund": "Das Doppel gegen Patten/Skupski entschied die Begegnung. Kapitän Kohlmann zeigte sich „sehr enttäuscht“, Struff sprach von einer „bitteren Niederlage“. Zverev sagte laut Sportschau, sein Körper brauche nach der langen Saison eine Pause; Fußschmerzen habe er erst spät im Match gespürt. Das Finalturnier läuft vom 24. bis 29. November in Bologna.",
+      "warum_wichtig": "Deutschland verpasst erneut den Halbfinaleinzug im wichtigsten Team-Wettbewerb des Tennis.",
+      "quellen": [
+        {
+          "titel": "Davis Cup: Deutschland scheidet im Viertelfinale aus",
+          "medium": "Sportschau",
+          "url": "https://sportschau.de/tennis/davis-cup/davis-cup-deutschland-scheidet-aus,davis-cup-viertelfinale-100.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        },
+        {
+          "titel": "Davis Cup: Deutschland scheidet im Viertelfinale aus (ZDFheute)",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/tennis-davis-cup-grossbritannien-deutschland-dtb-zverev-100.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Ergebnisse in beiden Quellen identisch. Offizielle Davis-Cup-Seite nicht abgerufen.",
+      "vertiefung": {
+        "text": "Der Ausgang entschied sich im Doppel, in dem das britische Duo laut Berichten erstmals zusammen spielte.",
+        "links": [
+          {
+            "titel": "Davis Cup: Deutschland scheidet im Viertelfinale aus",
+            "medium": "Sportschau",
+            "url": "https://sportschau.de/tennis/davis-cup/davis-cup-deutschland-scheidet-aus,davis-cup-viertelfinale-100.html"
+          },
+          {
+            "titel": "Davis Cup: Deutschland scheidet im Viertelfinale aus (ZDFheute)",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/sport/tennis-davis-cup-grossbritannien-deutschland-dtb-zverev-100.html"
+          }
+        ],
+        "chat_prompt": "Wie ist das Davis-Cup-Viertelfinale Deutschland gegen Großbritannien am 26. November 2026 in Bologna ausgegangen und was sagten die Spieler?"
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "2026-11-27-fact-1",
+      "art": "aktuell",
+      "thema": "ki",
+      "titel": "Riemann-Beweis in Lean: 175.187 Dateien, Kompaktfassung nur 794 Module",
+      "text": "Der Lean-Beweis von Levent Alpöge (20.11.2026) umfasst rund 17 Mio. Zeilen in 175.187 Dateien. Die am 25.11. vorgestellte Kompaktfassung hat 794 Module (ca. 76.000 Zeilen) und wurde am 26.11. von Michael Rubinstein geprüft.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Alpöge/Claude proof of the Generalized Riemann Hypothesis (Verifikationsseite)",
+          "medium": "University of Waterloo (M. Rubinstein)",
+          "url": "https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/",
+          "datum": "2026-11-26",
+          "primaer": true
+        }
+      ]
+    },
+    {
+      "id": "2026-11-27-fact-2",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "350.000 Jobs in der Metallindustrie seit 2019 verloren",
+      "text": "Laut Südwestmetall sind in der Metall- und Elektroindustrie seit 2019 rund 350.000 Arbeitsplätze verschwunden, knapp 100.000 davon in Baden-Württemberg (Stand 26.11.2026).",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "IG Metall: Einigung in Tarifverhandlungen der Metall- und Elektroindustrie erzielt",
+          "medium": "Berliner Zeitung",
+          "url": "https://www.berliner-zeitung.de/article/ig-metall-einigung-in-tarifverhandlungen-der-metall-und-elektroindustrie-erzielt-10639725",
+          "datum": "2026-11-26",
+          "primaer": false
+        },
+        {
+          "titel": "Tarifeinigung in der Metallindustrie",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/ig-metall-tarifstreit-einigung-100.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-27-fact-3",
+      "art": "zeitlos",
+      "thema": "wissenschaft",
+      "titel": "Riemann-Vermutung: Millennium-Problem mit einer Million Dollar",
+      "text": "Die Riemann-Vermutung steht seit 1900 auf Hilberts Liste von 23 Problemen und ist eines von sieben Millennium-Problemen des Clay Institute (2000), mit je einer Million Dollar Preisgeld. Laut Clay-Seite ist nur die Poincaré-Vermutung als gelöst gelistet.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Millennium Prize Problems",
+          "medium": "Clay Mathematics Institute",
+          "url": "https://www.claymath.org/millennium-problems/",
+          "datum": "2026-11-27",
+          "primaer": true
+        }
+      ]
+    }
+  ],
+  "extra_facts": [
+    {
+      "id": "2026-11-27-extra-1",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Bundeshaushalt 2027: 555,94 Mrd. Euro Ausgaben",
+      "text": "Nach den Beschlüssen des Haushaltsausschusses sind 555,94 Mrd. Euro Ausgaben und 122,97 Mrd. Euro Nettokreditaufnahme vorgesehen (Stand 27.11.2026, Schlussabstimmung im Bundestag am Freitag).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Haushaltsgesetz 2027 – dritte Lesung",
+          "medium": "Deutscher Bundestag",
+          "url": "https://www.bundestag.de/dokumente/textarchiv/2026/kw48-de-haushaltsgesetz-2027-dritte-lesung-1232350",
+          "datum": "2026-11-27",
+          "primaer": true
+        }
+      ]
+    },
+    {
+      "id": "2026-11-27-extra-2",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "Stromsteuersenkung 2027 kostet rund 4,98 Mrd. Euro",
+      "text": "Die Senkung der Stromsteuer 2027 führt laut Haushaltsbegleitgesetz zu geschätzten Einnahmeausfällen von rund 4,98 Mrd. Euro; eine Steuer auf Zuckergetränke soll ab 1. Januar 2028 etwa 1,1 Mrd. Euro jährlich bringen.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Haushaltsgesetz 2027 – dritte Lesung",
+          "medium": "Deutscher Bundestag",
+          "url": "https://www.bundestag.de/dokumente/textarchiv/2026/kw48-de-haushaltsgesetz-2027-dritte-lesung-1232350",
+          "datum": "2026-11-27",
+          "primaer": true
+        }
+      ]
+    },
+    {
+      "id": "2026-11-27-extra-3",
+      "art": "aktuell",
+      "thema": "wirtschaft",
+      "titel": "EU-Haushalt: Costa kürzt um 204 Mrd. Euro auf 1,781 Billionen",
+      "text": "Ratspräsident Costa hat den Entwurf für 2028–2034 um 204 Mrd. Euro auf 1,781 Billionen Euro gesenkt; Merz hält das weiterhin für zu hoch (Stand 26./27.11.2026).",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Drama ums EU-Geld: Gipfel vorzeitig beendet",
+          "medium": "Handelsblatt",
+          "url": "https://www.handelsblatt.com/politik/international/langfristiger-eu-haushalt-drama-ums-eu-geld-gipfel-vorzeitig-beendet/100272852.html",
+          "datum": "2026-11-27",
+          "primaer": false
+        },
+        {
+          "titel": "EU-Sondergipfel abgebrochen: Merz reist vorzeitig ab",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/eu-gipfel-haushalt-bruessel-europaeische-union-merz-abbruch-100.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-27-extra-4",
+      "art": "aktuell",
+      "thema": "sport",
+      "titel": "Zverev gewann sein Einzel in 71 Minuten",
+      "text": "Beim Davis-Cup-Viertelfinale am 26.11.2026 besiegte Alexander Zverev Arthur Fery 6:3, 6:2 in 71 Minuten.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Davis Cup: Deutschland scheidet im Viertelfinale aus (ZDFheute)",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/tennis-davis-cup-grossbritannien-deutschland-dtb-zverev-100.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-27-extra-5",
+      "art": "zeitlos",
+      "thema": "wissenschaft",
+      "titel": "Lean prüft jeden Beweisschritt mechanisch",
+      "text": "Lean ist eine Programmiersprache und ein Beweisassistent: Jeder Schritt eines Beweises wird vom Computer auf Korrektheit geprüft. Ob die formale Aussage zur ursprünglichen Frage passt, müssen Fachleute trotzdem beurteilen.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Anthropic mathematician proves Riemann hypothesis, most famous problem in all of math",
+          "medium": "Scientific American",
+          "url": "https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/",
+          "datum": "2026-11-21",
+          "primaer": false
+        }
+      ]
+    }
+  ],
+  "begriff": {
+    "id": "begriff-lean-beweisassistent",
+    "wort": "Lean (Beweisassistent)",
+    "erklaerung": "Ein Computerprogramm, das mathematische Beweise Schritt für Schritt automatisch nachprüft. Ist ein Beweis in Lean fehlerfrei, steckt formal kein Rechenfehler darin.",
+    "meldung_id": "2026-11-27-ki_tech-01",
+    "status": "eine_quelle",
+    "quellen": [
+      {
+        "titel": "Anthropic mathematician proves Riemann hypothesis, most famous problem in all of math",
+        "medium": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/",
+        "datum": "2026-11-21",
+        "primaer": false
+      }
+    ]
+  }
+}
