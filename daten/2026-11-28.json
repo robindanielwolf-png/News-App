@@ -1,0 +1,497 @@
+{
+  "version": 2,
+  "datum": "2026-11-28",
+  "erstellt_um": "2026-11-28T04:45:05.187Z",
+  "transparenz": "Diese Ausgabe wurde erstellt mit Claude (Anthropic). Recherche und Gegencheck erfolgten automatisch; Fehler sind möglich. Korrekturen werden offen ausgewiesen.",
+  "korrekturen": [],
+  "meldungen": [
+    {
+      "laeuft_noch": false,
+      "stand": "2026-11-28T06:00:00+01:00",
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "id": "2026-11-28-de_eu-01",
+      "bereich": "de_eu",
+      "schlagzeile": "Bundestag beschließt Haushalt 2027: 555,94 Mrd. Euro, 122,97 Mrd. neue Kredite",
+      "kurz": "Der Bundestag hat am 27. November den Bundeshaushalt 2027 mit 316 zu 260 Stimmen beschlossen. Die Ausgaben liegen bei 555,94 Mrd. Euro, die Nettokreditaufnahme bei 122,97 Mrd. Euro.",
+      "status": "bestaetigt",
+      "ereignis_datum": "2026-11-27",
+      "hintergrund": "Union und SPD stimmten dafür, AfD, Grüne und Linke dagegen (Bundestag: 576 Stimmen, 0 Enthaltungen). Die Ausgaben steigen um 31,4 Mrd. Euro gegenüber 2026, die Investitionen liegen bei 61,85 Mrd. Euro. Im Einzelplan des Verteidigungsministeriums stehen rund 109,8 Mrd. Euro, dazu kommen Mittel aus dem Sondervermögen Bundeswehr. Die AfD kritisierte die Verwendung des Sondervermögens, die Grünen ein chaotisches Verfahren, die Linke fehlende soziale Substanz. Mit dem Haushaltsbegleitgesetz wurde unter anderem die Stromsteuersenkung ab 2027 beschlossen (laut ZDFheute).",
+      "warum_wichtig": "Der Haushalt legt fest, wofür der Bund 2027 Geld ausgibt und wie stark er sich neu verschuldet.",
+      "quellen": [
+        {
+          "titel": "Haushaltsgesetz 2027 – dritte Lesung",
+          "medium": "Deutscher Bundestag",
+          "url": "https://www.bundestag.de/dokumente/textarchiv/2026/kw48-de-haushaltsgesetz-2027-dritte-lesung-1232350",
+          "datum": "2026-11-27",
+          "primaer": true
+        },
+        {
+          "titel": "556 Milliarden Euro: Bundestag beschließt Haushalt 2027",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/deutschland/haushalt-2027-beschlossen-abstimmung-bundestag-100.html",
+          "datum": "2026-11-27",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Abweichung bei den Ja-Stimmen: Bundestag-Protokoll 316, ZDFheute 317; übernommen wurde die Zahl des Bundestags (Primärquelle). Die Nettokreditaufnahme von rund 123 Mrd. Euro nennen beide Quellen; ZDFheute nennt zusätzlich über 210 Mrd. Euro inklusive Sondervermögen (nur eine Quelle, nicht übernommen).",
+      "vertiefung": {
+        "text": "Laut Bundestag sieht der Finanzplan den Verteidigungsetat bis 2030 auf 183,7 Mrd. Euro steigen. Finanzminister Klingbeil hat laut ZDFheute gewarnt, der Haushalt 2028 werde noch schwieriger.",
+        "links": [
+          {
+            "titel": "556 Milliarden Euro: Bundestag beschließt Haushalt 2027",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/deutschland/haushalt-2027-beschlossen-abstimmung-bundestag-100.html"
+          },
+          {
+            "titel": "Haushaltsgesetz 2027 – dritte Lesung",
+            "medium": "Deutscher Bundestag",
+            "url": "https://www.bundestag.de/dokumente/textarchiv/2026/kw48-de-haushaltsgesetz-2027-dritte-lesung-1232350"
+          }
+        ],
+        "chat_prompt": "Was steht im Bundeshaushalt 2027, den der Bundestag am 27. November 2026 beschlossen hat – Ausgaben, Kredite, Verteidigung – und welche Kritik gibt es?"
+      }
+    },
+    {
+      "laeuft_noch": true,
+      "stand": "2026-11-28T06:00:00+01:00",
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "id": "2026-11-28-de_eu-02",
+      "bereich": "de_eu",
+      "schlagzeile": "Koalition streitet über „Rente mit 63“: Schweitzer will strengere Regeln statt Abschaffung",
+      "kurz": "Arbeitsminister Schweitzer (SPD) will die abschlagsfreie Rente nach 45 Beitragsjahren behalten, aber enger fassen. Laut Politbarometer vom 27. November rechnen nur 35 % mit einer baldigen Einigung der Koalition.",
+      "status": "unklar",
+      "ereignis_datum": "2026-11-27",
+      "hintergrund": "Laut Papier seines Ministeriums würden Zeiten von Arbeitslosigkeit, Krankheit, Minijobs und freiwillige Beiträge nicht mehr auf die 45 Jahre zählen; das Rentenalter soll an die Lebenserwartung gekoppelt werden (sechs Monate pro Jahr Anstieg). Vertrauensschutz soll für vor 1972 Geborene mit Altersteilzeit- oder Vorruhestandsvereinbarung gelten. Warken (CDU) sagte, es gebe noch keine Einigung. Der DGB begrüßt den Erhalt der 45-Jahre-Regel, kritisiert aber höhere Abschläge. Politbarometer (24.–26.11., 1.245 Befragte): 69 % lehnen eine Abschaffung ab, 26 % befürworten sie.",
+      "warum_wichtig": "Die Rentenreform betrifft Millionen Beschäftigte und entscheidet über den Zusammenhalt der Koalition.",
+      "quellen": [
+        {
+          "titel": "Schweitzer will „Rente mit 63“ erhalten – aber verändern",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/rente-mit-63-koalition-schweitzer-vorschlag-100.html",
+          "datum": "2026-11-27",
+          "primaer": false
+        },
+        {
+          "titel": "Rentenreform: Mehrheit zweifelt an baldiger Einigung (Politbarometer)",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/deutschland/politbarometer-rentenreform-einigung-zweifel-100.html",
+          "datum": "2026-11-27",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Beide Quellen stammen von ZDFheute; das Papier des Ministeriums liegt nicht im Original vor, daher Status unklar. Umfragewerte sind mit etwa ±3 Punkten Fehlermarge behaftet.",
+      "vertiefung": {
+        "text": "Die Rente nach 45 Beitragsjahren ist seit Jahren politisch umkämpft; die Union hatte höhere Abschläge und den Erhalt der Minijobs gefordert, SPD-Fraktionsmitglied Klose sieht Forderungen teils berücksichtigt (laut ZDFheute).",
+        "links": [
+          {
+            "titel": "Schweitzer will „Rente mit 63“ erhalten – aber verändern",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/rente-mit-63-koalition-schweitzer-vorschlag-100.html"
+          },
+          {
+            "titel": "Rentenreform: Mehrheit zweifelt an baldiger Einigung (Politbarometer)",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/deutschland/politbarometer-rentenreform-einigung-zweifel-100.html"
+          }
+        ],
+        "chat_prompt": "Was schlägt Arbeitsminister Schweitzer im November 2026 zur „Rente mit 63“ vor, wie reagieren Union und Gewerkschaften und was zeigt das ZDF-Politbarometer dazu?"
+      }
+    },
+    {
+      "laeuft_noch": false,
+      "stand": "2026-11-28T06:00:00+01:00",
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "id": "2026-11-28-wirtschaft-01",
+      "bereich": "wirtschaft",
+      "schlagzeile": "Arbeitsmarkt: 2,936 Mio. Arbeitslose, Quote 6,2 % – keine Belebung",
+      "kurz": "Im November sank die Zahl der Arbeitslosen saisonal um 19.000 auf 2,936 Mio.; das sind 51.000 mehr als vor einem Jahr. Die Quote liegt bei 6,2 %.",
+      "status": "bestaetigt",
+      "ereignis_datum": "2026-11-27",
+      "hintergrund": "Saisonbereinigt stieg die Arbeitslosigkeit laut Bundesagentur um 9.000. Gemeldet waren 646.000 offene Stellen (plus 23.000 zum Vorjahr). 1,068 Mio. Menschen bezogen Arbeitslosengeld (plus 84.000), die Zahl erwerbsfähiger Grundsicherungsbezieher fiel um 162.000 auf 3,646 Mio. BA-Vorstand Terzenbach: Die leichte konjunkturelle Erholung führe auch im November nicht zu einer Belebung am Arbeitsmarkt.",
+      "warum_wichtig": "Der Arbeitsmarkt zeigt, ob die schwache Konjunktur bei den Beschäftigten ankommt.",
+      "quellen": [
+        {
+          "titel": "Arbeitsmarkt im November 2026",
+          "medium": "Bundesagentur für Arbeit",
+          "url": "https://www.arbeitsagentur.de/presse/2026-47-arbeitsmarkt-im-november-2026",
+          "datum": "2026-11-27",
+          "primaer": true
+        },
+        {
+          "titel": "Weniger Arbeitslose – aber keine Belebung am Arbeitsmarkt",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/arbeitslosigkeit-deutschland-arbeitsmarkt-november-100.html",
+          "datum": "2026-11-27",
+          "primaer": false
+        }
+      ],
+      "vertiefung": {
+        "text": "Die Erwerbstätigkeit lag im Oktober bei 45,84 Mio., das sind 227.000 weniger als vor einem Jahr (BA). Die Kurzarbeit sank laut vorläufigen Daten auf 113.000 Beschäftigte.",
+        "links": [
+          {
+            "titel": "Arbeitsmarkt im November 2026",
+            "medium": "Bundesagentur für Arbeit",
+            "url": "https://www.arbeitsagentur.de/presse/2026-47-arbeitsmarkt-im-november-2026"
+          },
+          {
+            "titel": "Weniger Arbeitslose – aber keine Belebung am Arbeitsmarkt",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/wirtschaft/arbeitslosigkeit-deutschland-arbeitsmarkt-november-100.html"
+          }
+        ],
+        "chat_prompt": "Wie hat sich der deutsche Arbeitsmarkt laut Bundesagentur für Arbeit im November 2026 entwickelt und was bedeuten die Zahlen?"
+      }
+    },
+    {
+      "laeuft_noch": false,
+      "stand": "2026-11-28T06:00:00+01:00",
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "id": "2026-11-28-ki_tech-01",
+      "bereich": "ki_tech",
+      "schlagzeile": "Wallonien stoppt Bau eines Google-Rechenzentrums in Farciennes",
+      "kurz": "Die wallonische Regierung hat laut AFP/ZDFheute am 27. November einen Baustopp für ein Google-Rechenzentrum in Farciennes verhängt. Es fehle eine gültige Baugenehmigung („schwere Straftat“).",
+      "status": "eine_quelle",
+      "ereignis_datum": "2026-11-27",
+      "hintergrund": "Der Bau auf einem früheren Bergbaugelände umfasst drei Hektar. Greenpeace hatte die Behörden laut ZDFheute mit Drohnenaufnahmen alarmiert; Google habe nach dem Entzug der Genehmigung im August weitergebaut (Behauptung von Greenpeace). Google reagierte auf eine AFP-Anfrage zunächst nicht. Laut DH (28.10.) hatte der wallonische Minister Desquesnes eine geänderte Genehmigung im August wegen Wasserknappheit abgelehnt; Google ging dagegen vor den Conseil d'État. Geplant war eine Kühlung mit Wasser der Sambre (600 m³ pro Stunde).",
+      "warum_wichtig": "Rechenzentren für KI brauchen viel Strom und Wasser und stoßen zunehmend auf Genehmigungs- und Umweltgrenzen.",
+      "quellen": [
+        {
+          "titel": "„Schwere Straftat“: Belgien stoppt Google-Rechenzentrum",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/unternehmen/google-belgien-rechenzentrum-bau-stopp-100.html",
+          "datum": "2026-11-27",
+          "primaer": false
+        },
+        {
+          "titel": "Google introduit un recours au Conseil d'État pour son site de Farciennes",
+          "medium": "DH Les Sports+ (dhnet.be)",
+          "url": "https://www.dhnet.be/dernieres-depeches/2026/10/28/google-introduit-un-recours-au-conseil-detat-pour-son-site-de-farciennes-VSNLUA6YIVE2JFS4LH6ESVNI5M/",
+          "datum": "2026-10-28",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Der Baustopp selbst stammt nur aus einer Quelle (ZDFheute/AFP); die Vorgeschichte (Genehmigungsstreit, Berufung) bestätigt DH als Regionalmedium (Klasse B). Greenpeace-Angaben sind Behauptungen.",
+      "vertiefung": {
+        "text": "Im Oktober hatten laut ZDFheute auch finnische Behörden Arbeiten an zwei Google-Standorten bis zu Umweltprüfungen gestoppt.",
+        "links": [
+          {
+            "titel": "„Schwere Straftat“: Belgien stoppt Google-Rechenzentrum",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/wirtschaft/unternehmen/google-belgien-rechenzentrum-bau-stopp-100.html"
+          },
+          {
+            "titel": "Google introduit un recours au Conseil d'État pour son site de Farciennes",
+            "medium": "DH Les Sports+ (dhnet.be)",
+            "url": "https://www.dhnet.be/dernieres-depeches/2026/10/28/google-introduit-un-recours-au-conseil-detat-pour-son-site-de-farciennes-VSNLUA6YIVE2JFS4LH6ESVNI5M/"
+          }
+        ],
+        "chat_prompt": "Warum hat die wallonische Regierung am 27. November 2026 den Bau eines Google-Rechenzentrums in Farciennes gestoppt und wie ist der Streit um Genehmigung und Wasser entstanden?"
+      }
+    },
+    {
+      "laeuft_noch": true,
+      "stand": "2026-11-28T06:00:00+01:00",
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "id": "2026-11-28-ki_tech-02",
+      "bereich": "ki_tech",
+      "schlagzeile": "Nvidia-Affäre: Huang soll am 1. Dezember vor Kongressausschüssen aussagen",
+      "kurz": "Nvidia-Chef Jensen Huang, der nach Affären zurückgetreten und elf Tage später zurückgeholt wurde, soll am 1. Dezember hinter verschlossenen Türen vor Kongressausschüssen aussagen. Eine SEC-Anfrage zu Nvidias Bilanzierung wird laut ZDFheute berichtet.",
+      "status": "unklar",
+      "ereignis_datum": "2026-11-27",
+      "hintergrund": "Vorwürfe betreffen Verbindungen einer Managerin eines Singapurer Nvidia-Kunden zu chinesischen Diensten und mögliche Umgehung von Exportbeschränkungen für KI-Chips; Beweise für Gesetzesverstöße Huangs nennt der Artikel nicht, das Justizministerium sieht laut ZDFheute keine nachgewiesenen Verstöße. Laut Axios (17.11.) tritt Huang am 1. Dezember, Nvidias Chefjurist am 2. Dezember vor Ausschüssen auf. Der Ausgang ist offen.",
+      "warum_wichtig": "Nvidia ist zentraler Chip-Lieferant der KI-Branche; Exportregeln und Vertrauen in die Führung wirken auf den gesamten KI-Markt.",
+      "quellen": [
+        {
+          "titel": "Nvidia-Chef Jensen Huang: Ein CEO als Sicherheitsrisiko",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/nvidia-jensen-huang-skandal-ermittlungen-100.html",
+          "datum": "2026-11-27",
+          "primaer": false
+        },
+        {
+          "titel": "Jensen Huang agrees to face Congress over Nvidia scandal",
+          "medium": "Axios",
+          "url": "https://axios.com/2026/11/17/nvidia-jensen-huang-congress-testify-dates",
+          "datum": "2026-11-17",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Der ZDFheute-Beitrag ist eine Analyse; einzelne Details (SEC-Anfrage, Sicherheitsfreigabe) stammen aus dort zitierten Medienberichten. Axios ist keine Quelle der Klasse A; die Anhörungstermine sind daher nicht doppelt belegt.",
+      "vertiefung": {
+        "text": "Der Fall dreht sich auch um die Frage, ob Nvidia Nachfrage über „zirkuläre Finanzierung“ aufgebläht hat – eine Kritik, kein belegter Befund (laut ZDFheute).",
+        "links": [
+          {
+            "titel": "Nvidia-Chef Jensen Huang: Ein CEO als Sicherheitsrisiko",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/wirtschaft/nvidia-jensen-huang-skandal-ermittlungen-100.html"
+          },
+          {
+            "titel": "Jensen Huang agrees to face Congress over Nvidia scandal",
+            "medium": "Axios",
+            "url": "https://axios.com/2026/11/17/nvidia-jensen-huang-congress-testify-dates"
+          }
+        ],
+        "chat_prompt": "Was ist über die Nvidia-Affäre um Jensen Huang bekannt, welche Untersuchungen laufen und was ist für die Kongressanhörung am 1. Dezember 2026 geplant?"
+      }
+    },
+    {
+      "laeuft_noch": true,
+      "stand": "2026-11-28T06:00:00+01:00",
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "id": "2026-11-28-welt-01",
+      "bereich": "welt",
+      "schlagzeile": "Ukraine greift russische Schiffe weit entfernt vom Schwarzen Meer an",
+      "kurz": "Die Ukraine hat laut ZDFheute zuletzt russische Schiffe vor Libyen und im Golf von Finnland angegriffen; Selenskyj reklamierte die Versenkung eines Kriegsschiffs vor Libyen. Ziel sei Druck für ein „Schwarzmeerabkommen 2.0“, so ein Militäranalyst.",
+      "status": "eine_quelle",
+      "ereignis_datum": "2026-11-26",
+      "hintergrund": "Satellitenbilder vom 22. November zeigten Rauch am Marinestützpunkt Bengasi; am 23. November reklamierte die Ukraine Angriffe auf ein Kriegsschiff und einen Frachter (Behauptung der Ukraine, nicht unabhängig bestätigt). Im Golf von Finnland wurde laut ZDFheute der Frachter „Sparta II“ von einer Drohne getroffen. Analyst Gressel (Helsing) sieht die Angriffe als Antwort auf russische Schläge gegen ukrainische Getreideexporte und hält ein Abkommen vor dem Frühjahr für unwahrscheinlich.",
+      "warum_wichtig": "Die Angriffe weiten den Krieg auf neue Seegebiete aus und berühren Fragen des Seerechts und der Handelsschifffahrt.",
+      "quellen": [
+        {
+          "titel": "Was Kiew mit Angriffen auf russische Schiffe erreichen will",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/ukraine-krieg-russland-angriffe-schiffe-meer-100.html",
+          "datum": "2026-11-26",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur ein Beleg (ZDFheute-Interview vom 26.11.); Angaben der Ukraine sind Behauptungen. Erneuter Suchversuch nach einer zweiten Quelle zu „Sparta II“ ergab keine Treffer.",
+      "vertiefung": {
+        "text": "Der Analyst verweist darauf, dass Angriffe auf Kriegsschiffe in fremden Wirtschaftszonen erlaubt sind, auf alle Schiffe aber nicht (Einschätzung, kein Rechtsgutachten).",
+        "links": [
+          {
+            "titel": "Was Kiew mit Angriffen auf russische Schiffe erreichen will",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/politik/ausland/ukraine-krieg-russland-angriffe-schiffe-meer-100.html"
+          }
+        ],
+        "chat_prompt": "Was ist über die ukrainischen Angriffe auf russische Schiffe vor Libyen und im Golf von Finnland im November 2026 bekannt und welche Ziele verfolgt Kiew damit?"
+      }
+    },
+    {
+      "laeuft_noch": false,
+      "stand": "2026-11-28T06:00:00+01:00",
+      "modelle": null,
+      "benchmarks": null,
+      "positionen": null,
+      "interessenkonflikt": false,
+      "korrigiert": null,
+      "id": "2026-11-28-sport-01",
+      "bereich": "sport",
+      "schlagzeile": "Bremen holt gegen Gladbach 1:3-Rückstand auf und spielt 3:3",
+      "kurz": "Werder Bremen und Borussia Mönchengladbach trennten sich am 27. November im Weserstadion 3:3. Gladbach führte nach Honorats Doppelpack 3:1, Bremen glich durch Füllkrug in der 90.+2 Minute aus.",
+      "status": "eine_quelle",
+      "ereignis_datum": "2026-11-27",
+      "hintergrund": "Tore: Diks (27., Handelfmeter nach Videobeweis), Dinkci (38., 85.), Honorat (46., 78.), Füllkrug (90.+2). Gladbach bleibt Tabellenletzter. 41.800 Zuschauer sahen das Spiel des 11. Spieltags. Bremen hätte mit einem Sieg bis Sonntag mit RB Leipzig auf Platz vier gleichziehen können.",
+      "warum_wichtig": "Das Ergebnis hält Gladbach im Abstiegskampf, Bremen verpasst den Sprung ins obere Tabellendrittel.",
+      "quellen": [
+        {
+          "titel": "Bremen mit furiosem Schlussspurt gegen Gladbach",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-werder-bremen-borussia-moenchengladbach-spieltag-11-26-27-100.html",
+          "datum": "2026-11-27",
+          "primaer": false
+        }
+      ],
+      "hinweis_quellen": "Nur ZDFheute als Quelle; eine zweite Quelle (Suche nach Bundesliga/Agenturen) lieferte nur ältere Spiele.",
+      "vertiefung": {
+        "text": "Bremen kam nach dem 1:3 durch zwei Tore in der Schlussphase zurück.",
+        "links": [
+          {
+            "titel": "Bremen mit furiosem Schlussspurt gegen Gladbach",
+            "medium": "ZDFheute",
+            "url": "https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-werder-bremen-borussia-moenchengladbach-spieltag-11-26-27-100.html"
+          }
+        ],
+        "chat_prompt": "Wie verlief das Bundesliga-Spiel Werder Bremen gegen Borussia Mönchengladbach am 27. November 2026 (3:3) und wie steht es in der Tabelle?"
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "2026-11-28-fact-01",
+      "art": "aktuell",
+      "thema": "Wirtschaft",
+      "titel": "Verteidigungsetat 2027: rund 109,8 Mrd. Euro im Einzelplan",
+      "text": "Im Haushalt 2027 sind im Einzelplan des Verteidigungsministeriums rund 109,8 Mrd. Euro vorgesehen; laut Finanzplan steigt der Etat bis 2030 auf 183,7 Mrd. Euro (Stand 27.11.2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Haushaltsgesetz 2027 – dritte Lesung",
+          "medium": "Deutscher Bundestag",
+          "url": "https://www.bundestag.de/dokumente/textarchiv/2026/kw48-de-haushaltsgesetz-2027-dritte-lesung-1232350",
+          "datum": "2026-11-27",
+          "primaer": true
+        }
+      ]
+    },
+    {
+      "id": "2026-11-28-fact-02",
+      "art": "aktuell",
+      "thema": "KI",
+      "titel": "Nvidia: Huang soll am 1. Dezember aussagen",
+      "text": "Laut Axios (17.11.2026) soll Jensen Huang am 1. Dezember in einer nicht öffentlichen Befragung vor Kongressausschüssen auftreten; Nvidias Chefjurist folgt am 2. Dezember.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Nvidia-Chef Jensen Huang: Ein CEO als Sicherheitsrisiko",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/wirtschaft/nvidia-jensen-huang-skandal-ermittlungen-100.html",
+          "datum": "2026-11-27",
+          "primaer": false
+        },
+        {
+          "titel": "Jensen Huang agrees to face Congress over Nvidia scandal",
+          "medium": "Axios",
+          "url": "https://axios.com/2026/11/17/nvidia-jensen-huang-congress-testify-dates",
+          "datum": "2026-11-17",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-28-fact-03",
+      "art": "zeitlos",
+      "thema": "Wirtschaft",
+      "titel": "Zwei Arten, Arbeitslosigkeit zu messen",
+      "text": "Die Bundesagentur nennt für Oktober 2026 eine ILO-Erwerbslosenquote von 4,0 %, während die eigene Arbeitslosenquote im November 6,2 % beträgt; beide messen mit unterschiedlichen Definitionen.",
+      "status": "bestaetigt",
+      "quellen": [
+        {
+          "titel": "Arbeitsmarkt im November 2026",
+          "medium": "Bundesagentur für Arbeit",
+          "url": "https://www.arbeitsagentur.de/presse/2026-47-arbeitsmarkt-im-november-2026",
+          "datum": "2026-11-27",
+          "primaer": true
+        }
+      ]
+    }
+  ],
+  "extra_facts": [
+    {
+      "id": "2026-11-28-extra-01",
+      "art": "aktuell",
+      "thema": "Wirtschaft",
+      "titel": "Erwerbstätige: 227.000 weniger als vor einem Jahr",
+      "text": "Im Oktober 2026 gab es laut Bundesagentur 45,84 Mio. Erwerbstätige, 227.000 weniger als ein Jahr zuvor.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Arbeitsmarkt im November 2026",
+          "medium": "Bundesagentur für Arbeit",
+          "url": "https://www.arbeitsagentur.de/presse/2026-47-arbeitsmarkt-im-november-2026",
+          "datum": "2026-11-27",
+          "primaer": true
+        }
+      ]
+    },
+    {
+      "id": "2026-11-28-extra-02",
+      "art": "aktuell",
+      "thema": "Wirtschaft",
+      "titel": "Kurzarbeit: 113.000 Beschäftigte",
+      "text": "Nach vorläufigen Daten bezogen 113.000 Beschäftigte Kurzarbeitergeld, 68.000 weniger als ein Jahr zuvor (Stand September 2026).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Arbeitsmarkt im November 2026",
+          "medium": "Bundesagentur für Arbeit",
+          "url": "https://www.arbeitsagentur.de/presse/2026-47-arbeitsmarkt-im-november-2026",
+          "datum": "2026-11-27",
+          "primaer": true
+        }
+      ]
+    },
+    {
+      "id": "2026-11-28-extra-03",
+      "art": "aktuell",
+      "thema": "Politik",
+      "titel": "Rentenumfrage: 69 % gegen Abschaffung der „Rente mit 63“",
+      "text": "Im Politbarometer (24.–26.11.2026, 1.245 Befragte) lehnen 69 % eine Abschaffung der abschlagsfreien Rente nach 45 Jahren ab, 26 % sind dafür.",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Rentenreform: Mehrheit zweifelt an baldiger Einigung (Politbarometer)",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/deutschland/politbarometer-rentenreform-einigung-zweifel-100.html",
+          "datum": "2026-11-27",
+          "primaer": false
+        }
+      ]
+    },
+    {
+      "id": "2026-11-28-extra-04",
+      "art": "aktuell",
+      "thema": "Politik",
+      "titel": "Bundeshaushalt 2027: 61,85 Mrd. Euro Investitionen",
+      "text": "Der Bundestag beschloss am 27.11.2026 Investitionen von 61,85 Mrd. Euro (2026: 58,35 Mrd. Euro).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Haushaltsgesetz 2027 – dritte Lesung",
+          "medium": "Deutscher Bundestag",
+          "url": "https://www.bundestag.de/dokumente/textarchiv/2026/kw48-de-haushaltsgesetz-2027-dritte-lesung-1232350",
+          "datum": "2026-11-27",
+          "primaer": true
+        }
+      ]
+    },
+    {
+      "id": "2026-11-28-extra-05",
+      "art": "aktuell",
+      "thema": "Politik",
+      "titel": "Spanien: Neuwahl wegen gescheiterter Mieterschutz-Dekrete",
+      "text": "Zwei Mieterschutz-Dekrete der Regierung Sánchez scheiterten im Oktober 2026 im Parlament und lösten die vorgezogene Wahl aus (laut ZDFheute).",
+      "status": "eine_quelle",
+      "quellen": [
+        {
+          "titel": "Spanien: Wo Wohnungsnot die Wahl entscheiden könnte",
+          "medium": "ZDFheute",
+          "url": "https://www.zdfheute.de/politik/ausland/spanien-wahl-proteste-neuwahl-parlament-wohnungsmarkt-100.html",
+          "datum": "2026-11-27",
+          "primaer": false
+        }
+      ]
+    }
+  ],
+  "begriff": {
+    "id": "begriff-rente-mit-63",
+    "wort": "Rente mit 63",
+    "erklaerung": "Umgangssprachlich die abschlagsfreie Rente nach 45 Beitragsjahren. Die Regelung steht in der Koalition zur Debatte.",
+    "meldung_id": "2026-11-28-de_eu-02",
+    "status": "eine_quelle",
+    "quellen": [
+      {
+        "titel": "Schweitzer will „Rente mit 63“ erhalten – aber verändern",
+        "medium": "ZDFheute",
+        "url": "https://www.zdfheute.de/politik/rente-mit-63-koalition-schweitzer-vorschlag-100.html",
+        "datum": "2026-11-27",
+        "primaer": false
+      }
+    ]
+  }
+}

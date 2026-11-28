@@ -1,7 +1,14 @@
 {
   "version": 1,
-  "aktualisiert": "2026-11-27T04:46:21.848Z",
+  "aktualisiert": "2026-11-28T04:45:05.299Z",
   "tage": [
+    {
+      "datum": "2026-11-28",
+      "datei": "2026-11-28.json",
+      "meldungen": 7,
+      "schlagzeile": "Bundestag beschließt Haushalt 2027: 555,94 Mrd. Euro, 122,97 Mrd. neue Kredite",
+      "korrigiert": 0
+    },
     {
       "datum": "2026-11-27",
       "datei": "2026-11-27.json",
